@@ -1,0 +1,6 @@
+@import '_variables-v1';
+
+$primary: $theme-colors.primary;
+$secondary: $theme-colors.secondary;
+
+@import 'lms/static/sass/partials/lms/theme/variables';
