@@ -16,8 +16,10 @@ $footer-bg: #ffffff !default;
     }
 
     .nav-links .secondary {
-      .secondary .nav-item a, .dropdown-user-menu .dropdown-item a {
-        color: $link-color;
+      .nav-item a,
+      .dropdown-user-menu .dropdown-item a
+      {
+        color: $main-color;
       }
     }
 }
