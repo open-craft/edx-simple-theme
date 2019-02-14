@@ -1,6 +1,6 @@
-@import '_variables-v1';
+@import '../theme-overrides';
 
-$primary: $theme-colors.primary;
-$secondary: $theme-colors.secondary;
+$primary: $main-color;
+$secondary: $main-color;
 
 @import 'lms/static/sass/partials/lms/theme/variables';
