@@ -11,6 +11,21 @@ $footer-bg: #ffffff !default;
 .global-header {
     background: $header-bg;
 
+    a.sign-in-btn,
+    a.register-btn:hover
+    {
+      color: $header-bg !important; // Main color
+      background: $main-color !important; // Link color
+      border-color: $header-bg !important; // Main color
+    }
+    a.register-btn,
+    a.sign-in-btn:hover
+    {
+      color: $main-color !important; // Link color
+      background: $header-bg !important; // Main color
+      border-color: $main-color !important; // Link color
+    }
+
     span {
       color: $main-color;
     }
