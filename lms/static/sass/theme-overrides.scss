@@ -1,12 +1,6 @@
 // Import theme colors
 @import 'theme-colors';
 
-// Set default colors in case they aren't set on the parent file
-$main-color: #ffffff !default;
-$link-color: #ffff00 !default;
-$header-bg: #ffffff !default;
-$footer-bg: #ffffff !default;
-
 // Overrides to make the theme pretty
 .global-header {
     background: $header-bg;
@@ -26,49 +20,86 @@ $footer-bg: #ffffff !default;
       border-color: $main-color !important; // Link color
     }
 
+    .nav-links .main .nav-tab a {
+        color: $link-color;
+    }
+    .nav-links .main .nav-tab a.active,
+    .nav-links .main .nav-tab a:hover {
+      border-bottom-color: $link-color;
+      border-bottom-style: solid;
+    }
+
     span {
-      color: $main-color;
+      color: $header-font-color; // Header text color
     }
 
     .nav-links .secondary {
-      .nav-item a,
-      .dropdown-user-menu .dropdown-item a
-      {
-        color: $main-color;
+      .nav-item a {
+        color: $link-color;
+      }
+      .dropdown-user-menu .dropdown-item a {
+        color: #000000;
       }
     }
 }
+
 .wrapper-footer {
     background: $footer-bg; // Footer color
     background-color: $footer-bg !important; // Footer color
 
-    p.copyright
+    p.copyright,
+    footer .copyright,
+    footer#footer-openedx p.copyright
     {
-      color: $main-color; // Link color
+      color: $footer-font-color !important;  // Footer text color
     }
 
-    footer .site-nav .nav-item .nav-link
+    footer .site-nav .nav-item .nav-link,
+    footer#footer-openedx .colophon .nav-colophon li a,
     {
       color: $link-color !important; // Link color
     }
-
-    footer#footer-openedx {
-      .colophon .nav-colophon li a, .copyright, a {
-        color: $link-color; // Link Color
-      }
-    }
 }
+
+.wrapper-course-material .course-tabs .tab {
+  a:hover, a.active {
+    color: $link-color !important;
+    border-bottom-color: $link-color;
+  }
+}
+
+.content-wrapper {
+  .course-tabs .tab a,
+  .course-tabs .nav-item .nav-link
+  {
+    color: black !important;
+  }
+
+  .course-tabs .nav-item.active .nav-link,
+  .course-tabs .nav-item:hover .nav-link {
+    color: $link-color !important;
+    border-bottom-color: $link-color !important;
+  }
+}
+
 // User profile photo bar
 .view-profile .wrapper-profile-section-container-one .wrapper-profile-section-one {
   border-top-color: $link-color; // Link Color
 }
 
 // Login and registration fixes
+.login-register .form-field .field-link {
+  color: $link-color;
+}
 .login-register-content h2 {
-  color: $main-color !important; // Main Color
+  color: #000000 !important;
 }
 .login-register .action-primary
 .login-register .action-primary:hover
 {
   background: $main-color !important; // Link color
+}
+
+.fa-chevron-right:before {
+  color: $main-color !important;
 }
