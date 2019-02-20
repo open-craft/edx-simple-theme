@@ -104,13 +104,13 @@
   .nav-item .btn-link:focus,
   .nav-item .btn-link.active-section
   {
-    color: $link-color !important;
-    border-bottom: 3px solid $link-color !important;
+    color: $link-color;
+    border-bottom: 3px solid $link-color;
   }
 
   .nav-item .btn-link
   {
-    color: black !important;
+    color: black;
   }
 }
 
@@ -121,20 +121,31 @@
 
 .date-summary-container .date-summary-todays-date
 {
-    border-left: 3px solid $main-color;
+  border-left: 3px solid $main-color;
 }
 
  // Login and registration fixes
-.login-register .form-field .field-link {
-  color: $link-color;
+.login-register
+{
+  a:hover {
+    color: $main-color !important;
+  }
+  .form-field
+  {
+    .field-link {
+      color: $link-color;
+    }
+    .field-link:hover {
+      color: $main-color;
+    }
+  }
 }
 .login-register-content h2 {
   color: #000000 !important;
 }
-.login-register .action-primary
-.login-register .action-primary:hover
-{
-  background: $main-color !important; // Main color
+.login-register .action-primary {
+  background: $main-color !important;
+  border: 0;
 }
 
  .fa-chevron-right:before {
