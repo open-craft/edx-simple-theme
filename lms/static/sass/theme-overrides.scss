@@ -3,62 +3,62 @@
 
 // Overrides to make the theme pretty
 .global-header {
-    background: $header-bg;
+  background: $header-bg;
 
-    a.sign-in-btn,
-    a.register-btn:hover
-    {
-      color: $header-bg !important; // Main color
-      background: $main-color !important; // Link color
-      border-color: $header-bg !important; // Main color
-    }
-    a.register-btn,
-    a.sign-in-btn:hover
-    {
-      color: $main-color !important; // Link color
-      background: $header-bg !important; // Main color
-      border-color: $main-color !important; // Link color
-    }
+  a.sign-in-btn,
+  a.register-btn:hover
+  {
+    color: $header-bg !important; // Main color
+    background: $main-color !important; // Link color
+    border-color: $header-bg !important; // Main color
+  }
+  a.register-btn,
+  a.sign-in-btn:hover
+  {
+    color: $main-color !important; // Link color
+    background: $header-bg !important; // Main color
+    border-color: $main-color !important; // Link color
+  }
 
-    .nav-links .main .nav-tab a {
-        color: $link-color;
-    }
-    .nav-links .main .nav-tab a.active,
-    .nav-links .main .nav-tab a:hover {
-      border-bottom-color: $link-color;
-      border-bottom-style: solid;
-    }
+  .nav-links .main .nav-tab a {
+      color: $link-color;
+  }
+  .nav-links .main .nav-tab a.active,
+  .nav-links .main .nav-tab a:hover {
+    border-bottom-color: $link-color;
+    border-bottom-style: solid;
+  }
 
-    span {
-      color: $header-font-color; // Header text color
-    }
+  span {
+    color: $header-font-color; // Header text color
+  }
 
-    .nav-links .secondary {
-      .nav-item a {
-        color: $link-color;
-      }
-      .dropdown-user-menu .dropdown-item a {
-        color: $link-color;
-      }
+  .nav-links .secondary {
+    .nav-item a {
+      color: $link-color;
     }
+    .dropdown-user-menu .dropdown-item a {
+      color: $link-color;
+    }
+  }
 }
 
 .wrapper-footer {
-    background: $footer-bg; // Footer color
-    background-color: $footer-bg !important; // Footer color
+  background: $footer-bg; // Footer color
+  background-color: $footer-bg !important; // Footer color
 
-    p.copyright,
-    footer .copyright,
-    footer#footer-openedx p.copyright
-    {
-      color: $footer-font-color !important;  // Footer text color
-    }
+  p.copyright,
+  footer .copyright,
+  footer#footer-openedx p.copyright
+  {
+    color: $footer-font-color !important;  // Footer text color
+  }
 
-    footer .site-nav .nav-item .nav-link,
-    footer#footer-openedx .colophon .nav-colophon li a,
-    {
-      color: $link-color !important; // Link color
-    }
+  footer .site-nav .nav-item .nav-link,
+  footer#footer-openedx .colophon .nav-colophon li a,
+  {
+    color: $link-color !important; // Link color
+  }
 }
 
 .wrapper-course-material .course-tabs .tab {
@@ -69,6 +69,11 @@
 }
 
 .content-wrapper {
+  h4 a:hover
+  {
+   color: $main-color !important; // Main color
+  }
+
   .course-tabs .tab a,
   .course-tabs .nav-item .nav-link
   {
@@ -82,12 +87,44 @@
   }
 }
 
-// User profile photo bar
+.wiki-wrapper section.wiki
+{
+  .nav-tabs li.active a,
+  .nav-tabs a:hover,
+  .article-functions .see-children a:hover
+  {
+    color: $main-color; // Main color
+  }
+}
+
+// Fix instructor page
+.instructor-dashboard-content-2 .instructor-nav
+{
+  .nav-item .btn-link:hover,
+  .nav-item .btn-link:focus,
+  .nav-item .btn-link.active-section
+  {
+    color: $link-color !important;
+    border-bottom: 3px solid $link-color !important;
+  }
+
+  .nav-item .btn-link
+  {
+    color: black !important;
+  }
+}
+
+ // User profile photo bar
 .view-profile .wrapper-profile-section-container-one .wrapper-profile-section-one {
   border-top-color: $link-color; // Link Color
 }
 
-// Login and registration fixes
+.date-summary-container .date-summary-todays-date
+{
+    border-left: 3px solid $main-color;
+}
+
+ // Login and registration fixes
 .login-register .form-field .field-link {
   color: $link-color;
 }
@@ -97,9 +134,9 @@
 .login-register .action-primary
 .login-register .action-primary:hover
 {
-  background: $main-color !important; // Link color
+  background: $main-color !important; // Main color
 }
 
-.fa-chevron-right:before {
+ .fa-chevron-right:before {
   color: $main-color !important;
 }
