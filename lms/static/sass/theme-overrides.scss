@@ -69,7 +69,8 @@
 }
 
 .content-wrapper {
-  h4 a:hover
+  h4 a:hover,
+  h3 a:hover
   {
    color: $main-color !important; // Main color
   }
