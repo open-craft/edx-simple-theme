@@ -1,4 +1,3 @@
-# EDX Simple theme
+# Open edX Simple theme
 
-This theme is used in instances deployed by Ocim to theme OpenCraft client instances.
-This is used together with simple-theme role from edx-configuration repos.
+This skeleton theme is used to customize the themes of Open edX instances using the `simple-theme` role from the `edx/configuration` repository.
