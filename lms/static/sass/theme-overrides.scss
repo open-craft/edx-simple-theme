@@ -1,0 +1,154 @@
+// Import theme colors
+@import 'theme-colors';
+
+// Overrides to make the theme pretty
+.global-header {
+  background: $header-bg;
+
+  a.sign-in-btn,
+  a.register-btn:hover
+  {
+    color: $header-bg !important; // Main color
+    background: $main-color !important; // Link color
+    border-color: $header-bg !important; // Main color
+  }
+  a.register-btn,
+  a.sign-in-btn:hover
+  {
+    color: $main-color !important; // Link color
+    background: $header-bg !important; // Main color
+    border-color: $main-color !important; // Link color
+  }
+
+  .nav-links .main .nav-tab a {
+      color: $link-color;
+  }
+  .nav-links .main .nav-tab a.active,
+  .nav-links .main .nav-tab a:hover {
+    border-bottom-color: $link-color;
+    border-bottom-style: solid;
+  }
+
+  span {
+    color: $header-font-color; // Header text color
+  }
+
+  .nav-links .secondary {
+    .nav-item a {
+      color: $link-color;
+    }
+    .dropdown-user-menu .dropdown-item a {
+      color: $link-color;
+    }
+  }
+}
+
+.wrapper-footer {
+  background: $footer-bg; // Footer color
+  background-color: $footer-bg !important; // Footer color
+
+  p.copyright,
+  footer .copyright,
+  footer#footer-openedx p.copyright
+  {
+    color: $footer-font-color !important;  // Footer text color
+  }
+
+  footer .site-nav .nav-item .nav-link,
+  footer#footer-openedx .colophon .nav-colophon li a,
+  {
+    color: $link-color !important; // Link color
+  }
+}
+
+.wrapper-course-material .course-tabs .tab {
+  a:hover, a.active {
+    color: $link-color !important;
+    border-bottom-color: $link-color;
+  }
+}
+
+.content-wrapper {
+  h4 a:hover,
+  h3 a:hover
+  {
+   color: $main-color !important; // Main color
+  }
+
+  .course-tabs .tab a,
+  .course-tabs .nav-item .nav-link
+  {
+    color: black !important;
+  }
+
+  .course-tabs .nav-item.active .nav-link,
+  .course-tabs .nav-item:hover .nav-link {
+    color: $link-color !important;
+    border-bottom-color: $link-color !important;
+  }
+}
+
+.wiki-wrapper section.wiki
+{
+  .nav-tabs li.active a,
+  .nav-tabs a:hover,
+  .article-functions .see-children a:hover
+  {
+    color: $main-color; // Main color
+  }
+}
+
+// Fix instructor page
+.instructor-dashboard-content-2 .instructor-nav
+{
+  .nav-item .btn-link:hover,
+  .nav-item .btn-link:focus,
+  .nav-item .btn-link.active-section
+  {
+    color: $link-color;
+    border-bottom: 3px solid $link-color;
+  }
+
+  .nav-item .btn-link
+  {
+    color: black;
+  }
+}
+
+ // User profile photo bar
+.view-profile .wrapper-profile-section-container-one .wrapper-profile-section-one {
+  border-top-color: $link-color; // Link Color
+}
+
+.date-summary-container .date-summary-todays-date
+{
+  border-left: 3px solid $main-color;
+}
+
+ // Login and registration fixes
+.login-register
+{
+  a:hover {
+    color: $main-color !important;
+  }
+  .form-field
+  {
+    .field-link {
+      color: $link-color;
+    }
+    .field-link:hover {
+      color: $main-color;
+    }
+  }
+}
+.login-register-content h2 {
+  color: #000000 !important;
+}
+.login-register .action-primary {
+  background: $main-color !important;
+  border: 0;
+}
+
+ .fa-chevron-right:before {
+  color: $main-color !important;
+}
