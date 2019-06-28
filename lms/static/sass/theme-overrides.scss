@@ -199,7 +199,7 @@ a:not(.btn), a:not(.btn):hover, a:not(.btn):focus, a:visited:not(.btn):hover, a:
   }
 }
 
- // User profile photo bar
+ // Customize the top border of the User profile photo
 .view-profile .wrapper-profile-section-container-one .wrapper-profile-section-one {
   border-top-color: $link-color;
 }
@@ -256,10 +256,12 @@ a:not(.btn), a:not(.btn):hover, a:not(.btn):focus, a:visited:not(.btn):hover, a:
         .account-settings-section-body .u-field {
             .field {
                 select ~ .icon-caret-down::after {
-                    border-top:7px solid $link-color !important;
+                    // Customize the color for the dropdown arrow
+                    border-top-color: $link-color !important;
                 }
                 button.u-field-link:disabled {
-                    border: 1px solid #ddd;
+                    // Customize the colors for the disabled button - for example the password reset button
+                    border-color: #ddd;
                     color: #ddd;
                 }
             }
@@ -268,7 +270,12 @@ a:not(.btn), a:not(.btn):hover, a:not(.btn):focus, a:visited:not(.btn):hover, a:
     .wrapper-header .account-nav button {
         &:focus, &:hover, &.active {
             @if variable-exists(account-settings-nav-border-bottom-color) {
+                // Customize the account settings nav menu border bottom color
                 border-bottom-color: $account-settings-nav-border-bottom-color !important;
+            }
+            @if variable-exists(account-settings-nav-color) {
+                // Customize the account settings nav menu color
+                color: $account-settings-nav-color !important;
             }
         }
     }
@@ -279,62 +286,90 @@ a:not(.btn), a:not(.btn):hover, a:not(.btn):focus, a:visited:not(.btn):hover, a:
         .field .u-field-link {
             &, &:hover {
                 color: $btn-primary-border-color;
-                border: 1px solid $btn-primary-border-color;
+                border-color: $btn-primary-border-color;
             }
             &:hover {
                 color: #ffff;
-                border: 1px solid $btn-primary-border-color;
+                border-color: $btn-primary-border-color;
                 background-color: $btn-primary-border-color;
             }
         }
 
     }
     .account-deletion-details .btn-outline-primary {
+        // Customize the account deletion button colors
         & {
             color: #b20610 !important;
-            border: 1px solid #b20610 !important;
+            border-color: #b20610 !important;
         }
         &:hover {
             color: #fff !important;
-            border: 1px solid #b20610 !important;
+            border-color: #b20610 !important;
             background-color: #b20610 !important;
         }
     }
 }
 .courses-container .courses .course {
-  border-bottom: 3px solid violet !important;
+  border-bottom-color: $link-color !important;
 }
 
 .sequence .sequence-nav-button {
   &.button-previous:not([disabled="disabled"]) .fa.fa-chevron-prev,
   &.button-next:not([disabled="disabled"]) .fa.fa-chevron-next {
-    color: violet !important;
+    color: $link-color !important;
   }
 }
-/* Expand the course info page hero section to fit the image/video size */
+
+// Expand the course info page hero section to fit the image/video size
 .course-info header.course-profile {
   height: auto !important;
 }
 
 
-
-
 .wrapper-footer {
-    background-color: $footer-bg;
-    @if variable-exists(customize-footer-border) {
+  background: $footer-bg; // Footer color
+  background-color: $footer-bg !important; // Footer color
+
+  @if variable-exists(customize-footer-border) {
         // Customize the footer border
         border-top: $footer-border-top-width solid $footer-border-bottom-color;
         border-bottom: $footer-border-bottom-width solid $footer-border-bottom-color;
     }
 
+  p.copyright,
+  footer .copyright,
+  footer#footer-openedx p.copyright
+  {
+    color: $footer-color !important;  // Footer text color
+  }
+
+  footer .site-nav .nav-item .nav-link,
+  footer#footer-openedx .colophon .nav-colophon li a,
+  {
+    color: $link-color !important; // Link color
+  }
 }
 
-.wrapper-footer footer#footer-openedx .colophon .nav-colophon li a {
-    // Customize the footer link color
-    color: $link-color;
-}
 
-.wrapper-footer footer#footer-openedx .copyright {
-    // Customize the footer text color.
-    color: $footer-color;
-}
+
+// .wrapper-footer {
+//     // Customize the footer background color
+//     background-color: $footer-bg;
+//     background: $footer-bg
+//     @if variable-exists(customize-footer-border) {
+//         // Customize the footer border
+//         border-top: $footer-border-top-width solid $footer-border-bottom-color;
+//         border-bottom: $footer-border-bottom-width solid $footer-border-bottom-color;
+//     }
+
+// }
+
+// .wrapper-footer footer#footer-openedx .colophon .nav-colophon li a {
+//     // Customize the footer link color
+//     color: $link-color;
+// }
+
+// .wrapper-footer footer#footer-openedx .copyright {
+//     // Customize the footer text color.
+//     color: $footer-color;
+// }
