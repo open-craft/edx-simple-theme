@@ -1,93 +1,185 @@
 // Import theme colors
 @import 'theme-colors';
 
-// Overrides to make the theme pretty
+@mixin btn-styles($bg, $color, $border-color, $hover-bg, $hover-color, $hover-border-color) {
+    background: $bg !important;
+    color: $color !important;
+    border: 1px solid $border-color !important;
+    &:hover {
+        background-color: $hover-bg !important;
+        color: $hover-color !important;
+        border-color: $hover-border-color !important;
+    }
+}
+
+// Set the default color of links
+a:not(.btn), a:not(.btn):hover, a:not(.btn):focus, a:visited:not(.btn):hover, a:visited:not(.btn):focus {
+    color: $link-color;
+}
+
 .global-header {
-  background: $header-bg;
+    // Set the header background color
+    background-color: $header-bg;
 
-  a.sign-in-btn,
-  a.register-btn:hover
-  {
-    color: $header-bg !important; // Main color
-    background: $main-color !important; // Link color
-    border-color: $header-bg !important; // Main color
-  }
-  a.register-btn,
-  a.sign-in-btn:hover
-  {
-    color: $main-color !important; // Link color
-    background: $header-bg !important; // Main color
-    border-color: $main-color !important; // Link color
-  }
-
-  .nav-links .main .nav-tab a {
-      color: $link-color;
-  }
-  .nav-links .main .nav-tab a.active,
-  .nav-links .main .nav-tab a:hover {
-    border-bottom-color: $link-color;
-    border-bottom-style: solid;
-  }
-
-  span {
-    color: $header-font-color; // Header text color
-  }
-
-  .nav-links .secondary {
-    .nav-item a {
-      color: $link-color;
+    @if variable-exists(customize-header-border) {
+        // Set the top and bottom border of the header
+        border-top: $header-border-top-width solid $header-border-top-color;
+        border-bottom: $header-border-bottom-width solid $header-border-bottom-color;
     }
-    .dropdown-user-menu .dropdown-item a {
-      color: $link-color;
+    // Set the color of text in the header - course about page.
+    span {
+        color: $link-color;
     }
-  }
+    .nav-links {
+        @if variable-exists(main-nav-color) {
+            // Set the color of the links in the dashboard
+            .main .nav-tab a, .secondary .nav-item a {
+                color: $main-nav-color !important;
+            }
+        }
+        @if variable-exists(main-nav-item-border-bottom-color) {
+            // Set the bottom border color of the links in the dashboard like 'Courses', 'Programs', 'Profile' etc.
+            .main .nav-tab a {
+                &.active, &:hover {
+                    border-bottom-color: $main-nav-item-border-bottom-color !important;
+                    border-bottom-style: solid !important;
+                }
+            }
+        }
+        @if variable-exists(user-dropdown-color) {
+            // Customize the color of the links in the user dropdown menu
+            .secondary .dropdown-user-menu .dropdown-item a {
+                color: $user-dropdown-color !important;
+            }
+        }
+    }
+    .main .nav-tab a, .secondary .nav-item a, .secondary .nav-item .toggle-user-dropdown {
+        // Set the color of the dropdown arrow of the user dropdowm menu
+        color: $link-color !important;
+    }
+    .secondary {
+        @if variable-exists(customize-sign-in-btn) {
+            // Customize the sign-in button on the home page
+            a.sign-in-btn {
+                @include btn-styles($btn-sign-in-bg, $btn-sign-in-color, $btn-sign-in-border-color, $btn-sign-in-hover-bg, $btn-sign-in-hover-color, $btn-sign-in-hover-border-color);
+            }
+        }
+        @if variable-exists(customize-register-btn) {
+            // Customize the register button on the home page
+            a.register-btn {
+                @include btn-styles($btn-register-bg, $btn-register-color, $btn-register-border-color, $btn-register-hover-bg, $btn-register-hover-color, $btn-register-hover-border-color);
+            }
+        }
+    }
+
 }
 
-.wrapper-footer {
-  background: $footer-bg; // Footer color
-  background-color: $footer-bg !important; // Footer color
-
-  p.copyright,
-  footer .copyright,
-  footer#footer-openedx p.copyright
-  {
-    color: $footer-font-color !important;  // Footer text color
-  }
-
-  footer .site-nav .nav-item .nav-link,
-  footer#footer-openedx .colophon .nav-colophon li a,
-  {
-    color: $link-color !important; // Link color
-  }
+.login-register {
+    .form-field .field-link {
+        // Customize the color of the links in the login/registration form.
+        color: $link-color;
+    }
+    .action-primary {
+        @if variable-exists(customize-sign-in-btn) {
+            // Customize the sign-in button on the login page
+            &.login-button {
+                @include btn-styles($btn-sign-in-bg, $btn-sign-in-color, $btn-sign-in-border-color, $btn-sign-in-hover-bg, $btn-sign-in-hover-color, $btn-sign-in-hover-border-color);
+                box-shadow: none;
+            }
+        }
+        @if variable-exists(customize-register-btn) {
+            // Customize the register button on the registration page
+            &.register-button {
+                @include btn-styles($btn-register-bg, $btn-register-color, $btn-register-border-color, $btn-register-hover-bg, $btn-register-hover-color, $btn-register-hover-border-color);
+                box-shadow: none;
+            }
+        }
+    }
 }
 
-.wrapper-course-material .course-tabs .tab {
-  a:hover, a.active {
-    color: $link-color !important;
-    border-bottom-color: $link-color;
-  }
+.login-register-content h2 {
+    // Customize the color of the login/registration page header
+    color: $login-register-header-color;
+}
+
+.courses-container .courses .course {
+    @if variable-exists(accent-color) {
+        // Customize the bottom border color on hover for the course card in the home page
+        border-bottom-color: $accent-color;
+    }
+    .course-image .cover-image .learn-more {
+        // Set the color of the 'Learn more' button in the course card in the home page
+        background-color: $btn-secondary-bg;
+        color: $btn-secondary-color;
+    }
+}
+
+.home>header .title>.heading-group {
+    @if variable-exists(home-page-hero-title-color) {
+        h1 {
+            // Customize the home page hero title color
+            color: $home-page-hero-title-color;
+        }
+    }
+    @if variable-exists(home-page-hero-subtitle-color) {
+        p {
+            // Customize the home page hero subtitle color
+            color: $home-page-hero-subtitle-color;
+        }
+    }
+}
+
+.course-info header.course-profile .intro-inner-wrapper .intro .main-cta {
+    a.register, strong {
+        &, &:hover, &:hover:not(:disabled) {
+            // Customize the action buttons on the course about page
+            background-image: none;
+            @include btn-styles($btn-primary-bg, $btn-primary-color, $btn-primary-border-color, $btn-primary-hover-bg, $btn-primary-hover-color, $btn-primary-hover-border-color);
+            box-shadow: none;
+        }
+    }
+}
+
+.dashboard .main-container .my-courses .course .details .enter-course {
+    // Customize the 'View Course' button on the dashboard
+    @include btn-styles($btn-secondary-bg, $btn-secondary-color, $btn-secondary-border-color, $btn-secondary-hover-bg, $btn-secondary-hover-color, $btn-secondary-hover-border-color);
+}
+
+@if variable-exists(wrapper-preview-menu-color) {
+    // Customize the color of the preview section shown when viewing the course as a staff user.
+    .wrapper-preview-menu {
+        background-color: $wrapper-preview-menu-color;
+    }
+}
+
+.btn-primary {
+    // Set the styles for the primary button
+    @include btn-styles($btn-primary-bg, $btn-primary-color, $btn-primary-border-color, $btn-primary-hover-bg, $btn-primary-hover-color, $btn-primary-hover-border-color);
+
 }
 
 .content-wrapper {
-  h4 a:hover,
-  h3 a:hover
-  {
-   color: $main-color !important; // Main color
-  }
+    // Customize the colors of the course navigation menu - bootstrap
+    h4 a:hover,
+    h3 a:hover
+    {
+        color: $main-color !important; // Main color
+    }
 
-  .course-tabs .tab a,
-  .course-tabs .nav-item .nav-link
-  {
-    color: black !important;
-  }
+    .course-tabs .tab a,
+    .course-tabs .nav-item .nav-link
+    {
+        color: black !important;
+    }
 
   .course-tabs .nav-item.active .nav-link,
   .course-tabs .nav-item:hover .nav-link {
-    color: $link-color !important;
-    border-bottom-color: $link-color !important;
+      color: $course-nav-menu-color !important;
+      // Customize the border bottom highlight color of the course navigation menu - bootstrap
+      border-bottom-color: $course-nav-menu-border-bottom-color !important;
   }
 }
-
+// BUGBUG: Test
 .wiki-wrapper section.wiki
 {
   .nav-tabs li.active a,
@@ -101,14 +193,6 @@
 // Fix instructor page
 .instructor-dashboard-content-2 .instructor-nav
 {
-  .nav-item .btn-link:hover,
-  .nav-item .btn-link:focus,
-  .nav-item .btn-link.active-section
-  {
-    color: $link-color;
-    border-bottom: 3px solid $link-color;
-  }
-
   .nav-item .btn-link
   {
     color: black;
@@ -117,7 +201,13 @@
 
  // User profile photo bar
 .view-profile .wrapper-profile-section-container-one .wrapper-profile-section-one {
-  border-top-color: $link-color; // Link Color
+  border-top-color: $link-color;
+}
+
+// Customize the 'View Records' button in the profile page
+.view-profile .profile-self .wrapper-profile-field-account-privacy .wrapper-profile-records button {
+    @include btn-styles($btn-primary-bg, $btn-primary-color, $btn-primary-border-color, $btn-primary-hover-bg, $btn-primary-hover-color, $btn-primary-hover-border-color);
+    box-shadow: none;
 }
 
 .date-summary-container .date-summary-todays-date
@@ -125,30 +215,126 @@
   border-left: 3px solid $main-color;
 }
 
- // Login and registration fixes
-.login-register
-{
-  a:hover {
-    color: $main-color !important;
-  }
-  .form-field
-  {
-    .field-link {
-      color: $link-color;
-    }
-    .field-link:hover {
-      color: $main-color;
-    }
-  }
-}
-.login-register-content h2 {
-  color: #000000 !important;
-}
-.login-register .action-primary {
-  background: $main-color !important;
-  border: 0;
+.instructor-nav li.nav-item .btn-link:hover {
+    // Disable the underline in the instructor section sub nav menu.
+    text-decoration: none !important;
 }
 
- .fa-chevron-right:before {
-  color: $main-color !important;
+.wrapper-course-material .course-tabs .tab {
+    a.active, a:hover, a:focus {
+        @if variable-exists(course-nav-menu-color) {
+            // Customize the course nav bar color
+            color: $course-nav-menu-color !important;
+        }
+        @if variable-exists(course-nav-menu-border-bottom-color) {
+            // Customize the course nav bar border bottom color
+            border-bottom-color: $course-nav-menu-border-bottom-color;
+        }
+    }
+}
+
+.instructor-dashboard-content-2 .instructor-nav
+{
+  .nav-item .btn-link:hover,
+  .nav-item .btn-link:focus,
+  .nav-item .btn-link.active-section
+  {
+      @if variable-exists(course-nav-menu-color) {
+          // Customize the course nav bar color
+          color: $course-nav-menu-color;
+      }
+      @if variable-exists(course-nav-menu-border-bottom-color) {
+          // Customize the course nav bar border bottom color
+          border-bottom-color: $course-nav-menu-border-bottom-color;
+      }
+  }
+}
+
+// Account settings page
+.wrapper-account-settings .account-settings-container {
+    .account-settings-sections .section {
+        .account-settings-section-body .u-field {
+            .field {
+                select ~ .icon-caret-down::after {
+                    border-top:7px solid $link-color !important;
+                }
+                button.u-field-link:disabled {
+                    border: 1px solid #ddd;
+                    color: #ddd;
+                }
+            }
+        }
+    }
+    .wrapper-header .account-nav button {
+        &:focus, &:hover, &.active {
+            @if variable-exists(account-settings-nav-border-bottom-color) {
+                border-bottom-color: $account-settings-nav-border-bottom-color !important;
+            }
+        }
+    }
+}
+
+.account-settings-sections .section {
+    .account-settings-section-body .u-field {
+        .field .u-field-link {
+            &, &:hover {
+                color: $btn-primary-border-color;
+                border: 1px solid $btn-primary-border-color;
+            }
+            &:hover {
+                color: #ffff;
+                border: 1px solid $btn-primary-border-color;
+                background-color: $btn-primary-border-color;
+            }
+        }
+
+    }
+    .account-deletion-details .btn-outline-primary {
+        & {
+            color: #b20610 !important;
+            border: 1px solid #b20610 !important;
+        }
+        &:hover {
+            color: #fff !important;
+            border: 1px solid #b20610 !important;
+            background-color: #b20610 !important;
+        }
+    }
+}
+.courses-container .courses .course {
+  border-bottom: 3px solid violet !important;
+}
+
+.sequence .sequence-nav-button {
+  &.button-previous:not([disabled="disabled"]) .fa.fa-chevron-prev,
+  &.button-next:not([disabled="disabled"]) .fa.fa-chevron-next {
+    color: violet !important;
+  }
+}
+/* Expand the course info page hero section to fit the image/video size */
+.course-info header.course-profile {
+  height: auto !important;
+}
+
+
+
+
+.wrapper-footer {
+    background-color: $footer-bg;
+    @if variable-exists(customize-footer-border) {
+        // Customize the footer border
+        border-top: $footer-border-top-width solid $footer-border-bottom-color;
+        border-bottom: $footer-border-bottom-width solid $footer-border-bottom-color;
+    }
+
+}
+
+.wrapper-footer footer#footer-openedx .colophon .nav-colophon li a {
+    // Customize the footer link color
+    color: $link-color;
+}
+
+.wrapper-footer footer#footer-openedx .copyright {
+    // Customize the footer text color.
+    color: $footer-color;
 }

@@ -2,8 +2,28 @@
 
 // Set default colors in case they aren't set on the parent file
 $main-color: #ff8000 !default;
-$link-color: #f9ff60 !default;
+$link-color: #126f9a !default;
 $header-bg: #ffffff !default;
 $header-font-color: #000000 !default;
 $footer-bg: #ffffff !default;
-$footer-font-color: #000000 !default;
+$footer-color: #000000 !default;
+
+$btn-primary-bg: theme-colors("primary") !default;
+$btn-primary-color: theme-colors("inverse") !default;
+$btn-primary-border-color: theme-colors("primary") !default;
+$btn-primary-hover-bg: theme-colors("primary") !default;
+$btn-primary-hover-color: theme-colors("inverse") !default;
+$btn-primary-hover-border-color: theme-colors("primary") !default;
+
+$btn-secondary-bg: theme-colors("primary") !default;
+$btn-secondary-color: theme-colors("inverse") !default;
+$btn-secondary-border-color: theme-colors("primary") !default;
+$btn-secondary-hover-bg: theme-colors("primary") !default;
+$btn-secondary-hover-color: theme-colors("inverse") !default;
+$btn-secondary-hover-border-color: theme-colors("primary") !default;
+
+$home-page-hero-title-color: blue;
+$home-page-hero-subtitle-color: red;
+
+$accent-color: $link-color !default;
+$login-register-header-color: $link-color !default;
