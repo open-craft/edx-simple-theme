@@ -97,9 +97,11 @@ a:not(.btn), a:not(.btn):hover, a:not(.btn):focus, a:visited:not(.btn):hover, a:
     }
 }
 
-.login-register-content h2 {
-    // Customize the color of the login/registration page header
-    color: $login-register-header-color;
+@if variable-exists(login-register-header-color) {
+    .login-register-content h2 {
+        // Customize the color of the login/registration page header
+        color: $login-register-header-color;
+    }
 }
 
 .courses-container .courses .course {
@@ -174,12 +176,15 @@ a:not(.btn), a:not(.btn):hover, a:not(.btn):focus, a:visited:not(.btn):hover, a:
 
   .course-tabs .nav-item.active .nav-link,
   .course-tabs .nav-item:hover .nav-link {
-      color: $course-nav-menu-color !important;
+      @if variable-exists(course-nav-menu-color) {
+          color: $course-nav-menu-color !important;
+      }
+      @if variable-exists(course-nav-menu-border-bottom-color) {
       // Customize the border bottom highlight color of the course navigation menu - bootstrap
-      border-bottom-color: $course-nav-menu-border-bottom-color !important;
+          border-bottom-color: $course-nav-menu-border-bottom-color !important;
+      }
   }
 }
-// BUGBUG: Test
 .wiki-wrapper section.wiki
 {
   .nav-tabs li.active a,
@@ -190,7 +195,6 @@ a:not(.btn), a:not(.btn):hover, a:not(.btn):focus, a:visited:not(.btn):hover, a:
   }
 }
 
-// Fix instructor page
 .instructor-dashboard-content-2 .instructor-nav
 {
   .nav-item .btn-link
@@ -336,40 +340,14 @@ a:not(.btn), a:not(.btn):hover, a:not(.btn):focus, a:visited:not(.btn):hover, a:
         border-bottom: $footer-border-bottom-width solid $footer-border-bottom-color;
     }
 
-  p.copyright,
-  footer .copyright,
-  footer#footer-openedx p.copyright
-  {
-    color: $footer-color !important;  // Footer text color
+  @if variable-exists(footer-color) {
+      p.copyright, footer .copyright, footer#footer-openedx p.copyright {
+          color:$footer-color !important;  // Footer text color
+      }
   }
-
   footer .site-nav .nav-item .nav-link,
   footer#footer-openedx .colophon .nav-colophon li a,
   {
     color: $link-color !important; // Link color
   }
 }
-
-
-
-// .wrapper-footer {
-//     // Customize the footer background color
-//     background-color: $footer-bg;
-//     background: $footer-bg
-//     @if variable-exists(customize-footer-border) {
-//         // Customize the footer border
-//         border-top: $footer-border-top-width solid $footer-border-bottom-color;
-//         border-bottom: $footer-border-bottom-width solid $footer-border-bottom-color;
-//     }
-
-// }
-
-// .wrapper-footer footer#footer-openedx .colophon .nav-colophon li a {
-//     // Customize the footer link color
-//     color: $link-color;
-// }
-
-// .wrapper-footer footer#footer-openedx .copyright {
-//     // Customize the footer text color.
-//     color: $footer-color;
-// }
