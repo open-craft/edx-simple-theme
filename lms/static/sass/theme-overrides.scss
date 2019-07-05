@@ -27,21 +27,31 @@ a:not(.btn), a:not(.btn):hover, a:not(.btn):focus, a:visited:not(.btn):hover, a:
         border-bottom: $header-border-bottom-width solid $header-border-bottom-color;
     }
     // Set the color of text in the header - course about page.
-    span {
-        color: $link-color;
+    @if variable-exists(main-nav-color) {
+        span {
+            color: $main-nav-color;
+        }
     }
     .nav-links {
-        @if variable-exists(main-nav-color) {
+        @if variable-exists(main-nav-link-color) {
             // Set the color of the links in the dashboard
-            .main .nav-tab a, .secondary .nav-item a {
-                color: $main-nav-color !important;
+            .main .nav-tab a, .secondary .nav-item a, .secondary .nav-item a span, .toggle-user-dropdown span {
+                color: $main-nav-link-color !important;
             }
         }
         @if variable-exists(main-nav-item-border-bottom-color) {
             // Set the bottom border color of the links in the dashboard like 'Courses', 'Programs', 'Profile' etc.
             .main .nav-tab a {
-                &.active, &:hover {
+                &.active {
                     border-bottom-color: $main-nav-item-border-bottom-color !important;
+                    border-bottom-style: solid !important;
+                }
+            }
+        }
+        @if variable-exists(main-nav-item-hover-border-bottom-color) {
+            .main .nav-tab a {
+                &:not(.active):hover {
+                    border-bottom-color: $main-nav-item-hover-border-bottom-color !important;
                     border-bottom-style: solid !important;
                 }
             }
@@ -80,17 +90,10 @@ a:not(.btn), a:not(.btn):hover, a:not(.btn):focus, a:visited:not(.btn):hover, a:
         color: $link-color;
     }
     .action-primary {
-        @if variable-exists(customize-sign-in-btn) {
-            // Customize the sign-in button on the login page
-            &.login-button {
-                @include btn-styles($btn-sign-in-bg, $btn-sign-in-color, $btn-sign-in-border-color, $btn-sign-in-hover-bg, $btn-sign-in-hover-color, $btn-sign-in-hover-border-color);
-                box-shadow: none;
-            }
-        }
-        @if variable-exists(customize-register-btn) {
-            // Customize the register button on the registration page
-            &.register-button {
-                @include btn-styles($btn-register-bg, $btn-register-color, $btn-register-border-color, $btn-register-hover-bg, $btn-register-hover-color, $btn-register-hover-border-color);
+        @if variable-exists(customize-logistration-action-btn) {
+            // Customize the sign-in/registration button on the login page
+            &.login-button, &.register-button {
+                @include btn-styles($btn-logistration-bg, $btn-logistration-color, $btn-logistration-border-color, $btn-logistration-hover-bg, $btn-logistration-hover-color, $btn-logistration-hover-border-color);
                 box-shadow: none;
             }
         }
@@ -346,8 +349,11 @@ a:not(.btn), a:not(.btn):hover, a:not(.btn):focus, a:visited:not(.btn):hover, a:
       }
   }
   footer .site-nav .nav-item .nav-link,
+  footer .legal-nav .nav-item .nav-link,
   footer#footer-openedx .colophon .nav-colophon li a,
+  footer#footer-openedx ul a,
+
   {
-    color: $link-color !important; // Link color
+    color: $footer-link-color !important; // Link color
   }
 }

@@ -7,6 +7,7 @@ $header-bg: #ffffff !default;
 $header-font-color: #000000 !default;
 $footer-bg: #ffffff !default;
 $footer-color: #000000 !default;
+$footer-link-color: $link-color !default;
 
 $btn-primary-bg: theme-colors("primary") !default;
 $btn-primary-color: theme-colors("inverse") !default;
