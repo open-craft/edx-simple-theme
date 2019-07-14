@@ -348,12 +348,12 @@ a:not(.btn), a:not(.btn):hover, a:not(.btn):focus, a:visited:not(.btn):hover, a:
           color:$footer-color !important;  // Footer text color
       }
   }
-  footer .site-nav .nav-item .nav-link,
-  footer .legal-nav .nav-item .nav-link,
-  footer#footer-openedx .colophon .nav-colophon li a,
-  footer#footer-openedx ul a,
-
-  {
-    color: $footer-link-color !important; // Link color
+  @if variable-exists(footer-link-color) {
+    footer .site-nav .nav-item .nav-link,
+    footer .legal-nav .nav-item .nav-link,
+    footer#footer-openedx .colophon .nav-colophon li a,
+    footer#footer-openedx ul a {
+      color: $footer-link-color !important; // Link color
+    }
   }
 }
