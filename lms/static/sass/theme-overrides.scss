@@ -37,8 +37,12 @@
     .nav-item a {
       color: $link-color;
     }
-    .dropdown-user-menu .dropdown-item a {
-      color: $link-color;
+    .dropdown-user-menu {
+      background-color: $header-bg;
+
+      .dropdown-item a {
+        color: $link-color;
+      }
     }
   }
 }
