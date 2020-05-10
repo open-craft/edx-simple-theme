@@ -357,3 +357,19 @@ a:not(.btn), a:not(.btn):hover, a:not(.btn):focus, a:visited:not(.btn):hover, a:
     }
   }
 }
+
+
+// Course Bookmarks page
+.course-bookmarks {
+  .bookmarks-results-list {
+    .bookmarks-results-list-item:hover {
+      border-color: $link-color !important;
+      color: $link-color !important;
+      text-decoration: unset;
+    }
+    .bookmarks-results-list-item::before,
+    .bookmarks-results-list-item:hover .list-item-breadcrumbtrail {
+      color: $link-color !important;
+    }
+  }
+} 
