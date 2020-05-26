@@ -63,7 +63,7 @@ a:not(.btn), a:not(.btn):hover, a:not(.btn):focus, a:visited:not(.btn):hover, a:
             }
         }
     }
-    .main .nav-tab a, .secondary .nav-item a, .secondary .nav-item .toggle-user-dropdown {
+    .main .nav-tab a, .secondary .nav-item a:not(.btn), .secondary .nav-item .toggle-user-dropdown {
         // Set the color of the dropdown arrow of the user dropdowm menu
         color: $link-color !important;
     }
@@ -372,4 +372,4 @@ a:not(.btn), a:not(.btn):hover, a:not(.btn):focus, a:visited:not(.btn):hover, a:
       color: $link-color !important;
     }
   }
-} 
+}
