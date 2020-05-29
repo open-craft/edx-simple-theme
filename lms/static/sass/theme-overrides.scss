@@ -13,8 +13,13 @@
 }
 
 // Set the default color of links
-a:not(.btn), a:not(.btn):hover, a:not(.btn):focus, a:visited:not(.btn):hover, a:visited:not(.btn):focus, .breadcrumbs .nav-item a {
+a:not(.btn), a:not(.btn):hover, a:not(.btn):focus, a:visited:not(.btn):hover, a:visited:not(.btn):focus {
     color: $link-color;
+}
+
+// The breadcrumb links in the course content pages
+.breadcrumbs .nav-item a {
+    color: $link-color !important;
 }
 
 .global-header {
@@ -92,7 +97,7 @@ a:not(.btn), a:not(.btn):hover, a:not(.btn):focus, a:visited:not(.btn):hover, a:
     .action-primary {
         @if variable-exists(customize-logistration-action-btn) {
             // Customize the sign-in/registration button on the login page
-            &.login-button, &.register-button {
+            &.login-button, &.register-button, & {
                 @include btn-styles($btn-logistration-bg, $btn-logistration-color, $btn-logistration-border-color, $btn-logistration-hover-bg, $btn-logistration-hover-color, $btn-logistration-hover-border-color);
                 box-shadow: none;
             }
@@ -186,6 +191,9 @@ a:not(.btn), a:not(.btn):hover, a:not(.btn):focus, a:visited:not(.btn):hover, a:
       // Customize the border bottom highlight color of the course navigation menu - bootstrap
           border-bottom-color: $course-nav-menu-border-bottom-color !important;
       }
+  }
+  button.accordion-trigger .fa {
+      color: $link-color;
   }
 }
 .wiki-wrapper section.wiki
@@ -374,6 +382,7 @@ a:not(.btn), a:not(.btn):hover, a:not(.btn):focus, a:visited:not(.btn):hover, a:
   }
 }
 
-.btn-outline-primary {
+// For the discussion home page button and the embedded discussion block
+.btn-outline-primary, .discussion-module .discussion-show.btn {
     @include btn-styles($btn-secondary-bg, $btn-secondary-color, $btn-secondary-border-color, $btn-secondary-hover-bg, $btn-secondary-hover-color, $btn-secondary-hover-border-color);
 }
