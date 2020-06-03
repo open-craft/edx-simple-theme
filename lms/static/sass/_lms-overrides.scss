@@ -1,8 +1,21 @@
 @import 'common-variables';
 
 .global-header .hamburger-menu .line {
-    background-color: #545454;
+  background-color: #545454;
 }
 .view-profile .profile-self .wrapper-profile-field-account-privacy .wrapper-profile-records button {
-    font-weight: 500;
+  font-weight: 500;
+}
+
+.mobile-nav-link .btn {
+  &, &:visited {
+    color: #545454;
+  }
+}
+
+.home > header .title > .heading-group {
+  width: 100%;
+  h1 {
+    text-align: center;
+  }
 }
