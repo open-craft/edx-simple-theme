@@ -15,7 +15,7 @@
 .mobile-menu {
   @if variable-exists(customize-header-border) {
     // Set the top border of the mobile menu
-    border-top: $header-border-top-width solid $header-border-top-color;
+    border-top: 1px solid $header-border-top-color;
   }
 }
 
