@@ -18,7 +18,11 @@
             <ul class="navbar-nav">
               % for item_num, link in enumerate(footer['navigation_links'], start=1):
                 <li class="nav-item">
-                  <a class="nav-link" href="${link['url']}">${link['title']}</a>
+                  % if link['title'] == 'Help Center':
+                    <a class="nav-link" href="${link['url']}">Contact</a>
+                  % else:
+                    <a class="nav-link" href="${link['url']}">${link['title']}</a>
+                  % endif
                 </li>
               % endfor
                 <li class="nav-item">
@@ -88,9 +92,13 @@
         <nav class="nav-colophon" aria-label="${_('About')}">
           <ol>
               % for item_num, link in enumerate(footer['navigation_links'], start=1):
-              <li class="nav-colophon-0${item_num}">
-                <a id="${link['name']}" href="${link['url']}">${link['title']}</a>
-              </li>
+                <li class="nav-colophon-0${item_num}">
+                  % if link['title'] == 'Help Center':
+                    <a id="${link['name']}"  href="${link['url']}">Contact</a>
+                  % else:
+                    <a id="${link['name']}" href="${link['url']}">${link['title']}</a>>
+                  % endif
+                </li>
               % endfor
               <li class="nav-colophon-99">
                 <a id="help" href="http://meristem.anu.edu.au/index.php/courses/help/">Help</a>
