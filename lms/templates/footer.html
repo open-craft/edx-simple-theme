@@ -94,9 +94,9 @@
               % for item_num, link in enumerate(footer['navigation_links'], start=1):
                 <li class="nav-colophon-0${item_num}">
                   % if link['title'] == 'Help Center':
-                    <a id="${link['name']}"  href="${link['url']}">Contact</a>
+                    <a id="${link['name']}" href="${link['url']}">Contact</a>
                   % else:
-                    <a id="${link['name']}" href="${link['url']}">${link['title']}</a>>
+                    <a id="${link['name']}" href="${link['url']}">${link['title']}</a>
                   % endif
                 </li>
               % endfor
