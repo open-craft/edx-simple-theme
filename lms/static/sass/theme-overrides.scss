@@ -40,7 +40,7 @@ a:not(.btn), a:not(.btn):hover, a:not(.btn):focus, a:visited:not(.btn):hover, a:
   .nav-links {
     @if variable-exists(main-nav-link-color) {
       // Set the color of the links in the dashboard
-      .main .nav-tab a, .secondary .nav-item a, .secondary .nav-item a span, .toggle-user-dropdown span {
+      .main .nav-tab a, .secondary .nav-item a:not(.help-link), .secondary .nav-item a span, .toggle-user-dropdown span {
         color: $main-nav-link-color !important;
       }
     }
