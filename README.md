@@ -49,7 +49,7 @@ Below is the list of available SASS variables for customization. Check `lms/stat
   - $btn-register-hover-bg
   - $btn-register-hover-color
   - $btn-register-hover-border-color
-* $customize-logistration-action-btn. If defined, requires all the following variables to be set.
+* $customize-logistration-btn. If defined, requires all the following variables to be set.
   - $btn-logistration-bg
   - $btn-logistration-color
   - $btn-logistration-border-color
