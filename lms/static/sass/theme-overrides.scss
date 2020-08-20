@@ -122,6 +122,13 @@ a:not(.btn), a:not(.btn):hover, a:not(.btn):focus, a:visited:not(.btn):hover, a:
     background-color: $btn-secondary-bg;
     color: $btn-secondary-color;
   }
+  border-bottom-color: $link-color !important;
+
+  .course-info {
+    .course-organization, .course-code, .course-date {
+      color: $main-color !important;
+    }
+  }
 }
 
 .home>header .title>.heading-group {
@@ -323,9 +330,6 @@ a:not(.btn), a:not(.btn):hover, a:not(.btn):focus, a:visited:not(.btn):hover, a:
       background-color: #b20610 !important;
     }
   }
-}
-.courses-container .courses .course {
-  border-bottom-color: $link-color !important;
 }
 
 .sequence .sequence-nav-button {
