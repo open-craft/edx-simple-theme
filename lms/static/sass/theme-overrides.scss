@@ -95,7 +95,7 @@ a:not(.btn), a:not(.btn):hover, a:not(.btn):focus, a:visited:not(.btn):hover, a:
     color: $link-color;
   }
   .action-primary {
-    @if variable-exists(customize-logistration-btn) {
+    @if variable-exists(customize-logistration-action-btn) {
       // Customize the sign-in/registration button on the login page
       &.login-button, &.register-button, & {
         @include btn-styles($btn-logistration-bg, $btn-logistration-color, $btn-logistration-border-color, $btn-logistration-hover-bg, $btn-logistration-hover-color, $btn-logistration-hover-border-color);
