@@ -1,21 +1,6 @@
 // Import theme colors
 @import 'theme-colors';
-
-@mixin btn-styles($bg, $color, $border-color, $hover-bg, $hover-color, $hover-border-color) {
-  background: $bg !important;
-  color: $color !important;
-  border: 1px solid $border-color !important;
-  &:hover {
-    background-color: $hover-bg !important;
-    color: $hover-color !important;
-    border-color: $hover-border-color !important;
-  }
-}
-
-// Set the default color of links
-a:not(.btn), a:not(.btn):hover, a:not(.btn):focus, a:visited:not(.btn):hover, a:visited:not(.btn):focus, a:not(.help-link) {
-  color: $link-color;
-}
+@import '../../../common/overrides';
 
 // The breadcrumb links in the course content pages
 .breadcrumbs .nav-item a {
@@ -37,13 +22,18 @@ a:not(.btn), a:not(.btn):hover, a:not(.btn):focus, a:visited:not(.btn):hover, a:
       color: $main-nav-color;
     }
   }
+
   .nav-links {
     @if variable-exists(main-nav-link-color) {
       // Set the color of the links in the dashboard
-      .main .nav-tab a, .secondary .nav-item a, .secondary .nav-item a span, .toggle-user-dropdown span {
+      .main .nav-tab a,
+      .secondary .nav-item a,
+      .secondary .nav-item a span,
+      .toggle-user-dropdown span {
         color: $main-nav-link-color !important;
       }
     }
+
     @if variable-exists(main-nav-item-border-bottom-color) {
       // Set the bottom border color of the links in the dashboard like 'Courses', 'Programs', 'Profile' etc.
       .main .nav-tab a {
@@ -53,6 +43,7 @@ a:not(.btn), a:not(.btn):hover, a:not(.btn):focus, a:visited:not(.btn):hover, a:
         }
       }
     }
+
     @if variable-exists(main-nav-item-hover-border-bottom-color) {
       .main .nav-tab a {
         &:not(.active):hover {
@@ -61,6 +52,7 @@ a:not(.btn), a:not(.btn):hover, a:not(.btn):focus, a:visited:not(.btn):hover, a:
         }
       }
     }
+
     @if variable-exists(user-dropdown-color) {
       // Customize the color of the links in the user dropdown menu
       .secondary .dropdown-user-menu .dropdown-item a {
@@ -68,10 +60,14 @@ a:not(.btn), a:not(.btn):hover, a:not(.btn):focus, a:visited:not(.btn):hover, a:
       }
     }
   }
-  .main .nav-tab a, .secondary .nav-item a:not(.btn):not(.help-link), .secondary .nav-item .toggle-user-dropdown {
+
+  .main .nav-tab a,
+  .secondary .nav-item a:not(.btn):not(.help-link),
+  .secondary .nav-item .toggle-user-dropdown {
     // Set the color of the dropdown arrow of the user dropdowm menu
     color: $link-color !important;
   }
+
   .secondary {
     @if variable-exists(customize-sign-in-btn) {
       // Customize the sign-in button on the home page header
@@ -79,6 +75,7 @@ a:not(.btn), a:not(.btn):hover, a:not(.btn):focus, a:visited:not(.btn):hover, a:
         @include btn-styles($btn-sign-in-bg, $btn-sign-in-color, $btn-sign-in-border-color, $btn-sign-in-hover-bg, $btn-sign-in-hover-color, $btn-sign-in-hover-border-color);
       }
     }
+
     @if variable-exists(customize-register-btn) {
       // Customize the register button on the home page header
       a.register-btn {
@@ -86,7 +83,6 @@ a:not(.btn), a:not(.btn):hover, a:not(.btn):focus, a:visited:not(.btn):hover, a:
       }
     }
   }
-
 }
 
 .login-register {
@@ -94,11 +90,15 @@ a:not(.btn), a:not(.btn):hover, a:not(.btn):focus, a:visited:not(.btn):hover, a:
     // Customize the color of the links in the login/registration form.
     color: $link-color;
   }
+
   .action-primary {
     @if variable-exists(customize-logistration-action-btn) {
       // Customize the sign-in/registration button on the login page
-      &.login-button, &.register-button, & {
+      &.login-button,
+      &.register-button,
+      & {
         @include btn-styles($btn-logistration-bg, $btn-logistration-color, $btn-logistration-border-color, $btn-logistration-hover-bg, $btn-logistration-hover-color, $btn-logistration-hover-border-color);
+
         box-shadow: none;
       }
     }
@@ -117,27 +117,32 @@ a:not(.btn), a:not(.btn):hover, a:not(.btn):focus, a:visited:not(.btn):hover, a:
     // Customize the bottom border color on hover for the course card in the home page
     border-bottom-color: $accent-color;
   }
+
   .course-image .cover-image .learn-more {
     // Set the color of the 'Learn more' button in the course card in the home page
     background-color: $btn-secondary-bg;
     color: $btn-secondary-color;
   }
+
   border-bottom-color: $link-color !important;
 
   .course-info {
-    .course-organization, .course-code, .course-date {
+    .course-organization,
+    .course-code,
+    .course-date {
       color: $main-color !important;
     }
   }
 }
 
-.home>header .title>.heading-group {
+.home > header .title > .heading-group {
   @if variable-exists(home-page-hero-title-color) {
     h1 {
       // Customize the home page hero title color
       color: $home-page-hero-title-color;
     }
   }
+
   @if variable-exists(home-page-hero-subtitle-color) {
     p {
       // Customize the home page hero subtitle color
@@ -147,11 +152,16 @@ a:not(.btn), a:not(.btn):hover, a:not(.btn):focus, a:visited:not(.btn):hover, a:
 }
 
 .course-info header.course-profile .intro-inner-wrapper .intro .main-cta {
-  a.register, strong {
-    &, &:hover, &:hover:not(:disabled) {
+  a.register,
+  strong {
+    &,
+    &:hover,
+    &:hover:not(:disabled) {
       // Customize the action buttons on the course about page
       background-image: none;
+
       @include btn-styles($btn-primary-bg, $btn-primary-color, $btn-primary-border-color, $btn-primary-hover-bg, $btn-primary-hover-color, $btn-primary-hover-border-color);
+
       box-shadow: none;
     }
   }
@@ -169,23 +179,15 @@ a:not(.btn), a:not(.btn):hover, a:not(.btn):focus, a:visited:not(.btn):hover, a:
   }
 }
 
-.btn-primary {
-  // Set the styles for the primary button
-  @include btn-styles($btn-primary-bg, $btn-primary-color, $btn-primary-border-color, $btn-primary-hover-bg, $btn-primary-hover-color, $btn-primary-hover-border-color);
-
-}
-
 .content-wrapper {
   // Customize the colors of the course navigation menu - bootstrap
   h4 a:hover,
-  h3 a:hover
-  {
+  h3 a:hover {
     color: $main-color !important; // Main color
   }
 
   .course-tabs .tab a,
-  .course-tabs .nav-item .nav-link
-  {
+  .course-tabs .nav-item .nav-link {
     color: black !important;
   }
 
@@ -194,29 +196,28 @@ a:not(.btn), a:not(.btn):hover, a:not(.btn):focus, a:visited:not(.btn):hover, a:
     @if variable-exists(course-nav-menu-color) {
       color: $course-nav-menu-color !important;
     }
+
     @if variable-exists(course-nav-menu-border-bottom-color) {
       // Customize the border bottom highlight color of the course navigation menu - bootstrap
       border-bottom-color: $course-nav-menu-border-bottom-color !important;
     }
   }
+
   button.accordion-trigger .fa {
     color: $link-color;
   }
 }
-.wiki-wrapper section.wiki
-{
+
+.wiki-wrapper section.wiki {
   .nav-tabs li.active a,
   .nav-tabs a:hover,
-  .article-functions .see-children a:hover
-  {
+  .article-functions .see-children a:hover {
     color: $main-color; // Main color
   }
 }
 
-.instructor-dashboard-content-2 .instructor-nav
-{
-  .nav-item .btn-link
-  {
+.instructor-dashboard-content-2 .instructor-nav {
+  .nav-item .btn-link {
     color: black;
   }
 }
@@ -229,11 +230,11 @@ a:not(.btn), a:not(.btn):hover, a:not(.btn):focus, a:visited:not(.btn):hover, a:
 // Customize the 'View Records' button in the profile page
 .view-profile .profile-self .wrapper-profile-field-account-privacy .wrapper-profile-records button {
   @include btn-styles($btn-primary-bg, $btn-primary-color, $btn-primary-border-color, $btn-primary-hover-bg, $btn-primary-hover-color, $btn-primary-hover-border-color);
+
   box-shadow: none;
 }
 
-.date-summary-container .date-summary-todays-date
-{
+.date-summary-container .date-summary-todays-date {
   border-left: 3px solid $main-color;
 }
 
@@ -243,11 +244,14 @@ a:not(.btn), a:not(.btn):hover, a:not(.btn):focus, a:visited:not(.btn):hover, a:
 }
 
 .wrapper-course-material .course-tabs .tab {
-  a.active, a:hover, a:focus {
+  a.active,
+  a:hover,
+  a:focus {
     @if variable-exists(course-nav-menu-color) {
       // Customize the course nav bar color
       color: $course-nav-menu-color !important;
     }
+
     @if variable-exists(course-nav-menu-border-bottom-color) {
       // Customize the course nav bar border bottom color
       border-bottom-color: $course-nav-menu-border-bottom-color;
@@ -255,16 +259,15 @@ a:not(.btn), a:not(.btn):hover, a:not(.btn):focus, a:visited:not(.btn):hover, a:
   }
 }
 
-.instructor-dashboard-content-2 .instructor-nav
-{
+.instructor-dashboard-content-2 .instructor-nav {
   .nav-item .btn-link:hover,
   .nav-item .btn-link:focus,
-  .nav-item .btn-link.active-section
-  {
+  .nav-item .btn-link.active-section {
     @if variable-exists(course-nav-menu-color) {
       // Customize the course nav bar color
       color: $course-nav-menu-color;
     }
+
     @if variable-exists(course-nav-menu-border-bottom-color) {
       // Customize the course nav bar border bottom color
       border-bottom-color: $course-nav-menu-border-bottom-color;
@@ -281,6 +284,7 @@ a:not(.btn), a:not(.btn):hover, a:not(.btn):focus, a:visited:not(.btn):hover, a:
           // Customize the color for the dropdown arrow
           border-top-color: $link-color !important;
         }
+
         button.u-field-link:disabled {
           // Customize the colors for the disabled button - for example the password reset button
           border-color: #ddd;
@@ -289,12 +293,16 @@ a:not(.btn), a:not(.btn):hover, a:not(.btn):focus, a:visited:not(.btn):hover, a:
       }
     }
   }
+
   .wrapper-header .account-nav button {
-    &:focus, &:hover, &.active {
+    &:focus,
+    &:hover,
+    &.active {
       @if variable-exists(account-settings-nav-border-bottom-color) {
         // Customize the account settings nav menu border bottom color
         border-bottom-color: $account-settings-nav-border-bottom-color !important;
       }
+
       @if variable-exists(account-settings-nav-color) {
         // Customize the account settings nav menu color
         color: $account-settings-nav-color !important;
@@ -306,24 +314,27 @@ a:not(.btn), a:not(.btn):hover, a:not(.btn):focus, a:visited:not(.btn):hover, a:
 .account-settings-sections .section {
   .account-settings-section-body .u-field {
     .field .u-field-link {
-      &, &:hover {
+      &,
+      &:hover {
         color: $btn-primary-border-color;
         border-color: $btn-primary-border-color;
       }
+
       &:hover {
         color: #ffff;
         border-color: $btn-primary-border-color;
         background-color: $btn-primary-border-color;
       }
     }
-
   }
+
   .account-deletion-details .btn-outline-primary {
     // Customize the account deletion button colors
     & {
       color: #b20610 !important;
       border-color: #b20610 !important;
     }
+
     &:hover {
       color: #fff !important;
       border-color: #b20610 !important;
@@ -344,11 +355,11 @@ a:not(.btn), a:not(.btn):hover, a:not(.btn):focus, a:visited:not(.btn):hover, a:
   height: auto !important;
 }
 
-
 .wrapper-footer {
   background: $footer-bg; // Footer color
   background-color: $footer-bg !important; // Footer color
   box-shadow: none !important;
+
   @if variable-exists(customize-footer-border) {
     // Customize the footer border
     border-top: $footer-border-top-width solid $footer-border-bottom-color !important;
@@ -356,10 +367,13 @@ a:not(.btn), a:not(.btn):hover, a:not(.btn):focus, a:visited:not(.btn):hover, a:
   }
 
   @if variable-exists(footer-color) {
-    p.copyright, footer .copyright, footer#footer-openedx p.copyright {
-      color:$footer-color !important;  // Footer text color
+    p.copyright,
+    footer .copyright,
+    footer#footer-openedx p.copyright {
+      color: $footer-color !important;  // Footer text color
     }
   }
+
   @if variable-exists(footer-link-color) {
     footer .site-nav .nav-item .nav-link,
     footer .legal-nav .nav-item .nav-link,
@@ -370,7 +384,6 @@ a:not(.btn), a:not(.btn):hover, a:not(.btn):focus, a:visited:not(.btn):hover, a:
   }
 }
 
-
 // Course Bookmarks page
 .course-bookmarks {
   .bookmarks-results-list {
@@ -379,6 +392,7 @@ a:not(.btn), a:not(.btn):hover, a:not(.btn):focus, a:visited:not(.btn):hover, a:
       color: $link-color !important;
       text-decoration: unset;
     }
+
     .bookmarks-results-list-item::before,
     .bookmarks-results-list-item:hover .list-item-breadcrumbtrail {
       color: $link-color !important;
@@ -387,6 +401,7 @@ a:not(.btn), a:not(.btn):hover, a:not(.btn):focus, a:visited:not(.btn):hover, a:
 }
 
 // For the discussion home page button and the embedded discussion block
-.btn-outline-primary, .discussion-module .discussion-show.btn {
+.btn-outline-primary,
+.discussion-module .discussion-show.btn {
   @include btn-styles($btn-secondary-bg, $btn-secondary-color, $btn-secondary-border-color, $btn-secondary-hover-bg, $btn-secondary-hover-color, $btn-secondary-hover-border-color);
 }
