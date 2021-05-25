@@ -1,0 +1,26 @@
+@mixin btn-styles($bg, $color, $border-color, $hover-bg, $hover-color, $hover-border-color) {
+  background: $bg !important;
+  color: $color !important;
+  border: 1px solid $border-color !important;
+
+  &:hover {
+    background-color: $hover-bg !important;
+    color: $hover-color !important;
+    border-color: $hover-border-color !important;
+  }
+}
+
+// Set the default color of links
+a:not(.btn),
+a:not(.btn):hover,
+a:not(.btn):focus,
+a:visited:not(.btn):hover,
+a:visited:not(.btn):focus,
+a:not(.help-link) {
+  color: $link-color;
+}
+
+.btn-primary {
+  // Set the styles for the primary button
+  @include btn-styles($btn-primary-bg, $btn-primary-color, $btn-primary-border-color, $btn-primary-hover-bg, $btn-primary-hover-color, $btn-primary-hover-border-color);
+}

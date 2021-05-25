@@ -89,3 +89,25 @@ Of these variables,
 * $btn-secondary-hover-border-color
 
 are required. All the other variables are optional.
+
+To use on the devstack, you need to create `lms/static/sass/common-variables.scss` with the above
+variables, and the file `lms/static/sass/_lms-overrides.scss` that imports these variables using
+`@import 'common-variables';` and contains any other edx-platform-specific scss overrides.
+
+You can then install and use it as a regular theme. Run `make dev.static.lms` to make
+sure that the latest changes are picked up.
+
+# [IN DEVELOPMENT] Use as branding package for MFEs
+This can also be used as a [branding package for MFEs](
+  https://open-edx-proposals.readthedocs.io/en/latest/oep-0048-brand-customization.html).
+To do so install this package as an override to `@edx/brand`. Any variables specified in
+`lms/static/sass/common-variables.scss` will be picked up by the MFE as well.
+
+If you're using `edx/configuration` for deployment, you can also have this theme applied to MFEs by
+adding it as an npm override from the location where it's already installed. You can do so by adding
+the following ansible config:
+
+```yaml
+MFE_DEPLOY_NPM_OVERRIDES:
+  - "@edx/brand@file:/edx/var/edxapp/themes/simple-theme/"
+```
