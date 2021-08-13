@@ -393,6 +393,4 @@ temp/
 
 # End of https://www.toptal.com/developers/gitignore/api/sass,node,django,intellij
 
-lms/static/sass/_lms-overrides.scss
-lms/static/sass/common-variables.scss
 lms/static/css/

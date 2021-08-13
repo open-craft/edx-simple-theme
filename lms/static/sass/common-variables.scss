@@ -1,0 +1,3 @@
+{% for item in SIMPLETHEME_SASS_OVERRIDES %}
+${{ item.variable }}: {{ item.value }};
+{% endfor %}
