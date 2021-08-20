@@ -120,3 +120,24 @@ footer.footer {
     }
   }
 }
+
+// Set color for course nav bar in Learning MFE
+.course-tabs-navigation a.nav-link {
+  @if variable-exists(course-nav-menu-color) {
+    &:focus,
+    &:hover,
+    &.active {
+      color: $course-nav-menu-color;
+    }
+  }
+
+  @if variable-exists(course-nav-menu-border-bottom-color) {
+    &.active {
+      border-bottom-color: $course-nav-menu-border-bottom-color;
+    }
+  }
+}
+
+.btn-outline-secondary {
+  @include btn-styles($btn-secondary-bg, $btn-secondary-color, $btn-secondary-border-color, $btn-secondary-hover-bg, $btn-secondary-hover-color, $btn-secondary-hover-border-color);
+}
