@@ -401,7 +401,6 @@
 }
 
 // For the discussion home page button and the embedded discussion block
-.btn-outline-primary,
 .discussion-module .discussion-show.btn {
   @include btn-styles($btn-secondary-bg, $btn-secondary-color, $btn-secondary-border-color, $btn-secondary-hover-bg, $btn-secondary-hover-color, $btn-secondary-hover-border-color);
 }
