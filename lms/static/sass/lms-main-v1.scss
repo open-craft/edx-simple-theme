@@ -1,2 +1,32 @@
+@import 'theme-colors';
 @import 'lms/static/sass/lms-main-v1';
 @import 'theme-overrides';
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&family=Work+Sans&display=swap');
+$font-family-sans-serif:      "Work Sans", "Helvetica Neue", Arial, sans-serif;
+
+
+
+
+
+html {
+  height: 100%;
+  color: $primary;
+}
+
+body {
+  border: 19px solid $body-border-color;
+  background-color: $body-bg;
+}
+
+.window-wrap {
+  background-color: $body-bg;
+}
+
+.wrapper-footer {
+  background-color: $footer-bg;
+}
+
+.global-header {
+  background-color: $header-bg;
+  border-bottom: none;
+}
