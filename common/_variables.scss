@@ -1,4 +1,7 @@
 // Set default colors in case they aren't set on the parent file
+
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,400;0,600;1,400;1,700&display=swap');
+$font-family-sans-serif:      "Work Sans", "Helvetica Neue", Arial, sans-serif;
 $main-color: #ff8000 !default;
 $link-color: #FFF !default;
 $header-bg: #006173;
@@ -7,6 +10,7 @@ $body-bg: #006173;
 $body-border-color: #44ffe1 !default;
 $secondary: #FFF !default;
 $primary: #ffe45e !default;
+$lighter-base-font-color: rgba(255, 255, 255, 0.5);
 
 $btn-primary-bg: theme-color("primary") !default;
 $btn-primary-color: theme-color("inverse") !default;

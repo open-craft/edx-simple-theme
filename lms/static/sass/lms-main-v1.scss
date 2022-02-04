@@ -1,11 +1,6 @@
 @import 'theme-colors';
 @import 'lms/static/sass/lms-main-v1';
 @import 'theme-overrides';
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans&family=Work+Sans&display=swap');
-$font-family-sans-serif:      "Work Sans", "Helvetica Neue", Arial, sans-serif;
-
-
-
 
 
 html {
@@ -29,4 +24,24 @@ body {
 .global-header {
   background-color: $header-bg;
   border-bottom: none;
+  box-shadow: none;
+}
+
+.dashboard {
+  .main-container {
+    .my-courses {
+      .wrapper-header-courses {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 0px;
+        .header-courses {
+          font-size: 50px;
+          font-family: "Work Sans";
+          margin-bottom: 36px;
+          font-weight: 600;
+          
+        }
+      }
+    }
+  }
 }
