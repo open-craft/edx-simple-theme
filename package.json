@@ -1,7 +1,7 @@
 {
-  "name": "@open-craft/simple-theme",
-  "version": "0.1.0",
-  "description": "This is a customisable branding package for Open edX MFEs that provides a number of overridable variables. ",
+  "name": "@open-craft/comprehensive-theme",
+  "version": "0.0.1",
+  "description": "This is a community contribution to the edX themes. ",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
