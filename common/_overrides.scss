@@ -1,10 +1,8 @@
+
 .window-wrap {
   background-color: $body-bg;
 }
 
-.wrapper-footer {
-  background-color: $footer-bg;
-}
 
 .global-header {
   background-color: $header-bg;
@@ -17,6 +15,7 @@
 }
 
 .footer {
+  
   .footer-logo {
     background-repeat: no-repeat;
     margin-right: 1rem;
@@ -86,6 +85,7 @@
 body {
   border: 19px solid $body-border-color;
   background-color: $body-bg;
+  padding: $baseline * 2;
 }
 
 .footer {

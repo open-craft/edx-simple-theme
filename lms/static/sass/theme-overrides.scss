@@ -1,7 +1,75 @@
+@import 'theme-colors';
 @import 'bootstrap/scss/functions';
 @import 'bootstrap/scss/variables';
 @import 'bootstrap/scss/mixins';
-@import 'theme-colors';
+$baseline: 20px;
+html {
+  background: white;
+}
+
+.courses-container {
+  .courses {
+    .course {
+      &:hover {
+        background-color: $primary;
+        color: $font-color-inverse;
+      }
+      .course-info {
+        .course-code, .course-organization, .course-date {
+          color: $link-color;
+
+          &:hover {
+            color: $font-color-inverse;
+          }
+        }
+      }
+    }
+  }
+}
+
+.wrapper-footer {
+  border-top: none;
+  box-shadow: none;
+  
+  footer#footer-openedx {
+    .colophon .nav-colophon li a {
+      color: $font-color;
+    }
+    .copyright {
+      color: $font-color;
+    }
+  }
+}
+
+.home > header {
+  background-color: transparent;
+  box-shadow: none;
+
+  .outer-wrapper {
+    animation: none;
+  }
+
+  .title {
+    background: transparent;
+    box-shadow: none;
+    transition: none;
+    width: 100%;
+    margin-left: unset;
+
+    .heading-group {
+      transition: none;
+      text-align: center;
+      h1 {
+        text-align: center;
+        text-shadow: none;
+        color: $font-color;
+        font-size: 60px;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
 
 .global-header {
   background: transparent;
@@ -68,7 +136,6 @@
           }
         }
 
-
         .btn {
         }
 
@@ -79,8 +146,9 @@
           border-radius: 20.5px;
           &:hover {
             background-color: $primary;
-            color: $main-nav-link-color;
           }
+
+          
         }
 
         a.register-btn {
