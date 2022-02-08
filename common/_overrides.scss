@@ -1,42 +1,3 @@
-@mixin btn-styles($bg, $color, $border-color, $hover-bg, $hover-color, $hover-border-color) {
-  background: $bg !important;
-  color: $color !important;
-  border: 1px solid $border-color !important;
-
-  span {
-    color: $color !important;
-  }
-
-  &:hover {
-    background-color: $hover-bg !important;
-    color: $hover-color !important;
-    border-color: $hover-border-color !important;
-
-    span {
-      color: $hover-color !important;
-    }
-  }
-}
-
-// Set the default color of links
-a:not(.btn, .help-link),
-a:not(.btn):hover,
-a:not(.btn):focus,
-a:visited:not(.btn):hover,
-a:visited:not(.btn):focus {
-  color: $link-color;
-}
-
-.btn-primary,
-.btn-brand {
-  // Set the styles for the primary button
-  @include btn-styles($btn-primary-bg, $btn-primary-color, $btn-primary-border-color, $btn-primary-hover-bg, $btn-primary-hover-color, $btn-primary-hover-border-color);
-}
-
-.btn-outline-primary {
-  @include btn-styles($btn-secondary-bg, $btn-secondary-color, $btn-secondary-border-color, $btn-secondary-hover-bg, $btn-secondary-hover-color, $btn-secondary-hover-border-color);
-}
-
 .window-wrap {
   background-color: $body-bg;
 }
@@ -121,7 +82,6 @@ a:visited:not(.btn):focus {
     }
   }
 }
-
 
 body {
   border: 19px solid $body-border-color;
