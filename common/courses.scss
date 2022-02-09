@@ -1,0 +1,24 @@
+.find-courses {
+  background-color: transparent;
+}
+
+.courses-container {
+  .courses {
+    .course {
+      &:hover {
+        // background-color: $primary;
+        // color: $font-color-inverse;
+      }
+      .course-info {
+        .course-code, .course-organization, .course-date {
+          // color: $link-color;
+
+          
+          &:hover {
+            // color: $font-color-inverse;
+          }
+        }
+      }
+    }
+  }
+}

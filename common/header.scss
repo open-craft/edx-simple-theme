@@ -1,45 +1,13 @@
-@import 'theme-colors';
-@import 'bootstrap/scss/functions';
-@import 'bootstrap/scss/variables';
-@import 'bootstrap/scss/mixins';
-$baseline: 20px;
-html {
-  background: white;
-}
-
-.courses-container {
-  .courses {
-    .course {
-      &:hover {
-        background-color: $primary;
-        color: $font-color-inverse;
-      }
-      .course-info {
-        .course-code, .course-organization, .course-date {
-          color: $link-color;
-
-          &:hover {
-            color: $font-color-inverse;
-          }
-        }
-      }
-    }
-  }
-}
-
-.wrapper-footer {
-  border-top: none;
+.global-header {
+  background-color: $header-bg;
+  border-bottom: none;
   box-shadow: none;
-  
-  footer#footer-openedx {
-    .colophon .nav-colophon li a {
-      color: $font-color;
-    }
-    .copyright {
-      color: $font-color;
-    }
+
+  .nav-links .secondary .user-image-frame {
+    border-radius: 50%;
   }
 }
+
 
 .home > header {
   background-color: transparent;
@@ -62,7 +30,7 @@ html {
       h1 {
         text-align: center;
         text-shadow: none;
-        color: $font-color;
+        color: $font-color-h1;
         font-size: 60px;
         font-weight: 600;
       }
@@ -70,9 +38,8 @@ html {
   }
 }
 
-
 .global-header {
-  background: transparent;
+  background: $header-bg;
   border-bottom-color: transparent;
   box-shadow: none;
   @include media-breakpoint-up(lg) {
@@ -129,10 +96,13 @@ html {
 
       .secondary {
         .nav-item {
+
           &.nav-item-dropdown {
+            
           }
 
           a {
+            color: $font-color;
           }
         }
 
@@ -142,7 +112,7 @@ html {
         a.sign-in-btn,
         .nav-item a.shopping-cart {
           background-color: $secondary;
-          color: $font-color-inverse;
+          color: $font-color-nav;
           border-radius: 20.5px;
           &:hover {
             background-color: $primary;
@@ -154,7 +124,7 @@ html {
         a.register-btn {
           background: transparent;
           border: none;
-          color: $main-nav-link-color;
+          color: $font-color-nav;
           &:hover {
             background: transparent;
             color: $primary;
@@ -165,9 +135,13 @@ html {
         }
 
         .toggle-user-dropdown {
+          color: $font-color-nav;
         }
 
         .dropdown-user-menu {
+          background-color: $header-bg;
+          border-color: $body-border-color;
+
           .dropdown-item {
             &:hover {
             }

@@ -1,21 +1,4 @@
-
-.window-wrap {
-  background-color: $body-bg;
-}
-
-
-.global-header {
-  background-color: $header-bg;
-  border-bottom: none;
-  box-shadow: none;
-
-  .nav-links .secondary .user-image-frame {
-    border-radius: 50%;
-  }
-}
-
 .footer {
-  
   .footer-logo {
     background-repeat: no-repeat;
     margin-right: 1rem;
@@ -49,47 +32,8 @@
   }
 }
 
-.dashboard {
-  .main-container {
-    .my-courses {
-      .wrapper-header-courses {
-        display: flex;
-        justify-content: center;
-        margin-bottom: 0px;
-        .header-courses {
-          font-size: 50px;
-          font-family: "Work Sans";
-          margin-bottom: 36px;
-          font-weight: 600;
-        }
-      }
-      .course {
-        .details {
-          .wrapper-course-details {
-            .course-info {
-              [class*="info-"] {
-                color: $secondary;
-              }
-
-              .info-date-block-container .info-date-block {
-                color: $body-border-color;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-body {
-  border: 19px solid $body-border-color;
-  background-color: $body-bg;
-  padding: $baseline * 2;
-}
 
 .footer {
-
   background-color: $body-border-color;
   color: white;
 
@@ -119,6 +63,36 @@ body {
 
     *:not(:last-child) {
       border-right: 1px solid white;
+    }
+  }
+}
+
+
+.wrapper-footer {
+  border-top: none;
+  box-shadow: none;
+  background-color: $footer-bg;
+  padding-left: $body-padding;
+  padding-right: $body-padding;
+
+  footer {
+    .site-nav .nav-item .nav-link{
+      color: $font-color;
+    }
+    .copyright {
+      color: $font-color;
+    }
+  }
+  
+  footer#footer-openedx {
+    ul a {
+      color: $font-color;
+    }
+    .colophon .nav-colophon li a {
+      color: $font-color;
+    }
+    .copyright {
+      color: $font-color;
     }
   }
 }

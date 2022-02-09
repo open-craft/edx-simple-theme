@@ -1,0 +1,32 @@
+.dashboard {
+  .main-container {
+    .my-courses {
+      .wrapper-header-courses {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 0px;
+        .header-courses {
+          font-size: 50px;
+          font-family: "Work Sans";
+          margin-bottom: 36px;
+          font-weight: 600;
+        }
+      }
+      .course {
+        .details {
+          .wrapper-course-details {
+            .course-info {
+              [class*="info-"] {
+                // color: $secondary;
+              }
+
+              .info-date-block-container .info-date-block {
+                // color: $body-border-color;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
