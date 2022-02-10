@@ -6,8 +6,17 @@
   .nav-links .secondary .user-image-frame {
     border-radius: 50%;
   }
+
+  .header-logo .course-header {
+    color: $font-color-nav;
+  }
 }
 
+.main-container h1 {
+  color: $font-color-h1;
+  font-size: 50px;
+  font-weight: 600;
+}
 
 .home > header {
   background-color: transparent;
@@ -107,6 +116,11 @@
 
           a {
             color: $font-color-nav;
+            &:hover {
+              background-color: $btn-hover-bg;
+              background-color: $btn-hover-border-color;
+              color: $btn-hover-color;
+            }
           }
         }
 
@@ -236,4 +250,46 @@
 }
 
 .settings-language-form {
+}
+
+
+.learning-header {
+  background-color: $header-bg;
+  color: $font-color-nav;
+
+  .course-title {
+    color: $font-color-nav;
+  }
+
+  .show > .btn-outline-primary.dropdown-toggle {
+    background-color: transparent;
+  }
+
+  .user-dropdown {
+    .btn {
+      border-radius: 0;
+      &.btn-outline-primary {
+
+        
+        border: none;
+        color: $font-color-nav;
+
+        &:not(:disabled):not(.disabled):active {
+          background-color: transparent;
+        }
+        &:hover {
+          color: $font-color-nav-hover;
+          background-color: transparent;
+        }
+      }
+    }
+  }
+
+  .text-gray-700 {
+    color: $font-color-nav !important;
+    &:hover {
+      color: $font-color-nav-hover;
+      border-color: $btn-primary-border-color;
+    }
+  }
 }
