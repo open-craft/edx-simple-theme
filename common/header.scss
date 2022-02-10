@@ -59,7 +59,11 @@
       }
 
       @include media-breakpoint-down(md) {
+        float: none;
+        margin: 0;
         .logo {
+          margin: 0 0 0 20px;
+          float: none;
         }
       }
     }
@@ -145,7 +149,7 @@
           border: none;
           &:hover {
             background: transparent;
-            color: $font-color-nav;
+            color: $font-color-nav-hover;
           }
         }
 
@@ -181,11 +185,22 @@
   }
 
   @include media-breakpoint-down(md) {
+    
+    .header-logo {
+      margin-left: 0;
+    }
     .main-header {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
     }
 
     .hamburger-menu {
+      top: 12px;
+      right: 20px;
+      left: unset;
       .line {
+        background: $font-color-nav;
         &:nth-child(1) {
         }
 
@@ -198,6 +213,7 @@
       }
 
       &.open .line {
+        
         &:nth-child(1) {
         }
 
@@ -221,18 +237,33 @@
 }
 
 .mobile-menu {
+  border-top: none;
   @include media-breakpoint-up(lg) {
   }
 
   @include media-breakpoint-down(md) {
+
+    background-color: $header-bg;
+    color: $font-color-nav;
+    height: calc(100vh - 25px);
     // Override standard styling for the mobile menu links
     .mobile-nav-link {
       a {
+        background: transparent;
+        border-bottom: none;
+        font-size: 2.5rem;
+        text-align: center;
+        color: $font-color-nav;
+        
+        
         &:hover,
         &:focus {
+          background: transparent;
+          color: $font-color-nav-hover;
         }
 
         &::after {
+          content: "";
         }
       }
     }
