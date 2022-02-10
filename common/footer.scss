@@ -55,7 +55,20 @@
   }
 
   .legal-links{
+    display: flex;
     font-size: 12px;
+    justify-content: flex-end;
+    
+    [dir="rtl"] {
+      justify-content: flex-start;
+    }
+      
+    @include media-breakpoint-down(md) {
+      justify-content: flex-start;
+      [dir="rtl"] {
+        justify-content: flex-end;
+      }
+    }
   }
 
   .social-links {
@@ -64,6 +77,11 @@
     align-items: center;
     justify-content: flex-end;
     margin-bottom: 10px;
+    @include media-breakpoint-down(md) {
+      justify-content: flex-start;
+    }
+    
+    
     a {
       color: $btn-primary-bg;
     }

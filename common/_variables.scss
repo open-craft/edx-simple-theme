@@ -1,34 +1,3 @@
 // Set default colors in case they aren't set on the parent file
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,400;0,600;1,400;1,700&display=swap');
-$font-family-sans-serif: "Work Sans", "Helvetica Neue", Arial, sans-serif;
-
-$active-color: #44ffe1;
-$muted-color: #acd7df;
-
-$header-bg: #006173 !default;
-$footer-bg: $header-bg !default;
-$body-bg: #fff !default;
-$section-bg: #fff !default;
-$body-border-color: #44ffe1;
-
-$font-color: #000 !default;
-$font-color-h1: #585858 !default;
-$font-color-nav: #fff !default;
-$font-color-nav-hover:  #f7e746;
-$font-color-footer: #fff !default;
-$font-color-footer-hover: #f7e746;
-$font-color-alt-section: #585858 !default;
-
-$font-color-headings: #acd7df !default;;
-$font-color-active: $active-color !default;
-
-$btn-hover-bg:#ffe45e !default;
-$btn-hover-border-color: #f7e746 !default;
-$btn-hover-color: $font-color !default;
-
-$btn-primary-bg: #ffe45e !default;;
-$btn-primary-color: $font-color !default;
-$btn-primary-border-color: #f7e746 !default;
-$btn-default-bg: #fff !default;
-
-$body-padding: 40px;
+@import 'monotone-colors';
+// @import 'calm-colors';
