@@ -35,7 +35,7 @@
 
 .footer {
   background-color: $body-border-color;
-  color: white;
+  color: $font-color-footer;
 
   .theme-copyright {
     font-size: 12px;
@@ -44,14 +44,14 @@
   .footer-separator {
     width: 100%;
     height: 1px;
-    background-color: #fff;
+    background-color: $font-color-footer;
     opacity: 0.25;
     margin-top: 36px;
     margin-bottom: 36px;
   }
   
   a {
-    color: white;
+    color: $font-color-footer;
   }
 
   .legal-links{
@@ -62,7 +62,7 @@
     }
 
     *:not(:last-child) {
-      border-right: 1px solid white;
+      border-right: 1px solid $font-color-footer;
     }
   }
 }
@@ -77,22 +77,27 @@
 
   footer {
     .site-nav .nav-item .nav-link{
-      color: $font-color;
+      color: $font-color-footer;
     }
     .copyright {
-      color: $font-color;
+      color: $font-color-footer;
     }
   }
   
   footer#footer-openedx {
     ul a {
-      color: $font-color;
+      color: $font-color-footer;
     }
     .colophon .nav-colophon li a {
-      color: $font-color;
+      color: $font-color-footer;
+      
+      &:hover {
+        color: $font-color-footer-hover;
+      }
+        
     }
     .copyright {
-      color: $font-color;
+      color: $font-color-footer;
     }
   }
 }

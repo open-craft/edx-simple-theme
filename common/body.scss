@@ -1,12 +1,9 @@
-@import 'variables';
-
-.window-wrap {
-  background-color: $body-bg;
-}
-
 body {
   border: 19px solid $body-border-color;
   background-color: $body-bg;
+  .content-wrapper {
+    padding: $body-padding;
+  }
 }
 
 

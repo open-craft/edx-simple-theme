@@ -84,8 +84,12 @@
         .nav-tab {
 
           a {
+            color: $font-color-nav;
+            
+            
             &.active,
             &:hover {
+              border-bottom-color: $font-color-nav-hover;
             }
 
             &:hover {
@@ -102,7 +106,7 @@
           }
 
           a {
-            color: $font-color;
+            color: $font-color-nav;
           }
         }
 
@@ -111,23 +115,23 @@
 
         a.sign-in-btn,
         .nav-item a.shopping-cart {
-          background-color: $secondary;
-          color: $font-color-nav;
+          background-color: $btn-default-bg;
+          border-color: $btn-default-bg;
           border-radius: 20.5px;
+          color: $font-color;
           &:hover {
-            background-color: $primary;
+            background-color: $btn-primary-bg;
+            color: $btn-primary-color;
+            border-color: $btn-primary-border-color;
           }
-
-          
         }
 
         a.register-btn {
           background: transparent;
           border: none;
-          color: $font-color-nav;
           &:hover {
             background: transparent;
-            color: $primary;
+            color: $font-color-nav;
           }
         }
 
