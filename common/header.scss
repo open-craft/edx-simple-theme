@@ -121,9 +121,8 @@
           a {
             color: $font-color-nav;
             &:hover {
-              background-color: $btn-hover-bg;
-              background-color: $btn-hover-border-color;
-              color: $btn-hover-color;
+              border-color: transparent;
+              color: $font-color-nav-hover;
             }
           }
         }
@@ -297,6 +296,14 @@
   }
 
   .user-dropdown {
+
+    .fa-user-circle {
+      display: block !important;
+      color: $font-color-nav-hover;
+      margin-right: 0.5rem;
+      font-size: 2rem;
+    }
+    
     .btn {
       border-radius: 0;
       &.btn-outline-primary {
@@ -319,8 +326,8 @@
   .text-gray-700 {
     color: $font-color-nav !important;
     &:hover {
-      color: $font-color-nav-hover;
-      border-color: $btn-primary-border-color;
+      text-decoration: none;
+      color: $font-color-nav-hover !important;
     }
   }
 }
