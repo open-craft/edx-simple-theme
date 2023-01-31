@@ -30,7 +30,7 @@
       .secondary .nav-item a,
       .secondary .nav-item a span,
       .toggle-user-dropdown span {
-        color: $main-nav-link-color !important;
+        color: $main-nav-link-color;
       }
     }
 
@@ -61,10 +61,10 @@
     }
   }
 
+  // Set the color of the links in the dashboard like 'Courses', 'Programs', 'Profile' etc.
   .main .nav-tab a,
-  .secondary .nav-item a:not(.btn):not(.help-link),
+  // Set the color of the dropdown arrow of the user dropdown menu.
   .secondary .nav-item .toggle-user-dropdown {
-    // Set the color of the dropdown arrow of the user dropdowm menu
     color: $link-color !important;
   }
 
@@ -106,7 +106,7 @@
 }
 
 @if variable-exists(login-register-header-color) {
-  .login-register-content h2 {
+  .login-register-content h1 {
     // Customize the color of the login/registration page header
     color: $login-register-header-color;
   }
@@ -115,7 +115,9 @@
 .courses-container .courses .course {
   @if variable-exists(accent-color) {
     // Customize the bottom border color on hover for the course card in the home page
-    border-bottom-color: $accent-color;
+    &:hover {
+      border-bottom-color: $accent-color;
+    }
   }
 
   .course-image .cover-image .learn-more {
@@ -124,7 +126,7 @@
     color: $btn-secondary-color;
   }
 
-  border-bottom-color: $link-color !important;
+  border-bottom-color: $link-color;
 
   .course-info {
     .course-organization,
@@ -180,12 +182,6 @@
 }
 
 .content-wrapper {
-  // Customize the colors of the course navigation menu - bootstrap
-  h4 a:hover,
-  h3 a:hover {
-    color: $main-color !important; // Main color
-  }
-
   .course-tabs .tab a,
   .course-tabs .nav-item .nav-link {
     color: black !important;
@@ -275,74 +271,6 @@
   }
 }
 
-// Account settings page
-.wrapper-account-settings .account-settings-container {
-  .account-settings-sections .section {
-    .account-settings-section-body .u-field {
-      .field {
-        select ~ .icon-caret-down::after {
-          // Customize the color for the dropdown arrow
-          border-top-color: $link-color !important;
-        }
-
-        button.u-field-link:disabled {
-          // Customize the colors for the disabled button - for example the password reset button
-          border-color: #ddd;
-          color: #ddd;
-        }
-      }
-    }
-  }
-
-  .wrapper-header .account-nav button {
-    &:focus,
-    &:hover,
-    &.active {
-      @if variable-exists(account-settings-nav-border-bottom-color) {
-        // Customize the account settings nav menu border bottom color
-        border-bottom-color: $account-settings-nav-border-bottom-color !important;
-      }
-
-      @if variable-exists(account-settings-nav-color) {
-        // Customize the account settings nav menu color
-        color: $account-settings-nav-color !important;
-      }
-    }
-  }
-}
-
-.account-settings-sections .section {
-  .account-settings-section-body .u-field {
-    .field .u-field-link {
-      &,
-      &:hover {
-        color: $btn-primary-border-color;
-        border-color: $btn-primary-border-color;
-      }
-
-      &:hover {
-        color: #ffff;
-        border-color: $btn-primary-border-color;
-        background-color: $btn-primary-border-color;
-      }
-    }
-  }
-
-  .account-deletion-details .btn-outline-primary {
-    // Customize the account deletion button colors
-    & {
-      color: #b20610 !important;
-      border-color: #b20610 !important;
-    }
-
-    &:hover {
-      color: #fff !important;
-      border-color: #b20610 !important;
-      background-color: #b20610 !important;
-    }
-  }
-}
-
 .sequence .sequence-nav-button {
   &.button-previous:not([disabled="disabled"]) .fa.fa-chevron-prev,
   &.button-next:not([disabled="disabled"]) .fa.fa-chevron-next {
@@ -362,7 +290,7 @@
 
   @if variable-exists(customize-footer-border) {
     // Customize the footer border
-    border-top: $footer-border-top-width solid $footer-border-bottom-color !important;
+    border-top: $footer-border-top-width solid $footer-border-top-color !important;
     border-bottom: $footer-border-bottom-width solid $footer-border-bottom-color;
   }
 

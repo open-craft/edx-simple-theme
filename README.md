@@ -64,8 +64,6 @@ Below is the list of available SASS variables for customization. Check `lms/stat
 * $main-color
 * $course-nav-menu-color
 * $course-nav-menu-border-bottom-color
-* $account-settings-nav-border-bottom-color
-* $account-settings-nav-border-bottom-color
 * $footer-bg
 * $footer-color
 * $footer-link-color

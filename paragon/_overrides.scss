@@ -17,75 +17,34 @@ header {
     // it breaks the UI.
     height: calc(3.75rem + #{$header-border-top-width + $header-border-bottom-width});
   }
-  // Set the color of text in the header - course about page.
-  @if variable-exists(main-nav-color) {
-    span {
-      color: $main-nav-color;
-    }
-  }
 
-  .nav-links {
-    @if variable-exists(main-nav-link-color) {
-      // Set the color of the links in the dashboard
-      .main .nav-tab a,
-      .secondary .nav-item a,
-      .secondary .nav-item a span,
-      .toggle-user-dropdown span {
-        color: $main-nav-link-color !important;
-      }
-    }
-
-    @if variable-exists(main-nav-item-border-bottom-color) {
-      // Set the bottom border color of the links in the dashboard like 'Courses', 'Programs', 'Profile' etc.
-      .main .nav-tab a {
-        &.active {
-          border-bottom-color: $main-nav-item-border-bottom-color !important;
-          border-bottom-style: solid !important;
-        }
-      }
-    }
-
-    @if variable-exists(main-nav-item-hover-border-bottom-color) {
-      .main .nav-tab a {
-        &:not(.active):hover {
-          border-bottom-color: $main-nav-item-hover-border-bottom-color !important;
-          border-bottom-style: solid !important;
-        }
-      }
-    }
-
-    @if variable-exists(user-dropdown-color) {
-      // Customize the color of the links in the user dropdown menu
-      nav.secondary-menu-container .dropdown-menu .dropdown-item a {
+  @if variable-exists(user-dropdown-color) {
+    // Customize the color of the links in the user dropdown menu in the learning MFE
+    .user-dropdown,
+    // Customize the color of the links in the user dropdown menu in other MFEs
+    nav.secondary-menu-container {
+      .dropdown-menu a.dropdown-item {
         color: $user-dropdown-color !important;
       }
     }
   }
 
-  .main .nav-tab a,
-  .secondary .nav-item a:not(.btn):not(.help-link),
-  .secondary .nav-item .toggle-user-dropdown {
-    // Set the color of the dropdown arrow of the user dropdowm menu
-    color: $link-color !important;
-  }
-
-
-    @if variable-exists(customize-sign-in-btn) {
-      // Customize the sign-in button on the home page header
-      a.sign-in-btn {
-        @include btn-styles(
-          $btn-sign-in-bg,
-          $btn-sign-in-color,
-          $btn-sign-in-border-color,
-          $btn-sign-in-hover-bg,
-          $btn-sign-in-hover-color,
-          $btn-sign-in-hover-border-color
-        );
-      }
+  @if variable-exists(customize-sign-in-btn) {
+    // Customize the sign-in button on the course page header
+    a.btn-primary[href*="/login"] {
+      @include btn-styles(
+        $btn-sign-in-bg,
+        $btn-sign-in-color,
+        $btn-sign-in-border-color,
+        $btn-sign-in-hover-bg,
+        $btn-sign-in-hover-color,
+        $btn-sign-in-hover-border-color
+      );
+    }
 
     @if variable-exists(customize-register-btn) {
-      // Customize the register button on the home page header
-      a.register-btn {
+      // Customize the register button on the course page header
+      a.btn-outline-primary[href*="/register"] {
         @include btn-styles(
           $btn-register-bg,
           $btn-register-color,
@@ -99,6 +58,13 @@ header {
   }
 }
 
+@if variable-exists(wrapper-preview-menu-color) {
+  // Customize the color of the preview section shown when viewing the course as a staff user.
+  .bg-primary.text-white {
+    background-color: $wrapper-preview-menu-color !important;
+  }
+}
+
 footer.footer {
   background: $footer-bg; // Footer color
   background-color: $footer-bg !important; // Footer color
@@ -106,7 +72,7 @@ footer.footer {
 
   @if variable-exists(customize-footer-border) {
     // Customize the footer border
-    border-top: $footer-border-top-width solid $footer-border-bottom-color !important;
+    border-top: $footer-border-top-width solid $footer-border-top-color !important;
     border-bottom: $footer-border-bottom-width solid $footer-border-bottom-color;
   }
 
