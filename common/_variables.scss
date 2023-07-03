@@ -4,16 +4,38 @@ $link-color: #126f9a !default;
 $header-bg: #fff !default;
 $footer-bg: #fff !default;
 
+$btn-font-size: null !default;
+$btn-font-weight: null !default;
+$btn-border-width: 1px !default;
+
 $btn-primary-bg: theme-color("primary") !default;
 $btn-primary-color: theme-color("inverse") !default;
+$btn-primary-font-size: $btn-font-size !default;
+$btn-primary-font-weight: $btn-font-weight !default;
 $btn-primary-border-color: theme-color("primary") !default;
+$btn-primary-border-width: $btn-border-width !default;
 $btn-primary-hover-bg: theme-color("primary") !default;
 $btn-primary-hover-color: theme-color("inverse") !default;
 $btn-primary-hover-border-color: theme-color("primary") !default;
 
 $btn-secondary-bg: theme-color("primary") !default;
 $btn-secondary-color: theme-color("inverse") !default;
+$btn-secondary-font-size: $btn-font-size !default;
+$btn-secondary-font-weight: $btn-font-weight !default;
 $btn-secondary-border-color: theme-color("primary") !default;
+$btn-secondary-border-width: $btn-border-width !default;
 $btn-secondary-hover-bg: theme-color("primary") !default;
 $btn-secondary-hover-color: theme-color("inverse") !default;
 $btn-secondary-hover-border-color: theme-color("primary") !default;
+
+$btn-sign-in-font-size: $btn-font-size !default;
+$btn-sign-in-font-weight: $btn-font-weight !default;
+$btn-sign-in-border-width: $btn-border-width !default;
+
+$btn-register-font-size: $btn-font-size !default;
+$btn-register-font-weight: $btn-font-weight !default;
+$btn-register-border-width: $btn-border-width !default;
+
+$btn-logistration-font-size: $btn-font-size !default;
+$btn-logistration-font-weight: $btn-font-weight !default;
+$btn-logistration-border-width: $btn-border-width !default;
