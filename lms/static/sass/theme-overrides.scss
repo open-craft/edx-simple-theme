@@ -415,6 +415,13 @@
   height: auto !important;
 }
 
+// change social links colors on course summary page
+.course-info .course-sidebar header .social-sharing .share {
+  @if variable-exists(course-info-social-sharing-links-color) {
+    color: $course-info-social-sharing-links-color;
+  }
+}
+
 .wrapper-footer {
   background: $footer-bg; // Footer color
   background-color: $footer-bg !important; // Footer color

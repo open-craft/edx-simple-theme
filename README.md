@@ -79,6 +79,7 @@ Below is the list of available SASS variables for customization. Check `lms/stat
 * $home-page-hero-title-color
 * $home-page-hero-subtitle-color
 * $wrapper-preview-menu-color
+* $course-info-social-sharing-links-color
 * $main-color
 * $course-nav-menu-color
 * $course-nav-menu-border-bottom-color
