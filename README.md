@@ -18,15 +18,24 @@ Below is the list of available SASS variables for customization. Check `lms/stat
   - $footer-border-top-color
   - $footer-border-bottom-width
   - $footer-border-bottom-color
+* $btn-font-size
+* $btn-font-weight
+* $btn-border-width
 * $btn-primary-bg
 * $btn-primary-color
+* $btn-primary-font-size
+* $btn-primary-font-weight
 * $btn-primary-border-color
+* $btn-primary-border-width
 * $btn-primary-hover-bg
 * $btn-primary-hover-color
 * $btn-primary-hover-border-color
 * $btn-secondary-bg
 * $btn-secondary-color
+* $btn-secondary-font-size
+* $btn-secondary-font-weight
 * $btn-secondary-border-color
+* $btn-secondary-border-width
 * $btn-secondary-hover-bg
 * $btn-secondary-hover-color
 * $btn-secondary-hover-border-color
@@ -38,21 +47,30 @@ Below is the list of available SASS variables for customization. Check `lms/stat
 * $customize-sign-in-btn. If defined, requires all the following variables to be set.
   - $btn-sign-in-bg
   - $btn-sign-in-color
+  - $btn-sign-in-font-size
+  - $btn-sign-in-font-weight
   - $btn-sign-in-border-color
+  - $btn-sign-in-border-width
   - $btn-sign-in-hover-bg
   - $btn-sign-in-hover-color
   - $btn-sign-in-hover-border-color
 * $customize-register-btn. If defined, requires all the following variables to be set.
   - $btn-register-bg
   - $btn-register-color
+  - $btn-register-font-size
+  - $btn-register-font-weight
   - $btn-register-border-color
+  - $btn-register-border-width
   - $btn-register-hover-bg
   - $btn-register-hover-color
   - $btn-register-hover-border-color
 * $customize-logistration-action-btn. If defined, requires all the following variables to be set.
   - $btn-logistration-bg
   - $btn-logistration-color
+  - $btn-logistration-font-size
+  - $btn-logistration-font-weight
   - $btn-logistration-border-color
+  - $btn-logistration-border-width
   - $btn-logistration-hover-bg
   - $btn-logistration-hover-color
   - $btn-logistration-hover-border-color
@@ -61,6 +79,7 @@ Below is the list of available SASS variables for customization. Check `lms/stat
 * $home-page-hero-title-color
 * $home-page-hero-subtitle-color
 * $wrapper-preview-menu-color
+* $course-info-social-sharing-links-color
 * $main-color
 * $course-nav-menu-color
 * $course-nav-menu-border-bottom-color
