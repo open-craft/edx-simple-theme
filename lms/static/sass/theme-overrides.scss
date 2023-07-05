@@ -72,14 +72,34 @@
     @if variable-exists(customize-sign-in-btn) {
       // Customize the sign-in button on the home page header
       a.sign-in-btn {
-        @include btn-styles($btn-sign-in-bg, $btn-sign-in-color, $btn-sign-in-border-color, $btn-sign-in-hover-bg, $btn-sign-in-hover-color, $btn-sign-in-hover-border-color);
+        @include btn-styles(
+          $btn-sign-in-bg,
+          $btn-sign-in-color,
+          $btn-sign-in-font-size,
+          $btn-sign-in-font-weight,
+          $btn-sign-in-border-color,
+          $btn-sign-in-border-width,
+          $btn-sign-in-hover-bg,
+          $btn-sign-in-hover-color,
+          $btn-sign-in-hover-border-color
+        );
       }
     }
 
     @if variable-exists(customize-register-btn) {
       // Customize the register button on the home page header
       a.register-btn {
-        @include btn-styles($btn-register-bg, $btn-register-color, $btn-register-border-color, $btn-register-hover-bg, $btn-register-hover-color, $btn-register-hover-border-color);
+        @include btn-styles(
+          $btn-register-bg,
+          $btn-register-color,
+          $btn-register-font-size,
+          $btn-register-font-weight,
+          $btn-register-border-color,
+          $btn-register-border-width,
+          $btn-register-hover-bg,
+          $btn-register-hover-color,
+          $btn-register-hover-border-color
+        );
       }
     }
   }
@@ -97,7 +117,17 @@
       &.login-button,
       &.register-button,
       & {
-        @include btn-styles($btn-logistration-bg, $btn-logistration-color, $btn-logistration-border-color, $btn-logistration-hover-bg, $btn-logistration-hover-color, $btn-logistration-hover-border-color);
+        @include btn-styles(
+          $btn-logistration-bg,
+          $btn-logistration-color,
+          $btn-logistration-font-size,
+          $btn-logistration-font-weight,
+          $btn-logistration-border-color,
+          $btn-logistration-border-width,
+          $btn-logistration-hover-bg,
+          $btn-logistration-hover-color,
+          $btn-logistration-hover-border-color
+        );
 
         box-shadow: none;
       }
@@ -162,7 +192,17 @@
       // Customize the action buttons on the course about page
       background-image: none;
 
-      @include btn-styles($btn-primary-bg, $btn-primary-color, $btn-primary-border-color, $btn-primary-hover-bg, $btn-primary-hover-color, $btn-primary-hover-border-color);
+      @include btn-styles(
+        $btn-primary-bg,
+        $btn-primary-color,
+        $btn-primary-font-size,
+        $btn-primary-font-weight,
+        $btn-primary-border-color,
+        $btn-primary-border-width,
+        $btn-primary-hover-bg,
+        $btn-primary-hover-color,
+        $btn-primary-hover-border-color
+      );
 
       box-shadow: none;
     }
@@ -171,7 +211,17 @@
 
 .dashboard .main-container .my-courses .course .details .enter-course {
   // Customize the 'View Course' button on the dashboard
-  @include btn-styles($btn-secondary-bg, $btn-secondary-color, $btn-secondary-border-color, $btn-secondary-hover-bg, $btn-secondary-hover-color, $btn-secondary-hover-border-color);
+  @include btn-styles(
+    $btn-secondary-bg,
+    $btn-secondary-color,
+    $btn-secondary-font-size,
+    $btn-secondary-font-weight,
+    $btn-secondary-border-color,
+    $btn-secondary-border-width,
+    $btn-secondary-hover-bg,
+    $btn-secondary-hover-color,
+    $btn-secondary-hover-border-color
+  );
 }
 
 @if variable-exists(wrapper-preview-menu-color) {
@@ -225,7 +275,17 @@
 
 // Customize the 'View Records' button in the profile page
 .view-profile .profile-self .wrapper-profile-field-account-privacy .wrapper-profile-records button {
-  @include btn-styles($btn-primary-bg, $btn-primary-color, $btn-primary-border-color, $btn-primary-hover-bg, $btn-primary-hover-color, $btn-primary-hover-border-color);
+  @include btn-styles(
+    $btn-primary-bg,
+    $btn-primary-color,
+    $btn-primary-font-size,
+    $btn-primary-font-weight,
+    $btn-primary-border-color,
+    $btn-primary-border-width,
+    $btn-primary-hover-bg,
+    $btn-primary-hover-color,
+    $btn-primary-hover-border-color
+  );
 
   box-shadow: none;
 }
@@ -283,6 +343,13 @@
   height: auto !important;
 }
 
+// change social links colors on course summary page
+.course-info .course-sidebar header .social-sharing .share {
+  @if variable-exists(course-info-social-sharing-links-color) {
+    color: $course-info-social-sharing-links-color;
+  }
+}
+
 .wrapper-footer {
   background: $footer-bg; // Footer color
   background-color: $footer-bg !important; // Footer color
@@ -330,5 +397,15 @@
 
 // For the discussion home page button and the embedded discussion block
 .discussion-module .discussion-show.btn {
-  @include btn-styles($btn-secondary-bg, $btn-secondary-color, $btn-secondary-border-color, $btn-secondary-hover-bg, $btn-secondary-hover-color, $btn-secondary-hover-border-color);
+  @include btn-styles(
+    $btn-secondary-bg,
+    $btn-secondary-color,
+    $btn-secondary-font-size,
+    $btn-secondary-font-weight,
+    $btn-secondary-border-color,
+    $btn-secondary-border-width,
+    $btn-secondary-hover-bg,
+    $btn-secondary-hover-color,
+    $btn-secondary-hover-border-color
+  );
 }

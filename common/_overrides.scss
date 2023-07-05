@@ -1,7 +1,15 @@
-@mixin btn-styles($bg, $color, $border-color, $hover-bg, $hover-color, $hover-border-color) {
+@mixin btn-styles($bg, $color, $font-size, $font-weight, $border-color, $border-width, $hover-bg, $hover-color, $hover-border-color) {
   background: $bg !important;
   color: $color !important;
-  border: 1px solid $border-color !important;
+  border: $border-width solid $border-color !important;
+
+  @if $font-size {
+    font-size: $font-size !important;
+  }
+
+  @if $font-weight {
+    font-weight: $font-weight !important;
+  }
 
   span {
     color: $color !important;
@@ -31,9 +39,29 @@ a[href]:visited:not(.btn):focus {
 .btn-primary,
 .btn-brand {
   // Set the styles for the primary button
-  @include btn-styles($btn-primary-bg, $btn-primary-color, $btn-primary-border-color, $btn-primary-hover-bg, $btn-primary-hover-color, $btn-primary-hover-border-color);
+  @include btn-styles(
+    $btn-primary-bg,
+    $btn-primary-color,
+    $btn-primary-font-size,
+    $btn-primary-font-weight,
+    $btn-primary-border-color,
+    $btn-primary-border-width,
+    $btn-primary-hover-bg,
+    $btn-primary-hover-color,
+    $btn-primary-hover-border-color
+  );
 }
 
 .btn-outline-primary {
-  @include btn-styles($btn-secondary-bg, $btn-secondary-color, $btn-secondary-border-color, $btn-secondary-hover-bg, $btn-secondary-hover-color, $btn-secondary-hover-border-color);
+  @include btn-styles(
+    $btn-secondary-bg,
+    $btn-secondary-color,
+    $btn-secondary-font-size,
+    $btn-secondary-font-weight,
+    $btn-secondary-border-color,
+    $btn-secondary-border-width,
+    $btn-secondary-hover-bg,
+    $btn-secondary-hover-color,
+    $btn-secondary-hover-border-color
+  );
 }

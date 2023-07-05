@@ -35,7 +35,10 @@ header {
       @include btn-styles(
         $btn-sign-in-bg,
         $btn-sign-in-color,
+        $btn-sign-in-font-size,
+        $btn-sign-in-font-weight,
         $btn-sign-in-border-color,
+        $btn-sign-in-border-width,
         $btn-sign-in-hover-bg,
         $btn-sign-in-hover-color,
         $btn-sign-in-hover-border-color
@@ -48,7 +51,10 @@ header {
         @include btn-styles(
           $btn-register-bg,
           $btn-register-color,
+          $btn-register-font-size,
+          $btn-register-font-weight,
           $btn-register-border-color,
+          $btn-register-border-width,
           $btn-register-hover-bg,
           $btn-register-hover-color,
           $btn-register-hover-border-color
@@ -105,5 +111,15 @@ footer.footer {
 }
 
 .btn-outline-secondary {
-  @include btn-styles($btn-secondary-bg, $btn-secondary-color, $btn-secondary-border-color, $btn-secondary-hover-bg, $btn-secondary-hover-color, $btn-secondary-hover-border-color);
+  @include btn-styles(
+    $btn-secondary-bg,
+    $btn-secondary-color,
+    $btn-secondary-font-size,
+    $btn-secondary-font-weight,
+    $btn-secondary-border-color,
+    $btn-secondary-border-width,
+    $btn-secondary-hover-bg,
+    $btn-secondary-hover-color,
+    $btn-secondary-hover-border-color
+  );
 }
