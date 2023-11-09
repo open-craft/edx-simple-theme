@@ -1,41 +1,41 @@
 // Set default colors in case they aren't set on the parent file
-$main-color: #ff8000 !default;
-$link-color: #126f9a !default;
-$header-bg: #fff !default;
-$footer-bg: #fff !default;
+$main-color: var(--pgn-color-main) !default;
+$link-color: var(--pgn-color-link-base) !default;
+$header-bg: var(--pgn-color-header-bg) !default;
+$footer-bg: var(--pgn-color-footer-bg) !default;
 
-$btn-font-size: null !default;
-$btn-font-weight: null !default;
-$btn-border-width: 1px !default;
+$btn-font-size: var(--pgn-typography-btn-font-size-base) !default;
+$btn-font-weight: var(--pgn-typography-btn-font-weight) !default;
+$btn-border-width: var(--pgn-size-btn-border-width) !default;
 
-$btn-primary-bg: theme-color("primary") !default;
-$btn-primary-color: theme-color("inverse") !default;
-$btn-primary-font-size: $btn-font-size !default;
-$btn-primary-font-weight: $btn-font-weight !default;
-$btn-primary-border-color: theme-color("primary") !default;
-$btn-primary-border-width: $btn-border-width !default;
-$btn-primary-hover-bg: theme-color("primary") !default;
-$btn-primary-hover-color: theme-color("inverse") !default;
-$btn-primary-hover-border-color: theme-color("primary") !default;
+$btn-primary-bg: var(--pgn-color-btn-bg-primary) !default;
+$btn-primary-color: var(--pgn-color-btn-text-primary) !default;
+$btn-primary-font-size: var(--pgn-typography-btn-font-size-primary) !default;
+$btn-primary-font-weight: var(--pgn-typography-btn-font-weight-primary) !default;
+$btn-primary-border-color: var(--pgn-color-btn-border-primary) !default;
+$btn-primary-border-width: var(--pgn-size-btn-border-width-primary) !default;
+$btn-primary-hover-bg: var(--pgn-color-btn-hover-bg-primary) !default;
+$btn-primary-hover-color: var(--pgn-color-btn-hover-text-primary) !default;
+$btn-primary-hover-border-color: var(--pgn-color-btn-hover-border-primary) !default;
 
-$btn-secondary-bg: theme-color("primary") !default;
-$btn-secondary-color: theme-color("inverse") !default;
-$btn-secondary-font-size: $btn-font-size !default;
-$btn-secondary-font-weight: $btn-font-weight !default;
-$btn-secondary-border-color: theme-color("primary") !default;
-$btn-secondary-border-width: $btn-border-width !default;
-$btn-secondary-hover-bg: theme-color("primary") !default;
-$btn-secondary-hover-color: theme-color("inverse") !default;
-$btn-secondary-hover-border-color: theme-color("primary") !default;
+$btn-secondary-bg: var(--pgn-color-btn-bg-secondary) !default;
+$btn-secondary-color: var(--pgn-color-btn-text-secondary) !default;
+$btn-secondary-font-size: var(--pgn-typography-btn-font-size-secondary) !default;
+$btn-secondary-font-weight: var(--pgn-typography-btn-font-weight-secondary) !default;
+$btn-secondary-border-color: var(--pgn-color-btn-border-secondary) !default;
+$btn-secondary-border-width: var(--pgn-size-btn-border-width-secondary) !default;
+$btn-secondary-hover-bg: var(--pgn-color-btn-hover-bg-secondary) !default;
+$btn-secondary-hover-color: var(--pgn-color-btn-hover-text-secondary) !default;
+$btn-secondary-hover-border-color: var(--pgn-color-btn-hover-border-secondary) !default;
 
-$btn-sign-in-font-size: $btn-font-size !default;
-$btn-sign-in-font-weight: $btn-font-weight !default;
-$btn-sign-in-border-width: $btn-border-width !default;
+$btn-sign-in-font-size: var(--pgn-typography-sign-in-btn-font-size) !default;
+$btn-sign-in-font-weight: var(--pgn-typography-sign-in-btn-font-weight) !default;
+$btn-sign-in-border-width: var(--pgn-size-sign-in-btn-border-width) !default;
 
-$btn-register-font-size: $btn-font-size !default;
-$btn-register-font-weight: $btn-font-weight !default;
-$btn-register-border-width: $btn-border-width !default;
+$btn-register-font-size: var(--pgn-typography-register-btn-font-size) !default;
+$btn-register-font-weight: var(--pgn-typography-register-btn-font-weight) !default;
+$btn-register-border-width: var(--pgn-size-register-btn-border-width) !default;
 
-$btn-logistration-font-size: $btn-font-size !default;
-$btn-logistration-font-weight: $btn-font-weight !default;
-$btn-logistration-border-width: $btn-border-width !default;
+$btn-logistration-font-size: var(--pgn-typography-logistration-btn-font-size) !default;
+$btn-logistration-font-weight: var(--pgn-typography-logistration-btn-font-weight) !default;
+$btn-logistration-border-width: var(--pgn-size-logistration-btn-border-width) !default;

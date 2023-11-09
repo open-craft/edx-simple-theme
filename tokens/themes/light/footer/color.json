@@ -1,0 +1,34 @@
+{
+  "color": {
+    "footer": {
+      "bg": {
+        "value": "white",
+        "type": "color",
+        "source": "$footer-bg"
+      },
+      "text": {
+        "value": "",
+        "type": "color",
+        "source": "$footer-color"
+      },
+      "link": {
+        "value": "",
+        "type": "color",
+        "source": "$footer-link-color"
+      },
+
+      "border": {
+        "top": {
+          "value": "",
+          "type": "color",
+          "source": "$footer-border-top-color"
+        },
+        "bottom": {
+          "value": "",
+          "type": "color",
+          "source": "$footer-border-bottom-color"
+        }
+      }
+    }
+  }
+}

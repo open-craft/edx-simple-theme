@@ -1,0 +1,48 @@
+{
+  "typography": {
+    "btn": {
+      "font": {
+        "size": {
+          "secondary": {
+            "value": "",
+            "type": "dimension",
+            "source": "$btn-secondary-font-size"
+          },
+          "primary": {
+            "value": "",
+            "type": "dimension",
+            "source": "$btn-primary-font-size"
+          }
+        },
+        "weight": {
+          "secondary": {
+            "value": "",
+            "type": "fontWeight",
+            "source": "$btn-secondary-font-weight"
+          },
+          "primary": {
+            "value": "",
+            "type": "fontWeight",
+            "source": "$btn-primary-font-weight"
+          }
+        }
+      }
+    }
+  },
+  "size": {
+    "border": {
+      "width": {
+        "secondary": {
+          "value": "",
+          "type": "dimensions",
+          "source": "$btn-secondary-border-width"
+        },
+        "primary": {
+          "value": "",
+          "type": "dimensions",
+          "source": "$btn-primary-border-width"
+        }
+      }
+    }
+  }
+}

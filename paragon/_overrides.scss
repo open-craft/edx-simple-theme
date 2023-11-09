@@ -2,25 +2,25 @@
 
 header {
   // Set the header background color
-  background-color: $header-bg;
+  background-color: var(--pgn-color-header-bg);
 
   // Set the header for desktop
   &.site-header-desktop {
-    background-color: $header-bg;
+    background-color: var(--pgn-color-header-bg);
   }
 
   @if variable-exists(customize-header-border) {
-    // Set the top and bottom border of the header
-    border-top: $header-border-top-width solid $header-border-top-color;
-    border-bottom: $header-border-bottom-width solid $header-border-bottom-color;
+    // Set the top and bottom border of the header    
+    border-top: var(--pgn-size-header-border-top-width) solid var(--pgn-color-header-border-top);
+    border-bottom: var(--pgn-size-header-border-bottom-width) solid var(--pgn-color-header-border-bottom);
     // The default height is 3.75rem, to that we add the additional border size, otherwise
     // it breaks the UI.
-    height: calc(3.75rem + #{$header-border-top-width + $header-border-bottom-width});
+    height: calc(3.75rem + var(--pgn-size-header-border-top-width) + var(--pgn-size-header-border-bottom-width));
   }
   // Set the color of text in the header - course about page.
   @if variable-exists(main-nav-color) {
     span {
-      color: $main-nav-color;
+      color: var(--pgn-color-header-nav-text);
     }
   }
 
@@ -31,7 +31,7 @@ header {
       .secondary .nav-item a,
       .secondary .nav-item a span,
       .toggle-user-dropdown span {
-        color: $main-nav-link-color !important;
+        color: var(--pgn-color-header-nav-link) !important;
       }
     }
 
@@ -39,7 +39,7 @@ header {
       // Set the bottom border color of the links in the dashboard like 'Courses', 'Programs', 'Profile' etc.
       .main .nav-tab a {
         &.active {
-          border-bottom-color: $main-nav-item-border-bottom-color !important;
+          border-bottom-color: var(--pgn-color-header-nav-item-border-bottom-color) !important;
           border-bottom-style: solid !important;
         }
       }
@@ -48,7 +48,7 @@ header {
     @if variable-exists(main-nav-item-hover-border-bottom-color) {
       .main .nav-tab a {
         &:not(.active):hover {
-          border-bottom-color: $main-nav-item-hover-border-bottom-color !important;
+          border-bottom-color: var(--pgn-color-header-nav-item-border-bottom-hover-color) !important;
           border-bottom-style: solid !important;
         }
       }
@@ -57,7 +57,7 @@ header {
     @if variable-exists(user-dropdown-color) {
       // Customize the color of the links in the user dropdown menu
       nav.secondary-menu-container .dropdown-menu .dropdown-item a {
-        color: $user-dropdown-color !important;
+        color: var(--pgn-color-header-nav-user-dropdown-menu-item-color) !important;
       }
     }
   }
@@ -66,7 +66,7 @@ header {
   .secondary .nav-item a:not(.btn):not(.help-link),
   .secondary .nav-item .toggle-user-dropdown {
     // Set the color of the dropdown arrow of the user dropdowm menu
-    color: $link-color !important;
+    color: var(--pgn-color-link-base) !important;
   }
 
 
@@ -74,15 +74,15 @@ header {
       // Customize the sign-in button on the home page header
       a.sign-in-btn {
         @include btn-styles(
-          $btn-sign-in-bg,
-          $btn-sign-in-color,
-          $btn-sign-in-font-size,
-          $btn-sign-in-font-weight,
-          $btn-sign-in-border-color,
-          $btn-sign-in-border-width,
-          $btn-sign-in-hover-bg,
-          $btn-sign-in-hover-color,
-          $btn-sign-in-hover-border-color
+          var(--pgn-color-sign-in-btn-bg),
+          var(--pgn-color-sign-in-btn-text),
+          var(--pgn-typography-sign-in-btn-font-size),
+          var(--pgn-typography-sign-in-btn-font-weight),
+          var(--pgn-color-sign-in-btn-border),
+          var(--pgn-size-sign-in-btn-border-width),
+          var(--pgn-color-sign-in-btn-hover-bg),
+          var(--pgn-color-sign-in-btn-hover-text),
+          var(--pgn-color-sign-in-btn-hover-border)
         );
       }
 
@@ -90,15 +90,15 @@ header {
       // Customize the register button on the home page header
       a.register-btn {
         @include btn-styles(
-          $btn-register-bg,
-          $btn-register-color,
-          $btn-register-font-size,
-          $btn-register-font-weight,
-          $btn-register-border-color,
-          $btn-register-border-width,
-          $btn-register-hover-bg,
-          $btn-register-hover-color,
-          $btn-register-hover-border-color
+          var(--pgn-color-register-btn-bg),
+          var(--pgn-color-register-btn-text),
+          var(--pgn-typography-register-btn-font-size),
+          var(--pgn-typography-register-btn-font-weight),
+          var(--pgn-color-register-btn-border),
+          var(--pgn-size-register-btn-border-width),
+          var(--pgn-color-register-btn-hover-bg),
+          var(--pgn-color-register-btn-hover-text),
+          var(--pgn-color-register-btn-hover-border)
         );
       }
     }
@@ -106,23 +106,23 @@ header {
 }
 
 footer.footer {
-  background: $footer-bg; // Footer color
-  background-color: $footer-bg !important; // Footer color
+  background: var(--pgn-color-footer-bg); // Footer color
+  background-color: var(--pgn-color-footer-bg) !important; // Footer color
   box-shadow: none !important;
 
   @if variable-exists(customize-footer-border) {
     // Customize the footer border
-    border-top: $footer-border-top-width solid $footer-border-bottom-color !important;
-    border-bottom: $footer-border-bottom-width solid $footer-border-bottom-color;
+    border-top: var(--pgn-size-footer-border-top-width) solid var(--pgn-color-footer-border-bottom) !important;
+    border-bottom: var(--pgn-size-footer-border-bottom-width) solid var(--pgn-color-footer-border-bottom);
   }
 
   @if variable-exists(footer-color) {
-    color: $footer-color !important; // Footer text color
+    color: var(--pgn-color-footer-text) !important; // Footer text color
   }
 
   @if variable-exists(footer-link-color) {
     a {
-      color: $footer-link-color !important; // Link color
+      color: var(--pgn-color-footer-link) !important; // Link color
     }
   }
 }
@@ -133,27 +133,27 @@ footer.footer {
     &:focus,
     &:hover,
     &.active {
-      color: $course-nav-menu-color;
+      color: var(--pgn-color-course-nav-menu-text);
     }
   }
 
   @if variable-exists(course-nav-menu-border-bottom-color) {
     &.active {
-      border-bottom-color: $course-nav-menu-border-bottom-color;
+      border-bottom-color: var(--pgn-color-course-nav-menu-border-bottom);
     }
   }
 }
 
 .btn-outline-secondary {
   @include btn-styles(
-    $btn-secondary-bg,
-    $btn-secondary-color,
-    $btn-secondary-font-size,
-    $btn-secondary-font-weight,
-    $btn-secondary-border-color,
-    $btn-secondary-border-width,
-    $btn-secondary-hover-bg,
-    $btn-secondary-hover-color,
-    $btn-secondary-hover-border-color
+    var(--pgn-color-btn-bg-secondary),
+    var(--pgn-color-btn-text-secondary),
+    var(--pgn-typography-btn-font-size-secondary),
+    var(--pgn-typography-btn-font-weight-secondary),
+    var(--pgn-color-btn-border-secondary),
+    var(--pgn-size-border-width-secondary),
+    var(--pgn-color-btn-hover-bg-secondary),
+    var(--pgn-color-btn-hover-text-secondary),
+    var(--pgn-color-btn-hover-border-secondary)
   );
 }

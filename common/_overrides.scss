@@ -32,35 +32,35 @@ a:not(.btn):hover,
 a:not(.btn):focus,
 a:visited:not(.btn):hover,
 a:visited:not(.btn):focus {
-  color: $link-color;
+  color: var(--pgn-color-link-base);
 }
 
 .btn-primary,
 .btn-brand {
   // Set the styles for the primary button
   @include btn-styles(
-    $btn-primary-bg,
-    $btn-primary-color,
-    $btn-primary-font-size,
-    $btn-primary-font-weight,
-    $btn-primary-border-color,
-    $btn-primary-border-width,
-    $btn-primary-hover-bg,
-    $btn-primary-hover-color,
-    $btn-primary-hover-border-color
+    var(--pgn-color-btn-bg-primary),
+    var(--pgn-color-btn-text-primary),
+    var(--pgn-typography-btn-font-size-primary),
+    var(--pgn-typography-btn-font-weight-primary),
+    var(--pgn-color-btn-border-primary),
+    var(--pgn-size-border-width-primary),
+    var(--pgn-color-btn-hover-bg-primary),
+    var(--pgn-color-btn-hover-text-primary),
+    var(--pgn-color-btn-hover-border-primary)
   );
 }
 
 .btn-outline-primary {
   @include btn-styles(
-    $btn-secondary-bg,
-    $btn-secondary-color,
-    $btn-secondary-font-size,
-    $btn-secondary-font-weight,
-    $btn-secondary-border-color,
-    $btn-secondary-border-width,
-    $btn-secondary-hover-bg,
-    $btn-secondary-hover-color,
-    $btn-secondary-hover-border-color
+    var(--pgn-color-btn-bg-secondary),
+    var(--pgn-color-btn-text-secondary),
+    var(--pgn-typography-btn-font-size-secondary),
+    var(--pgn-typography-btn-font-weight-secondary),
+    var(--pgn-color-btn-border-secondary),
+    var(--pgn-size-border-width-secondary),
+    var(--pgn-color-btn-hover-bg-secondary),
+    var(--pgn-color-btn-hover-text-secondary),
+    var(--pgn-color-btn-hover-border-secondary)
   );
 }

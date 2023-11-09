@@ -116,7 +116,7 @@ variables, and the file `lms/static/sass/_lms-overrides.scss` that imports these
 You can then install and use it as a regular theme. Run `make dev.static.lms` to make
 sure that the latest changes are picked up.
 
-# [IN DEVELOPMENT] Use as branding package for MFEs
+# Use as branding package for MFEs
 This can also be used as a [branding package for MFEs](
   https://open-edx-proposals.readthedocs.io/en/latest/oep-0048-brand-customization.html).
 To do so install this package as an override to `@edx/brand`. Any variables specified in
@@ -130,3 +130,22 @@ the following ansible config:
 MFE_DEPLOY_NPM_OVERRIDES:
   - "@edx/brand@file:/edx/var/edxapp/themes/simple-theme/"
 ```
+
+
+# WIP: Automatically deploying a runtime theme to S3 via gitlab CI
+
+This repo has a GitLab CI confiuration to automatically deploy to AWS S3 if
+configured.
+
+To use that you need to configure the environemnt variables that AWS CLI needs
+for S3. At minimum you need:
+
+- AWS_ACCESS_KEY_ID
+- AWS_SECRET_ACCESS_KEY
+- S3_BUCKET
+
+If deploying to DigitalOcean buckets or some other S3-compatible storage you can
+specify `AWS_ENDPOINT_URL` as well.
+
+If the files need to be deployed to a sub-path, set `THEME_PATH` as well.
+

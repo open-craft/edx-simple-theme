@@ -1,0 +1,20 @@
+{
+  "color": {
+    "course-nav": {
+      "menu": {
+        "text": {
+          "value": "",
+          "type": "color",
+          "source": "$course-nav-menu-color"
+        },
+        "border": {
+          "bottom": {
+            "value": "",
+            "type": "color",
+            "source": "$course-nav-menu-border-bottom-color"
+          }
+        }
+      }
+    }
+  }
+}

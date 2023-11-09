@@ -1,0 +1,22 @@
+{
+    "size": {
+        "header": {
+            "border": {
+                "top": {
+                    "width": {
+                        "value": "",
+                        "type": "dimension",
+                        "source": "$header-border-top-width"
+                    }
+                },
+                "bottom": {
+                    "width": {
+                        "value": "",
+                        "type": "dimension",
+                        "source": "$header-border-bottom-width"
+                    }
+                }
+            }
+        }
+    }
+}

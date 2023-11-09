@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "description": "This is a customisable branding package for Open edX MFEs that provides a number of overridable variables. ",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build-tokens": "paragon build-tokens --source ./tokens --build-dir ./paragon/css --source-tokens-only --all-themes --base-theme light",
+    "build-scss": "paragon build-scss --corePath ./paragon/core.scss --themesPath ./paragon/css/themes",
+    "build": "rimraf dist && mkdir dist && npm run build-scss"
   },
   "repository": {
     "type": "git",
@@ -16,7 +18,9 @@
   },
   "homepage": "https://github.com/open-craft/edx-simple-theme#readme",
   "devDependencies": {
-    "stylelint": "^13.13.0",
-    "stylelint-config-standard": "^22.0.0"
+    "@edx/paragon": "https://github.com/openedx/paragon/tarball/pull/2792/head",
+    "rimraf": "^5.0.5",
+    "stylelint": "^15.11.0",
+    "stylelint-config-standard": "^34.0.0"
   }
 }
