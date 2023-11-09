@@ -1,2 +1,6 @@
-@import "../common/variables";
-@import "../lms/static/sass/common-variables";
+// Set default colors in case they aren't set on the parent file
+$main-color: var(--pgn-color-main) !default;
+$header-bg: var(--pgn-color-header-bg) !default;
+$footer-bg: var(--pgn-color-footer-bg) !default;
+
+$header-btn-bg: $header-bg !default;

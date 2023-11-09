@@ -1,0 +1,6 @@
+[*.json]
+indent_style = space
+indent_size = 2
+
+[*.scss]
+max_line_length = 120

@@ -1,0 +1,30 @@
+[color.header.bg]
+"$value" = "white"
+
+[color.header.nav.text]
+"$value" = "initial"
+source = "$main-nav-color"
+
+[color.header.nav.link]
+"$value" = "initial"
+source = "$main-nav-link-color"
+
+[color.header.nav.item.border.bottom.color]
+"$value" = "initial"
+source = "$main-nav-item-border-bottom-color"
+
+[color.header.nav.item.border.bottom.hover.color]
+"$value" = "initial"
+source = "$main-nav-item-hover-border-bottom-color"
+
+[color.header.nav.user-dropdown.menu-item.color]
+"$value" = "initial"
+source = "$user-dropdown-color"
+
+[color.header.border.top]
+"$value" = "initial"
+source = "$header-border-top-color"
+
+[color.header.border.bottom]
+"$value" = "initial"
+source = "$header-border-bottom-color"

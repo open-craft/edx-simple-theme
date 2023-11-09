@@ -1,0 +1,15 @@
+
+[color.primary.base]
+"$value" = "#ff0000"
+
+[color.primary.100]
+"$value" = "#fff4ef"
+
+[color.primary.200]
+"$value" = "#ffd0be"
+
+[color.primary.400]
+"$value" = "#ff6945"
+
+[color.primary.500]
+"$value" = "{color.primary.base}"

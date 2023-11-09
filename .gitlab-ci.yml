@@ -1,0 +1,37 @@
+stages:
+  - build
+  - deploy
+
+build themes:
+  stage: build
+  image: node:18
+  cache:
+    - key:
+        files:
+          - package.json
+          - package-lock.json
+      paths:
+        - node_modules
+  before_script:
+    - npm install
+  script:
+    - npm run build
+  artifacts:
+    paths:
+      - dist/
+    when: on_success
+
+deploy s3:
+  stage: deploy
+  needs:
+    - build themes
+  image:
+    name: amazon/aws-cli:latest
+    entrypoint:
+      - "/usr/bin/env"
+  script:
+    - aws s3 cp dist/ s3://$S3_BUCKET/$THEME_PATH --recursive --acl public-read
+  rules:
+    # Only deploy if merging to default branch and if a bucket is defined
+    - if: "$CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH && $S3_BUCKET"
+      when: always
