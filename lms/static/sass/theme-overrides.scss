@@ -409,3 +409,13 @@
     $btn-secondary-hover-border-color
   );
 }
+
+// Set the default color of links
+// HACK: The first rule splits classes into separate :not selectors to increase the specificity.
+a[href]:not(.btn):not(.help-link),
+a[href]:not(.btn):hover,
+a[href]:not(.btn):focus,
+a[href]:visited:not(.btn):hover,
+a[href]:visited:not(.btn):focus {
+  color: $link-color;
+}
