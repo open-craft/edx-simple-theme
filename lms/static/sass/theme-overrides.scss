@@ -412,6 +412,9 @@
 
 // Set the default color of links
 // HACK: The first rule splits classes into separate :not selectors to increase the specificity.
+//
+// I moved this out of common because is overriding MFE course authoring styles,
+// which causes styles to break in the tagging sandbox
 a[href]:not(.btn):not(.help-link),
 a[href]:not(.btn):hover,
 a[href]:not(.btn):focus,
