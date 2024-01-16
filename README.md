@@ -157,7 +157,7 @@ output it as CSS variables so they can be loaded by the custom theme.
 This is a two-step process:
 
 1. Building the tokens: The `paragon build-tokens` build tokens command compiles
-   the JSON style dictionaries into CSS file sin the `paragon/css/` directory.
+   the JSON style dictionaries into CSS files in the `paragon/css/` directory.
    These are supposed to be committed to the repository.
 2. Building the SCSS: The build token CSS files are then compiled into a brand
    theme in the dist folder using the `paragon build-scss` command. The contents
