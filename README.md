@@ -137,9 +137,8 @@ Design tokens present a new way of customising styles using variables that are
 then translated into different forms depending on the platform they are used in.
 
 For instance a token like `color.brand.base` could translate to a SCSS variable
-called `$brand-base` a css variable called `--pgn-color-brand-base` or be output
-in an XML that can be used for styling Android. For now the focus of Paragon is
-on CSS variables.
+called `$brand-base`, a css variable called `--pgn-color-brand-base`, or be output
+in an XML that can be used for styling Android. Currently, the focus of Paragon is on CSS variables.
 
 To customise a theme using this system, you'll need to provide all the variables
 that you want to override in JSON files. You can look at the JSON files in the
