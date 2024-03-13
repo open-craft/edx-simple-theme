@@ -1,0 +1,71 @@
+{
+  "color": {
+    "register": {
+      "btn": {
+        "bg": {
+          "value": "",
+          "type": "color",
+          "source": "$btn-register-bg"
+        },
+        "text": {
+          "value": "",
+          "type": "color",
+          "source": "$btn-register-color"
+        },
+        "border": {
+          "value": "",
+          "type": "color",
+          "source": "$btn-register-border-color"
+        },
+        "hover": {
+          "bg": {
+            "value": "",
+            "type": "color",
+            "source": "$btn-register-hover-bg"
+          },
+          "text": {
+            "value": "",
+            "type": "color",
+            "source": "$btn-register-hover-color"
+          },
+          "border": {
+            "value": "",
+            "type": "color",
+            "source": "$btn-register-hover-border-color"
+          }
+        }
+      }
+    }
+  },
+  "typography": {
+    "register": {
+      "btn": {
+        "font": {
+          "size": {
+            "value": "",
+            "type": "dimension",
+            "source": "$btn-register-font-size"
+          },
+          "weight": {
+            "value": "",
+            "type": "fontWeight",
+            "source": "$btn-register-font-weight"
+          }
+        }
+      }
+    }
+  },
+  "size": {
+    "register": {
+      "btn": {
+        "border": {
+          "width": {
+            "value": "",
+            "type": "dimension",
+            "source": "$btn-register-border-width"
+          }
+        }
+      }
+    }
+  }
+}

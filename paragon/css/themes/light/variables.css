@@ -1,0 +1,20 @@
+/**
+ * IMPORTANT: This file is the result of assembling design tokens
+ * Do not edit directly
+ * Generated on Thu, 09 Nov 2023 15:04:27 GMT
+ */
+
+:root {
+  --pgn-color-header-bg: #FFFFFFFF;
+  --pgn-color-main: #FF8000FF;
+  --pgn-color-footer-bg: #FFFFFFFF;
+  --pgn-typography-sign-in-btn-font-weight: ;
+  --pgn-typography-sign-in-btn-font-size: ;
+  --pgn-typography-register-btn-font-weight: ;
+  --pgn-typography-register-btn-font-size: ;
+  --pgn-typography-logistration-btn-font-weight: ;
+  --pgn-typography-logistration-btn-font-size: ;
+  --pgn-size-sign-in-btn-border-width: ;
+  --pgn-size-register-btn-border-width: ;
+  --pgn-size-logistration-btn-border-width: ;
+}

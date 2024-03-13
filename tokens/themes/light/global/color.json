@@ -1,0 +1,9 @@
+{
+  "color": {
+    "main": {
+      "value": "#ff8000",
+      "type": "color",
+      "source": "$main-color"
+    }
+  }
+}

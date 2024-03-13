@@ -1,0 +1,33 @@
+{
+  "typography": {
+    "logistration": {
+      "btn": {
+        "font": {
+          "size": {
+            "value": "",
+            "type": "dimension",
+            "source": "$btn-logistration-font-size"
+          },
+          "weight": {
+            "value": "",
+            "type": "fontWeight",
+            "source": "$btn-logistration-font-weight"
+          }
+        }
+      }
+    }
+  },
+  "size": {
+    "logistration": {
+      "btn": {
+        "border": {
+          "width": {
+            "value": "",
+            "type": "dimension",
+            "source": "$btn-logistration-border-width"
+          }
+        }
+      }
+    }
+  }
+}

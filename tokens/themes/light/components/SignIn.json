@@ -1,0 +1,71 @@
+{
+  "color": {
+    "sign-in": {
+      "btn": {
+        "bg": {
+          "value": "",
+          "type": "color",
+          "source": "$btn-sign-in-bg"
+        },
+        "text": {
+          "value": "",
+          "type": "color",
+          "source": "$btn-sign-in-color"
+        },
+        "border": {
+          "value": "",
+          "type": "color",
+          "source": "$btn-sign-in-border-color"
+        },
+        "hover": {
+          "bg": {
+            "value": "",
+            "type": "color",
+            "source": "$btn-sign-in-hover-bg"
+          },
+          "text": {
+            "value": "",
+            "type": "color",
+            "source": "$btn-sign-in-hover-color"
+          },
+          "border": {
+            "value": "",
+            "type": "color",
+            "source": "$btn-sign-in-hover-border-color"
+          }
+        }
+      }
+    }
+  },
+  "typography": {
+    "sign-in": {
+      "btn": {
+        "font": {
+          "size": {
+            "value": "",
+            "type": "dimension",
+            "source": "$btn-sign-in-font-size"
+          },
+          "weight": {
+            "value": "",
+            "type": "fontWeight",
+            "source": "$btn-sign-in-font-weight"
+          }
+        }
+      }
+    }
+  },
+  "size": {
+    "sign-in": {
+      "btn": {
+        "border": {
+          "width": {
+            "value": "",
+            "type": "dimension",
+            "source": "$btn-sign-in-border-width"
+          }
+        }
+      }
+    }
+  }
+}
