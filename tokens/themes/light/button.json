@@ -13,34 +13,45 @@
             "type": "dimension",
             "source": "$btn-primary-font-size"
           }
-        },
-        "weight": {
-          "secondary": {
-            "value": "",
-            "type": "fontWeight",
-            "source": "$btn-secondary-font-weight"
-          },
-          "primary": {
-            "value": "",
-            "type": "fontWeight",
-            "source": "$btn-primary-font-weight"
+        }
+      }
+    }
+  },
+  "oc": {
+    "typography": {
+      "btn": {
+        "font": {
+          "weight": {
+            "secondary": {
+              "value": "",
+              "type": "fontWeight",
+              "source": "$btn-secondary-font-weight"
+            },
+            "primary": {
+              "value": "",
+              "type": "fontWeight",
+              "source": "$btn-primary-font-weight"
+            }
           }
         }
       }
     }
   },
+
   "size": {
-    "border": {
-      "width": {
-        "secondary": {
-          "value": "",
-          "type": "dimensions",
-          "source": "$btn-secondary-border-width"
-        },
-        "primary": {
-          "value": "",
-          "type": "dimensions",
-          "source": "$btn-primary-border-width"
+    "btn": {
+      "border": {
+        "size": {
+          "secondary": {
+            "value": "",
+            "type": "dimensions",
+            "source": "$btn-secondary-border-width"
+          },
+          "primary": {
+            "value": "",
+            "type": "dimensions",
+            "source": "$btn-primary-border-width"
+          }
         }
       }
     }

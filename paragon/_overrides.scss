@@ -10,7 +10,7 @@ header {
   }
 
   @if variable-exists(customize-header-border) {
-    // Set the top and bottom border of the header    
+    // Set the top and bottom border of the header
     border-top: var(--pgn-size-header-border-top-width) solid var(--pgn-color-header-border-top);
     border-bottom: var(--pgn-size-header-border-bottom-width) solid var(--pgn-color-header-border-bottom);
     // The default height is 3.75rem, to that we add the additional border size, otherwise
@@ -149,9 +149,9 @@ footer.footer {
     var(--pgn-color-btn-bg-secondary),
     var(--pgn-color-btn-text-secondary),
     var(--pgn-typography-btn-font-size-secondary),
-    var(--pgn-typography-btn-font-weight-secondary),
+    var(--pgn-oc-typography-btn-font-weight-secondary),
     var(--pgn-color-btn-border-secondary),
-    var(--pgn-size-border-width-secondary),
+    var(--pgn-size-btn-border-size-secondary),
     var(--pgn-color-btn-hover-bg-secondary),
     var(--pgn-color-btn-hover-text-secondary),
     var(--pgn-color-btn-hover-border-secondary)

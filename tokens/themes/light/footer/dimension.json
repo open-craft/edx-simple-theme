@@ -1,22 +1,22 @@
 {
-    "size": {
-        "footer": {
-            "border": {
-                "top": {
-                    "width": {
-                        "value": "",
-                        "type": "dimension",
-                        "source": "$footer-border-top-width"
-                    }
-                },
-                "bottom": {
-                    "width": {
-                        "value": "",
-                        "type": "dimension",
-                        "source": "$footer-border-bottom-width"
-                    }
-                }
-            }
+  "size": {
+    "footer": {
+      "border": {
+        "top": {
+          "width": {
+            "value": "",
+            "type": "dimension",
+            "source": "$footer-border-top-width"
+          }
+        },
+        "bottom": {
+          "width": {
+            "value": "",
+            "type": "dimension",
+            "source": "$footer-border-bottom-width"
+          }
         }
+      }
     }
+  }
 }

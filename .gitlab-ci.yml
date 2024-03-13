@@ -4,7 +4,7 @@ stages:
 
 build themes:
   stage: build
-  image: node:latest
+  image: node:18
   cache:
     - key:
         files:
