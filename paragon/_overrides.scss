@@ -150,6 +150,10 @@ footer.footer {
 // Discussions mfe overwrites learning header color to white
 .learning-header {
   background-color: $header-bg !important;
+  .course-title-lockup {
+    // Update course name color in mfe header
+    color: $main-nav-color;
+  }
 }
 
 .learning-header a {
