@@ -147,6 +147,11 @@ footer.footer {
   }
 }
 
+// Discussions mfe overwrites learning header color to white
+.learning-header {
+  background-color: $header-bg !important;
+}
+
 .learning-header a {
   color: $link-color !important;
   &:focus,
