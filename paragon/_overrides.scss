@@ -103,6 +103,43 @@ header {
       }
     }
   }
+    // Set the color of nav items in the learner dashboard MFE
+  .btn-inverse-primary,
+  .btn-icon-inverse-primary,
+  .btn-light,
+  .show>.btn-light.dropdown-toggle {
+    color: $link-color !important;
+    background-color: $header-btn-bg !important;
+    border-radius: 0 !important;
+  }
+
+  // Remove border white color from user dropdown in header
+  .btn-avatar {
+    border-width: 0 !important;
+  }
+
+  // Adds underline below each item in header on hover or focus
+  .btn-light:not(:disabled):not(.disabled):hover,
+  .btn-inverse-primary:not(:disabled):not(.disabled):hover,
+  .btn-light:not(:disabled):not(.disabled):focus,
+  .btn-inverse-primary:not(:disabled):not(.disabled):focus {
+    border-bottom: $header-btn-bottom-border-width solid $header-btn-bottom-border-hover-color !important;
+  }
+}
+
+.learner-variant-header {
+  a {
+    // needed to make the link not resize the header
+    border-bottom: $header-btn-bottom-border-width solid transparent;
+  }
+  .course-link {
+    // Adds bottom border on active element
+    border-bottom: $header-btn-bottom-border-width solid $header-course-link-btn-bottom-border-color !important;
+  }
+
+  .course-link:hover {
+    border-bottom: inherit !important;
+  }
 }
 
 footer.footer {
@@ -144,6 +181,20 @@ footer.footer {
   }
 }
 
+// Discussions mfe overwrites learning header color to white
+.learning-header {
+  background-color: $header-bg !important;
+}
+
+.learning-header a {
+  color: $link-color !important;
+  &:focus,
+  &:hover,
+  &.active {
+    color: $link-color !important;
+  }
+}
+
 .btn-outline-secondary {
   @include btn-styles(
     $btn-secondary-bg,
@@ -156,4 +207,12 @@ footer.footer {
     $btn-secondary-hover-color,
     $btn-secondary-hover-border-color
   );
+}
+
+
+// Header navigation colors in the learner dashboard MFE on mobile
+.nav-small-menu {
+  .btn-inverse-primary {
+    color: $link-color;
+  }
 }
