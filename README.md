@@ -8,6 +8,10 @@ Below is the list of available SASS variables for customization. Check `lms/stat
 
 * $link-color
 * $header-bg
+* $header-btn-bg: Update header links background color in mfe which are decorated as buttons by default.
+* $header-btn-bottom-border-width: Update header links bottom border width.
+* $header-btn-bottom-border-hover-color: Update header links hover color.
+* $header-course-link-btn-bottom-border-color: Update course link bottom border in header.
 * $customize-header-border (boolean). If defined, requires all the following variables to be set.
   - $header-border-top-width
   - $header-border-top-color
