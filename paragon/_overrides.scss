@@ -1,13 +1,8 @@
 @import "../common/overrides";
 
-header {
+header.learning-header, header.learner-variant-header, header.site-header-desktop {
   // Set the header background color
   background-color: $header-bg;
-
-  // Set the header for desktop
-  &.site-header-desktop {
-    background-color: $header-bg;
-  }
 
   @if variable-exists(customize-header-border) {
     // Set the top and bottom border of the header
