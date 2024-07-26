@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/open-craft/edx-simple-theme#readme",
   "devDependencies": {
-    "@edx/paragon": "https://github.com/openedx/paragon/tarball/pull/2792/head",
+    "@openedx/paragon": "23.0.0-alpha.1",
     "rimraf": "^5.0.5",
     "stylelint": "^15.11.0",
     "stylelint-config-standard": "^34.0.0"
