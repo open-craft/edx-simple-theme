@@ -157,3 +157,16 @@ footer.footer {
     var(--pgn-color-btn-hover-border-secondary)
   );
 }
+
+// Studio grade fixing the remove button
+.grading-scale {
+  .grading-scale-segments-and-ticks {
+    padding-top: 1.8rem !important;
+    height: 5.125rem !important;
+    border: none !important;
+  }
+
+  .btn-icon {
+    margin-top: 1.1rem;
+  }
+}
