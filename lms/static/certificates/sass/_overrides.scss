@@ -1,0 +1,4 @@
+// Don't hide signatures on honor certs.
+.layout-accomplishment.certificate-honor .accomplishment-rendering .accomplishment-signatories .signatory-signature {
+  display: block;
+}
