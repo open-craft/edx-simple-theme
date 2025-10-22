@@ -29,6 +29,7 @@ course_mode_class = course_mode if course_mode else ''
     <title>${document_title}</title>
 
     <%static:css group='style-certificates'/>
+    <%static:css group='style-certs-extra'/>
 
 
     <% ga_4_id = static.get_value("GOOGLE_ANALYTICS_4_ID", settings.GOOGLE_ANALYTICS_4_ID) %>
@@ -44,8 +45,7 @@ course_mode_class = course_mode if course_mode else ''
     % endif
 </head>
 
-<!-- PSU Change: Remove course mode class. -->
-<body class="layout-accomplishment view-valid-accomplishment ${dir_rtl} certificate" data-view="valid-accomplishment">
+<body class="layout-accomplishment view-valid-accomplishment ${dir_rtl} certificate certificate-${course_mode_class}" data-view="valid-accomplishment">
 
     <div class="wrapper-view" dir="${dir_rtl}">
 
