@@ -18,24 +18,20 @@ course_mode_class = course_mode if course_mode else ''
                 <span class="accomplishment-type-symbol">
                     <img class="src" src="/static/certificates/images/ico-${course_mode_class}.png" alt="Image for course mode of type ${course_mode_class}">
                 </span>
-
-                <span class="accomplishment-type-label hd-3">${document_title}</span>
+                <span class="accomplishment-type-label hd-3">${organization_long_name or platform_name} | Online Course Certificate</span>
             </div>
 
             <div class="wrapper-statement-and-signatories">
                 <div class="accomplishment-statement">
                     <p class="accomplishment-statement-lead">
                         <strong class="accomplishment-recipient hd-1 emphasized">${accomplishment_copy_name}</strong>
-                        <span class="accomplishment-summary copy copy-lead">${accomplishment_copy_description_full}</span>
+                        <span class="accomplishment-summary copy copy-lead">has completed</span>
 
                         <span class="accomplishment-course hd-1 emphasized">
-                            <span class="accomplishment-course-org">${accomplishment_copy_course_org}  </span>
-                            <span class="accomplishment-course-number">${course_number}</span>:
                             <span class="accomplishment-course-name">${accomplishment_copy_course_name}</span>
                         </span>
                     </p>
-
-                    <p class="accomplishment-statement-detail copy copy-lead">${accomplishment_copy_course_description}</p>
+                    <p class="accomplishment-statement-detail copy copy-lead">${optional_cert_text or ''}</p>
                 </div>
 
                 % if mode != 'base':
