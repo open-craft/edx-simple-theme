@@ -1,5 +1,8 @@
 <%page expression_filter="h"/>
-<%! from django.utils.translation import gettext as _ %>
+<%
+from django.utils.translation import gettext as _
+from django.urls import reverse
+%>
 <%namespace name='static' file='../static_content.html'/>
 <%
 course_mode_class = course_mode if course_mode else ''
@@ -86,33 +89,24 @@ course_mode_class = course_mode if course_mode else ''
         </div>
     </div>
 
-    <div class="wrapper-accomplishment-metadata">
-        <div class="accomplishment-metadata">
-            <h2 class="accomplishment-metadata-title hd-6">${accomplishment_copy_more_about}</h2>
-
-            <div class="wrapper-metadata">
-                <dl class="metadata accomplishment-recipient">
-                    <dt class="label sr-only">${_("Awarded to:")}</dt>
-                    <dd class="value copy copy-meta">
-                        <span class="recipient-img">
-                            <img class="src" src="/static/certificates/images/demo-user-profile.png" alt="Recipient Image">
-                        </span>
-                        <div class="recipient-details">
-                            <h3 class="recipient-name">${accomplishment_copy_name}</h3>
-                            <p class="recipient-username">${accomplishment_copy_username} @ ${platform_name}</p>
-                        </div>
-                    </dd>
-                </dl>
-                <dl class="metadata accomplishment-id">
-                    <dt class="label copy copy-meta">${certificate_id_number_title}:</dt>
-                    <dd class="value copy copy-base">${certificate_id_number}</dd>
-                </dl>
-                <dl class="metadata accomplishment-date">
-                    <dt class="label copy copy-meta">${certificate_date_issued_title}</dt>
-                    <dd class="value copy copy-base">${certificate_date_issued}</dd>
-                </dl>
-            </div>
-        </div>
+    <div class="certificate-metadata-container">
+      <div class="certificate-metadata">
+        <div class="metadata-definitions">
+          <dl class="metadata accomplishment-id">
+            <dt class="label copy copy-meta">${certificate_id_number_title}:</dt>
+            <dd class="value copy copy-base">${certificate_id_number}</dd>
+          </dl>
+	  <div class="spacer"></div>
+          <dl class="metadata accomplishment-date">
+            <dt class="label copy copy-meta">${certificate_date_issued_title}</dt>
+            <dd class="value copy copy-base"><strong>${certificate_date_issued}</strong></dd>
+          </dl>
+	</div>
+	<p class="authenticity-section">
+	  Verify the authenticity of this certificate at
+	  <strong><a href="${request.scheme}://${request.get_host() + request.path}"
+	  >${request.scheme}://${request.get_host() + request.path}</a></strong>
+	</p>
+      </div>
     </div>
-
 </main>
