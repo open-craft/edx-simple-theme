@@ -1,2 +1,8 @@
 @import 'lms/static/sass/lms-course';
 @import 'theme-overrides';
+
+// To be removed when https://github.com/openedx/platform-roadmap/issues/392
+// is resolved.
+.course-tabs-navigation a[href$="/dates"].nav-item.flex-shrink-0.nav-link {
+  display: none;
+}
