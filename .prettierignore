@@ -1,0 +1,4 @@
+*.yml
+*.md
+*.json
+/pargaon/css/**/*.css

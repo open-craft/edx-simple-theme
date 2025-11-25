@@ -1,0 +1,7 @@
+[size.header.border.top.width]
+"$value" = "0px"
+source = "$header-border-top-width"
+
+[size.header.border.bottom.width]
+"$value" = "0px"
+source = "$header-border-bottom-width"

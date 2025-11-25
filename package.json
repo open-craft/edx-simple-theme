@@ -1,9 +1,12 @@
 {
-  "name": "@open-craft/simple-theme",
+  "name": "@open-craft/brand-simple-theme",
   "version": "0.1.0",
   "description": "This is a customisable branding package for Open edX MFEs that provides a number of overridable variables. ",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build-tokens": "paragon build-tokens --source ./tokens/ --build-dir ./paragon/css --all-themes --paragon-base-theme light",
+    "build-scss": "paragon build-scss --corePath ./paragon/core.scss --themesPath ./paragon/css/themes",
+    "build": "rimraf dist && mkdir dist && npm run build-scss",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -15,8 +18,17 @@
     "url": "https://github.com/open-craft/edx-simple-theme/issues"
   },
   "homepage": "https://github.com/open-craft/edx-simple-theme#readme",
+  "peerDependencies": {
+    "@openedx/paragon": "^23.4.5"
+  },
   "devDependencies": {
-    "stylelint": "^13.13.0",
-    "stylelint-config-standard": "^22.0.0"
+    "@openedx/paragon": "^23.16.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.6",
+    "prettier": "3.6.2",
+    "rimraf": "^6.1.0"
+  },
+  "lint-staged": {
+    "*.{css,scss}": "prettier --write"
   }
 }
