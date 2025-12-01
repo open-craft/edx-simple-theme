@@ -1,0 +1,125 @@
+<%page expression_filter="h"/>
+<%namespace name='static' file='/static_content.html'/>
+<%!
+from django.utils.translation import gettext as _
+from openedx.core.djangolib.js_utils import js_escaped_string
+%>
+<%
+# set doc language direction
+from django.utils.translation import get_language_bidi
+dir_rtl = 'rtl' if get_language_bidi() else 'ltr'
+course_mode_class = course_mode if course_mode else ''
+%>
+
+<!DOCTYPE html>
+<html class="no-js" lang="${LANGUAGE_CODE}">
+<head dir="${dir_rtl}">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    % if facebook_share_enabled:
+        ## OG (Open Graph) url, title, type, image and description added below to give social media info to display
+        ## (https://developers.facebook.com/docs/opengraph/howtos/maximizing-distribution-media-content#tags)
+        <meta property="og:url" content="${share_url}" />
+        <meta property="og:title" content="${document_title}" />
+        <meta property="og:type" content="image/png" />
+        <meta property="og:image" content="${full_course_image_url}" />
+        <meta property="og:description" content="${facebook_share_text}" />
+    %endif
+    <title>${document_title}</title>
+
+    <%static:css group='style-certificates'/>
+    <!-- hack for PSU so we can have some style overrides in certs without replacing everything.
+         There is almost certainly a better way to do this. But I am out of time, and this will all be blown away in Phase II. -->
+    <style>
+    .layout-accomplishment .accomplishment-orgs .organization-logo {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    .layout-accomplishment.certificate-honor .accomplishment-rendering .accomplishment-signatories .signatory-signature {
+      display: block;
+    }
+    .certificate-metadata-container {
+      background-color: rgb(0, 30, 68);
+      color: rgb(245, 246, 250);
+      display: flex;
+      justify-content: center;
+    }
+    .certificate-metadata-container a {
+      color: rgb(245, 246, 250);
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    @media print {
+      .certificate-metadata-container {
+        background-color: unset;
+        color: unset;
+      }
+      .certificate-metadata-container a {
+        color: unset;
+      }
+      .certificate-metadata {
+        margin-top: .5rem;
+	margin-bottom: 0;
+      }
+    }
+    .certificate-metadata {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      width: 100%;
+      max-width: 73.125rem;
+    }
+    .certificate-metadata .metadata-definitions {
+      display: flex;
+    }
+    .metadata-definitions .spacer {
+      flex-grow: 1;
+    }
+    .certificate-metadata dl {
+      display: inline-block;
+    }
+    .certificate-metadata dl dt, .certificate-metadata dl dd {
+      display: inline;
+    }
+    .certificate-metadata dl dd {
+      margin-left: 1rem;
+    }
+    </style>
+
+    <% ga_4_id = static.get_value("GOOGLE_ANALYTICS_4_ID", settings.GOOGLE_ANALYTICS_4_ID) %>
+    % if ga_4_id:
+        <script async src="https://www.googletagmanager.com/gtag/js?id=${ga_4_id}"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', '${ga_4_id | n, js_escaped_string}');
+        </script>
+    % endif
+</head>
+
+<body class="layout-accomplishment view-valid-accomplishment ${dir_rtl} certificate certificate-${course_mode_class}" data-view="valid-accomplishment">
+
+    <div class="wrapper-view" dir="${dir_rtl}">
+
+        <%include file="_accomplishment-header.html" />
+
+        <hr class="divider sr-only">
+
+        ${self.body()}
+
+        <hr class="divider sr-only">
+
+        <%include file="_accomplishment-footer.html" />
+    </div>
+
+    <%include file="_assets-secondary.html" />
+    %if badge:
+        <%include file="_badges-modal.html" />
+    %endif
+</body>
+</html>
+

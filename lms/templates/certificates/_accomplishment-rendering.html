@@ -1,0 +1,112 @@
+<%page expression_filter="h"/>
+<%
+from django.utils.translation import gettext as _
+from django.urls import reverse
+%>
+<%namespace name='static' file='../static_content.html'/>
+<%
+course_mode_class = course_mode if course_mode else ''
+%>
+
+<main class="accomplishment accomplishment-main">
+
+    <div class="wrapper-accomplishment-rendering">
+        <div class="accomplishment-rendering">
+            <span class="deco-corner deco-corner-tl"></span>
+            <span class="deco-corner deco-corner-tr"></span>
+            <span class="deco-corner deco-corner-bl"></span>
+            <span class="deco-corner deco-corner-br"></span>
+
+            <div class="accomplishment-type">
+                <span class="accomplishment-type-symbol">
+                    <img class="src" src="/static/certificates/images/ico-${course_mode_class}.png" alt="Image for course mode of type ${course_mode_class}">
+                </span>
+                <span class="accomplishment-type-label hd-3">${organization_long_name or platform_name} | Online Course Certificate</span>
+            </div>
+
+            <div class="wrapper-statement-and-signatories">
+                <div class="accomplishment-statement">
+                    <p class="accomplishment-statement-lead">
+                        <strong class="accomplishment-recipient hd-1 emphasized">${accomplishment_copy_name}</strong>
+                        <span class="accomplishment-summary copy copy-lead">has completed</span>
+
+                        <span class="accomplishment-course hd-1 emphasized">
+                            <span class="accomplishment-course-name">${accomplishment_copy_course_name}</span>
+                        </span>
+                    </p>
+                    <p class="accomplishment-statement-detail copy copy-lead">${optional_cert_text or ''}</p>
+                </div>
+
+                % if mode != 'base':
+                <div class="accomplishment-signatories">
+                    <h3 class="accomplishment-signatories-title sr-only">${_("Noted by")}</h3>
+
+                    <div class="wrapper-signatories">
+                        <div class="list-signatories">
+                            % if certificate_data:
+                                % for signatory in certificate_data.get('signatories', []):
+                                    % if signatory.get('signature_image_path'):
+                                        <div class="signatory">
+                                            <img class="signatory-signature" src="${static.url(signatory['signature_image_path'])}" alt="${signatory['name']}">
+
+                                            <h4 class="signatory-name hd-5">${signatory['name']}</h4>
+                                            <p class="signatory-credentials copy copy-micro">
+                                                <span class="role">${signatory['title']}</span>
+                                                <span class="organization">${signatory['organization']}</span>
+                                            </p>
+                                        </div>
+                                    % endif
+                                % endfor
+                            % endif
+                        </div>
+                    </div>
+                </div>
+                % endif
+            </div>
+
+            <div class="accomplishment-orgs">
+                <h3 class="accomplishment-orgs-title sr-only">${_("Supported by the following organizations")}</h3>
+
+                <ul class="wrapper-orgs list-orgs">
+		  <!-- Commented out for PSU's use case.
+                    <li class="wrapper-organization">
+                        <div class="organization organization-edX">
+                            <img class="organization-logo" src="${logo_src}" alt="${platform_name}">
+                        </div>
+                    </li>
+		  -->
+
+                    % if organization_logo:
+		    <!-- PSU adjustment: Add organization-edX class to make this logo full width. -->
+                    <li class="wrapper-organization">
+                        <div class="organization">
+                            <img class="organization-logo" src="${organization_logo.url}" alt="${platform_name}">
+                        </div>
+                    </li>
+                    % endif
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="certificate-metadata-container">
+      <div class="certificate-metadata">
+        <div class="metadata-definitions">
+          <dl class="metadata accomplishment-id">
+            <dt class="label copy copy-meta">${certificate_id_number_title}:</dt>
+            <dd class="value copy copy-base">${certificate_id_number}</dd>
+          </dl>
+	  <div class="spacer"></div>
+          <dl class="metadata accomplishment-date">
+            <dt class="label copy copy-meta">${certificate_date_issued_title}</dt>
+            <dd class="value copy copy-base"><strong>${certificate_date_issued}</strong></dd>
+          </dl>
+	</div>
+	<p class="authenticity-section">
+	  Verify the authenticity of this certificate at
+	  <strong><a href="${request.scheme}://${request.get_host() + request.path}"
+	  >${request.scheme}://${request.get_host() + request.path}</a></strong>
+	</p>
+      </div>
+    </div>
+</main>
