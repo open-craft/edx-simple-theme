@@ -5,3 +5,21 @@
 // rules into modular pieces.
 
 @import '../theme-overrides';
+
+// WGU customisations
+.course-wrapper .course-content .vert-mod .vert {
+  border-bottom: none;
+}
+
+
+.xmodule_display.xmodule_AboutBlock img.full-bleed,
+.xmodule_display.xmodule_CourseInfoBlock img.full-bleed,
+.xmodule_display.xmodule_HtmlBlock img.full-bleed,
+.xmodule_display.xmodule_StaticTabBlock img.full-bleed {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  height: auto;
+  width: 100vw;
+  max-width: 100vw;
+}
