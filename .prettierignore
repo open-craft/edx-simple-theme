@@ -1,4 +1,4 @@
 *.yml
 *.md
 *.json
-/pargaon/css/**/*.css
+/paragon/css/**/*.css
