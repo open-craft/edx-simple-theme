@@ -15,7 +15,8 @@
 .xmodule_display.xmodule_AboutBlock img.full-bleed,
 .xmodule_display.xmodule_CourseInfoBlock img.full-bleed,
 .xmodule_display.xmodule_HtmlBlock img.full-bleed,
-.xmodule_display.xmodule_StaticTabBlock img.full-bleed {
+.xmodule_display.xmodule_StaticTabBlock img.full-bleed,
+.xblock-student_view-cover {
   position: relative;
   left: 50%;
   transform: translateX(-50%);
