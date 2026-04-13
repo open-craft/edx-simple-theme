@@ -22,7 +22,7 @@
     "@openedx/paragon": "^23.4.5"
   },
   "devDependencies": {
-    "@openedx/paragon": "^23.16.0",
+    "@openedx/paragon": "^23.20.3",
     "husky": "^9.1.7",
     "lint-staged": "^16.2.6",
     "prettier": "3.6.2",
