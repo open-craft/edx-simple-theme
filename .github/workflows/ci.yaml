@@ -1,0 +1,40 @@
+name: Verify
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [24]
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Setup Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v6
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Prettier check
+        run: npx prettier --check .
+
+      - name: Build tokens
+        run: npm run build-tokens
+
+      - name: Verify token output unchanged
+        run: |
+          if ! git diff --exit-code paragon/css/; then
+            echo "There are unexpected changes in ./paragon/css. These changes need to be committed."
+            echo "Please run 'npm run build-tokens' and commit the changes"
+            exit 1
+          fi
+
+      - name: Build
+        run: npm run build
