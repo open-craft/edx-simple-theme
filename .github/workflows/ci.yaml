@@ -30,7 +30,7 @@ jobs:
 
       - name: Verify token output unchanged
         run: |
-          if ! git diff --exit-code paragon/css/; then
+          if ! git diff --exit-code; then
             echo "There are unexpected changes in ./paragon/css. These changes need to be committed."
             echo "Please run 'npm run build-tokens' and commit the changes"
             exit 1
