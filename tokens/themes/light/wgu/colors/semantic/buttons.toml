@@ -1,0 +1,10 @@
+[wgu.color.button.default]
+"$value" = "{wgu.color.blue.base}"
+[wgu.color.button.hover]
+"$value" = "{wgu.color.navy.base}"
+[wgu.color.button.disabled]
+"$value" = "{wgu.color.lake.base}"
+[wgu.color.button.focus]
+"$value" = "{wgu.color.navy.base}"
+[wgu.color.button.background.secondary]
+"$value" = "{color.white}"

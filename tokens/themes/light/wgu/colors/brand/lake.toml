@@ -1,0 +1,32 @@
+[wgu.color.lake.50]
+"$value" = "#edf7fd"
+
+[wgu.color.lake.100]
+"$value" = "#c6e7fa"
+
+[wgu.color.lake.200]
+"$value" = "#aadbf8"
+
+[wgu.color.lake.300]
+"$value" = "#83cbf4"
+
+[wgu.color.lake.400]
+"$value" = "#6bc1f2"
+
+[wgu.color.lake.500]
+"$value" = "{wgu.color.lake.base}"
+
+[wgu.color.lake.600]
+"$value" = "#40a1d9"
+
+[wgu.color.lake.700]
+"$value" = "#327eaa"
+
+[wgu.color.lake.800]
+"$value" = "#276183"
+
+[wgu.color.lake.900]
+"$value" = "#1d4a64"
+
+[wgu.color.lake.base]
+"$value" = "#46b1ef"
