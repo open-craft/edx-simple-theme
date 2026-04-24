@@ -1,15 +1,323 @@
-
-[color.primary.base]
-"$value" = "#ff0000"
-
 [color.primary.100]
-"$value" = "#fff4ef"
+"$type" = "color"
+"$value" = "#E6EAEE"
 
 [color.primary.200]
-"$value" = "#ffd0be"
+"$type" = "color"
+"$value" = "#B0BCCA"
+
+[color.primary.300]
+"$type" = "color"
+"$value" = "#7A8FA7"
 
 [color.primary.400]
-"$value" = "#ff6945"
+"$type" = "color"
+"$value" = "#4A6786"
 
 [color.primary.500]
-"$value" = "{color.primary.base}"
+"$type" = "color"
+"$value" = "#002855"
+
+[color.primary.600]
+"$type" = "color"
+"$value" = "#001C3C"
+
+[color.primary.700]
+"$type" = "color"
+"$value" = "#001124"
+
+[color.primary.800]
+"$type" = "color"
+"$value" = "#000A15"
+
+[color.primary.900]
+"$type" = "color"
+"$value" = "#000508"
+
+[color.primary.base]
+"$type" = "color"
+"$value" = "#002855"
+
+[color.secondary.100]
+"$type" = "color"
+"$value" = "#E6F1FE"
+
+[color.secondary.200]
+"$type" = "color"
+"$value" = "#B0D3FA"
+
+[color.secondary.300]
+"$type" = "color"
+"$value" = "#7CB5F6"
+
+[color.secondary.400]
+"$type" = "color"
+"$value" = "#4797F3"
+
+[color.secondary.500]
+"$type" = "color"
+"$value" = "#0070F0"
+
+[color.secondary.600]
+"$type" = "color"
+"$value" = "#0050AA"
+
+[color.secondary.700]
+"$type" = "color"
+"$value" = "#002F65"
+
+[color.secondary.800]
+"$type" = "color"
+"$value" = "#001C3C"
+
+[color.secondary.900]
+"$type" = "color"
+"$value" = "#000E1E"
+
+[color.secondary.base]
+"$type" = "color"
+"$value" = "#0070F0"
+
+[color.brand.100]
+"$type" = "color"
+"$value" = "#E6EAEE"
+
+[color.brand.200]
+"$type" = "color"
+"$value" = "#B0BCCA"
+
+[color.brand.300]
+"$type" = "color"
+"$value" = "#7A8FA7"
+
+[color.brand.400]
+"$type" = "color"
+"$value" = "#4A6786"
+
+[color.brand.500]
+"$type" = "color"
+"$value" = "#002855"
+
+[color.brand.600]
+"$type" = "color"
+"$value" = "#001C3C"
+
+[color.brand.700]
+"$type" = "color"
+"$value" = "#001124"
+
+[color.brand.800]
+"$type" = "color"
+"$value" = "#000A15"
+
+[color.brand.900]
+"$type" = "color"
+"$value" = "#000508"
+
+[color.brand.base]
+"$type" = "color"
+"$value" = "#002855"
+
+[color.success.100]
+"$type" = "color"
+"$value" = "#ECFDED"
+
+[color.success.200]
+"$type" = "color"
+"$value" = "#C4F9C6"
+
+[color.success.300]
+"$type" = "color"
+"$value" = "#8BE98E"
+
+[color.success.400]
+"$type" = "color"
+"$value" = "#4EDC53"
+
+[color.success.500]
+"$type" = "color"
+"$value" = "#12C117"
+
+[color.success.600]
+"$type" = "color"
+"$value" = "#0D8910"
+
+[color.success.700]
+"$type" = "color"
+"$value" = "#08510A"
+
+[color.success.800]
+"$type" = "color"
+"$value" = "#053305"
+
+[color.success.900]
+"$type" = "color"
+"$value" = "#021A03"
+
+[color.success.base]
+"$type" = "color"
+"$value" = "#12C117"
+
+[color.info.100]
+"$type" = "color"
+"$value" = "#EDF7FD"
+
+[color.info.200]
+"$type" = "color"
+"$value" = "#C6E7FA"
+
+[color.info.300]
+"$type" = "color"
+"$value" = "#AADBF8"
+
+[color.info.400]
+"$type" = "color"
+"$value" = "#83CBF4"
+
+[color.info.500]
+"$type" = "color"
+"$value" = "#46B1EF"
+
+[color.info.600]
+"$type" = "color"
+"$value" = "#40A1D9"
+
+[color.info.700]
+"$type" = "color"
+"$value" = "#327EAA"
+
+[color.info.800]
+"$type" = "color"
+"$value" = "#276183"
+
+[color.info.900]
+"$type" = "color"
+"$value" = "#1D4A64"
+
+[color.info.base]
+"$type" = "color"
+"$value" = "#46B1EF"
+
+[color.warning.100]
+"$type" = "color"
+"$value" = "#FEF5E7"
+
+[color.warning.200]
+"$type" = "color"
+"$value" = "#FDDFB6"
+
+[color.warning.300]
+"$type" = "color"
+"$value" = "#FCD092"
+
+[color.warning.400]
+"$type" = "color"
+"$value" = "#FBBB60"
+
+[color.warning.500]
+"$type" = "color"
+"$value" = "#F99912"
+
+[color.warning.600]
+"$type" = "color"
+"$value" = "#E38B10"
+
+[color.warning.700]
+"$type" = "color"
+"$value" = "#B16D0D"
+
+[color.warning.800]
+"$type" = "color"
+"$value" = "#89540A"
+
+[color.warning.900]
+"$type" = "color"
+"$value" = "#694008"
+
+[color.warning.base]
+"$type" = "color"
+"$value" = "#F99912"
+
+[color.danger.100]
+"$type" = "color"
+"$value" = "#FBEDEC"
+
+[color.danger.200]
+"$type" = "color"
+"$value" = "#F4C7C3"
+
+[color.danger.300]
+"$type" = "color"
+"$value" = "#EEABA6"
+
+[color.danger.400]
+"$type" = "color"
+"$value" = "#E7857D"
+
+[color.danger.500]
+"$type" = "color"
+"$value" = "#DB493D"
+
+[color.danger.600]
+"$type" = "color"
+"$value" = "#C74238"
+
+[color.danger.700]
+"$type" = "color"
+"$value" = "#9B342B"
+
+[color.danger.800]
+"$type" = "color"
+"$value" = "#782822"
+
+[color.danger.900]
+"$type" = "color"
+"$value" = "#5C1F1A"
+
+[color.danger.base]
+"$type" = "color"
+"$value" = "#DB493D"
+
+[color.gray.100]
+"$type" = "color"
+"$value" = "#FFFFFF"
+
+[color.gray.200]
+"$type" = "color"
+"$value" = "#F2F2F2"
+
+[color.gray.300]
+"$type" = "color"
+"$value" = "#D6D9DF"
+
+[color.gray.400]
+"$type" = "color"
+"$value" = "#B3B3B3"
+
+[color.gray.500]
+"$type" = "color"
+"$value" = "#808080"
+
+[color.gray.600]
+"$type" = "color"
+"$value" = "#666666"
+
+[color.gray.700]
+"$type" = "color"
+"$value" = "#4D4D4D"
+
+[color.gray.800]
+"$type" = "color"
+"$value" = "#333333"
+
+[color.gray.900]
+"$type" = "color"
+"$value" = "#1A1A1A"
+
+[color.gray.base]
+"$type" = "color"
+"$value" = "#808080"
+
+
+[size.chip.border-radius]
+"$value" = "{size.rounded.pill}"
