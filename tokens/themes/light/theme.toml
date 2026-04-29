@@ -1,18 +1,18 @@
 [color.primary.100]
 "$type" = "color"
-"$value" = "#E6EAEE"
+"$value" = "#e6eaee"
 
 [color.primary.200]
 "$type" = "color"
-"$value" = "#B0BCCA"
+"$value" = "#b0bcca"
 
 [color.primary.300]
 "$type" = "color"
-"$value" = "#7A8FA7"
+"$value" = "#7a8fa7"
 
 [color.primary.400]
 "$type" = "color"
-"$value" = "#4A6786"
+"$value" = "#4a6786"
 
 [color.primary.500]
 "$type" = "color"
@@ -20,7 +20,7 @@
 
 [color.primary.600]
 "$type" = "color"
-"$value" = "#001C3C"
+"$value" = "#001c3c"
 
 [color.primary.700]
 "$type" = "color"
@@ -28,71 +28,63 @@
 
 [color.primary.800]
 "$type" = "color"
-"$value" = "#000A15"
+"$value" = "#000a15"
 
 [color.primary.900]
 "$type" = "color"
 "$value" = "#000508"
 
-[color.primary.base]
-"$type" = "color"
-"$value" = "#002855"
-
 [color.secondary.100]
 "$type" = "color"
-"$value" = "#E6F1FE"
+"$value" = "#e6f1fe"
 
 [color.secondary.200]
 "$type" = "color"
-"$value" = "#B0D3FA"
+"$value" = "#b0d3fa"
 
 [color.secondary.300]
 "$type" = "color"
-"$value" = "#7CB5F6"
+"$value" = "#7cb5f6"
 
 [color.secondary.400]
 "$type" = "color"
-"$value" = "#4797F3"
+"$value" = "#4797f3"
 
 [color.secondary.500]
 "$type" = "color"
-"$value" = "#0070F0"
+"$value" = "#0070f0"
 
 [color.secondary.600]
 "$type" = "color"
-"$value" = "#0050AA"
+"$value" = "#0050aa"
 
 [color.secondary.700]
 "$type" = "color"
-"$value" = "#002F65"
+"$value" = "#002f65"
 
 [color.secondary.800]
 "$type" = "color"
-"$value" = "#001C3C"
+"$value" = "#001c3c"
 
 [color.secondary.900]
 "$type" = "color"
-"$value" = "#000E1E"
-
-[color.secondary.base]
-"$type" = "color"
-"$value" = "#0070F0"
+"$value" = "#000e1e"
 
 [color.brand.100]
 "$type" = "color"
-"$value" = "#E6EAEE"
+"$value" = "#e6eaee"
 
 [color.brand.200]
 "$type" = "color"
-"$value" = "#B0BCCA"
+"$value" = "#b0bcca"
 
 [color.brand.300]
 "$type" = "color"
-"$value" = "#7A8FA7"
+"$value" = "#7a8fa7"
 
 [color.brand.400]
 "$type" = "color"
-"$value" = "#4A6786"
+"$value" = "#4a6786"
 
 [color.brand.500]
 "$type" = "color"
@@ -100,7 +92,7 @@
 
 [color.brand.600]
 "$type" = "color"
-"$value" = "#001C3C"
+"$value" = "#001c3c"
 
 [color.brand.700]
 "$type" = "color"
@@ -108,43 +100,39 @@
 
 [color.brand.800]
 "$type" = "color"
-"$value" = "#000A15"
+"$value" = "#000a15"
 
 [color.brand.900]
 "$type" = "color"
 "$value" = "#000508"
 
-[color.brand.base]
-"$type" = "color"
-"$value" = "#002855"
-
 [color.success.100]
 "$type" = "color"
-"$value" = "#ECFDED"
+"$value" = "#ecfded"
 
 [color.success.200]
 "$type" = "color"
-"$value" = "#C4F9C6"
+"$value" = "#c4f9c6"
 
 [color.success.300]
 "$type" = "color"
-"$value" = "#8BE98E"
+"$value" = "#8be98e"
 
 [color.success.400]
 "$type" = "color"
-"$value" = "#4EDC53"
+"$value" = "#4edc53"
 
 [color.success.500]
 "$type" = "color"
-"$value" = "#12C117"
+"$value" = "#12c117"
 
 [color.success.600]
 "$type" = "color"
-"$value" = "#0D8910"
+"$value" = "#0d8910"
 
 [color.success.700]
 "$type" = "color"
-"$value" = "#08510A"
+"$value" = "#08510a"
 
 [color.success.800]
 "$type" = "color"
@@ -152,39 +140,35 @@
 
 [color.success.900]
 "$type" = "color"
-"$value" = "#021A03"
-
-[color.success.base]
-"$type" = "color"
-"$value" = "#12C117"
+"$value" = "#021a03"
 
 [color.info.100]
 "$type" = "color"
-"$value" = "#EDF7FD"
+"$value" = "#edf7fd"
 
 [color.info.200]
 "$type" = "color"
-"$value" = "#C6E7FA"
+"$value" = "#c6e7fa"
 
 [color.info.300]
 "$type" = "color"
-"$value" = "#AADBF8"
+"$value" = "#aadbf8"
 
 [color.info.400]
 "$type" = "color"
-"$value" = "#83CBF4"
+"$value" = "#83cbf4"
 
 [color.info.500]
 "$type" = "color"
-"$value" = "#46B1EF"
+"$value" = "#46b1ef"
 
 [color.info.600]
 "$type" = "color"
-"$value" = "#40A1D9"
+"$value" = "#40a1d9"
 
 [color.info.700]
 "$type" = "color"
-"$value" = "#327EAA"
+"$value" = "#327eaa"
 
 [color.info.800]
 "$type" = "color"
@@ -192,79 +176,71 @@
 
 [color.info.900]
 "$type" = "color"
-"$value" = "#1D4A64"
-
-[color.info.base]
-"$type" = "color"
-"$value" = "#46B1EF"
+"$value" = "#1d4a64"
 
 [color.warning.100]
 "$type" = "color"
-"$value" = "#FEF5E7"
+"$value" = "#fef5e7"
 
 [color.warning.200]
 "$type" = "color"
-"$value" = "#FDDFB6"
+"$value" = "#fddfb6"
 
 [color.warning.300]
 "$type" = "color"
-"$value" = "#FCD092"
+"$value" = "#fcd092"
 
 [color.warning.400]
 "$type" = "color"
-"$value" = "#FBBB60"
+"$value" = "#fbbb60"
 
 [color.warning.500]
 "$type" = "color"
-"$value" = "#F99912"
+"$value" = "#f99912"
 
 [color.warning.600]
 "$type" = "color"
-"$value" = "#E38B10"
+"$value" = "#e38b10"
 
 [color.warning.700]
 "$type" = "color"
-"$value" = "#B16D0D"
+"$value" = "#b16d0d"
 
 [color.warning.800]
 "$type" = "color"
-"$value" = "#89540A"
+"$value" = "#89540a"
 
 [color.warning.900]
 "$type" = "color"
 "$value" = "#694008"
 
-[color.warning.base]
-"$type" = "color"
-"$value" = "#F99912"
-
 [color.danger.100]
 "$type" = "color"
-"$value" = "#FBEDEC"
+"$value" = "#fbedec"
 
 [color.danger.200]
 "$type" = "color"
-"$value" = "#F4C7C3"
+"$value" = "#f4c7c3"
 
 [color.danger.300]
 "$type" = "color"
-"$value" = "#EEABA6"
+"$value" = "#eeaba6"
 
 [color.danger.400]
 "$type" = "color"
-"$value" = "#E7857D"
+"$value" = "#e7857d"
 
 [color.danger.500]
 "$type" = "color"
-"$value" = "#DB493D"
+"$value" = "#db493d"
 
 [color.danger.600]
 "$type" = "color"
-"$value" = "#C74238"
+"$value" = "#c74238"
 
 [color.danger.700]
 "$type" = "color"
-"$value" = "#9B342B"
+"$value" = "#9b342b"
 
 [color.danger.800]
 "$type" = "color"
@@ -272,27 +248,23 @@
 
 [color.danger.900]
 "$type" = "color"
-"$value" = "#5C1F1A"
-
-[color.danger.base]
-"$type" = "color"
-"$value" = "#DB493D"
+"$value" = "#5c1f1a"
 
 [color.gray.100]
 "$type" = "color"
-"$value" = "#FFFFFF"
+"$value" = "#ffffff"
 
 [color.gray.200]
 "$type" = "color"
-"$value" = "#F2F2F2"
+"$value" = "#f2f2f2"
 
 [color.gray.300]
 "$type" = "color"
-"$value" = "#D6D9DF"
+"$value" = "#d6d9df"
 
 [color.gray.400]
 "$type" = "color"
-"$value" = "#B3B3B3"
+"$value" = "#b3b3b3"
 
 [color.gray.500]
 "$type" = "color"
@@ -304,7 +276,7 @@
 
 [color.gray.700]
 "$type" = "color"
-"$value" = "#4D4D4D"
+"$value" = "#4d4d4d"
 
 [color.gray.800]
 "$type" = "color"
@@ -312,12 +284,18 @@
 
 [color.gray.900]
 "$type" = "color"
-"$value" = "#1A1A1A"
-
-[color.gray.base]
-"$type" = "color"
-"$value" = "#808080"
+"$value" = "#1a1a1a"
 
 
-[size.chip.border-radius]
-"$value" = "{size.rounded.pill}"
+# TODO: Currently we can't set the form feedback color spearately from the border color
+[color.form.feedback.valid]
+"$value" = "{color.success.900}"
+
+[color.form.feedback.invalid]
+"$value" = "{color.danger.900}"
+
+[size.form.input.radius.border.base]
+"$value" = "0"
+
+[color.form.input.focus.border]
+"$value" = "{color.secondary.500}"
