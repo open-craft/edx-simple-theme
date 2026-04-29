@@ -26,7 +26,7 @@ jobs:
         run: npx prettier --check .
 
       - name: Build tokens
-        run: npm run build-tokens
+        run: npm run build:tokens
 
       - name: Verify token output unchanged
         run: |
