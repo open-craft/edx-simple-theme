@@ -162,21 +162,6 @@ footer.footer {
   }
 }
 
-// Discussions mfe overwrites learning header color to white
-.learning-header {
-  background-color: var(--pgn-color-header-bg) !important;
-}
-
-.learning-header a {
-  color: var(--pgn-color-link-base) !important;
-
-  &:focus,
-  &:hover,
-  &.active {
-    color: var(--pgn-color-link-base) !important;
-  }
-}
-
 // Header navigation colors in the learner dashboard MFE on mobile
 .nav-small-menu {
   .btn-inverse-primary {
