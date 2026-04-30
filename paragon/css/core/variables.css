@@ -4,5 +4,8 @@
  */
 
 :root {
+  --pgn-size-dummy: 0;
   --pgn-spacing-spacer-base: 16px; /** Basic space value */
+  --pgn-typography-font-family-sans-serif: Lato, sans-serif, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; /** Sans-serif font family. */
+  --pgn-typography-heading-font-family: Sora,sans-serif;
 }

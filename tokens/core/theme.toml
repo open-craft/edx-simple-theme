@@ -1,5 +1,11 @@
 [spacing.spacer.base]
 "$value" = "16px"
-#
-#[size.mew]
-#"$value" = "16px"
+
+[size.dummy]
+"$value" = "0"
+
+[typography.font.family.sans.serif]
+"$value" = ["Lato", "sans-serif"]
+
+[typography.heading.font.family]
+"$value" = ["Sora", "sans-serif"]
