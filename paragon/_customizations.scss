@@ -1,11 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Sora:wght@100..800&display=swap");
-
 .outline-sidebar {
-  //box-shadow: var(--pgn-elevation-box-shadow-down-1);
-  //border-radius: var(--pgn-size-border-radius-base);
-  //padding: var(--pgn-spacing-spacer-1);
-  //background-color: var(--pgn-color-white);
-
   .outline-sidebar-heading-wrapper {
     border: none;
     background-color: white !important;
@@ -59,5 +52,39 @@
   .dropdown-toggle {
     border: none;
     padding: 0;
+
+    &::after {
+      display: none;
+    }
   }
 }
+
+/* Allows the unit container to grow beyond the default 1024px */
+.unit-container {
+  max-width: none !important;
+}
+
+/* The default max-width of the main container is still limited, this undoes that */
+.app-container #main-content {
+  max-width: 100%;
+  padding: 0;
+}
+
+header.learning-header {
+  padding-right: var(--pgn-spacing-spacer-4);
+  padding-left: var(--pgn-spacing-spacer-4);
+
+  .container-xl {
+    max-width: none;
+  }
+}
+
+///* This removes the navigation sidebar from the flow making it float over the content   */
+//.outline-sidebar-heading-wrapper, .sequence-container .outline-sidebar-wrapper {
+//    position: fixed;
+//    z-index: 100;
+//}
+///* This moves the sidebar icon up slightly (68px is its height) so that it doesn't come in the way of content  */
+//.outline-sidebar-heading-wrapper, #outline-sidebar-outline {
+//    transform: translateY(-68px);
+//}

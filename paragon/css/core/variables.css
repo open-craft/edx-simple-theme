@@ -5,7 +5,11 @@
 
 :root {
   --pgn-size-dummy: 0;
-  --pgn-spacing-spacer-base: 16px; /** Basic space value */
+  --pgn-spacing-spacer-base: 1rem; /** Basic space value */
+  --pgn-typography-headings-font-family: Sora, sans-serif;
   --pgn-typography-font-family-sans-serif: Lato, sans-serif, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; /** Sans-serif font family. */
-  --pgn-typography-heading-font-family: Sora,sans-serif;
+  --pgn-typography-font-size-h2-base: 2.125rem; /** Font size of heading level 2. */
+  --pgn-typography-font-size-h3-base: 1.875rem; /** Font size of heading level 3. */
+  --pgn-typography-font-size-h4-base: 1.5rem; /** Font size of heading level 4. */
+  --pgn-typography-font-size-h5-base: 1.25rem; /** Font size of heading level 5. */
 }
