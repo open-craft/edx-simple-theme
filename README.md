@@ -125,6 +125,65 @@ upload the `dist` folder contents to a CDN, and add the path to `core.min.css`
 and `light.min.css` to the appropriate places. You can also create other themes
 like a `dark` theme or a separate theme for each site.
 
+## Developing a New Theme
+
+When developing a new theme, you can use the `build:tokens` script to generate
+the theme tokens and `build:scss` to compile the SCSS files. They both have 
+corresponding `watch:tokens` and `watch:scss` scripts that will automatically 
+rebuild the theme when changes are made to the tokens or SCSS files.
+
+The `watch` script combines them both so as you make changes to the design tokens 
+or custom SCSS it will be rebuilt to a theme that can be used in the MFE.
+
+Additionally, you can use the `dev` script which will also use Paragon's 
+`serve-theme-css` script to serve the theme CSS files so you can see the theme 
+in action in the Paragon docs or in the MFE if configured to use the 
+locally served theme.
+
+### Using a Local Theme
+
+To use a locally served theme, you need to configure MFEs to load the theme CSS
+from a local server. This can be done using the following tutor plugin:
+
+```python
+from tutor import hooks
+import json
+
+paragon_theme_urls = {
+    "core": {
+        "urls": {
+            "default": "https://cdn.jsdelivr.net/npm/@openedx/paragon@$paragonVersion/dist/core.min.css",
+            "brandOverride": "http://localhost:3000/core.css",
+        }
+    },
+    "default": {
+        "light": "light",
+    },
+    "variants": {
+        "light": {
+            "urls": {
+                "default": "https://cdn.jsdelivr.net/npm/@openedx/paragon@$paragonVersion/dist/light.min.css",
+                "brandOverride": "http://localhost:3000/light.min.css"
+            }
+        }
+    }
+}
+
+pargon_theme_config = f"""
+MFE_CONFIG["PARAGON_THEME_URLS"] = {json.dumps(paragon_theme_urls)}
+"""
+
+hooks.Filters.ENV_PATCHES.add_item(
+    (
+        "mfe-lms-common-settings",
+        pargon_theme_config
+    )
+)
+```
+Alternatively, you can use eh above config in JSON format in the SiteConfiguration's `MFE_CONFIG`. 
+After enabling the above plugin you only need to restart the lms and cms, you don't need to run 
+`launch` again.
+
 ## Automatically Deploying a Runtime Theme to S3 via Gitlab CI
 
 This repo has a GitLab CI configuration to automatically deploy to AWS S3 if
