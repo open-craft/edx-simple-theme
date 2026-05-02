@@ -8,6 +8,9 @@
 "$value" = ["Lato", "sans-serif"]
 
 #TODO: Currently can't override the font family of display class
+[typography.display.font.family]
+"$value" = ["Sora", "sans-serif"]
+
 [typography.headings.font.family]
 "$value" = ["Sora", "sans-serif"]
 
