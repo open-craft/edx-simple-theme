@@ -150,15 +150,34 @@ footer.footer {
 }
 
 // Set color for course nav bar in Learning MFE
-.course-tabs-navigation a.nav-link {
-  &:focus,
-  &:hover,
+#courseTabsNavigation a.nav-link {
+  color: var(--pgn-color-course-nav-menu-text);
+
   &.active {
-    color: var(--pgn-color-course-nav-menu-text);
+    color: var(--pgn-color-course-nav-menu-active-text);
   }
 
   &.active {
-    border-bottom-color: var(--pgn-color-course-nav-menu-border-bottom);
+    background-color: var(--pgn-color-course-nav-menu-active-background);
+  }
+
+  &.active {
+    border-bottom-color: var(--pgn-color-course-nav-menu-active-border-bottom);
+  }
+
+  &:focus,
+  &:hover {
+    color: var(--pgn-color-course-nav-menu-hover-text);
+  }
+
+  &:focus,
+  &:hover {
+    background-color: var(--pgn-color-course-nav-menu-hover-background);
+  }
+
+  &:focus,
+  &:hover {
+    border-bottom-color: var(--pgn-color-course-nav-menu-hover-border-bottom);
   }
 }
 

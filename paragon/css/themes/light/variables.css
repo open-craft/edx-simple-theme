@@ -11,10 +11,14 @@
   --pgn-size-header-border-top-width: 0px;
   --pgn-size-header-border-bottom-width: 0px;
   --pgn-spacing-input-btn-padding-y: 0.5625rem;
+  --pgn-color-teal: #006DAAFF; /** Teal color. */
+  --pgn-color-gray-700: #454545FF; /** Gray color of level 700. */
   --pgn-color-primary-100: #FFFEFEFF; /** Primary color of level 100. */
   --pgn-color-primary-200: #FFF3EFFF; /** Primary color of level 200. */
   --pgn-color-primary-400: #FF8F74FF; /** Primary color of level 400. */
   --pgn-color-primary-base: #FF0000FF; /** Basic primary color. */
+  --pgn-color-light-base: #E1DDDBFF; /** Basic light color. */
+  --pgn-color-course-nav-menu-active-background: initial;
   --pgn-color-register-btn-bg: #008000FF;
   --pgn-color-sign-in-btn-bg: initial;
   --pgn-color-sign-in-btn-text: initial;
@@ -41,16 +45,31 @@
   --pgn-color-btn-hover-bg-outline-primary: var(--pgn-color-primary-100);
   --pgn-color-primary-500: var(--pgn-color-primary-base); /** Primary color of level 500. */
   --pgn-color-primary-700: #CC0000FF; /** Primary color of level 700. */
+  --pgn-color-info-base: var(--pgn-color-teal); /** Basic info color. */
+  --pgn-color-light-400: #E9E6E4FF; /** Light color of level 400. */
+  --pgn-color-action-default-gray-700: #2B2B2BFF;
   --pgn-color-action-default-primary-100: #FFCBCBFF;
   --pgn-color-action-default-primary-200: #FFCDBCFF;
   --pgn-color-action-default-primary-400: #FF6641FF;
   --pgn-color-action-default-primary-base: #CC0000FF;
+  --pgn-color-action-default-light-base: #CAC3BFFF;
+  --pgn-color-course-nav-menu-text: var(--pgn-color-gray-700);
   --pgn-color-theme-hover-primary: var(--pgn-color-primary-700); /** Theme-specific primary hover color. */
+  --pgn-color-info-500: var(--pgn-color-info-base); /** Info color of level 500. */
   --pgn-color-action-default-primary-500: #CC0000FF;
   --pgn-color-action-default-primary-700: #990000FF;
+  --pgn-color-action-default-info-base: #004C77FF;
+  --pgn-color-action-default-light-400: #D2CCC8FF;
+  --pgn-color-course-nav-menu-active-text: var(--pgn-color-primary-500);
+  --pgn-color-course-nav-menu-active-border-bottom: var(--pgn-color-primary-500);
+  --pgn-color-course-nav-menu-hover-background: var(--pgn-color-light-400);
   --pgn-color-register-btn-text: var(--pgn-color-btn-text-outline-primary);
   --pgn-color-register-btn-border: var(--pgn-color-btn-border-outline-primary);
   --pgn-color-register-btn-hover-bg: var(--pgn-color-btn-hover-bg-outline-primary);
   --pgn-color-btn-hover-text-outline-primary: var(--pgn-color-theme-hover-primary);
+  --pgn-color-link-base: var(--pgn-color-info-500);
+  --pgn-color-action-default-info-500: #004C77FF;
+  --pgn-color-course-nav-menu-hover-border-bottom: var(--pgn-color-course-nav-menu-active-border-bottom);
+  --pgn-color-course-nav-menu-hover-text: var(--pgn-color-link-base);
   --pgn-color-register-btn-hover-text: var(--pgn-color-btn-hover-text-outline-primary);
 }
