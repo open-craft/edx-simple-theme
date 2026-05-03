@@ -12,4 +12,5 @@
   --pgn-typography-font-size-h3-base: 1.875rem; /** Font size of heading level 3. */
   --pgn-typography-font-size-h4-base: 1.5rem; /** Font size of heading level 4. */
   --pgn-typography-font-size-h5-base: 1.25rem; /** Font size of heading level 5. */
+  --pgn-typography-display-font-family: Sora,sans-serif;
 }
