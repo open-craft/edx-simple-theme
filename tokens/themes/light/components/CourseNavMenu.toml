@@ -1,0 +1,20 @@
+[color.course.nav.menu.text]
+"$value" = "{color.gray.700}"
+
+[color.course.nav.menu.active.text]
+"$value" = "{color.primary.500}"
+
+[color.course.nav.menu.hover.text]
+"$value" = "{color.link.base}"
+
+[color.course.nav.menu.active.background]
+"$value" = "initial"
+
+[color.course.nav.menu.hover.background]
+"$value" = "{color.light.400}"
+
+[color.course.nav.menu.active.border.bottom]
+"$value" = "{color.primary.500}"
+
+[color.course.nav.menu.hover.border.bottom]
+"$value" = "{color.course.nav.menu.active.border.bottom}"
