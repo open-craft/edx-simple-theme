@@ -3,7 +3,7 @@
  * See <PARAGON_ROOT>/tokens/README.md for more details.
  */
 
-:root {
+:root,:host {
   --pgn-size-btn-focus-width: 2px;
   --pgn-size-form-input-radius-border-base: 0;
   --pgn-size-input-btn-focus-width: 1px;

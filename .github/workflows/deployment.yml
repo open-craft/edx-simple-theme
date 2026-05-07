@@ -1,0 +1,138 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches:
+      - "*-release/**"
+  pull_request_target:
+    types:
+      - opened
+      - reopened
+      - synchronize
+    branches:
+      - "*-release/**"
+
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+
+    outputs:
+      client: ${{ steps.parse.outputs.client }}
+      version: ${{ steps.parse.outputs.version }}
+      environment_name: ${{ steps.parse.outputs.environment_name }}
+      deploy_path_suffix: ${{ steps.parse.outputs.deploy_path_suffix }}
+      is_pull_request: ${{ steps.parse.outputs.is_pull_request }}
+
+    steps:
+      - name: Parse deployment target
+        id: parse
+        shell: bash
+        run: |
+          if [ "${GITHUB_EVENT_NAME}" = "pull_request" ]; then
+            TARGET_BRANCH="${GITHUB_BASE_REF}"
+            SOURCE_BRANCH="${GITHUB_HEAD_REF}"
+            IS_PULL_REQUEST="true"
+          else
+            TARGET_BRANCH="${GITHUB_REF_NAME}"
+            SOURCE_BRANCH="${GITHUB_REF_NAME}"
+            IS_PULL_REQUEST="false"
+          fi
+
+          if [[ ! "$TARGET_BRANCH" =~ ^([A-Za-z0-9_-]+)-release/(.+)$ ]]; then
+            echo "Target branch must match CLIENT-release/VERSION"
+            echo "Actual target branch: $TARGET_BRANCH"
+            exit 1
+          fi
+
+          CLIENT="${BASH_REMATCH[1]}"
+          VERSION="${BASH_REMATCH[2]}"
+          ENVIRONMENT_NAME="${CLIENT}-staging"
+
+          if [ "$IS_PULL_REQUEST" = "true" ]; then
+            SAFE_BRANCH_NAME="$(echo "$SOURCE_BRANCH" | sed -E 's#[^A-Za-z0-9._-]+#-#g')"
+            DEPLOY_PATH_SUFFIX="pr/${{ github.event.pull_request.number }}-${SAFE_BRANCH_NAME}"
+          else
+            DEPLOY_PATH_SUFFIX="${VERSION}"
+          fi
+
+          echo "client=${CLIENT}" >> "$GITHUB_OUTPUT"
+          echo "version=${VERSION}" >> "$GITHUB_OUTPUT"
+          echo "environment_name=${ENVIRONMENT_NAME}" >> "$GITHUB_OUTPUT"
+          echo "deploy_path_suffix=${DEPLOY_PATH_SUFFIX}" >> "$GITHUB_OUTPUT"
+          echo "is_pull_request=${IS_PULL_REQUEST}" >> "$GITHUB_OUTPUT"
+
+          echo "Client: ${CLIENT}"
+          echo "Version: ${VERSION}"
+          echo "Environment: ${ENVIRONMENT_NAME}"
+          echo "Deploy path suffix: ${DEPLOY_PATH_SUFFIX}"
+
+  build-and-maybe-deploy:
+    needs: prepare
+    runs-on: ubuntu-latest
+
+    environment:
+      name: ${{ needs.prepare.outputs.environment_name }}
+
+    steps:
+      - name: Show deployment context
+        run: |
+          echo "Environment: ${{ needs.prepare.outputs.environment_name }}"
+          echo "S3_REGION set: ${{ vars.S3_REGION != '' }}"
+          echo "S3_ACCESS_KEY_ID set: ${{ secrets.S3_ACCESS_KEY_ID != '' }}"
+          echo "S3_SECRET_ACCESS_KEY set: ${{ secrets.S3_SECRET_ACCESS_KEY != '' }}"
+
+      - uses: actions/checkout@v6
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build tokens
+        run: npm run build:tokens
+
+      - name: Build
+        run: npm run build
+
+      - name: Configure S3-compatible credentials
+        uses: aws-actions/configure-aws-credentials@v5
+        with:
+          aws-access-key-id: ${{ secrets.S3_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.S3_SECRET_ACCESS_KEY }}
+          aws-region: ${{ vars.S3_REGION }}
+
+      - name: Deploy to S3-compatible CDN target
+        shell: bash
+        env:
+          DEPLOY_PATH_SUFFIX: ${{ needs.prepare.outputs.deploy_path_suffix }}
+          S3_BUCKET: ${{ secrets.S3_BUCKET }}
+          S3_PREFIX: ${{ vars.S3_PREFIX }}
+          S3_ENDPOINT: ${{ vars.S3_ENDPOINT }}
+        run: |
+          if [ -z "${S3_BUCKET}" ]; then
+            echo "S3_BUCKET is required."
+            exit 1
+          fi
+
+          if [ -z "${S3_ENDPOINT}" ]; then
+            echo "S3_ENDPOINT is required."
+            exit 1
+          fi
+
+          PREFIX="${S3_PREFIX:-}"
+
+          if [ -n "${PREFIX}" ]; then
+            TARGET_PATH="s3://${S3_BUCKET}/${PREFIX}/${DEPLOY_PATH_SUFFIX}"
+          else
+            TARGET_PATH="s3://${S3_BUCKET}/${DEPLOY_PATH_SUFFIX}"
+          fi
+
+          echo "Deploying to ${TARGET_PATH}"
+
+          aws s3 sync ./dist "${TARGET_PATH}" \
+            --endpoint-url "${S3_ENDPOINT}" \
+            --delete

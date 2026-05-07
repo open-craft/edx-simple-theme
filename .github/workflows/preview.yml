@@ -1,0 +1,60 @@
+name: PR Preview
+
+on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+      - reopened
+      - closed
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  build-and-deploy-preview:
+    if: github.event.action != 'closed'
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build tokens
+        run: npm run build:tokens
+
+      - name: Build
+        run: npm run build
+
+      - name: Deploy PR preview to GitHub Pages branch
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          destination_dir: pr/${{ github.event.pull_request.number }}
+
+      - name: Comment preview URL
+        uses: actions/github-script@v8
+        with:
+          script: |
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+            const pr = context.payload.pull_request.number;
+
+            const previewUrl = `https://${owner}.github.io/${repo}/pr/${pr}/`;
+
+            await github.rest.issues.createComment({
+              owner,
+              repo,
+              issue_number: pr,
+              body: `PR preview deployed: ${previewUrl}`
+            });
