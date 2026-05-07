@@ -1,0 +1,107 @@
+.outline-sidebar {
+  .outline-sidebar-heading-wrapper {
+    border: none;
+    background-color: white !important;
+  }
+
+  .course-sidebar-section.active-section button {
+    --pgn-btn-color: var(--pgn-color-secondary-base) !important;
+    color: var(--pgn-color-secondary-base) !important;
+
+    > div.text-dark-500 {
+      color: var(--pgn-color-secondary-base) !important;
+    }
+  }
+
+  #outline-sidebar-outline {
+    li > div.pgn_collapsible {
+      margin-bottom: 0 !important;
+    }
+
+    .collapsible-trigger,
+    .collapsible-card-lg {
+      border: none !important;
+    }
+
+    .active-unit a {
+      color: var(--pgn-color-secondary-base) !important;
+    }
+
+    .active-section {
+      color: var(--pgn-color-secondary-base) !important;
+
+      .collapsible-trigger span.align-middle.text-dark-500 {
+        color: var(--pgn-color-secondary-base) !important;
+      }
+    }
+  }
+
+  .course-sidebar-section {
+    margin-bottom: 0 !important;
+    border: none !important;
+
+    button {
+      padding: var(--pgn-spacing-spacer-2) var(--pgn-spacing-spacer-4) !important;
+    }
+  }
+}
+
+.learning-header .user-dropdown {
+  margin: 0 !important;
+
+  .dropdown-toggle {
+    border: none;
+    padding: 0;
+
+    &::after {
+      display: none;
+    }
+  }
+}
+
+/* This adds support for customising the font of the display classes */
+.display-1,
+.display-2,
+.display-3,
+.display-4 {
+  font-family: var(--typography-display-font-family);
+}
+
+/* Allows the unit container to grow beyond the default 1024px */
+.unit-container {
+  max-width: none !important;
+  @media (--pgn-size-breakpoint-min-width-sm) {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  @media (min-width: 830px) {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
+/* The default max-width of the main container is still limited, this undoes that */
+.app-container #main-content {
+  max-width: 100%;
+  padding: 0;
+}
+
+header.learning-header {
+  padding-right: var(--pgn-spacing-spacer-4);
+  padding-left: var(--pgn-spacing-spacer-4);
+
+  .container-xl {
+    max-width: none;
+  }
+}
+
+///* This removes the navigation sidebar from the flow making it float over the content   */
+//.outline-sidebar-heading-wrapper, .sequence-container .outline-sidebar-wrapper {
+//    position: fixed;
+//    z-index: 100;
+//}
+///* This moves the sidebar icon up slightly (68px is its height) so that it doesn't come in the way of content  */
+//.outline-sidebar-heading-wrapper, #outline-sidebar-outline {
+//    transform: translateY(-68px);
+//}
