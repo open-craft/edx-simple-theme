@@ -1,0 +1,21 @@
+{
+  "themeUrls": {
+    "defaults": {
+      "light": "light"
+    },
+    "variants": {
+      "light": {
+        "paths": {
+          "default": "./light.css",
+          "minified": "./light.min.css"
+        }
+      }
+    },
+    "core": {
+      "paths": {
+        "default": "./core.css",
+        "minified": "./core.min.css"
+      }
+    }
+  }
+}
