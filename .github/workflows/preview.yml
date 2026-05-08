@@ -1,30 +1,30 @@
-name: PR Preview
+name: Build and Deploy
 
 on:
   pull_request:
-    types:
-      - opened
-      - synchronize
-      - reopened
-      - closed
-
-permissions:
-  contents: write
-  pull-requests: write
+    branches:
+      - "*-release/**"
 
 jobs:
-  build-and-deploy-preview:
-    if: github.event.action != 'closed'
+
+  build-and-maybe-deploy:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Show deployment context
+        run: |
+          echo "Environment: ${{ needs.prepare.outputs.environment_name }}"
+          echo "AWS_REGION set: ${{ vars.AWS_REGION != '' }}"
+          echo "AWS_ACCESS_KEY_ID set: ${{ secrets.AWS_ACCESS_KEY_ID != '' }}"
+          echo "AWS_SECRET_ACCESS_KEY set: ${{ secrets.AWS_SECRET_ACCESS_KEY != '' }}"
+
       - uses: actions/checkout@v6
 
       - name: Setup Node.js
         uses: actions/setup-node@v6
         with:
           node-version: 24
-          cache: npm
+          cache: "npm"
 
       - name: Install dependencies
         run: npm ci
@@ -35,26 +35,69 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Deploy PR preview to GitHub Pages branch
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
-          destination_dir: pr/${{ github.event.pull_request.number }}
+      - name: Deploy to S3-compatible CDN target
+        shell: bash
+        env:
+          DEPLOY_PATH_SUFFIX: pr/${{ github.event.pull_request.number }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: ${{ vars.AWS_REGION }}
+          S3_BUCKET: ${{ secrets.S3_BUCKET }}
+          S3_ENDPOINT: ${{ vars.S3_ENDPOINT }}
+        run: |
+          if [ -z "${S3_BUCKET}" ]; then
+            echo "S3_BUCKET is required."
+            exit 1
+          fi
 
-      - name: Comment preview URL
-        uses: actions/github-script@v8
-        with:
-          script: |
-            const owner = context.repo.owner;
-            const repo = context.repo.repo;
-            const pr = context.payload.pull_request.number;
+          if [ -z "${S3_ENDPOINT}" ]; then
+            echo "S3_ENDPOINT is required."
+            exit 1
+          fi
 
-            const previewUrl = `https://${owner}.github.io/${repo}/pr/${pr}/`;
+          TARGET_PATH="s3://${S3_BUCKET}/${DEPLOY_PATH_SUFFIX}"
 
-            await github.rest.issues.createComment({
-              owner,
-              repo,
-              issue_number: pr,
-              body: `PR preview deployed: ${previewUrl}`
-            });
+          echo "Deploying to ${TARGET_PATH}"
+
+          aws s3 sync ./dist "${TARGET_PATH}" \
+            --endpoint-url "${S3_ENDPOINT}" \
+            --delete
+#
+#       - name: Comment preview URL
+#         uses: actions/github-script@v8
+#         with:
+#           script: |
+#             const pr = context.payload.pull_request.number;
+#
+#             const previewUrl = `https://${owner}.github.io/${repo}/pr/${pr}/`;
+#
+#             const configJson = {
+#               "core": {
+#                 "urls": {
+#                   "brandOverride": `${previewUrl}/core.css`,
+#                   "default": "https://cdn.jsdelivr.net/npm/@openedx/paragon@$paragonVersion/dist/core.min.css"
+#                 }
+#               },
+#               "default": {
+#                 "light": "light"
+#               },
+#               "variants": {
+#                 "light": {
+#                   "urls": {
+#                     "brandOverride": `${previewUrl}/light.css`,
+#                     "default": "https://cdn.jsdelivr.net/npm/@openedx/paragon@$paragonVersion/dist/light.min.css"
+#                   }
+#                 }
+#               }
+#             };
+#             await github.rest.issues.createComment({
+#               owner,
+#               repo,
+#               issue_number: pr,
+#               body: `This PR has been deployed for testing at: ${previewUrl}\n
+#               You can configure it in the with the following in the MFE Config in site configuration:\n
+#
+#               ${"```json\n" + JSON.stringify({PARAGON_THEME_URLS: configJson}, null, 2) + "\n```"}
+#
+#               `
+#             });

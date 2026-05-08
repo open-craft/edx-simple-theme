@@ -70,15 +70,19 @@
 /* Allows the unit container to grow beyond the default 1024px */
 .unit-container {
   max-width: none !important;
-  @media (--pgn-size-breakpoint-min-width-sm) {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-  }
-
-  @media (min-width: 830px) {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-  }
+  /*   @media (min-width: 576px) { */
+  /*     padding-left: 0 !important; */
+  /*     padding-right: 0 !important; */
+  /*   } */
+  /*   @media (--pgn-size-breakpoint-min-width-sm) { */
+  /*     padding-left: 0 !important; */
+  /*     padding-right: 0 !important; */
+  /*   } */
+  /*  */
+  /*   @media (min-width: 830px) { */
+  /*     padding-left: 0 !important; */
+  /*     padding-right: 0 !important; */
+  /*   } */
 }
 
 /* The default max-width of the main container is still limited, this undoes that */
@@ -94,6 +98,10 @@ header.learning-header {
   .container-xl {
     max-width: none;
   }
+}
+
+dialog.courseware-search {
+  margin: 60px 0 0;
 }
 
 ///* This removes the navigation sidebar from the flow making it float over the content   */
