@@ -151,33 +151,22 @@ footer.footer {
 
 // Set color for course nav bar in Learning MFE
 #courseTabsNavigation a.nav-link {
-  color: var(--pgn-color-course-nav-menu-text);
+  color: var(--pgn-color-course-nav-menu-text, var(--pgn-color-gray-700));
 
   &.active {
-    color: var(--pgn-color-course-nav-menu-active-text);
-  }
-
-  &.active {
+    color: var(--pgn-color-course-nav-menu-active-text, var(--pgn-color-primary-500));
     background-color: var(--pgn-color-course-nav-menu-active-background);
-  }
-
-  &.active {
-    border-bottom-color: var(--pgn-color-course-nav-menu-active-border-bottom);
+    border-bottom-color: var(--pgn-color-course-nav-menu-active-border-bottom, var(--pgn-color-primary-500));
   }
 
   &:focus,
   &:hover {
-    color: var(--pgn-color-course-nav-menu-hover-text);
+    color: var(--pgn-color-course-nav-menu-hover-text, var(--pgn-color-link-base));
+    background-color: var(--pgn-color-course-nav-menu-hover-background, var(--pgn-color-light-400));
   }
 
-  &:focus,
-  &:hover {
-    background-color: var(--pgn-color-course-nav-menu-hover-background);
-  }
-
-  &:focus,
-  &:hover {
-    border-bottom-color: var(--pgn-color-course-nav-menu-hover-border-bottom);
+  &:focus {
+    border-bottom-color: var(--pgn-color-course-nav-menu-focus-border-bottom, var(--pgn-color-primary-500));
   }
 }
 
