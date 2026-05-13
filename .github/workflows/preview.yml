@@ -61,7 +61,9 @@ jobs:
 
           aws s3 sync ./dist "${TARGET_PATH}" \
             --endpoint-url "${S3_ENDPOINT}" \
+            --acl public-read \
             --delete
+
 #
 #       - name: Comment preview URL
 #         uses: actions/github-script@v8

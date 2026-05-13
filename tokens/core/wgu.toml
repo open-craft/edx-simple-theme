@@ -1,9 +1,6 @@
 [spacing.spacer.base]
 "$value" = "1rem"
 
-[size.dummy]
-"$value" = "0"
-
 [typography.font.family.sans.serif]
 "$value" = ["Lato", "sans-serif"]
 

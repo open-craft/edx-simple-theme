@@ -29,10 +29,10 @@
     "@openedx/paragon": "^23.4.5"
   },
   "devDependencies": {
-    "@openedx/paragon": "^23.21.2",
+    "@openedx/paragon": "^23.22.0",
     "concurrently": "^9.2.1",
     "husky": "^9.1.7",
-    "lint-staged": "^16.4.0",
+    "lint-staged": "^17.0.4",
     "onchange": "^7.1.0",
     "prettier": "3.8.3",
     "rimraf": "^6.1.3"
