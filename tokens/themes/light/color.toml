@@ -237,3 +237,8 @@
 
 [color.gray.base]
 "$value" = "#808080"
+
+
+
+[color.headings.base]
+"$value" = "{color.primary.500}"
