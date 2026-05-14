@@ -15,13 +15,13 @@
   --pgn-typography-display-font-family: Sora,sans-serif;
   --pgn-wgu-size-border-radius-base: 16px;
   --pgn-wgu-size-border-radius-full: 9999px;
-  --pgn-size-border-radius-base: var(--pgn-wgu-size-border-radius-base); /** Default border radius. */
   --pgn-wgu-size-border-radius-xxs: calc(var(--pgn-wgu-size-border-radius-base) * 0.25);
   --pgn-wgu-size-border-radius-xs: calc(var(--pgn-wgu-size-border-radius-base) * .5);
   --pgn-wgu-size-border-radius-s: var(--pgn-wgu-size-border-radius-base);
   --pgn-wgu-size-border-radius-m: calc(var(--pgn-wgu-size-border-radius-base) * 1.5);
   --pgn-wgu-size-border-radius-l: calc(var(--pgn-wgu-size-border-radius-base) * 2);
   --pgn-wgu-size-border-radius-xl: calc(var(--pgn-wgu-size-border-radius-base) * 2.5);
-  --pgn-size-border-radius-lg: var(--pgn-wgu-size-border-radius-l); /** Large border radius. */
-  --pgn-size-border-radius-sm: var(--pgn-wgu-size-border-radius-s); /** Small border radius. */
+  --pgn-size-border-radius-base: var(--pgn-wgu-size-border-radius-xxs); /** Default border radius. */
+  --pgn-size-border-radius-lg: var(--pgn-wgu-size-border-radius-s); /** Large border radius. */
+  --pgn-size-border-radius-sm: var(--pgn-wgu-size-border-radius-xs); /** Small border radius. */
 }

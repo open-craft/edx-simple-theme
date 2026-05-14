@@ -1,30 +1,53 @@
+.outline-sidebar-wrapper {
+  margin: 0 var(--pgn-spacing-spacer-1) !important;
+}
 .outline-sidebar {
+  --outline-sidebar-bg-color: var(--pgn-color-gray-200);
   .outline-sidebar-heading-wrapper {
-    border: none;
-    background-color: white !important;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid white !important;
+    background-color: var(--outline-sidebar-bg-color) !important;
+    padding: var(--pgn-spacing-spacer-4) !important;
   }
 
-  .course-sidebar-section.active-section button {
-    --pgn-btn-color: var(--pgn-color-secondary-base) !important;
-    color: var(--pgn-color-secondary-base) !important;
-
-    > div.text-dark-500 {
-      color: var(--pgn-color-secondary-base) !important;
-    }
-  }
+  background: var(--outline-sidebar-bg-color);
+  --pgn-color-card-bg-base: var(--outline-sidebar-bg-color);
 
   #outline-sidebar-outline {
+    .course-sidebar-section {
+      > button {
+        padding: var(--pgn-spacing-spacer-2) 0 var(--pgn-spacing-spacer-2) var(--pgn-spacing-spacer-4) !important;
+      }
+      &.active-section button {
+        --pgn-btn-color: var(--pgn-color-secondary-base) !important;
+        color: var(--pgn-color-secondary-base) !important;
+
+        > div.text-dark-500 {
+          color: var(--pgn-color-secondary-base) !important;
+        }
+      }
+    }
     li > div.pgn_collapsible {
       margin-bottom: 0 !important;
+      padding: var(--pgn-spacing-spacer-2) var(--pgn-spacing-spacer-4);
+      li a {
+        padding: var(--pgn-spacing-spacer-2) var(--pgn-spacing-spacer-4);
+      }
     }
 
     .collapsible-trigger,
     .collapsible-card-lg {
       border: none !important;
+      padding: var(--pgn-spacing-spacer-2) 0 var(--pgn-spacing-spacer-2) var(--pgn-spacing-spacer-2) !important;
     }
 
-    .active-unit a {
-      color: var(--pgn-color-secondary-base) !important;
+    .active-unit {
+      --pgn-color-info-100: var(--outline-sidebar-bg-color);
+      a {
+        color: var(--pgn-color-secondary-base) !important;
+      }
     }
 
     .active-section {
