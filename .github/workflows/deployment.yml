@@ -60,3 +60,8 @@ jobs:
         uses: ./.github/actions/deploy
         with:
           deploy-path: ${{ needs.prepare.outputs.version }}
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-default-region: ${{ vars.AWS_REGION }}
+          s3-bucket: ${{ secrets.S3_BUCKET }}
+          s3-endpoint: ${{ vars.S3_ENDPOINT }}
