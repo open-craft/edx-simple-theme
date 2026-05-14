@@ -1,8 +1,0 @@
-[size.border.radius.base]
-"$value" = "var(--wgu-size-border-radius-base)"
-
-[size.border.radius.sm]
-"$value" = "var(--wgu-size-border-radius-s)"
-
-[size.border.radius.lg]
-"$value" = "var(--wgu-size-border-radius-l)"

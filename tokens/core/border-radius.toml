@@ -1,0 +1,8 @@
+[size.border.radius.base]
+"$value" = "{wgu.size.border.radius.base}"
+
+[size.border.radius.sm]
+"$value" = "{wgu.size.border.radius.s}"
+
+[size.border.radius.lg]
+"$value" = "{wgu.size.border.radius.l}"

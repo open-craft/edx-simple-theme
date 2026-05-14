@@ -1,10 +1,6 @@
-[spacing.spacer.base]
-"$value" = "1rem"
-
 [typography.font.family.sans.serif]
 "$value" = ["Lato", "sans-serif"]
 
-#TODO: Currently can't override the font family of display class
 [typography.display.font.family]
 "$value" = ["Sora", "sans-serif"]
 

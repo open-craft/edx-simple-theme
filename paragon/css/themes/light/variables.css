@@ -4,18 +4,14 @@
  */
 
 :root {
-  --pgn-size-border-radius-base: var(--wgu-size-border-radius-base); /** Default border radius. */
-  --pgn-size-border-radius-lg: var(--wgu-size-border-radius-l); /** Large border radius. */
-  --pgn-size-border-radius-sm: var(--wgu-size-border-radius-s); /** Small border radius. */
   --pgn-size-btn-focus-width: 2px;
-  --pgn-size-form-input-radius-border-base: 0;
   --pgn-size-input-btn-focus-width: 1px;
   --pgn-size-footer-border-top-width: initial;
   --pgn-size-footer-border-bottom-width: initial;
   --pgn-size-header-border-top-width: 0px;
   --pgn-size-header-border-bottom-width: 0px;
   --pgn-spacing-input-btn-padding-y: 0.5625rem;
-  --pgn-spacing-spacer-base: 16px; /** Basic space value */
+  --pgn-color-white: #FFFFFFFF; /** White color. */
   --pgn-color-gray-100: #FFFFFFFF; /** Gray color of level 100. */
   --pgn-color-gray-200: #F2F2F2FF; /** Gray color of level 200. */
   --pgn-color-gray-300: #D6D9DFFF; /** Gray color of level 300. */
@@ -25,6 +21,7 @@
   --pgn-color-gray-700: #4D4D4DFF; /** Gray color of level 700. */
   --pgn-color-gray-800: #333333FF; /** Gray color of level 800. */
   --pgn-color-gray-900: #1A1A1AFF; /** Gray color of level 900. */
+  --pgn-color-gray-base: #707070FF; /** Basic gray color. */
   --pgn-color-primary-100: #FEFEFEFF; /** Primary color of level 100. */
   --pgn-color-primary-200: #EBEEF2FF; /** Primary color of level 200. */
   --pgn-color-primary-300: #BDC7D3FF; /** Primary color of level 300. */
@@ -109,6 +106,66 @@
   --pgn-color-header-nav-user-dropdown-menu-item-color: initial;
   --pgn-color-header-border-top: initial;
   --pgn-color-header-border-bottom: initial;
+  --pgn-wgu-color-blue-50: #E6F1FEFF;
+  --pgn-wgu-color-blue-100: #B0FFFAFF;
+  --pgn-wgu-color-blue-200: #8ADBF8FF;
+  --pgn-wgu-color-blue-300: #549FF5FF;
+  --pgn-wgu-color-blue-400: #338DF3FF;
+  --pgn-wgu-color-blue-600: #0066DAFF;
+  --pgn-wgu-color-blue-700: #0050AAFF;
+  --pgn-wgu-color-blue-800: #003E84FF;
+  --pgn-wgu-color-blue-900: #002F65FF;
+  --pgn-wgu-color-blue-base: #0070F0FF;
+  --pgn-wgu-color-lake-50: #EDF7FDFF;
+  --pgn-wgu-color-lake-100: #C6E7FAFF;
+  --pgn-wgu-color-lake-200: #AADBF8FF;
+  --pgn-wgu-color-lake-300: #83CBF4FF;
+  --pgn-wgu-color-lake-400: #6BC1F2FF;
+  --pgn-wgu-color-lake-600: #40A1D9FF;
+  --pgn-wgu-color-lake-700: #327EAAFF;
+  --pgn-wgu-color-lake-800: #276183FF;
+  --pgn-wgu-color-lake-900: #1D4A64FF;
+  --pgn-wgu-color-lake-base: #46B1EFFF;
+  --pgn-wgu-color-navy-50: #E6EAEEFF;
+  --pgn-wgu-color-navy-100: #B0BCCAFF;
+  --pgn-wgu-color-navy-200: #8A9CB1FF;
+  --pgn-wgu-color-navy-300: #546F8DFF;
+  --pgn-wgu-color-navy-400: #335377FF;
+  --pgn-wgu-color-navy-600: #00244DFF;
+  --pgn-wgu-color-navy-700: #001C3CFF;
+  --pgn-wgu-color-navy-800: #00162FFF;
+  --pgn-wgu-color-navy-900: #001124FF;
+  --pgn-wgu-color-navy-base: #002855FF;
+  --pgn-wgu-color-green-50: #ECFDEDFF;
+  --pgn-wgu-color-green-100: #C4F9C6FF;
+  --pgn-wgu-color-green-200: #92E294FF;
+  --pgn-wgu-color-green-300: #60D564FF;
+  --pgn-wgu-color-green-400: #41CD45FF;
+  --pgn-wgu-color-green-600: #10B015FF;
+  --pgn-wgu-color-green-700: #0D8910FF;
+  --pgn-wgu-color-green-800: #0A6A0DFF;
+  --pgn-wgu-color-green-900: #08510AFF;
+  --pgn-wgu-color-green-base: #12C117FF;
+  --pgn-wgu-color-orange-50: #FEF5E7FF;
+  --pgn-wgu-color-orange-100: #FDDFB6FF;
+  --pgn-wgu-color-orange-200: #FCD092FF;
+  --pgn-wgu-color-orange-300: #FBBB60FF;
+  --pgn-wgu-color-orange-400: #FAAD41FF;
+  --pgn-wgu-color-orange-600: #E38B10FF;
+  --pgn-wgu-color-orange-700: #B16D0DFF;
+  --pgn-wgu-color-orange-800: #89540AFF;
+  --pgn-wgu-color-orange-900: #694008FF;
+  --pgn-wgu-color-orange-base: #F99912FF;
+  --pgn-wgu-color-red-50: #FBEDECFF;
+  --pgn-wgu-color-red-100: #F4C7C3FF;
+  --pgn-wgu-color-red-200: #EEABA6FF;
+  --pgn-wgu-color-red-300: #E7857DFF;
+  --pgn-wgu-color-red-400: #E26D64FF;
+  --pgn-wgu-color-red-600: #C74238FF;
+  --pgn-wgu-color-red-700: #9B342BFF;
+  --pgn-wgu-color-red-800: #782822FF;
+  --pgn-wgu-color-red-900: #5C1F1AFF;
+  --pgn-wgu-color-red-base: #DB493DFF;
   --pgn-spacing-form-input-padding-y-base: var(--pgn-spacing-input-btn-padding-y);
   --pgn-color-theme-hover-primary: var(--pgn-color-primary-700); /** Theme-specific primary hover color. */
   --pgn-color-btn-text-outline-primary: var(--pgn-color-primary-base);
@@ -126,6 +183,7 @@
   --pgn-color-action-default-gray-700: #333333FF;
   --pgn-color-action-default-gray-800: #1A1A1AFF;
   --pgn-color-action-default-gray-900: #000000FF;
+  --pgn-color-action-default-gray-base: #575757FF;
   --pgn-color-action-default-primary-100: #E5E5E5FF;
   --pgn-color-action-default-primary-200: #CCD4DEFF;
   --pgn-color-action-default-primary-300: #9EADBFFF;
@@ -190,7 +248,39 @@
   --pgn-color-action-default-danger-700: #541C17FF;
   --pgn-color-action-default-danger-800: #32110FFF;
   --pgn-color-action-default-danger-900: #180807FF;
+  --pgn-wgu-color-blue-500: var(--pgn-wgu-color-blue-base);
+  --pgn-wgu-color-lake-500: var(--pgn-wgu-color-lake-base);
+  --pgn-wgu-color-navy-500: var(--pgn-wgu-color-navy-base);
+  --pgn-wgu-color-green-500: var(--pgn-wgu-color-green-base);
+  --pgn-wgu-color-orange-500: var(--pgn-wgu-color-orange-base);
+  --pgn-wgu-color-red-500: var(--pgn-wgu-color-red-base);
+  --pgn-wgu-color-background-main-navy: var(--pgn-wgu-color-navy-base);
+  --pgn-wgu-color-background-main-blue: var(--pgn-wgu-color-blue-base);
+  --pgn-wgu-color-background-main-lake: var(--pgn-wgu-color-lake-base);
+  --pgn-wgu-color-border-gray: var(--pgn-color-gray-base);
+  --pgn-wgu-color-border-blue: var(--pgn-wgu-color-blue-base);
+  --pgn-wgu-color-btn-default: var(--pgn-wgu-color-blue-base);
+  --pgn-wgu-color-btn-hover: var(--pgn-wgu-color-blue-700);
+  --pgn-wgu-color-btn-disabled: var(--pgn-wgu-color-lake-base);
+  --pgn-wgu-color-btn-focus: var(--pgn-wgu-color-navy-base);
+  --pgn-wgu-color-icon-navy: var(--pgn-wgu-color-navy-base);
+  --pgn-wgu-color-icon-lake: var(--pgn-wgu-color-lake-base);
+  --pgn-wgu-color-icon-white: var(--pgn-color-white);
+  --pgn-wgu-color-icon-success: var(--pgn-wgu-color-green-base);
+  --pgn-wgu-color-icon-warning: var(--pgn-wgu-color-orange-base);
+  --pgn-wgu-color-icon-error: var(--pgn-wgu-color-red-base);
+  --pgn-wgu-color-text-main-navy: var(--pgn-wgu-color-navy-base);
+  --pgn-wgu-color-text-main-blue: var(--pgn-wgu-color-blue-base);
+  --pgn-wgu-color-text-main-lake: var(--pgn-wgu-color-lake-base);
+  --pgn-color-btn-bg-brand: var(--pgn-wgu-color-btn-default);
+  --pgn-color-btn-border-outline-brand: var(--pgn-wgu-color-btn-default);
   --pgn-color-btn-hover-text-outline-primary: var(--pgn-color-theme-hover-primary);
+  --pgn-color-btn-hover-bg-brand: var(--pgn-wgu-color-btn-hover);
+  --pgn-color-btn-hover-border-outline-brand: var(--pgn-wgu-color-btn-hover);
+  --pgn-color-btn-active-bg-brand: var(--pgn-wgu-color-btn-focus);
+  --pgn-color-btn-active-border-outline-brand: var(--pgn-wgu-color-btn-focus);
+  --pgn-color-btn-focus-border-outline-brand: var(--pgn-wgu-color-btn-focus);
+  --pgn-color-btn-focus-bg-brand: var(--pgn-wgu-color-btn-focus);
   --pgn-color-register-btn-text: var(--pgn-color-btn-text-outline-primary);
   --pgn-color-register-btn-border: var(--pgn-color-btn-border-outline-primary);
   --pgn-color-register-btn-hover-bg: var(--pgn-color-btn-hover-bg-outline-primary);
