@@ -15,10 +15,13 @@ runs:
         cache: npm
 
     - name: Install dependencies
+      shell: bash
       run: npm ci
 
     - name: Build tokens
+      shell: bash
       run: npm run build:tokens
 
     - name: Build
+      shell: bash
       run: npm run build
