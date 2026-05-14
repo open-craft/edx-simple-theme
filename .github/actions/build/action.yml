@@ -1,0 +1,26 @@
+name: Setup and build
+description: Setup the project, build tokens and CSS
+
+inputs:
+  node-version:
+    required: true
+
+runs:
+  using: composite
+  steps:
+    - uses: actions/checkout@v6
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v6
+      with:
+        node-version: ${{ inputs.node-version }}
+        cache: npm
+
+    - name: Install dependencies
+      run: npm ci
+
+    - name: Build tokens
+      run: npm run build:tokens
+
+    - name: Build
+      run: npm run build
