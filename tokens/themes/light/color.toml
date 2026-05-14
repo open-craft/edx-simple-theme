@@ -1,203 +1,224 @@
 [color.primary.100]
-"$value" = "#e6eaee"
+"$value" = "#E6EAEE"
 
 [color.primary.200]
-"$value" = "#b0bcca"
+"$value" = "#B0BCCA"
 
 [color.primary.300]
-"$value" = "#7a8fa7"
+"$value" = "#8A9CB1"
 
 [color.primary.400]
-"$value" = "#4a6786"
+"$value" = "#546F8D"
 
 [color.primary.500]
 "$value" = "#002855"
 
 [color.primary.600]
-"$value" = "#001c3c"
+"$value" = "#00244D"
 
 [color.primary.700]
-"$value" = "#001124"
+"$value" = "#001C3C"
 
 [color.primary.800]
-"$value" = "#000a15"
+"$value" = "#00162F"
 
 [color.primary.900]
-"$value" = "#000508"
+"$value" = "#001124"
+
+[color.primary.base]
+"$value" = "#002855"
 
 [color.secondary.100]
-"$value" = "#e6f1fe"
+"$value" = "#E6F1FE"
 
 [color.secondary.200]
-"$value" = "#b0d3fa"
+"$value" = "#B0D3FA"
 
 [color.secondary.300]
-"$value" = "#7cb5f6"
+"$value" = "#8ABDF8"
 
 [color.secondary.400]
-"$value" = "#4797f3"
+"$value" = "#338DF3"
 
 [color.secondary.500]
-"$value" = "#0070f0"
+"$value" = "#0070F0"
 
 [color.secondary.600]
-"$value" = "#0050aa"
+"$value" = "#0066DA"
 
 [color.secondary.700]
-"$value" = "#002f65"
+"$value" = "#0050AA"
 
 [color.secondary.800]
-"$value" = "#001c3c"
+"$value" = "#003E84"
 
 [color.secondary.900]
-"$value" = "#000e1e"
+"$value" = "#002F65"
+
+[color.secondary.base]
+"$value" = "#0070F0"
 
 [color.brand.100]
-"$value" = "#e6eaee"
+"$value" = "#E6EAEE"
 
 [color.brand.200]
-"$value" = "#b0bcca"
+"$value" = "#B0BCCA"
 
 [color.brand.300]
-"$value" = "#7a8fa7"
+"$value" = "#8A9CB1"
 
 [color.brand.400]
-"$value" = "#4a6786"
+"$value" = "#335377"
 
 [color.brand.500]
 "$value" = "#002855"
 
 [color.brand.600]
-"$value" = "#001c3c"
+"$value" = "#00244D"
 
 [color.brand.700]
-"$value" = "#001124"
+"$value" = "#001C3C"
 
 [color.brand.800]
-"$value" = "#000a15"
+"$value" = "#00162F"
 
 [color.brand.900]
-"$value" = "#000508"
+"$value" = "#001124"
+
+[color.brand.base]
+"$value" = "#002855"
 
 [color.success.100]
-"$value" = "#ecfded"
+"$value" = "#ECFDED"
 
 [color.success.200]
-"$value" = "#c4f9c6"
+"$value" = "#C4F9C6"
 
 [color.success.300]
-"$value" = "#8be98e"
+"$value" = "#8BE98E"
 
 [color.success.400]
-"$value" = "#4edc53"
+"$value" = "#4EDC53"
 
 [color.success.500]
-"$value" = "#12c117"
+"$value" = "#12C117"
 
 [color.success.600]
-"$value" = "#0d8910"
+"$value" = "#0D8910"
 
 [color.success.700]
-"$value" = "#08510a"
+"$value" = "#08510A"
 
 [color.success.800]
 "$value" = "#053305"
 
 [color.success.900]
-"$value" = "#021a03"
+"$value" = "#021A03"
+
+[color.success.base]
+"$value" = "#12C117"
 
 [color.info.100]
-"$value" = "#edf7fd"
+"$value" = "#EDF7FD"
 
 [color.info.200]
-"$value" = "#c6e7fa"
+"$value" = "#C6E7FA"
 
 [color.info.300]
-"$value" = "#aadbf8"
+"$value" = "#AADBF8"
 
 [color.info.400]
-"$value" = "#83cbf4"
+"$value" = "#83CBF4"
 
 [color.info.500]
-"$value" = "#46b1ef"
+"$value" = "#46B1EF"
 
 [color.info.600]
-"$value" = "#40a1d9"
+"$value" = "#40A1D9"
 
 [color.info.700]
-"$value" = "#327eaa"
+"$value" = "#327EAA"
 
 [color.info.800]
 "$value" = "#276183"
 
 [color.info.900]
-"$value" = "#1d4a64"
+"$value" = "#1D4A64"
+
+[color.info.base]
+"$value" = "#46B1EF"
 
 [color.warning.100]
-"$value" = "#fef5e7"
+"$value" = "#FEF5E7"
 
 [color.warning.200]
-"$value" = "#fddfb6"
+"$value" = "#FDDFB6"
 
 [color.warning.300]
-"$value" = "#fcd092"
+"$value" = "#FCD092"
 
 [color.warning.400]
-"$value" = "#fbbb60"
+"$value" = "#FBBB60"
 
 [color.warning.500]
-"$value" = "#f99912"
+"$value" = "#F99912"
 
 [color.warning.600]
-"$value" = "#e38b10"
+"$value" = "#E38B10"
 
 [color.warning.700]
-"$value" = "#b16d0d"
+"$value" = "#B16D0D"
 
 [color.warning.800]
-"$value" = "#89540a"
+"$value" = "#89540A"
 
 [color.warning.900]
 "$value" = "#694008"
 
+[color.warning.base]
+"$value" = "#F99912"
+
 [color.danger.100]
-"$value" = "#fbedec"
+"$value" = "#FBEDEC"
 
 [color.danger.200]
-"$value" = "#f4c7c3"
+"$value" = "#F4C7C3"
 
 [color.danger.300]
-"$value" = "#eeaba6"
+"$value" = "#EEABA6"
 
 [color.danger.400]
-"$value" = "#e7857d"
+"$value" = "#E7857D"
 
 [color.danger.500]
-"$value" = "#db493d"
+"$value" = "#DB493D"
 
 [color.danger.600]
-"$value" = "#c74238"
+"$value" = "#C74238"
 
 [color.danger.700]
-"$value" = "#9b342b"
+"$value" = "#9B342B"
 
 [color.danger.800]
 "$value" = "#782822"
 
 [color.danger.900]
-"$value" = "#5c1f1a"
+"$value" = "#5C1F1A"
+
+[color.danger.base]
+"$value" = "#DB493D"
 
 [color.gray.100]
-"$value" = "#ffffff"
+"$value" = "#FFFFFF"
 
 [color.gray.200]
-"$value" = "#f2f2f2"
+"$value" = "#F2F2F2"
 
 [color.gray.300]
-"$value" = "#d6d9df"
+"$value" = "#D6D9DF"
 
 [color.gray.400]
-"$value" = "#b3b3b3"
+"$value" = "#B3B3B3"
 
 [color.gray.500]
 "$value" = "#808080"
@@ -206,10 +227,13 @@
 "$value" = "#666666"
 
 [color.gray.700]
-"$value" = "#4d4d4d"
+"$value" = "#4D4D4D"
 
 [color.gray.800]
 "$value" = "#333333"
 
 [color.gray.900]
-"$value" = "#1a1a1a"
+"$value" = "#1A1A1A"
+
+[color.gray.base]
+"$value" = "#808080"
