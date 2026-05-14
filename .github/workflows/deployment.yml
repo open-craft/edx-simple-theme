@@ -41,7 +41,7 @@ jobs:
           echo "Version: ${VERSION}"
           echo "Environment: ${ENVIRONMENT_NAME}"
 
-  build-and-maybe-deploy:
+  build-and-deploy:
     needs: prepare
     runs-on: ubuntu-latest
 
@@ -49,58 +49,12 @@ jobs:
       name: ${{ needs.prepare.outputs.environment_name }}
 
     steps:
-      - uses: actions/checkout@v6
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v6
+      - name: Setup and Build
+        uses: ./.github/actions/build
         with:
           node-version: 24
-          cache: "npm"
 
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Build tokens
-        run: npm run build:tokens
-
-      - name: Build
-        run: npm run build
-
-      - name: Configure S3-compatible credentials
-        uses: aws-actions/configure-aws-credentials@v5
+      - name: Deploy
+        uses: ./.github/actions/deploy
         with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: ${{ vars.AWS_REGION }}
-
-      - name: Deploy to S3-compatible CDN target
-        shell: bash
-        env:
-          DEPLOY_PATH_SUFFIX: ${{ needs.prepare.outputs.version }}
-          S3_BUCKET: ${{ secrets.S3_BUCKET }}
-          S3_PREFIX: ${{ vars.S3_PREFIX }}
-          S3_ENDPOINT: ${{ vars.S3_ENDPOINT }}
-        run: |
-          if [ -z "${S3_BUCKET}" ]; then
-            echo "S3_BUCKET is required."
-            exit 1
-          fi
-
-          if [ -z "${S3_ENDPOINT}" ]; then
-            echo "S3_ENDPOINT is required."
-            exit 1
-          fi
-
-          PREFIX="${S3_PREFIX:-}"
-
-          if [ -n "${PREFIX}" ]; then
-            TARGET_PATH="s3://${S3_BUCKET}/${PREFIX}/${DEPLOY_PATH_SUFFIX}"
-          else
-            TARGET_PATH="s3://${S3_BUCKET}/${DEPLOY_PATH_SUFFIX}"
-          fi
-
-          echo "Deploying to ${TARGET_PATH}"
-
-          aws s3 sync ./dist "${TARGET_PATH}" \
-            --endpoint-url "${S3_ENDPOINT}" \
-            --delete
+          deploy-path: ${{ needs.prepare.outputs.version }}

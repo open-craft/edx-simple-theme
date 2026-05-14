@@ -1,0 +1,39 @@
+name: Deploy
+description: Deploys to S3 compatible
+
+inputs:
+  deploy-path:
+    required: true
+
+runs:
+  using: composite
+  steps:
+    - name: Deploy to S3-compatible CDN target
+      shell: bash
+      env:
+        DEPLOY_PATH_SUFFIX: ${{ inputs.deploy-path }}
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        AWS_DEFAULT_REGION: ${{ vars.AWS_REGION }}
+        S3_BUCKET: ${{ secrets.S3_BUCKET }}
+        S3_ENDPOINT: ${{ vars.S3_ENDPOINT }}
+      run: |
+        if [ -z "${S3_BUCKET}" ]; then
+          echo "S3_BUCKET is required."
+          exit 1
+        fi
+
+        if [ -z "${S3_ENDPOINT}" ]; then
+          echo "S3_ENDPOINT is required."
+          exit 1
+        fi
+
+        TARGET_PATH="s3://${S3_BUCKET}/${DEPLOY_PATH_SUFFIX}"
+
+        echo "Deploying to ${TARGET_PATH}"
+
+        aws s3 sync ./dist "${TARGET_PATH}" \
+          --endpoint-url "${S3_ENDPOINT}" \
+          --acl public-read \
+          --delete
+
