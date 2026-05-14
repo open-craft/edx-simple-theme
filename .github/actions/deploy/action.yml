@@ -4,6 +4,16 @@ description: Deploys to S3 compatible
 inputs:
   deploy-path:
     required: true
+  aws-access-key-id:
+    required: true
+  aws-secret-access-key:
+    required: true
+  aws-default-region:
+    required: true
+  s3-bucket:
+    required: true
+  s3-endpoint:
+    required: true
 
 runs:
   using: composite
