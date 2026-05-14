@@ -49,6 +49,8 @@ jobs:
       name: ${{ needs.prepare.outputs.environment_name }}
 
     steps:
+      - uses: actions/checkout@v6
+
       - name: Setup and Build
         uses: ./.github/actions/build
         with:
