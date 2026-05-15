@@ -93,6 +93,8 @@
 /* Allows the unit container to grow beyond the default 1024px */
 .unit-container {
   max-width: none !important;
+  // TODO: Update or remove this once we've figured out how to remove all
+  //  unneeded padding at smaller screen sizes.
   /*   @media (min-width: 576px) { */
   /*     padding-left: 0 !important; */
   /*     padding-right: 0 !important; */
@@ -126,13 +128,3 @@ header.learning-header {
 dialog.courseware-search {
   margin: 60px 0 0;
 }
-
-///* This removes the navigation sidebar from the flow making it float over the content   */
-//.outline-sidebar-heading-wrapper, .sequence-container .outline-sidebar-wrapper {
-//    position: fixed;
-//    z-index: 100;
-//}
-///* This moves the sidebar icon up slightly (68px is its height) so that it doesn't come in the way of content  */
-//.outline-sidebar-heading-wrapper, #outline-sidebar-outline {
-//    transform: translateY(-68px);
-//}

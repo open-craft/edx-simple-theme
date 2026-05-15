@@ -5,10 +5,10 @@
   "scripts": {
     "build-tokens": "npm run build:tokens",
     "build-scss": "npm run build:scss",
-    "build:tokens": "paragon build-tokens --source ./tokens/ --build-dir ./paragon/css --all-themes --paragon-base-theme light --source-tokens-only --verbose",
+    "build:tokens": "paragon build-tokens --source ./tokens/ --build-dir ./paragon/css --all-themes --paragon-base-theme light --verbose",
     "build:scss": "paragon build-scss --corePath ./paragon/core.scss --themesPath ./paragon/css/themes",
     "build": "rimraf dist && mkdir dist && npm run build:scss",
-    "watch:tokens": "onchange -v --initial --delay 1500 'tokens/**/*.json' 'tokens/**/*.toml' -- npm run build:tokens",
+    "watch:tokens": "onchange -v --initial --delay 1500 'tokens/**/*.json' 'tokens/**/*.toml' -- npm run build:tokens -- --source-tokens-only",
     "watch:scss": "onchange -v --initial --delay 1500 'paragon/**/*.css' 'paragon/**/*.scss' -- npm run build:scss",
     "watch": "concurrently --names tokens,scss -c green,magenta 'npm run watch:tokens' 'npm run watch:scss'",
     "dev": "concurrently --names watch,serve -c blue,yellow  'npm run watch' 'npm run serve'",
