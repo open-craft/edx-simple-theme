@@ -7,6 +7,12 @@
 [typography.headings.font.family]
 "$value" = ["Sora", "sans-serif"]
 
+[typography.font.size.base]
+"$value" = "16px"
+
+[typography.btn.font.size.base]
+"$value" = "1rem"
+
 [typography.font.size.h2.base]
 "$value" = "2.125rem"
 

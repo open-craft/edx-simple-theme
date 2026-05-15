@@ -299,6 +299,7 @@
   --pgn-typography-alert-font-size: 0.875rem;
   --pgn-typography-alert-line-height: 1.5rem;
   --pgn-typography-badge-font-size: 75%;
+  --pgn-typography-btn-font-size-base: 1rem;
   --pgn-typography-dropdown-item-text-decoration: none;
   --pgn-typography-image-figure-caption-font-size: 90%;
   --pgn-typography-menu-select-btn-link-text-decoration-line: underline;
@@ -332,7 +333,7 @@
   --pgn-typography-font-family-sans-serif: Lato, sans-serif, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; /** Sans-serif font family. */
   --pgn-typography-font-family-serif: serif; /** Serif font family. */
   --pgn-typography-font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace; /** Monospace font family. */
-  --pgn-typography-font-size-base: 1.125rem; /** Base font size. */
+  --pgn-typography-font-size-base: 16px; /** Base font size. */
   --pgn-typography-font-size-sm: 87.5%; /** Small font size. */
   --pgn-typography-font-size-xs: 75%; /** X-small font size. */
   --pgn-typography-font-size-micro: 0.688rem; /** Micro utils text font size. */
@@ -538,7 +539,6 @@
   --pgn-typography-annotation-line-height: var(--pgn-typography-line-height-sm);
   --pgn-typography-badge-font-weight: var(--pgn-typography-font-weight-bold);
   --pgn-typography-btn-font-family: var(--pgn-typography-input-btn-font-family);
-  --pgn-typography-btn-font-size-base: var(--pgn-typography-input-btn-font-size-base);
   --pgn-typography-btn-font-size-sm: var(--pgn-typography-input-btn-font-size-sm);
   --pgn-typography-btn-font-size-lg: var(--pgn-typography-input-btn-font-size-lg);
   --pgn-typography-btn-font-weight: var(--pgn-typography-font-weight-normal);

@@ -9,7 +9,6 @@
     border-right: none;
     border-bottom: 1px solid white !important;
     background-color: var(--outline-sidebar-bg-color) !important;
-    padding: var(--pgn-spacing-spacer-4) !important;
   }
 
   background: var(--outline-sidebar-bg-color);
@@ -17,10 +16,12 @@
 
   #outline-sidebar-outline {
     .course-sidebar-section {
+      background-color: var(--outline-sidebar-bg-color);
       > button {
         padding: var(--pgn-spacing-spacer-2) 0 var(--pgn-spacing-spacer-2) var(--pgn-spacing-spacer-4) !important;
       }
       &.active-section button {
+        background-color: var(--outline-sidebar-bg-color);
         --pgn-btn-color: var(--pgn-color-secondary-base) !important;
         color: var(--pgn-color-secondary-base) !important;
 
@@ -123,8 +124,12 @@ header.learning-header {
   .container-xl {
     max-width: none;
   }
+  .header-course-title {
+    font-family: var(--pgn-typography-headings-font-family);
+  }
 }
 
 dialog.courseware-search {
   margin: 60px 0 0;
+  border-radius: var(--pgn-size-border-radius-lg);
 }

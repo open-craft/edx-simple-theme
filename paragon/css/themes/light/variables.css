@@ -961,7 +961,7 @@
   --pgn-color-btn-text-outline-success: var(--pgn-color-success-base);
   --pgn-color-btn-text-inverse-success: var(--pgn-color-success-base);
   --pgn-color-btn-text-inverse-outline-success: var(--pgn-color-white);
-  --pgn-color-btn-text-tertiary: var(--pgn-color-gray-700);
+  --pgn-color-btn-text-tertiary: var(--pgn-color-primary-base);
   --pgn-color-btn-text-inverse-tertiary: var(--pgn-color-white);
   --pgn-color-btn-text-outline-warning: var(--pgn-color-warning-base);
   --pgn-color-btn-text-inverse-warning: var(--pgn-color-warning-base);
