@@ -24,3 +24,6 @@
 
 [wgu.size.border.radius.full]
 "$value" = "9999px"
+
+[size.card.border.radius.base]
+"$value" = "{wgu.size.border.radius.l}"
