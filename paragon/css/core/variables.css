@@ -295,7 +295,7 @@
   --pgn-spacing-label-margin-bottom: 0.5rem; /** Margin bottom for label. */
   --pgn-spacing-table-cell-padding-base: 0.75rem; /** Padding for tables. */
   --pgn-spacing-table-cell-padding-sm: 0.3rem; /** Padding sm for tables. */
-  --pgn-spacing-grid-gutter-width: 24px; /** Grid gutter width value. */
+  --pgn-spacing-grid-gutter-width: 32px; /** Grid gutter width value. */
   --pgn-typography-alert-font-size: 0.875rem;
   --pgn-typography-alert-line-height: 1.5rem;
   --pgn-typography-badge-font-size: 75%;
@@ -361,7 +361,7 @@
   --pgn-typography-line-height-lg: 1.5; /** Large line height. */
   --pgn-typography-line-height-sm: 1.5; /** Small line height. */
   --pgn-typography-line-height-micro: 0.938rem; /** Micro utils line height. */
-  --pgn-typography-line-height-display-base: 1; /** Standard display line height. */
+  --pgn-typography-line-height-display-base: 1.15; /** Standard display line height. */
   --pgn-typography-line-height-display-mobile: 3.5rem; /** Mobile display line height. */
   --pgn-typography-display-font-family: Sora,sans-serif;
   --pgn-transition-badge: none;

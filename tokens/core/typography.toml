@@ -25,3 +25,5 @@
 [typography.font.size.h5.base]
 "$value" = "1.25rem"
 
+[typography.line-height.display.base]
+"$value" = "1.15"
