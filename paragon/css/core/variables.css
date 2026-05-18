@@ -300,6 +300,8 @@
   --pgn-typography-alert-line-height: 1.5rem;
   --pgn-typography-badge-font-size: 75%;
   --pgn-typography-btn-font-size-base: 1rem;
+  --pgn-typography-btn-font-weight: 700;
+  --pgn-typography-btn-line-height-base: 1.5;
   --pgn-typography-dropdown-item-text-decoration: none;
   --pgn-typography-image-figure-caption-font-size: 90%;
   --pgn-typography-menu-select-btn-link-text-decoration-line: underline;
@@ -541,8 +543,6 @@
   --pgn-typography-btn-font-family: var(--pgn-typography-input-btn-font-family);
   --pgn-typography-btn-font-size-sm: var(--pgn-typography-input-btn-font-size-sm);
   --pgn-typography-btn-font-size-lg: var(--pgn-typography-input-btn-font-size-lg);
-  --pgn-typography-btn-font-weight: var(--pgn-typography-font-weight-normal);
-  --pgn-typography-btn-line-height-base: var(--pgn-typography-input-btn-line-height-base);
   --pgn-typography-btn-line-height-sm: var(--pgn-typography-input-btn-line-height-sm);
   --pgn-typography-footer-text-font-size: var(--pgn-typography-font-size-xs);
   --pgn-typography-close-button-font-size: calc(var(--pgn-typography-font-size-base) * 1.5);
@@ -639,6 +639,8 @@
   --pgn-typography-form-control-file-font-family: var(--pgn-typography-form-input-font-family);
   --pgn-typography-navbar-brand-font-size: var(--pgn-typography-font-size-lg);
   --pgn-typography-navbar-toggler-font-size: var(--pgn-typography-font-size-lg);
+  --pgn-two-column-block-image-size-border-radius-lg: var(--pgn-wgu-size-border-radius-m);
+  --pgn-two-column-block-image-size-border-radius-sm: var(--pgn-wgu-size-border-radius-xs);
   --pgn-size-card-image-border-radius: var(--pgn-size-card-border-radius-base);
   --pgn-size-dropdown-border-radius-base: var(--pgn-size-border-radius-base);
   --pgn-size-form-input-height-lg: calc(var(--pgn-typography-form-input-line-height-lg) * 1em + var(--pgn-spacing-input-btn-padding-lg-y) * 2 + var(--pgn-size-form-input-height-border));

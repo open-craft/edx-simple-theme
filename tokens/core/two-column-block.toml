@@ -1,0 +1,5 @@
+[two-column-block.image.size.border.radius.lg]
+"$value" = "{wgu.size.border.radius.m}"
+
+[two-column-block.image.size.border.radius.sm]
+"$value" = "{wgu.size.border.radius.xs}"
