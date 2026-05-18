@@ -3,10 +3,12 @@
   "version": "0.1.0",
   "description": "This is a customisable branding package for Open edX MFEs that provides a number of overridable variables. ",
   "scripts": {
-    "build:tokens": "paragon build-tokens --source ./tokens/ --build-dir ./paragon/css --all-themes --paragon-base-theme light --source-tokens-only --verbose",
+    "build-tokens": "npm run build:tokens",
+    "build-scss": "npm run build:scss",
+    "build:tokens": "paragon build-tokens --source ./tokens/ --build-dir ./paragon/css --all-themes --paragon-base-theme light --verbose",
     "build:scss": "paragon build-scss --corePath ./paragon/core.scss --themesPath ./paragon/css/themes",
     "build": "rimraf dist && mkdir dist && npm run build:scss",
-    "watch:tokens": "onchange -v --initial --delay 1500 'tokens/**/*.json' 'tokens/**/*.toml' -- npm run build:tokens",
+    "watch:tokens": "onchange -v --initial --delay 1500 'tokens/**/*.json' 'tokens/**/*.toml' -- npm run build:tokens -- --source-tokens-only",
     "watch:scss": "onchange -v --initial --delay 1500 'paragon/**/*.css' 'paragon/**/*.scss' -- npm run build:scss",
     "watch": "concurrently --names tokens,scss -c green,magenta 'npm run watch:tokens' 'npm run watch:scss'",
     "dev": "concurrently --names watch,serve -c blue,yellow  'npm run watch' 'npm run serve'",
@@ -27,10 +29,10 @@
     "@openedx/paragon": "^23.4.5"
   },
   "devDependencies": {
-    "@openedx/paragon": "^23.21.2",
+    "@openedx/paragon": "^23.22.0",
     "concurrently": "^9.2.1",
     "husky": "^9.1.7",
-    "lint-staged": "^16.4.0",
+    "lint-staged": "^17.0.4",
     "onchange": "^7.1.0",
     "prettier": "3.8.3",
     "rimraf": "^6.1.3"

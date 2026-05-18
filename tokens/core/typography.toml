@@ -1,0 +1,29 @@
+[typography.font.family.sans.serif]
+"$value" = ["Lato", "sans-serif"]
+
+[typography.display.font.family]
+"$value" = ["Sora", "sans-serif"]
+
+[typography.headings.font.family]
+"$value" = ["Sora", "sans-serif"]
+
+[typography.font.size.base]
+"$value" = "16px"
+
+[typography.btn.font.size.base]
+"$value" = "1rem"
+
+[typography.font.size.h2.base]
+"$value" = "2.125rem"
+
+[typography.font.size.h3.base]
+"$value" = "1.875rem"
+
+[typography.font.size.h4.base]
+"$value" = "1.5rem"
+
+[typography.font.size.h5.base]
+"$value" = "1.25rem"
+
+[typography.line-height.display.base]
+"$value" = "1.15"

@@ -1,0 +1,26 @@
+[color.btn.bg.brand]
+"$value" = "{wgu.color.btn.default}"
+
+[color.btn.hover.bg.brand]
+"$value" = "{wgu.color.btn.hover}"
+
+[color.btn.active.bg.brand]
+"$value" = "{wgu.color.btn.focus}"
+
+[color.btn.focus.bg.brand]
+"$value" = "{wgu.color.btn.focus}"
+
+[color.btn.border.outline-brand]
+"$value" = "{wgu.color.btn.default}"
+
+[color.btn.hover.border.outline-brand]
+"$value" = "{wgu.color.btn.hover}"
+
+[color.btn.active.border.outline-brand]
+"$value" = "{wgu.color.btn.focus}"
+
+[color.btn.focus.border.outline-brand]
+"$value" = "{wgu.color.btn.focus}"
+
+[color.btn.text.tertiary]
+"$value" = "{color.primary.base}"

@@ -1,0 +1,4 @@
+[wgu.color.border.gray]
+"$value" = "{color.gray.base}"
+[wgu.color.border.blue]
+"$value" = "{wgu.color.blue.base}"

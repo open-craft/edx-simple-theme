@@ -139,7 +139,7 @@ footer.footer {
   box-shadow: none !important;
 
   // Customize the footer border
-  border-top: var(--pgn-size-footer-border-top-width) solid var(--pgn-color-footer-border-bottom) !important;
+  border-top: var(--pgn-size-footer-border-top-width) solid var(--pgn-color-footer-border-top) !important;
   border-bottom: var(--pgn-size-footer-border-bottom-width) solid var(--pgn-color-footer-border-bottom);
 
   color: var(--pgn-color-footer-text) !important; // Footer text color
@@ -150,30 +150,23 @@ footer.footer {
 }
 
 // Set color for course nav bar in Learning MFE
-.course-tabs-navigation a.nav-link {
-  &:focus,
-  &:hover,
+#courseTabsNavigation a.nav-link {
+  color: var(--pgn-color-course-nav-menu-text, var(--pgn-color-gray-700));
+
   &.active {
-    color: var(--pgn-color-course-nav-menu-text);
+    color: var(--pgn-color-course-nav-menu-active-text, var(--pgn-color-primary-500));
+    background-color: var(--pgn-color-course-nav-menu-active-background);
+    border-bottom-color: var(--pgn-color-course-nav-menu-active-border-bottom, var(--pgn-color-primary-500));
   }
 
-  &.active {
-    border-bottom-color: var(--pgn-color-course-nav-menu-border-bottom);
-  }
-}
-
-// Discussions mfe overwrites learning header color to white
-.learning-header {
-  background-color: var(--pgn-color-header-bg) !important;
-}
-
-.learning-header a {
-  color: var(--pgn-color-link-base) !important;
-
   &:focus,
-  &:hover,
-  &.active {
-    color: var(--pgn-color-link-base) !important;
+  &:hover {
+    color: var(--pgn-color-course-nav-menu-hover-text, var(--pgn-color-link-base));
+    background-color: var(--pgn-color-course-nav-menu-hover-background, var(--pgn-color-light-400));
+  }
+
+  &:focus {
+    border-bottom-color: var(--pgn-color-course-nav-menu-focus-border-bottom, var(--pgn-color-primary-500));
   }
 }
 

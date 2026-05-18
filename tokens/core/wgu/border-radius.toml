@@ -1,0 +1,26 @@
+[wgu.size]
+"$type" = "size"
+
+[wgu.size.border.radius.base]
+"$value" = "16px"
+
+[wgu.size.border.radius.xxs]
+"$value" = "calc({wgu.size.border.radius.base} * 0.25)"
+
+[wgu.size.border.radius.xs]
+"$value" = "calc({wgu.size.border.radius.base} * .5)"
+
+[wgu.size.border.radius.s]
+"$value" = "{wgu.size.border.radius.base}"
+
+[wgu.size.border.radius.m]
+"$value" = "calc({wgu.size.border.radius.base} * 1.5)"
+
+[wgu.size.border.radius.l]
+"$value" = "calc({wgu.size.border.radius.base} * 2)"
+
+[wgu.size.border.radius.xl]
+"$value" = "calc({wgu.size.border.radius.base} * 2.5)"
+
+[wgu.size.border.radius.full]
+"$value" = "9999px"

@@ -1,10 +1,15 @@
+workflow:
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+    - if: $CI_COMMIT_BRANCH =~ /^release\//
+
 stages:
   - build
   - deploy
 
-build themes:
+.node-job:
   stage: build
-  image: node:18
+  image: node:24
   cache:
     - key:
         files:
@@ -14,7 +19,31 @@ build themes:
         - node_modules
   before_script:
     - npm install
+
+lint:
+  extends: .node-job
   script:
+    - npx prettier --write .
+    - git checkout package-lock.json
+    - |
+      if ! git diff --quiet; then
+        git diff
+        echo "The files are not formatted correctly. Please run 'npx prettier --write .' and commit the changes."
+        exit 1
+      fi
+
+build themes:
+  extends: .node-job
+  script:
+    - npm run build:tokens
+    - git checkout package-lock.json
+    - |
+      if ! git diff --quiet; then
+        git diff
+        echo "There are unexpected changes in ./paragon/css. These changes need to be committed."
+        echo "Please run 'npm run build:tokens' and commit the changes."
+        exit 1
+      fi
     - npm run build
   artifacts:
     paths:
@@ -29,9 +58,18 @@ deploy s3:
     name: amazon/aws-cli:latest
     entrypoint:
       - "/usr/bin/env"
+  variables:
+    SANITIZED_BRANCH: ""
+  before_script:
+    - SANITIZED_BRANCH=$(echo "$CI_COMMIT_REF_NAME" | tr '/' '-' | sed 's/[^a-zA-Z0-9._-]/-/g')
   script:
-    - aws s3 cp dist/ s3://$S3_BUCKET/$THEME_PATH --recursive --acl public-read
+    - |
+      if [ -n "$CLOUDFRONT_DISTRIBUTION_ID" ]; then
+        aws s3 sync dist/ s3://$S3_BUCKET/$SANITIZED_BRANCH/ --delete
+        aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION_ID --paths "/$SANITIZED_BRANCH/*"
+      else
+        aws s3 sync dist/ s3://$S3_BUCKET/$SANITIZED_BRANCH/ --delete --acl public-read
+      fi
   rules:
-    # Only deploy if merging to default branch and if a bucket is defined
-    - if: "$CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH && $S3_BUCKET"
+    - if: "$S3_BUCKET && $AWS_ACCESS_KEY_ID && $AWS_SECRET_ACCESS_KEY"
       when: always
