@@ -1,0 +1,2 @@
+[ccblk.typography.headings.color]
+"$value" = "var(--pgn-color-headings-base)"

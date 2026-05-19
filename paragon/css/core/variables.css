@@ -13,9 +13,6 @@
   --pgn-typography-font-size-h4-base: 1.5rem; /** Font size of heading level 4. */
   --pgn-typography-font-size-h5-base: 1.25rem; /** Font size of heading level 5. */
   --pgn-typography-display-font-family: Sora,sans-serif;
-  --pgn-ccblk-spacing-badge-spacer-x: 2rem;
-  --pgn-ccblk-spacing-badge-spacer-y: 0.5rem;
-  --pgn-ccblk-typography-headings-color: $color-headings-base;
   --pgn-wgu-size-border-radius-base: 16px;
   --pgn-wgu-size-border-radius-full: 9999px;
   --pgn-wgu-size-border-radius-xxs: calc(var(--pgn-wgu-size-border-radius-base) * 0.25);

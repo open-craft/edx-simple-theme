@@ -3,6 +3,3 @@
 
 [ccblk.spacing.badge.spacer-y]
 "$value" = "0.5rem"
-
-[ccblk.typography.headings.color]
-"$value" = "$color-headings-base"
