@@ -22,3 +22,5 @@
 [color.btn.focus.border.outline-brand]
 "$value" = "{wgu.color.btn.focus}"
 
+[color.btn.text.tertiary]
+"$value" = "{color.primary.base}"
