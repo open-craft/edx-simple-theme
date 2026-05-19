@@ -637,14 +637,13 @@
   --pgn-color-list-group-base: inherit;
   --pgn-color-mark-bg: #FFF243FF;
   --pgn-color-white: #FFFFFFFF; /** White color. */
-  --pgn-color-accent-a: #DB493DFF; /** Accent-A color. */
   --pgn-color-black: #000000FF; /** Black color. */
   --pgn-color-blue: #23419FFF; /** Blue color. */
   --pgn-color-red: #C32D3AFF; /** Red color. */
   --pgn-color-green: #178253FF; /** Green color. */
   --pgn-color-yellow: #FFD900FF; /** Yellow color. */
   --pgn-color-teal: #006DAAFF; /** Teal color. */
-  --pgn-color-accent-a: #00BBF9FF; /** Accent-A color. */
+  --pgn-color-accent-a: #DB493DFF; /** Accent-A color. */
   --pgn-color-accent-b: #FFEE88FF; /** Accent-B color. */
   --pgn-color-gray-100: #FFFFFFFF; /** Gray color of level 100. */
   --pgn-color-gray-200: #F2F2F2FF; /** Gray color of level 200. */
@@ -1098,7 +1097,6 @@
   --pgn-color-form-control-range-track-bg: var(--pgn-color-gray-300);
   --pgn-color-form-feedback-valid: var(--pgn-color-success-900);
   --pgn-color-form-feedback-invalid: var(--pgn-color-danger-900);
-  --pgn-color-headings-base: var(--pgn-color-primary-500);
   --pgn-color-icon-button-bg-primary-base: var(--pgn-color-icon-button-bg-base);
   --pgn-color-icon-button-bg-primary-focus: var(--pgn-color-icon-button-bg-base);
   --pgn-color-icon-button-bg-primary-inverse-base: var(--pgn-color-icon-button-bg-base);
@@ -1388,10 +1386,9 @@
   --pgn-color-action-default-danger-800: #32110FFF;
   --pgn-color-action-default-danger-900: #180807FF;
   --pgn-color-action-default-danger-base: #C13024FF;
-  --pgn-color-action-default-accent-a: #C13024FF;
   --pgn-color-action-default-light-base: #CAC3BFFF;
   --pgn-color-action-default-dark-base: #142018FF;
-  --pgn-color-action-default-accent-a: #0095C6FF;
+  --pgn-color-action-default-accent-a: #C13024FF;
   --pgn-color-action-default-accent-b: #FFE755FF;
   --pgn-border-color-nav-tabs-link-border-active: var(--pgn-color-primary-500);
   --pgn-wgu-color-blue-500: var(--pgn-wgu-color-blue-base);
