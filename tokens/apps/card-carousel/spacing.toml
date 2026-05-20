@@ -1,0 +1,5 @@
+[ccblk.spacing.badge.spacer-x]
+"$value" = "2rem"
+
+[ccblk.spacing.badge.spacer-y]
+"$value" = "0.5rem"

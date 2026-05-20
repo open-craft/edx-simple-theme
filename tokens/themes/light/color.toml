@@ -238,6 +238,8 @@
 [color.gray.base]
 "$value" = "#808080"
 
+[color.accent.a]
+"$value" = "#db493d"
 
 
 [color.headings.base]
