@@ -27,3 +27,9 @@
 
 [typography.line-height.display.base]
 "$value" = "1.15"
+
+[typography.btn.font.weight]
+"$value" = "700"
+
+[typography.btn.line-height.base]
+"$value" = "1.5"
