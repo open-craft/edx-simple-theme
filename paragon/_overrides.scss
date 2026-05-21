@@ -176,3 +176,9 @@ footer.footer {
     color: var(--pgn-color-link-base);
   }
 }
+
+// Remove 1px border from the learning mfe wrapper.
+// This overrides https://github.com/openedx/frontend-app-learning/blob/db18c2cb456fcf887b30c9122e153c163f867886/src/index.scss#L83
+.sequence-container > .sequence {
+    border: none;
+}
