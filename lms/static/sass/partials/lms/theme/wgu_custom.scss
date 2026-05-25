@@ -96,23 +96,27 @@
   }
 }
 
+// Fix the font for questions
+.xblock.xmodule_display.xmodule_ProblemBlock div.problem {
+  color: var(--pgn-color-body-base);
+  font-weight: 700;
+}
+
 // Remove the border around choices in the problem block
-.xblock.xmodule_display.xmodule_ProblemBlock div.problem .choicegroup label {
-  border: none;
-}
-.xblock.xmodule_display.xmodule_ProblemBlock
-  div.problem
-  .choicegroup
-  input:hover
-  + label {
-  border: none;
-}
-.xmodule_display.xmodule_ProblemBlock
-  div.problem
-  .choicegroup
-  input:focus
-  + label {
-  border: none;
+.xblock.xmodule_display.xmodule_ProblemBlock div.problem .choicegroup {
+  label {
+    border: none;
+  }
+  input:hover,
+  input:focus {
+     + label {
+      border: none;
+    }
+  }
+  legend {
+  	font-size: var(--pgn-typography-btn-font-size-base);
+  	
+  }
 }
 
 // This applies the custom styling to the submit button in the problem block.
