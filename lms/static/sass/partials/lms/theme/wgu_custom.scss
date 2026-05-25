@@ -1,0 +1,166 @@
+@import url("https://cdn.jsdelivr.net/npm/@openedx/paragon@23/dist/core.min.css");
+@import url("https://cdn.jsdelivr.net/npm/@openedx/paragon@23/dist/light.min.css");
+@import url("https://wgu-ulmo-static.sfo3.digitaloceanspaces.com/ulmo/core.css");
+@import url("https://wgu-ulmo-static.sfo3.digitaloceanspaces.com/ulmo/light.css");
+
+@mixin full-bleed {
+  margin-left: calc(50% - 50vw) !important;
+  height: auto;
+  width: 100vw;
+  max-width: 100vw;
+}
+
+// This removes the spacing and border between blocks in a unit
+.course-wrapper .course-content .vert-mod .vert {
+  border-bottom: none !important;
+
+  padding: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+// This defines full-bleed styling for images
+.xmodule_display.xmodule_AboutBlock img.full-bleed,
+.xmodule_display.xmodule_CourseInfoBlock img.full-bleed,
+.xmodule_display.xmodule_HtmlBlock img.full-bleed,
+.xmodule_display.xmodule_StaticTabBlock img.full-bleed,
+.xblock-student_view-cover,
+.xblock-student_view-two_column,
+.xblock-student_view-card_carousel,
+.xblock-student_view-keypoints {
+  @include full-bleed;
+}
+
+.xmodule_display .full-bleed-content {
+  @include full-bleed;
+  box-sizing: border-box;
+}
+
+// The fixes the problem block styling by having it use paragon variables.
+.xblock.xmodule_display.xmodule_ProblemBlock {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-top: 0;
+    margin-bottom: var(--pgn-spacing-headings-margin-bottom);
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .h1,
+  .h2,
+  .h3,
+  .h4,
+  .h5,
+  .h6,
+  .hd-1,
+  .hd-2,
+  .hd-3,
+  .hd-4,
+  .hd-5,
+  .hd-6 {
+    margin-bottom: var(--pgn-spacing-headings-margin-bottom);
+    font-family: var(--pgn-typography-headings-font-family);
+    font-weight: var(--pgn-typography-headings-font-weight);
+    line-height: var(--pgn-typography-headings-line-height);
+    color: var(--pgn-color-headings-base);
+  }
+  h1,
+  .h1 {
+    font-size: var(--pgn-typography-font-size-h1-base);
+  }
+  h2,
+  .h2 {
+    font-size: var(--pgn-typography-font-size-h2-base);
+  }
+  h3,
+  .h3 {
+    font-size: var(--pgn-typography-font-size-h3-base);
+  }
+  h4,
+  .h4 {
+    font-size: var(--pgn-typography-font-size-h4-base);
+  }
+  h5,
+  .h5 {
+    font-size: var(--pgn-typography-font-size-h5-base);
+  }
+  h6,
+  .h6 {
+    font-size: var(--pgn-typography-font-size-h6-base);
+  }
+}
+
+// Remove the border around choices in the problem block
+.xblock.xmodule_display.xmodule_ProblemBlock div.problem .choicegroup label {
+  border: none;
+}
+.xblock.xmodule_display.xmodule_ProblemBlock
+  div.problem
+  .choicegroup
+  input:hover
+  + label {
+  border: none;
+}
+.xmodule_display.xmodule_ProblemBlock
+  div.problem
+  .choicegroup
+  input:focus
+  + label {
+  border: none;
+}
+
+// This applies the custom styling to the submit button in the problem block.
+// This styling is meant to emulate a rouded pill outline brand button.
+.xblock.xmodule_display.xmodule_ProblemBlock
+  div.problem
+  .action
+  .submit-attempt-container
+  .submit {
+  font-family: var(--pgn-typography-btn-font-family);
+  font-weight: 700;
+  border: 2px solid var(--pgn-btn-border-color, transparent);
+  padding: var(--pgn-spacing-btn-padding-y-base)
+    var(--pgn-spacing-btn-padding-x-base);
+  font-size: var(--pgn-typography-btn-font-size-base);
+  line-height: var(--pgn-typography-btn-line-height-base);
+  border-radius: var(--pgn-size-rounded-pill);
+  color: var(--pgn-color-btn-text-outline-brand);
+
+  background: var(--pgn-color-btn-bg-outline-brand);
+  border-color: var(--pgn-color-btn-border-outline-brand);
+
+  &:hover {
+    color: var(--pgn-color-btn-hover-text-outline-brand);
+    background: var(--pgn-color-btn-hover-bg-outline-brand);
+    border-color: var(--pgn-color-btn-hover-border-outline-brand);
+  }
+
+  &:active {
+    color: var(--pgn-color-btn-active-text-outline-brand);
+    background: var(--pgn-color-btn-active-bg-outline-brand);
+    border-color: var(--pgn-color-btn-active-border-outline-brand);
+  }
+
+  &:disabled {
+    color: var(--pgn-color-btn-disabled-text-outline-brand);
+    background: var(--pgn-color-btn-disabled-bg-outline-brand);
+    border-color: var(--pgn-color-btn-disabled-border-outline-brand);
+  }
+
+  &:focus {
+    outline-color: var(--pgn-color-btn-focus-outline-outline-brand);
+    color: var(--pgn-color-btn-focus-text-outline-brand);
+    border-color: var(--pgn-color-btn-focus-border-outline-brand);
+    background: var(--pgn-color-btn-focus-bg-outline-brand);
+  }
+  // We are adding this via a unicode char, however if it needs to match fully, we need to import material fonts and use that here.
+  &::after {
+    content: "➜";
+  }
+}
