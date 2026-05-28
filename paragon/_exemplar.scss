@@ -132,3 +132,8 @@ dialog.courseware-search {
   margin: 60px 0 0;
   border-radius: var(--pgn-size-border-radius-lg);
 }
+
+#main-content > .position-relative {
+  margin: 0 !important;
+  padding: 0 !important;
+}
