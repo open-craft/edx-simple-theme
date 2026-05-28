@@ -172,4 +172,8 @@
 
 #content.content-wrapper {
   margin-top: 0;
+  padding-top: 0 !important;
+  main {
+    padding-top: 0;
+  }
 }
