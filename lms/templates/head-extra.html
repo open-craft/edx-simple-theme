@@ -1,0 +1,14 @@
+<script>
+    (function () {
+        if (window.top === window && window.location.pathname.startsWith("/xblock")) {
+            console.log("unit iframe loaded as parent, trying to break out");
+            try {
+                const usageKey = window.location.pathname.split('/').pop();
+                const blockId = usageKey.split('block@')[1];
+                window.location.href = "/courses/" + $$course_id + "/jump_to_id/" + blockId;
+            } catch (err) {
+                console.log("Can't redirect, possibly not a unit")
+            }
+        }
+    })();
+</script>
