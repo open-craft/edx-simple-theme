@@ -109,13 +109,12 @@
   }
   input:hover,
   input:focus {
-     + label {
+    + label {
       border: none;
     }
   }
   legend {
-  	font-size: var(--pgn-typography-btn-font-size-base);
-  	
+    font-size: var(--pgn-typography-btn-font-size-base);
   }
 }
 
@@ -167,4 +166,10 @@
   &::after {
     content: "➜";
   }
+}
+
+// Remove excess padding and margins
+
+#content.content-wrapper {
+  margin-top: 0;
 }
