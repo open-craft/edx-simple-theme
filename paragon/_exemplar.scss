@@ -114,6 +114,10 @@ header.site-header-desktop nav button.menu-trigger {
 .unit-iframe-wrapper {
   margin-left: 0 !important;
   margin-right: 0 !important;
+  iframe {
+    /* The iframe can contain alerts which could be obscured by a low height */
+    min-height: 5rem;
+  }
 }
 
 /* The default max-width of the main container is still limited, this undoes that */
