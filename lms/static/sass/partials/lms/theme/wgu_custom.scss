@@ -18,6 +18,12 @@
   margin-bottom: 0 !important;
 }
 
+// This adds spacing back in for specific blocks, undoing the above in a targeted way.
+.xmodule_ProblemBlock {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
 // This defines full-bleed styling for images
 .xmodule_display.xmodule_AboutBlock img.full-bleed,
 .xmodule_display.xmodule_CourseInfoBlock img.full-bleed,
