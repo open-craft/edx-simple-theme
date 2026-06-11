@@ -28,7 +28,7 @@
   },
   "devDependencies": {
     "@openedx/paragon": "^23.21.2",
-    "concurrently": "^9.2.1",
+    "concurrently": "^10.0.3",
     "husky": "^9.1.7",
     "lint-staged": "^16.4.0",
     "onchange": "^7.1.0",
