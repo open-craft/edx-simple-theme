@@ -1,0 +1,36 @@
+[typography.font.family.sans.serif]
+"$value" = ["nunito-sans", "sans-serif"]
+
+[typography.display.font.family]
+"$value" = ["roboto-slab", "sans-serif"]
+
+[typography.headings.font.family]
+"$value" = ["roboto-slab", "sans-serif"]
+
+[typography.font.size.base]
+"$value" = "18px"
+
+#[typography.font.weight.normal]
+#"$value" = "700"
+
+[typography.font.size.h1.base]
+"$value" = "2.222rem"
+
+[typography.font.size.h2.base]
+"$value" = "1.778rem"
+
+[typography.font.size.h3.base]
+"$value" = "1.222rem"
+
+[typography.font.size.h4.base]
+"$value" = "1rem"
+
+[typography.font.size.h5.base]
+"$value" = "0.778rem"
+
+[typography.font.size.h6.base]
+"$value" = "0.667rem"
+
+
+[size.btn.border.radius.base]
+"$value" = "0px"

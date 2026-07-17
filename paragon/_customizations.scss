@@ -1,0 +1,35 @@
+@import url("https://use.typekit.net/mcp8eqb.css");
+
+#courseTabsNavigation a.nav-link.active {
+  font-weight: 700;
+}
+
+.unit-container .unit h3 {
+  font-size: 38px;
+  font-weight: 500;
+}
+
+.outline-sidebar-heading-wrapper .outline-sidebar-heading {
+  color: var(--pgn-color-primary-base) !important;
+}
+
+.progress-tab-component {
+  h2 {
+    color: var(--pgn-color-accent-b);
+  }
+  h3.h4 {
+    font-size: var(--pgn-typography-font-size-h3-base);
+  }
+  .donut {
+    .donut-segment.complete-stroke {
+      stroke: var(--pgn-color-accent-b);
+    }
+    .donut-chart-number {
+      color: var(--pgn-color-accent-b);
+    }
+  }
+}
+
+#non-passing-grade-tooltip .text-dark-700 {
+  --pgn-color-dark-700: var(--pgn-color-light-300);
+}
