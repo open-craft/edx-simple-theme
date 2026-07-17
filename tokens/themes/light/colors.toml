@@ -1,0 +1,29 @@
+[color.psu.dark]
+"$value" = "#171717"
+
+[color.psu.gray]
+"$value" = "#c6c6c6"
+
+[color.psu.light]
+"$value" = "#eeeeee"
+
+[color.psu.primary]
+"$value" = "#001e44"
+
+[color.psu.color1]
+"$value" = "#2d3147"
+
+[color.psu.brand]
+"$value" = "#329be1"
+
+[color.psu.info]
+"$value" = "#dbecf7"
+
+[color.psu.info2]
+"$value" = "#f5f6fa"
+
+[color.psu.green1]
+"$value" = "#276966"
+
+[color.psu.green2]
+"$value" = "#1e4d4b"

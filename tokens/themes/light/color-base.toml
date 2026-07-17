@@ -1,0 +1,297 @@
+[color]
+"$type" = "color"
+
+[color.bg.base]
+"$value" = "{color.white}"
+"$description" = "Basic background color."
+
+[color.bg.active]
+source = "$component-active-bg"
+"$value" = "{color.primary.500}"
+"$description" = "Active background color."
+
+[color.text.50.black]
+source = "$text-black-50"
+"$value" = "{color.black}"
+"$description" = "Black text color with transparency of 50%."
+
+[[color.text.50.black.modify]]
+type = "alpha"
+amount = 0.5
+
+[color.text.50.white]
+source = "$text-white-50"
+"$value" = "{color.white}"
+"$description" = "White text color with transparency of 50%."
+
+[[color.text.50.white.modify]]
+type = "alpha"
+amount = 0.5
+
+[color.active]
+source = "$component-active-color"
+"$value" = "{color.white}"
+"$description" = "Color for active element."
+
+[color.disabled]
+"$value" = "{color.gray.500}"
+"$description" = "Color for disabled element."
+
+[color.input.focus]
+"$value" = "{color.primary.500}"
+"$description" = "Focused input value color."
+
+[color.table.caption]
+source = "$table-caption-color"
+"$value" = "{color.text-muted}"
+"$description" = "Table caption color."
+
+[color.table.border]
+source = "$table-border-color"
+"$value" = "{color.border}"
+"$description" = "Table border color."
+
+[color.border]
+source = "$border-color"
+"$value" = "{color.gray.200}"
+"$description" = "Border color."
+
+[color.theme.bg.primary]
+"$value" = "{color.primary.100}"
+"$description" = "Theme-specific primary background color."
+
+[color.theme.bg.secondary]
+"$value" = "{color.secondary.100}"
+"$description" = "Theme-specific secondary background color."
+
+[color.theme.bg.brand]
+"$value" = "{color.brand.100}"
+"$description" = "Theme-specific brand background color."
+
+[color.theme.bg.success]
+"$value" = "{color.success.100}"
+"$description" = "Theme-specific success background color."
+
+[color.theme.bg.info]
+"$value" = "{color.info.100}"
+"$description" = "Theme-specific info background color."
+
+[color.theme.bg.warning]
+"$value" = "{color.warning.100}"
+"$description" = "Theme-specific warning background color."
+
+[color.theme.bg.danger]
+"$value" = "{color.danger.100}"
+"$description" = "Theme-specific danger background color."
+
+[color.theme.bg.light]
+"$value" = "{color.light.100}"
+"$description" = "Theme-specific light background color."
+
+[color.theme.bg.dark]
+"$value" = "{color.dark.100}"
+"$description" = "Theme-specific dark background color."
+
+[color.theme.bg.gray]
+"$value" = "{color.gray.100}"
+"$description" = "Theme-specific gray background color."
+
+[color.theme.border.primary]
+"$value" = "{color.primary.200}"
+"$description" = "Theme-specific primary border color."
+
+[color.theme.border.secondary]
+"$value" = "{color.secondary.200}"
+"$description" = "Theme-specific secondary border color."
+
+[color.theme.border.brand]
+"$value" = "{color.brand.200}"
+"$description" = "Theme-specific brand border color."
+
+[color.theme.border.success]
+"$value" = "{color.success.200}"
+"$description" = "Theme-specific success border color."
+
+[color.theme.border.info]
+"$value" = "{color.info.200}"
+"$description" = "Theme-specific info border color."
+
+[color.theme.border.warning]
+"$value" = "{color.warning.200}"
+"$description" = "Theme-specific warning border color."
+
+[color.theme.border.danger]
+"$value" = "{color.danger.200}"
+"$description" = "Theme-specific danger border color."
+
+[color.theme.border.light]
+"$value" = "{color.light.200}"
+"$description" = "Theme-specific light border color."
+
+[color.theme.border.dark]
+"$value" = "{color.dark.200}"
+"$description" = "Theme-specific dark border color."
+
+[color.theme.border.gray]
+"$value" = "{color.gray.200}"
+"$description" = "Theme-specific gray border color."
+
+[color.theme.focus.primary]
+"$value" = "{color.primary.500}"
+"$description" = "Theme-specific primary focus color."
+
+[color.theme.focus.secondary]
+"$value" = "{color.secondary.500}"
+"$description" = "Theme-specific secondary focus color."
+
+[color.theme.focus.brand]
+"$value" = "{color.brand.500}"
+"$description" = "Theme-specific brand focus color."
+
+[color.theme.focus.success]
+"$value" = "{color.success.500}"
+"$description" = "Theme-specific success focus color."
+
+[color.theme.focus.info]
+"$value" = "{color.info.500}"
+"$description" = "Theme-specific info focus color."
+
+[color.theme.focus.warning]
+"$value" = "{color.warning.500}"
+"$description" = "Theme-specific warning focus color."
+
+[color.theme.focus.danger]
+"$value" = "{color.danger.500}"
+"$description" = "Theme-specific danger focus color."
+
+[color.theme.focus.light]
+"$value" = "{color.light.500}"
+"$description" = "Theme-specific light focus color."
+
+[color.theme.focus.dark]
+"$value" = "{color.dark.500}"
+"$description" = "Theme-specific dark focus color."
+
+[color.theme.focus.gray]
+"$value" = "{color.gray.500}"
+"$description" = "Theme-specific gray focus color."
+
+[color.theme.default.primary]
+"$value" = "{color.primary.500}"
+"$description" = "Theme-specific primary default color."
+
+[color.theme.default.secondary]
+"$value" = "{color.secondary.500}"
+"$description" = "Theme-specific secondary default color."
+
+[color.theme.default.brand]
+"$value" = "{color.brand.500}"
+"$description" = "Theme-specific brand default color."
+
+[color.theme.default.success]
+"$value" = "{color.success.500}"
+"$description" = "Theme-specific success default color."
+
+[color.theme.default.info]
+"$value" = "{color.info.500}"
+"$description" = "Theme-specific info default color."
+
+[color.theme.default.warning]
+"$value" = "{color.warning.500}"
+"$description" = "Theme-specific warning default color."
+
+[color.theme.default.danger]
+"$value" = "{color.danger.500}"
+"$description" = "Theme-specific danger default color."
+
+[color.theme.default.light]
+"$value" = "{color.light.500}"
+"$description" = "Theme-specific light default color."
+
+[color.theme.default.dark]
+"$value" = "{color.dark.500}"
+"$description" = "Theme-specific dark default color."
+
+[color.theme.default.gray]
+"$value" = "{color.gray.500}"
+"$description" = "Theme-specific gray default color."
+
+[color.theme.hover.primary]
+"$value" = "{color.primary.700}"
+"$description" = "Theme-specific primary hover color."
+
+[color.theme.hover.secondary]
+"$value" = "{color.secondary.700}"
+"$description" = "Theme-specific secondary hover color."
+
+[color.theme.hover.brand]
+"$value" = "{color.brand.700}"
+"$description" = "Theme-specific brand hover color."
+
+[color.theme.hover.success]
+"$value" = "{color.success.700}"
+"$description" = "Theme-specific success hover color."
+
+[color.theme.hover.info]
+"$value" = "{color.info.700}"
+"$description" = "Theme-specific info hover color."
+
+[color.theme.hover.warning]
+"$value" = "{color.warning.700}"
+"$description" = "Theme-specific warning hover color."
+
+[color.theme.hover.danger]
+"$value" = "{color.danger.700}"
+"$description" = "Theme-specific danger hover color."
+
+[color.theme.hover.light]
+"$value" = "{color.light.700}"
+"$description" = "Theme-specific light hover color."
+
+[color.theme.hover.dark]
+"$value" = "{color.dark.700}"
+"$description" = "Theme-specific dark hover color."
+
+[color.theme.hover.gray]
+"$value" = "{color.gray.700}"
+"$description" = "Theme-specific gray hover color."
+
+[color.theme.active.primary]
+"$value" = "{color.primary.900}"
+"$description" = "Theme-specific primary active color."
+
+[color.theme.active.secondary]
+"$value" = "{color.secondary.900}"
+"$description" = "Theme-specific secondary active color."
+
+[color.theme.active.brand]
+"$value" = "{color.brand.900}"
+"$description" = "Theme-specific brand active color."
+
+[color.theme.active.success]
+"$value" = "{color.success.900}"
+"$description" = "Theme-specific success active color."
+
+[color.theme.active.info]
+"$value" = "{color.info.900}"
+"$description" = "Theme-specific info active color."
+
+[color.theme.active.warning]
+"$value" = "{color.warning.900}"
+"$description" = "Theme-specific warning active color."
+
+[color.theme.active.danger]
+"$value" = "{color.danger.900}"
+"$description" = "Theme-specific danger active color."
+
+[color.theme.active.light]
+"$value" = "{color.light.900}"
+"$description" = "Theme-specific light active color."
+
+[color.theme.active.dark]
+"$value" = "{color.dark.900}"
+"$description" = "Theme-specific dark active color."
+
+[color.theme.active.gray]
+"$value" = "{color.gray.900}"
+"$description" = "Theme-specific gray active color."

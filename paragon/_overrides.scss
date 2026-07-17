@@ -20,15 +20,6 @@
   }
 }
 
-// Set the default color of links
-a:not(.btn, .help-link),
-a:not(.btn):hover,
-a:not(.btn):focus,
-a:visited:not(.btn):hover,
-a:visited:not(.btn):focus {
-  color: var(--pgn-color-link-base);
-}
-
 header.learning-header,
 header.learner-variant-header,
 header.site-header-desktop {
