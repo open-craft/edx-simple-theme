@@ -1,8 +1,8 @@
 [color.header.bg]
-"$value" = "white"
+"$value" = "{color.primary.base}"
 
 [color.header.nav.text]
-"$value" = "initial"
+"$value" = "white"
 source = "$main-nav-color"
 
 [color.header.nav.link]

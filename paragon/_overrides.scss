@@ -20,15 +20,6 @@
   }
 }
 
-// Set the default color of links
-a:not(.btn, .help-link),
-a:not(.btn):hover,
-a:not(.btn):focus,
-a:visited:not(.btn):hover,
-a:visited:not(.btn):focus {
-  color: var(--pgn-color-link-base);
-}
-
 header.learning-header,
 header.learner-variant-header,
 header.site-header-desktop {
@@ -43,9 +34,7 @@ header.site-header-desktop {
   // Set the top and bottom border of the header
   border-top: var(--pgn-size-header-border-top-width) solid var(--pgn-color-header-border-top);
   border-bottom: var(--pgn-size-header-border-bottom-width) solid var(--pgn-color-header-border-bottom);
-  // The default height is 3.75rem, to that we add the additional border size, otherwise
-  // it breaks the UI.
-  height: calc(3.75rem + var(--pgn-size-header-border-top-width) + var(--pgn-size-header-border-bottom-width));
+
   // Set the color of text in the header - course about page.
   span {
     color: var(--pgn-color-header-nav-text);
@@ -173,16 +162,6 @@ footer.footer {
 // Discussions mfe overwrites learning header color to white
 .learning-header {
   background-color: var(--pgn-color-header-bg) !important;
-}
-
-.learning-header a {
-  color: var(--pgn-color-link-base) !important;
-
-  &:focus,
-  &:hover,
-  &.active {
-    color: var(--pgn-color-link-base) !important;
-  }
 }
 
 // Header navigation colors in the learner dashboard MFE on mobile
