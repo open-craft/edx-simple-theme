@@ -1,9 +1,9 @@
 [color.footer.bg]
-"$value" = "white"
+"$value" = "#0E2C2A"
 source = "$footer-bg"
 
 [color.footer.text]
-"$value" = "initial"
+"$value" = "white"
 source = "$footer-color"
 
 [color.footer.link]

@@ -1,0 +1,36 @@
+
+[color.btn.text.outline-primary]
+"$value" = "{color.gray.400}"
+
+[color.btn.bg.outline-primary]
+"$value" = "transparent"
+
+[color.btn.border.outline-primary]
+"$value" = "{color.gray.400}"
+
+[color.btn.hover.text.outline-primary]
+"$value" = "{color.gray.700}"
+
+[color.btn.hover.bg.outline-primary]
+"$value" = "transparent"
+
+[color.btn.hover.border.outline-primary]
+"$value" = "{color.gray.700}"
+
+[color.btn.active.text.outline-primary]
+"$value" = "{color.gray.700}"
+
+[color.btn.active.bg.outline-primary]
+"$value" = "transparent"
+
+[color.btn.active.border.outline-primary]
+"$value" = "{color.gray.700}"
+
+[color.btn.focus.text.outline-primary]
+"$value" = "{color.gray.700}"
+
+[color.btn.focus.bg.outline-primary]
+"$value" = "transparent"
+
+[color.btn.focus.border.outline-primary]
+"$value" = "{color.gray.700}"

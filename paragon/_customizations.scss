@@ -1,0 +1,60 @@
+
+:root {
+    --catalog-home-page-banner-background-image: url("https://production-assets-47774f3.s3.eu-central-1.amazonaws.com/hero.jpg");
+}
+
+header.site-header-desktop,
+footer.footer {
+    // Override the outline-primary button just for the header and footer, where we want it yellow.
+    // It's gray elsewhere.
+    --pgn-color-btn-text-outline-primary: var(--pgn-color-primary-base);
+    --pgn-color-btn-bg-outline-primary: transparent;
+    --pgn-color-btn-border-outline-primary: var(--pgn-color-primary-base);
+    --pgn-color-btn-hover-text-outline-primary: var(--pgn-color-primary-700);
+    --pgn-color-btn-hover-bg-outline-primary: transparent;
+    --pgn-color-btn-hover-border-outline-primary: var(--pgn-color-primary-700);
+    --pgn-color-btn-active-text-outline-primary: var(--pgn-color-primary-700);
+    --pgn-color-btn-active-bg-outline-primary: transparent;
+    --pgn-color-btn-active-border-outline-primary: var(--pgn-color-primary-700);
+    --pgn-color-btn-focus-text-outline-primary: var(--pgn-color-primary-700);
+    --pgn-color-btn-focus-bg-outline-primary: transparent;
+    --pgn-color-btn-focus-border-outline-primary: var(--pgn-color-primary-700);
+}
+
+header.site-header-desktop {
+    nav.main-nav {
+        .nav-link {
+            padding: 1rem var(--pgn-spacing-spacer-base);
+            color: var(--pgn-color-primary-base);
+
+            &.active {
+                color: black;
+            }
+        }
+    }
+
+    .btn-link {
+        color: var(--pgn-color-primary-base);
+    }
+}
+
+// override the banner on the authn register/signin pages
+.medium-screen-top-stripe + div,
+.extra-large-screen-top-stripe + div
+{
+    .bg-primary-400 {
+        background-color: var(--pgn-color-secondary-base) !important;
+    }
+}
+
+.medium-screen-svg-primary,
+.large-screen-svg-primary
+{
+    fill: var(--pgn-color-secondary-base) !important;
+}
+
+nav.nav-tabs {
+    a.nav-link {
+        color: black !important;
+    }
+}

@@ -1,0 +1,8 @@
+[color.nav.tabs.base.link.active.text]
+"$value" = "black"
+
+[border-color.nav.tabs-link.border.focus]
+"$value" = "black"
+
+[border-color.nav.tabs-link.border.active]
+"$value" = "black"

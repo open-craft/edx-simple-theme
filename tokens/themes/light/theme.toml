@@ -1,15 +1,167 @@
+[color.active]
+"$value" = "black"
+
+
+# With btn-text, it works but paragon complains about collision with btn.text.
+# But if I use btn.text, it does not override --pgn-color-btn-text-brand...
+[color.btn-text.brand]
+"$value" = "black"
+[color.btn.hover-text.brand]
+"$value" = "black"
+
+[color.btn-text.primary]
+"$value" = "black"
+[color.btn.hover-text.primary]
+"$value" = "black"
 
 [color.primary.base]
-"$value" = "#ff0000"
+"$value" = "#FFC627"
+actions = { default = "{color.action.default.primary.base}" }
 
 [color.primary.100]
-"$value" = "#fff4ef"
+"$value" = "{color.primary.base}"
+actions = { default = "{color.action.default.primary.100}" }
+modify = [ { type = "mix", otherColor = "white", amount = "0.94" } ]
 
 [color.primary.200]
-"$value" = "#ffd0be"
+"$value" = "{color.primary.base}"
+actions = { default = "{color.action.default.primary.200}" }
+modify = [ { type = "mix", otherColor = "white", amount = "0.75" } ]
+
+[color.primary.300]
+"$value" = "{color.primary.base}"
+actions = { default = "{color.action.default.primary.300}" }
+modify = [ { type = "mix", otherColor = "white", amount = "0.50" } ]
 
 [color.primary.400]
-"$value" = "#ff6945"
+"$value" = "{color.primary.base}"
+actions = { default = "{color.action.default.primary.400}" }
+modify = [ { type = "mix", otherColor = "white", amount = "0.25" } ]
 
 [color.primary.500]
+"$value" = "{color.primary.base}"
+actions = { default = "{color.action.default.primary.500}" }
+
+[color.primary.600]
+"$value" = "{color.primary.base}"
+actions = { default = "{color.action.default.primary.600}" }
+modify = [ { type = "mix", otherColor = "black", amount = "0.10" } ]
+
+[color.primary.700]
+"$value" = "{color.primary.base}"
+actions = { default = "{color.action.default.primary.700}" }
+modify = [ { type = "mix", otherColor = "black", amount = "0.20" } ]
+
+[color.primary.800]
+"$value" = "{color.primary.base}"
+actions = { default = "{color.action.default.primary.800}" }
+modify = [ { type = "mix", otherColor = "black", amount = "0.25" } ]
+
+[color.primary.900]
+"$value" = "{color.primary.base}"
+actions = { default = "{color.action.default.primary.900}" }
+modify = [ { type = "mix", otherColor = "black", amount = "0.30" } ]
+
+
+[color.brand.base]
+"$value" = "#FF671B"
+actions = { default = "{color.action.default.brand.base}" }
+
+[color.brand.100]
+"$value" = "{color.brand.base}"
+actions = { default = "{color.action.default.brand.100}" }
+modify = [ { type = "mix", otherColor = "white", amount = "0.94" } ]
+
+[color.brand.200]
+"$value" = "{color.brand.base}"
+actions = { default = "{color.action.default.brand.200}" }
+modify = [ { type = "mix", otherColor = "white", amount = "0.75" } ]
+
+[color.brand.300]
+"$value" = "{color.brand.base}"
+actions = { default = "{color.action.default.brand.300}" }
+modify = [ { type = "mix", otherColor = "white", amount = "0.50" } ]
+
+[color.brand.400]
+"$value" = "{color.brand.base}"
+actions = { default = "{color.action.default.brand.400}" }
+modify = [ { type = "mix", otherColor = "white", amount = "0.25" } ]
+
+[color.brand.500]
+"$value" = "{color.brand.base}"
+actions = { default = "{color.action.default.brand.500}" }
+
+[color.brand.600]
+"$value" = "{color.brand.base}"
+actions = { default = "{color.action.default.brand.600}" }
+modify = [ { type = "mix", otherColor = "black", amount = "0.10" } ]
+
+[color.brand.700]
+"$value" = "{color.brand.base}"
+actions = { default = "{color.action.default.brand.700}" }
+modify = [ { type = "mix", otherColor = "black", amount = "0.20" } ]
+
+[color.brand.800]
+"$value" = "{color.brand.base}"
+actions = { default = "{color.action.default.brand.800}" }
+modify = [ { type = "mix", otherColor = "black", amount = "0.25" } ]
+
+[color.brand.900]
+"$value" = "{color.brand.base}"
+actions = { default = "{color.action.default.brand.900}" }
+modify = [ { type = "mix", otherColor = "black", amount = "0.30" } ]
+
+
+[color.secondary.base]
+"$value" = "#0E2C2A"
+actions = { default = "{color.action.default.secondary.base}" }
+
+
+[color.secondary.100]
+"$value" = "{color.secondary.base}"
+actions = { default = "{color.action.default.secondary.100}" }
+modify = [ { type = "mix", otherColor = "white", amount = "0.94" } ]
+
+[color.secondary.200]
+"$value" = "{color.secondary.base}"
+actions = { default = "{color.action.default.secondary.200}" }
+modify = [ { type = "mix", otherColor = "white", amount = "0.75" } ]
+
+[color.secondary.300]
+"$value" = "{color.secondary.base}"
+actions = { default = "{color.action.default.secondary.300}" }
+modify = [ { type = "mix", otherColor = "white", amount = "0.50" } ]
+
+[color.secondary.400]
+"$value" = "{color.secondary.base}"
+actions = { default = "{color.action.default.secondary.400}" }
+modify = [ { type = "mix", otherColor = "white", amount = "0.25" } ]
+
+[color.secondary.500]
+"$value" = "{color.secondary.base}"
+actions = { default = "{color.action.default.secondary.500}" }
+
+
+[color.secondary.600]
+"$value" = "{color.secondary.base}"
+actions = { default = "{color.action.default.secondary.600}" }
+modify = [ { type = "mix", otherColor = "black", amount = "0.10" } ]
+
+[color.secondary.700]
+"$value" = "{color.secondary.base}"
+actions = { default = "{color.action.default.secondary.700}" }
+modify = [ { type = "mix", otherColor = "black", amount = "0.20" } ]
+
+[color.secondary.800]
+"$value" = "{color.secondary.base}"
+actions = { default = "{color.action.default.secondary.800}" }
+modify = [ { type = "mix", otherColor = "black", amount = "0.25" } ]
+
+[color.secondary.900]
+"$value" = "{color.secondary.base}"
+actions = { default = "{color.action.default.secondary.900}" }
+modify = [ { type = "mix", otherColor = "black", amount = "0.30" } ]
+
+
+[color.accent.a]
 "$value" = "{color.primary.base}"

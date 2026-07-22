@@ -1,5 +1,5 @@
 [color.header.bg]
-"$value" = "white"
+"$value" = "{color.secondary.base}"
 
 [color.header.nav.text]
 "$value" = "initial"
