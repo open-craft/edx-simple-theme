@@ -3,6 +3,10 @@
 #courseTabsNavigation a.nav-link.active {
   font-weight: 700;
 }
+#courseTabsNavigation {
+  border-bottom-width: 2px;
+  background-color: var(--pgn-color-white);
+}
 
 .unit-container .unit h3 {
   font-size: 38px;
@@ -46,4 +50,33 @@
 
 .unit-container .unit-navigation {
   gap: 0;
+}
+
+.sequence-container .sequence {
+  background-color: var(--pgn-color-white);
+  border-color: var(--pgn-color-psu-gray);
+}
+
+.raised-card {
+  background-color: var(--pgn-color-white);
+}
+
+.donut-ring,
+.donut-segment,
+.donut-hole {
+  &.complete-stroke {
+    stroke: var(--pgn-color-brand-base);
+  }
+
+  &.divider-stroke {
+    stroke: white;
+  }
+
+  &.incomplete-stroke {
+    stroke: var(--pgn-color-psu-gray);
+  }
+
+  &.locked-stroke {
+    stroke: var(--pgn-color-primary-500);
+  }
 }

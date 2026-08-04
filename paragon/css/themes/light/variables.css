@@ -11,16 +11,12 @@
   --pgn-size-header-border-top-width: 0px;
   --pgn-size-header-border-bottom-width: 0px;
   --pgn-spacing-input-btn-padding-y: 0.5625rem;
+  --pgn-other-btn-disabled-opacity: 0.3;
   --pgn-color-link-base: #006C9AFF;
   --pgn-color-white: #FFFFFFFF; /** White color. */
   --pgn-color-black: #000000FF; /** Black color. */
-  --pgn-color-blue: #23419FFF; /** Blue color. */
-  --pgn-color-red: #C32D3AFF; /** Red color. */
-  --pgn-color-green: #178253FF; /** Green color. */
-  --pgn-color-yellow: #FFD900FF; /** Yellow color. */
-  --pgn-color-teal: #006DAAFF; /** Teal color. */
-  --pgn-color-accent-a: #00BBF9FF; /** Accent-A color. */
-  --pgn-color-accent-b: #FFEE88FF; /** Accent-B color. */
+  --pgn-color-accent-a: #001E44FF; /** Accent-A color. */
+  --pgn-color-accent-b: #276966FF; /** Accent-B color. */
   --pgn-color-gray-100: #EBEBEBFF; /** Gray color of level 100. */
   --pgn-color-gray-200: #CCCCCCFF; /** Gray color of level 200. */
   --pgn-color-gray-300: #ADADADFF; /** Gray color of level 300. */
@@ -31,13 +27,14 @@
   --pgn-color-gray-900: #212529FF; /** Gray color of level 900. */
   --pgn-color-gray-base: #707070FF; /** Basic gray color. */
   --pgn-color-primary-base: #001E44FF; /** Basic primary color. */
-  --pgn-color-secondary-base: #24BF96FF; /** Basic secondary color. */
+  --pgn-color-secondary-base: #001E44FF; /** Basic secondary color. */
   --pgn-color-brand-base: #276966FF; /** Basic brand color. */
   --pgn-color-success-base: #1E4D4BFF; /** Basic success color. */
   --pgn-color-info-base: #329BE1FF; /** Basic info color. */
   --pgn-color-warning-base: #FFD900FF; /** Basic warning color. */
   --pgn-color-danger-base: #C32D3AFF; /** Basic danger color. */
   --pgn-color-light-base: #F5F6FAFF; /** Basic light color. */
+  --pgn-color-dark-500: #000000FF; /** Dark color of level 500. */
   --pgn-color-dark-base: #1E4D4BFF; /** Basic dark color. */
   --pgn-color-psu-dark: #171717FF;
   --pgn-color-psu-gray: #C6C6C6FF;
@@ -68,8 +65,6 @@
   --pgn-color-header-nav-user-dropdown-menu-item-color: initial;
   --pgn-color-header-border-top: initial;
   --pgn-color-header-border-bottom: initial;
-  --pgn-color-accent-b: #276966FF;
-  --pgn-color-accent-a: #001E44FF;
   --pgn-color-course-nav-menu-text: #001E44FF;
   --pgn-spacing-form-input-padding-y-base: var(--pgn-spacing-input-btn-padding-y);
   --pgn-color-bg-base: var(--pgn-color-white); /** Basic background color. */
@@ -79,11 +74,13 @@
   --pgn-color-border: var(--pgn-color-gray-200); /** Border color. */
   --pgn-color-theme-bg-gray: var(--pgn-color-gray-100); /** Theme-specific gray background color. */
   --pgn-color-theme-border-gray: var(--pgn-color-gray-200); /** Theme-specific gray border color. */
+  --pgn-color-theme-focus-dark: var(--pgn-color-dark-500); /** Theme-specific dark focus color. */
+  --pgn-color-theme-default-dark: var(--pgn-color-dark-500); /** Theme-specific dark default color. */
   --pgn-color-theme-hover-gray: var(--pgn-color-gray-700); /** Theme-specific gray hover color. */
   --pgn-color-theme-active-gray: var(--pgn-color-gray-900); /** Theme-specific gray active color. */
   --pgn-color-btn-text-outline-primary: var(--pgn-color-primary-base);
   --pgn-color-btn-border-outline-primary: var(--pgn-color-primary-base);
-  --pgn-color-card-border-base: #C6C6C620;
+  --pgn-color-card-border-base: #C6C6C6FF;
   --pgn-color-body-bg: var(--pgn-color-light-base);
   --pgn-color-headings-base: var(--pgn-color-primary-base);
   --pgn-color-gray-500: var(--pgn-color-gray-base); /** Gray color of level 500. */
@@ -96,15 +93,15 @@
   --pgn-color-primary-700: #001836FF; /** Primary color of level 700. */
   --pgn-color-primary-800: #001733FF; /** Primary color of level 800. */
   --pgn-color-primary-900: #001530FF; /** Primary color of level 900. */
-  --pgn-color-secondary-100: #F2FBF9FF; /** Secondary color of level 100. */
-  --pgn-color-secondary-200: #C8EFE5FF; /** Secondary color of level 200. */
-  --pgn-color-secondary-300: #92DFCBFF; /** Secondary color of level 300. */
-  --pgn-color-secondary-400: #5BCFB0FF; /** Secondary color of level 400. */
+  --pgn-color-secondary-100: #F0F2F4FF; /** Secondary color of level 100. */
+  --pgn-color-secondary-200: #BFC7D0FF; /** Secondary color of level 200. */
+  --pgn-color-secondary-300: #808FA2FF; /** Secondary color of level 300. */
+  --pgn-color-secondary-400: #405673FF; /** Secondary color of level 400. */
   --pgn-color-secondary-500: var(--pgn-color-secondary-base); /** Secondary color of level 500. */
-  --pgn-color-secondary-600: #20AC87FF; /** Secondary color of level 600. */
-  --pgn-color-secondary-700: #1D9978FF; /** Secondary color of level 700. */
-  --pgn-color-secondary-800: #1B8F71FF; /** Secondary color of level 800. */
-  --pgn-color-secondary-900: #198669FF; /** Secondary color of level 900. */
+  --pgn-color-secondary-600: #001B3DFF; /** Secondary color of level 600. */
+  --pgn-color-secondary-700: #001836FF; /** Secondary color of level 700. */
+  --pgn-color-secondary-800: #001733FF; /** Secondary color of level 800. */
+  --pgn-color-secondary-900: #001530FF; /** Secondary color of level 900. */
   --pgn-color-brand-100: #F2F6F6FF; /** Brand color of level 100. */
   --pgn-color-brand-200: #C9DAD9FF; /** Brand color of level 200. */
   --pgn-color-brand-300: #93B4B3FF; /** Brand color of level 300. */
@@ -163,7 +160,6 @@
   --pgn-color-dark-200: #C7D3D2FF; /** Dark color of level 200. */
   --pgn-color-dark-300: #8FA6A5FF; /** Dark color of level 300. */
   --pgn-color-dark-400: #567A78FF; /** Dark color of level 400. */
-  --pgn-color-dark-500: var(--pgn-color-dark-base); /** Dark color of level 500. */
   --pgn-color-dark-600: #1B4544FF; /** Dark color of level 600. */
   --pgn-color-dark-700: #183E3CFF; /** Info color of level 700. */
   --pgn-color-dark-800: #173A38FF; /** Dark color of level 800. */
@@ -178,16 +174,17 @@
   --pgn-color-action-default-gray-900: #0A0C0DFF;
   --pgn-color-action-default-gray-base: #575757FF;
   --pgn-color-action-default-primary-base: #000811FF;
-  --pgn-color-action-default-secondary-base: #1C9474FF;
+  --pgn-color-action-default-secondary-base: #000811FF;
   --pgn-color-action-default-brand-base: #194442FF;
   --pgn-color-action-default-success-base: #102827FF;
   --pgn-color-action-default-info-base: #1D81C3FF;
   --pgn-color-action-default-warning-base: #CCAE00FF;
   --pgn-color-action-default-danger-base: #9A232EFF;
   --pgn-color-action-default-light-base: #D3D7E9FF;
+  --pgn-color-action-default-dark-500: #000000FF;
   --pgn-color-action-default-dark-base: #102827FF;
-  --pgn-color-action-default-accent-a: #0095C6FF;
-  --pgn-color-action-default-accent-b: #FFE755FF;
+  --pgn-color-action-default-accent-a: #000811FF;
+  --pgn-color-action-default-accent-b: #194442FF;
   --pgn-color-header-bg: var(--pgn-color-primary-base);
   --pgn-color-bg-active: var(--pgn-color-primary-500); /** Active background color. */
   --pgn-color-disabled: var(--pgn-color-gray-500); /** Color for disabled element. */
@@ -219,7 +216,6 @@
   --pgn-color-theme-focus-warning: var(--pgn-color-warning-500); /** Theme-specific warning focus color. */
   --pgn-color-theme-focus-danger: var(--pgn-color-danger-500); /** Theme-specific danger focus color. */
   --pgn-color-theme-focus-light: var(--pgn-color-light-500); /** Theme-specific light focus color. */
-  --pgn-color-theme-focus-dark: var(--pgn-color-dark-500); /** Theme-specific dark focus color. */
   --pgn-color-theme-focus-gray: var(--pgn-color-gray-500); /** Theme-specific gray focus color. */
   --pgn-color-theme-default-primary: var(--pgn-color-primary-500); /** Theme-specific primary default color. */
   --pgn-color-theme-default-secondary: var(--pgn-color-secondary-500); /** Theme-specific secondary default color. */
@@ -229,7 +225,6 @@
   --pgn-color-theme-default-warning: var(--pgn-color-warning-500); /** Theme-specific warning default color. */
   --pgn-color-theme-default-danger: var(--pgn-color-danger-500); /** Theme-specific danger default color. */
   --pgn-color-theme-default-light: var(--pgn-color-light-500); /** Theme-specific light default color. */
-  --pgn-color-theme-default-dark: var(--pgn-color-dark-500); /** Theme-specific dark default color. */
   --pgn-color-theme-default-gray: var(--pgn-color-gray-500); /** Theme-specific gray default color. */
   --pgn-color-theme-hover-primary: var(--pgn-color-primary-700); /** Theme-specific primary hover color. */
   --pgn-color-theme-hover-secondary: var(--pgn-color-secondary-700); /** Theme-specific secondary hover color. */
@@ -261,15 +256,15 @@
   --pgn-color-action-default-primary-700: #000103FF;
   --pgn-color-action-default-primary-800: #000000FF;
   --pgn-color-action-default-primary-900: #000000FF;
-  --pgn-color-action-default-secondary-100: #CBEFE7FF;
-  --pgn-color-action-default-secondary-200: #A0E4D2FF;
-  --pgn-color-action-default-secondary-300: #6BD3B8FF;
-  --pgn-color-action-default-secondary-400: #38BF9BFF;
-  --pgn-color-action-default-secondary-500: #1C9474FF;
-  --pgn-color-action-default-secondary-600: #188165FF;
-  --pgn-color-action-default-secondary-700: #156E56FF;
-  --pgn-color-action-default-secondary-800: #13644FFF;
-  --pgn-color-action-default-secondary-900: #115B47FF;
+  --pgn-color-action-default-secondary-100: #D3D8DEFF;
+  --pgn-color-action-default-secondary-200: #A2ADBAFF;
+  --pgn-color-action-default-secondary-300: #65758AFF;
+  --pgn-color-action-default-secondary-400: #2E3D52FF;
+  --pgn-color-action-default-secondary-500: #000811FF;
+  --pgn-color-action-default-secondary-600: #00040AFF;
+  --pgn-color-action-default-secondary-700: #000103FF;
+  --pgn-color-action-default-secondary-800: #000000FF;
+  --pgn-color-action-default-secondary-900: #000000FF;
   --pgn-color-action-default-brand-100: #D4E1E1FF;
   --pgn-color-action-default-brand-200: #ABC5C4FF;
   --pgn-color-action-default-brand-300: #759F9EFF;
@@ -328,7 +323,6 @@
   --pgn-color-action-default-dark-200: #AABDBBFF;
   --pgn-color-action-default-dark-300: #738F8EFF;
   --pgn-color-action-default-dark-400: #415C5BFF;
-  --pgn-color-action-default-dark-500: #102827FF;
   --pgn-color-action-default-dark-600: #0D2020FF;
   --pgn-color-action-default-dark-700: #0A1918FF;
   --pgn-color-action-default-dark-800: #091515FF;
