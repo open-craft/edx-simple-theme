@@ -55,3 +55,6 @@
 
 [other.btn.disabled.opacity]
 "$value" = 0.3
+
+[color.nav.link.text.base]
+"$value" = "{color.psu.gray}"

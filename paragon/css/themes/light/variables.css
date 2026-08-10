@@ -81,6 +81,7 @@
   --pgn-color-btn-text-outline-primary: var(--pgn-color-primary-base);
   --pgn-color-btn-border-outline-primary: var(--pgn-color-primary-base);
   --pgn-color-card-border-base: #C6C6C6FF;
+  --pgn-color-nav-link-text-base: var(--pgn-color-psu-gray);
   --pgn-color-body-bg: var(--pgn-color-light-base);
   --pgn-color-headings-base: var(--pgn-color-primary-base);
   --pgn-color-gray-500: var(--pgn-color-gray-base); /** Gray color of level 500. */
