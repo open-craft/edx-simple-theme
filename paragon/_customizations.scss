@@ -96,3 +96,19 @@
     color: var(--pgn-color-gray-100) !important;
   }
 }
+
+// The .progress-grades class is added by the wrapper from frontend-lib-psu-compoments'
+// ProgressGrades component, to allow overriding the font sizes for small,x-small and
+// micro that are deemed too small by the client.
+
+.progress-grades {
+  .micro {
+    font-size: 0.8rem !important;
+  }
+  .x-small {
+    font-size: 0.85rem !important;
+  }
+  .small {
+    font-size: 0.9rem !important;
+  }
+}
