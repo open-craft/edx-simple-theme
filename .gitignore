@@ -394,3 +394,4 @@ temp/
 # End of https://www.toptal.com/developers/gitignore/api/sass,node,django,intellij
 
 lms/static/css/
+cms/static/css/
