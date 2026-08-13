@@ -112,3 +112,8 @@
     font-size: 0.9rem !important;
   }
 }
+
+// Veritically center the content by adjusting the top margin
+.course-outline-tab .raised-card .pgn__card-header-content {
+  margin-top: calc(var(--pgn-spacing-spacer-base) * 1.5);
+}
