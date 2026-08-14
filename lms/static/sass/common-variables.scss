@@ -20,41 +20,25 @@ $link-color: #006c9a;
 $main-color: $black;
 $footer-color: $white;
 $btn-primary-bg: $primary;
-//$btn-register-bg: $secondary;
 $btn-secondary-bg: $secondary;
 $btn-primary-color: $white;
-//$footer-link-color: $white;
-//$btn-register-color: $white;
 $btn-secondary-color: $white;
 $main-nav-color: $white;
 $main-nav-link-color: $white;
-//$user-dropdown-color: #bb5c5c;
 $btn-primary-hover-bg: ligten($primary, 5%);
-//$btn-register-hover-bg: #b62323;
 $btn-secondary-hover-bg: darken($secondary, 5%);
-//$customize-register-btn: True;
 $btn-primary-hover-color: $primary;
 $btn-primary-border-color: $primary;
-//$btn-register-hover-color: #c52c2c;
-//$btn-register-border-color: #bd4949;
 $btn-secondary-hover-color: $white;
 $btn-secondary-border-color: $secondary;
-//$home-page-hero-title-color: #313131;
-//$home-page-hero-subtitle-color: #646464;
 $btn-primary-hover-border-color: $primary;
-//$btn-register-hover-border-color: #c54444;
 $btn-secondary-hover-border-color: $secondary;
-//$main-nav-item-border-bottom-color: #1a1ae6;
-//$main-nav-item-hover-border-bottom-color: #ad4040;
-//$homepage-bg-image: url("../images/hero_cover.png");
 $course-nav-menu-hover-bg: $light;
 $course-nav-menu-hover-color: $secondary;
 /* Variables from simple_theme role end here */
 
 $btn-border-radius: 0;
 $btn-primary-font-size: 18px;
-
-$wrapper-preview-menu-color: #0075b4;
 
 // FONTS
 $font-family-sans-serif: "nunito-sans";
