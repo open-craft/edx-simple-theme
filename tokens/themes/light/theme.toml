@@ -1,15 +1,60 @@
+[color.body.bg]
+"$value" = "{color.light.base}"
+
+[color.card.border.base]
+"$value" = "{color.psu.gray}"
+
+[[color.card.border.base.modify]]
+  type = "alpha"
+  amount = 1
+
+[color.link.base]
+"$value" = "#006C9A"
 
 [color.primary.base]
-"$value" = "#ff0000"
+"$value" = "#001e44"
 
-[color.primary.100]
-"$value" = "#fff4ef"
+[color.brand.base]
+"$value" = "#276966"
 
-[color.primary.200]
-"$value" = "#ffd0be"
+[color.secondary.base]
+"$value" = "#001e44"
 
-[color.primary.400]
-"$value" = "#ff6945"
+[color.success.base]
+"$value" = "#1e4d4b"
 
-[color.primary.500]
+[color.info.base]
+"$value" = "#329be1"
+
+[color.danger.base]
+"$value" = "#c32d3a"
+
+[color.warning.base]
+"$value" = "#ffd900"
+
+[color.light.base]
+"$value" = "#f5f6fa"
+
+[color.dark.base]
+"$value" = "#1e4d4b"
+
+[color.accent.b]
+"$value" = "#276966"
+
+[color.accent.a]
+"$value" = "#001e44"
+
+[color.headings.base]
 "$value" = "{color.primary.base}"
+
+[color.course.nav-menu.text]
+"$value" = "#001e44"
+
+[color.dark.500]
+"$value" = "#000000"
+
+[other.btn.disabled.opacity]
+"$value" = 0.3
+
+[color.nav.link.text.base]
+"$value" = "{color.psu.gray}"

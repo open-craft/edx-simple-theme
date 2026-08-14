@@ -1,0 +1,119 @@
+@import url("https://use.typekit.net/mcp8eqb.css");
+
+#courseTabsNavigation a.nav-link.active {
+  font-weight: 700;
+}
+#courseTabsNavigation {
+  border-bottom-width: 2px;
+  background-color: var(--pgn-color-white);
+}
+
+.unit-container .unit h3 {
+  font-size: 38px;
+  font-weight: 500;
+}
+
+.outline-sidebar-heading-wrapper .outline-sidebar-heading {
+  color: var(--pgn-color-primary-base) !important;
+}
+
+#outline-sidebar-outline ol.list-unstyled {
+  --pgn-color-info-100: #dbecf7;
+}
+
+.progress-tab-component {
+  h2 {
+    color: var(--pgn-color-accent-b);
+  }
+  h3.h4 {
+    font-size: var(--pgn-typography-font-size-h3-base);
+  }
+  .donut {
+    .donut-segment.complete-stroke {
+      stroke: var(--pgn-color-accent-b);
+    }
+    .donut-chart-number {
+      color: var(--pgn-color-accent-b);
+    }
+  }
+}
+
+#non-passing-grade-tooltip .text-dark-700 {
+  --pgn-color-dark-700: var(--pgn-color-light-300);
+}
+
+.unit-container .unit-navigation .previous-button,
+.unit-container .unit-navigation .next-button {
+  border-radius: 0;
+  --pgn-btn-disabled-border-color: var(--pgn-color-primary-base);
+}
+
+.unit-container .unit-navigation {
+  gap: 0;
+}
+
+.sequence-container .sequence {
+  background-color: var(--pgn-color-white);
+  border-color: var(--pgn-color-psu-gray);
+}
+
+.raised-card {
+  background-color: var(--pgn-color-white);
+}
+
+// Progress Page
+
+.donut-ring,
+.donut-segment,
+.donut-hole {
+  &.complete-stroke {
+    stroke: var(--pgn-color-brand-base) !important;
+  }
+
+  &.divider-stroke {
+    stroke: white;
+  }
+
+  &.incomplete-stroke {
+    stroke: var(--pgn-color-psu-gray) !important;
+  }
+
+  &.locked-stroke {
+    stroke: var(--pgn-color-primary-500) !important;
+  }
+}
+
+#notPassing_certificate_status {
+  background-color: var(--pgn-color-primary-base);
+  border-radius: var(--pgn-size-border-radius-base);
+  color: var(--pgn-color-white);
+
+  .pgn__card-header-title-md {
+    color: var(--pgn-color-white);
+  }
+
+  .text-gray-700 {
+    color: var(--pgn-color-gray-100) !important;
+  }
+}
+
+// The .progress-grades class is added by the wrapper from frontend-lib-psu-compoments'
+// ProgressGrades component, to allow overriding the font sizes for small,x-small and
+// micro that are deemed too small by the client.
+
+.progress-grades {
+  .micro {
+    font-size: 0.8rem !important;
+  }
+  .x-small {
+    font-size: 0.85rem !important;
+  }
+  .small {
+    font-size: 0.9rem !important;
+  }
+}
+
+// Veritically center the content by adjusting the top margin
+.course-outline-tab .raised-card .pgn__card-header-content {
+  margin-top: calc(var(--pgn-spacing-spacer-base) * 1.5);
+}
