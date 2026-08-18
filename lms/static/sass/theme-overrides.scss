@@ -86,6 +86,7 @@
         border-radius: 0;
         font-size: 18px;
         padding: 0.5625rem 1rem; // matching the MFE styling
+        margin-top: -6px;
 
         &:hover {
           background-color: $btn-secondary-hover-bg !important;
