@@ -1,0 +1,10 @@
+## mako
+<%page expression_filter="h"/>
+
+<%!
+from django.urls import reverse
+%>
+
+<div class="nav-item hidden-mobile mobile-nav-item">
+    <a class="btn btn-secondary" href="${reverse('dashboard')}">My Courses</a>
+</div>

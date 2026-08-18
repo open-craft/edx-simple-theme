@@ -1,0 +1,199 @@
+## mako
+
+## Note: This is a heavily customized version. The default template and related overrides
+## were not sufficient for the usecase.
+
+<%page expression_filter="h"/>
+<%!
+from django.urls import reverse
+from django.utils.translation import gettext as _
+%>
+<%namespace name='static' file='static_content.html'/>
+
+
+<footer id="footer-openedx" class="grid-container">
+    <div class="container-xl pt-5">
+        <div class="row">
+            <div class="footer-logo col">
+                <img style="max-width: 13rem;" src="https://extension.psu.edu/static/version1784699026/frontend/BlueAcorn/site/en_US/images/logo.svg" alt="PennState Extension" />
+            </div>
+        </div>
+        <div class="my-4 row">
+            <div class="mb-4 mb-md-0 col-md-2">
+                <div class="footer-address text-light x-small">
+                    <p>
+                        College of Agricultural Sciences<br>
+                        The Pennsylvania State University<br>
+                        323 Agricultural Administration Building<br>
+                        University Park, PA 16802
+                    </p>
+                </div>
+                <div class="social-icons mt-4 d-flex justify-content-around align-items-center">
+                    <a href="https://www.facebook.com/pennstextension/">
+                        <svg width="16" height="30" viewBox="0 0 16 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.7243 6.75993V10.9895H15.9986L15.1635 16.6869H10.7243V29.8136C9.83423 29.9361 8.92363 30 7.99932 30C6.93237 30 5.88463 29.9157 4.86432 29.7524V16.6869H0V10.9895H4.86432V5.81444C4.86432 2.60385 7.48779 0 10.7256 0V0.00270689C10.7352 0.00270689 10.7435 0 10.7531 0H16V4.92744H12.5715C11.5526 4.92744 10.7256 5.74777 10.7256 6.75856L10.7243 6.75993Z" fill="#4167B2"></path></svg>
+                    </a>
+                    <a href="https://www.linkedin.com/company/penn-state-extension/">
+                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.05192 5.85749C0.349381 5.2052 0 4.39779 0 3.43712C0 2.47645 0.351249 1.63352 1.05192 0.979362C1.75447 0.327076 2.65881 0 3.76681 0C4.87481 0 5.74366 0.327076 6.44433 0.979362C7.14688 1.63165 7.49626 2.45215 7.49626 3.43712C7.49626 4.42209 7.14501 5.2052 6.44433 5.85749C5.74179 6.50977 4.85052 6.83685 3.76681 6.83685C2.6831 6.83685 1.75447 6.50977 1.05192 5.85749ZM6.90584 9.59926V29.5977H0.588548V9.59926H6.90584Z" fill="#007EBB"></path><path d="M27.9353 11.5748C29.3124 13.0701 30 15.1222 30 17.7351V29.2445H24.0004V18.5463C24.0004 17.2286 23.6585 16.2044 22.9765 15.4755C22.2945 14.7465 21.3752 14.3802 20.2242 14.3802C19.0733 14.3802 18.1539 14.7447 17.4719 15.4755C16.7899 16.2044 16.448 17.2286 16.448 18.5463V29.2445H10.4129V9.54323H16.448V12.1561C17.059 11.2851 17.883 10.5973 18.9182 10.0908C19.9533 9.58434 21.1173 9.33203 22.4122 9.33203C24.7179 9.33203 26.5602 10.0796 27.9353 11.5748Z" fill="#007EBB"></path></svg>
+                    </a>
+                    <a href="https://twitter.com/psuextension">
+                        <svg width="27" height="26" viewBox="0 0 27 26" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.0649397 0L10.4893 13.9412L0 25.2764H2.3614L11.5456 15.3528L18.9656 25.2764H27L15.9897 10.551L25.7536 0H23.3922L14.9349 9.13941L8.10096 0H0.0665057H0.0649397ZM3.53654 1.73948H7.22671L23.5252 23.5369H19.8351L3.53654 1.73948Z" fill="white"></path></svg>
+                    </a>
+                    <a href="https://www.youtube.com/@psuextension">
+                        <svg width="29" height="20" viewBox="0 0 29 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M28.7528 5.36144C28.5747 3.66083 28.1914 1.78088 26.7807 0.792922C25.688 0.026784 24.2519 -0.00152015 22.9111 5.30268e-05C20.0769 0.00162621 17.2411 0.0047595 14.4069 0.00633268C11.6809 0.00947904 8.95482 0.0110599 6.22878 0.0142063C5.09001 0.0157794 3.98305 -0.0723301 2.92539 0.415355C2.01724 0.833821 1.30631 1.62986 0.878476 2.51556C0.285235 3.74736 0.161185 5.14277 0.0896148 6.50514C-0.0423932 8.98605 -0.0280791 11.4732 0.129376 13.9526C0.24548 15.7617 0.53971 17.7612 1.95363 18.9144C3.20691 19.9354 4.97549 19.9857 6.60094 19.9873C11.7604 19.992 16.9214 19.9967 22.0825 19.9999C22.7441 20.0014 23.4344 19.9889 24.1087 19.9165C25.4352 19.7749 26.6996 19.3989 27.552 18.4267C28.4125 17.4466 28.6336 16.0826 28.764 14.7911C29.0821 11.6573 29.0789 8.49364 28.7528 5.36144ZM11.4232 14.3931V5.60684L19.1147 9.99917L11.4232 14.3931Z" fill="#FF0209"></path></svg>
+                    </a>
+                    <a href="https://www.instagram.com/psuextension/">
+                        <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="31" height="31" rx="6" fill="url(#paint0_linear_95_602)"></rect><path d="M21.4978 4H9.50277C6.18892 4 3.49303 6.69669 3.49303 10.0115V20.9885C3.49303 24.3033 6.18892 27 9.50277 27H21.4978C24.8117 27 27.5076 24.3033 27.5076 20.9885V10.0115C27.5076 6.69669 24.8117 4 21.4978 4ZM5.61308 10.0115C5.61308 7.86639 7.35828 6.12067 9.50277 6.12067H21.4978C23.6423 6.12067 25.3875 7.86639 25.3875 10.0115V20.9885C25.3875 23.1336 23.6423 24.8793 21.4978 24.8793H9.50277C7.35828 24.8793 5.61308 23.1336 5.61308 20.9885V10.0115Z" fill="white"></path><path d="M15.4997 21.0903C18.5813 21.0903 21.0897 18.5825 21.0897 15.4986C21.0897 12.4147 18.5826 9.90686 15.4997 9.90686C12.4167 9.90686 9.90958 12.4147 9.90958 15.4986C9.90958 18.5825 12.4167 21.0903 15.4997 21.0903ZM15.4997 12.0289C17.4133 12.0289 18.9697 13.5858 18.9697 15.4999C18.9697 17.4141 17.4133 18.971 15.4997 18.971C13.5861 18.971 12.0296 17.4141 12.0296 15.4999C12.0296 13.5858 13.5861 12.0289 15.4997 12.0289Z" fill="white"></path><path d="M21.6069 10.8105C22.4368 10.8105 23.1131 10.1353 23.1131 9.30386C23.1131 8.47243 22.4381 7.79724 21.6069 7.79724C20.7758 7.79724 20.1008 8.47243 20.1008 9.30386C20.1008 10.1353 20.7758 10.8105 21.6069 10.8105Z" fill="white"></path><defs><linearGradient id="paint0_linear_95_602" x1="2" y1="29" x2="31" y2="5.5" gradientUnits="userSpaceOnUse"><stop stop-color="#FAAD4F"></stop><stop offset="0.370192" stop-color="#DD2A7B"></stop><stop offset="0.740385" stop-color="#9537B0"></stop><stop offset="1" stop-color="#515BD4"></stop></linearGradient></defs></svg>
+                    </a>
+                </div>
+            </div>
+            <div id="footer-link-groups" class="d-flex justify-content-start col-md-9 offset-md-1">
+                <div class="mr-6">
+                    <p class="text-light font-weight-bold x-small mb-1">
+                        ABOUT EXTENSION
+                    </p>
+                    <ul class="list-unstyled x-small">
+                        <li>
+                            <a class="text-light" href="https://extension.psu.edu/about-us">
+                                About
+                            </a>
+                        </li>
+                        <li>
+                            <a class="text-light" href="https://extension.psu.edu/directory/leadership">
+                                Leadership
+                            </a>
+                        </li>
+                        <li>
+                            <a class="text-light" href="https://extension.psu.edu/careers">
+                                Careers
+                            </a>
+                        </li>
+                        <li>
+                            <a class="text-light" href="https://extension.psu.edu/education-format/news">
+                                Extension News
+                            </a>
+                        </li>
+                        <li>
+                            <a class="text-light" href="https://extension.psu.edu/press">
+                                Press
+                            </a>
+                        </li>
+                        <li>
+                            <a class="text-light" href="https://extension.psu.edu/county-offices">
+                                County Offices
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="mr-6">
+                    <p class="text-light font-weight-bold x-small mb-1">
+                        CUSTOMER SERVICE
+                    </p>
+                    <ul class="list-unstyled x-small">
+                        <li>
+                            <a class="text-light" href="https://extension.psu.edu/help">
+                                Help Center
+                            </a>
+                        </li>
+                        <li>
+                            <a class="text-light" href="https://extension.psu.edu/customer/account/forgotpassword/">
+                                Login Problems
+                            </a>
+                        </li>
+                        <li>
+                            <a class="text-light" href="https://extension.psu.edu/psunewsletter/manage/preferences/">
+                                Manage Email Preferences
+                            </a>
+                        </li>
+                        <li>
+                            <a class="text-light" href="https://extension.psu.edu/contact-us">
+                                Contact Us
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="mr-6">
+                    <p class="text-light font-weight-bold x-small mb-1">
+                        OTHER PROGRAMS
+                    </p>
+                    <ul class="list-unstyled x-small">
+                        <li>
+                            <a class="text-light" href="https://extension.psu.edu/programs/4-h">
+                                Pennsylvania 4-H
+                            </a>
+                        </li>
+                        <li>
+                            <a class="text-light" href="https://extension.psu.edu/programs/betterkidcare">
+                                Better Kid Care
+                            </a>
+                        </li>
+                        <li>
+                            <a class="text-light" href="https://extension.psu.edu/programs/master-gardener">
+                                Master Gardeners
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="background-color: rgb(45, 49, 71);">
+        <div class="container-xl">
+            <div id="footer-bottom-links" class="d-flex py-1 justify-content-between font-weight-bold">
+                <div>
+                    <p class="my-2 text-center" style="font-size: 12px;">
+                        <a href="https://extension.psu.edu/youth-safety-information" class="text-light">
+                            YOUTH SAFETY
+                        </a>
+                    </p>
+                </div>
+                <div>
+                    <p class="my-2 text-center" style="font-size: 12px;">
+                        <a href="https://www.psu.edu/legal-statements/" class="text-light">
+                            PRIVACY AND LEGAL STATEMENTS
+                        </a>
+                    </p>
+                </div>
+                <div>
+                    <p class="my-2 text-center" style="font-size: 12px;">
+                        <a href="https://extension.psu.edu/veterinary-advice-statement" class="text-light">
+                            VETERINARY ADVICE STATEMENT
+                        </a>
+                    </p>
+                </div>
+                <div>
+                    <p class="my-2 text-center" style="font-size: 12px;">
+                        <a href="https://extension.psu.edu/non-discrimination" class="text-light">
+                            NON-DISCRIMINATION
+                        </a>
+                    </p>
+                </div>
+                <div>
+                    <p class="my-2 text-center" style="font-size: 12px;">
+                        <a href="https://agsci.psu.edu/accessibility" class="text-light">
+                            ACCESSIBILITY
+                        </a>
+                    </p>
+                </div>
+                <div>
+                    <p class="my-2 text-center" style="font-size: 12px;">
+                        <a href="https://www.psu.edu/copyright-information" class="text-light">
+                            © 2026 THE PENNSYLVANIA STATE UNIVERSITY</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</footer>
+
+% if include_dependencies:
+<%static:js group='base_vendor'/>
+<%static:css group='style-vendor'/>
+<%include file="widgets/segment-io.html" />
+<%include file="widgets/segment-io-footer.html" />
+% endif
+% if footer_css_urls:
+% for url in footer_css_urls:
+<link rel="stylesheet" type="text/css" href="${url}"></link>
+% endfor
+% endif

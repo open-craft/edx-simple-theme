@@ -1,0 +1,56 @@
+// COLORS
+$black: #000000;
+$white: #ffffff;
+$primary: #001e44;
+$secondary: #276966;
+$brand: #24bf96;
+$success: #1e4d4b;
+$info: #329be1;
+$danger: #c32d3a;
+$warning: #ffd900;
+$light: #f5f6fa;
+$dark: #1e4d4b;
+$accent-a: $secondary;
+$accent-b: $primary;
+
+/* Variables from simple_theme role start here */
+$footer-bg: $primary;
+$header-bg: $primary;
+$link-color: #006c9a;
+$main-color: $black;
+$footer-color: $white;
+$btn-primary-bg: $primary;
+$btn-secondary-bg: $secondary;
+$btn-primary-color: $white;
+$btn-secondary-color: $white;
+$main-nav-color: $white;
+$main-nav-link-color: $white;
+$btn-primary-hover-bg: ligten($primary, 5%);
+$btn-secondary-hover-bg: darken($secondary, 5%);
+$btn-primary-hover-color: $primary;
+$btn-primary-border-color: $primary;
+$btn-secondary-hover-color: $white;
+$btn-secondary-border-color: $secondary;
+$btn-primary-hover-border-color: $primary;
+$btn-secondary-hover-border-color: $secondary;
+$course-nav-menu-hover-bg: $light;
+$course-nav-menu-hover-color: $secondary;
+/* Variables from simple_theme role end here */
+
+$btn-border-radius: 0;
+$btn-primary-font-size: 18px;
+
+// FONTS
+$font-family-sans-serif: "nunito-sans";
+$font-family-serif: "roboto-slab";
+$font-size-base: 1.125rem;
+
+// FONT-WEIGHTS
+$font-light: 300;
+$font-regular: 400;
+$font-semibold: 600;
+$font-bold: 700;
+
+// Defaults
+$body-color: $black;
+$main-bg: $light;

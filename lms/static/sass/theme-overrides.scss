@@ -1,6 +1,7 @@
 // Import theme colors
 @import 'theme-colors';
 @import '../../../common/overrides';
+@import url("https://use.typekit.net/mcp8eqb.css");
 
 // The breadcrumb links in the course content pages
 .breadcrumbs .nav-item a {
@@ -22,6 +23,22 @@
       color: $main-nav-color;
     }
   }
+
+  .main-header {
+    max-width: 1920px;
+    margin: 0 auto;
+  }
+
+  // We can show the course header info even for small screens
+  .header-logo {
+    .course-header {
+      @media (max-width: 992px) {
+        display: block;
+        margin-left: 72px;
+      }
+    }
+  }
+
 
   .nav-links {
     @if variable-exists(main-nav-link-color) {
@@ -57,6 +74,24 @@
       // Customize the color of the links in the user dropdown menu
       .secondary .dropdown-user-menu .dropdown-item a {
         color: $user-dropdown-color !important;
+      }
+    }
+
+    // Styles for a cutom button
+    // Needs to be nested fully to be effective
+    .secondary {
+      a.btn-secondary {
+        background-color: $btn-secondary-bg;
+        color: $btn-secondary-color;
+        border-radius: 0;
+        font-size: 18px;
+        padding: 0.5625rem 1rem; // matching the MFE styling
+        margin-top: -6px;
+
+        &:hover {
+          background-color: $btn-secondary-hover-bg !important;
+          color: $btn-secondary-hover-color !important;
+        }
       }
     }
   }
@@ -229,20 +264,58 @@
   }
 }
 
+.window-wrap {
+    @if variable-exists(main-bg) {
+        background: $main-bg;
+    }
+}
+
 .content-wrapper {
+  margin-top: 0;
   // Customize the colors of the course navigation menu - bootstrap
   h4 a:hover,
   h3 a:hover {
     color: $main-color !important; // Main color
   }
 
-  .course-tabs .tab a,
-  .course-tabs .nav-item .nav-link {
-    color: black !important;
+  nav.wrapper-course-material {
+      margin-bottom: 2rem;
   }
 
-  .course-tabs .nav-item.active .nav-link,
-  .course-tabs .nav-item:hover .nav-link {
+  .course-tabs {
+      background-color: #fff;
+      border-bottom: 4px solid #eee;
+      margin-left: -20px;
+      margin-right: -20px;
+      padding-left: 20px !important;
+      padding-right: 20px !important;
+  }
+
+  .course-tabs .tab a,
+  .course-tabs .nav-item .nav-link {
+    padding: 0.75rem 1rem;
+    color: black !important;
+    margin-bottom: -4px; // move the big gray border up to match the "active" item's bottom border
+
+    @if variable-exists(font-size-base) {
+        font-size: $font-size-base;
+    }
+  }
+
+  .course-tabs .tab a:not(.active):hover,
+  .course-tabs .tab a:not(.active):focus {
+      border-bottom-color: transparent;
+      border-bottom-style: hidden;
+
+      @if variable-exists(course-nav-menu-hover-bg) {
+          background-color: $course-nav-menu-hover-bg !important;
+      }
+      @if variable-exists(course-nav-menu-hover-color) {
+          color: $course-nav-menu-hover-color !important;
+      }
+  }
+
+  .course-tabs .nav-item.active .nav-link {
     @if variable-exists(course-nav-menu-color) {
       color: $course-nav-menu-color !important;
     }
@@ -480,4 +553,65 @@
     $btn-secondary-hover-color,
     $btn-secondary-hover-border-color
   );
+}
+
+// Footer related styles that seems to be missing from LMS's "Custom Pages" template
+#footer-openedx {
+  background: $footer-bg;
+  margin-top: 3rem;
+  .container-xl {
+    @media (min-width: 1200px) {
+      max-width: 1600px;
+      margin: 0 auto;
+    }
+  }
+
+  .row {
+    display: flex;
+  }
+
+  // md styles
+  @media (min-width: 768px) {
+    .col-md-2 {
+      width: 16.66%;
+    }
+    .col-md-9 {
+      width: 75%;
+    }
+    .offset-md-1 {
+      margin-left: 8.33%
+    }
+    .mr-6 {
+      margin-right: 5rem;
+    }
+  }
+
+
+  .footer-address > p {
+    line-height: 26px;
+  }
+
+  // text styles
+  .x-small {
+    font-size: 14px;
+  }
+
+  .list-unstyled {
+    padding-left: 0;
+
+    li {
+      line-height: 24px;
+    }
+  }
+
+  // Mobile View customizations
+  @media (max-width: 768px) {
+    .row, #footer-link-groups, #footer-bottom-links {
+      flex-direction: column;
+    }
+    .col-md-2, .col-md-9 {
+      margin: 0 0.5rem;
+    }
+  }
+
 }

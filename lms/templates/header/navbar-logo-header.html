@@ -1,0 +1,15 @@
+## mako
+
+<%page expression_filter="h" args="online_help_token"/>
+
+<%namespace name='static' file='../static_content.html'/>
+
+<h1 class="header-logo">
+  % if course:
+    <div class="course-header">
+      <span class="provider">${platform_name}</span>
+      <span class="course-number">${course.display_number_with_default}</span>
+      <span class="course-name">${course.display_name_with_default}</span>
+    </div>
+  % endif
+</h1>
