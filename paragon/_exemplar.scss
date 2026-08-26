@@ -147,3 +147,10 @@ dialog.courseware-search {
   margin: 0 !important;
   padding: 0 !important;
 }
+
+/* sticky header for the learning mfe where the custom dropdown course nav is shown */
+header.learning-header {
+    position: sticky;
+    top: 0;
+    z-index: 99999; /* required otherwise it hides behind content on course home pages */
+}
