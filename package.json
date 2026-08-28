@@ -1,6 +1,6 @@
 {
   "name": "@open-craft/brand-simple-theme",
-  "version": "0.1.0",
+  "version": "22.0.0",
   "description": "This is a customisable branding package for Open edX MFEs that provides a number of overridable variables. ",
   "scripts": {
     "build-tokens": "npm run build:tokens",
