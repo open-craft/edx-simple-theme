@@ -1,5 +1,3 @@
-@import "variables";
-
 @mixin btn-styles($bg, $color, $border-color, $hover-bg, $hover-color, $hover-border-color) {
   background: $bg !important;
   color: $color !important;
@@ -88,36 +86,13 @@ header.site-header-desktop {
     color: var(--pgn-color-link-base) !important;
   }
 
-  // Customize the sign-in button on the home page header
-  a.sign-in-btn {
-    @include btn-styles(
-      var(--pgn-color-sign-in-btn-bg),
-      var(--pgn-color-sign-in-btn-text),
-      var(--pgn-color-sign-in-btn-border),
-      var(--pgn-color-sign-in-btn-hover-bg),
-      var(--pgn-color-sign-in-btn-hover-text),
-      var(--pgn-color-sign-in-btn-hover-border)
-    );
-  }
-  // Customize the register button on the home page header
-  a.register-btn {
-    @include btn-styles(
-      var(--pgn-color-register-btn-bg),
-      var(--pgn-color-register-btn-text),
-      var(--pgn-color-register-btn-border),
-      var(--pgn-color-register-btn-hover-bg),
-      var(--pgn-color-register-btn-hover-text),
-      var(--pgn-color-register-btn-hover-border)
-    );
-  }
-
   // Set the color of nav items in the learner dashboard MFE
   .btn-inverse-primary,
   .btn-icon-inverse-primary,
   .btn-light,
   .show > .btn-light.dropdown-toggle {
     color: var(--pgn-color-link-base) !important;
-    background-color: $header-btn-bg !important;
+    background-color: var(--pgn-color-header-bg) !important;
     border-radius: 0 !important;
   }
 
@@ -134,7 +109,6 @@ header.site-header-desktop {
 }
 
 footer.footer {
-  background: var(--pgn-color-footer-bg); // Footer color
   background-color: var(--pgn-color-footer-bg) !important; // Footer color
   box-shadow: none !important;
 
