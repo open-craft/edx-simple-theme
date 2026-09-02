@@ -3,5 +3,5 @@
 source = "$header-border-top-width"
 
 [size.header.border.bottom.width]
-"$value" = "0px"
+"$value" = "1px"
 source = "$header-border-bottom-width"

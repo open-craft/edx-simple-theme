@@ -26,5 +26,5 @@ source = "$user-dropdown-color"
 source = "$header-border-top-color"
 
 [color.header.border.bottom]
-"$value" = "initial"
+"$value" = "{wgu.color.border.gray}"
 source = "$header-border-bottom-color"
