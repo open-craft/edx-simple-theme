@@ -9,7 +9,7 @@
   --pgn-size-footer-border-top-width: initial;
   --pgn-size-footer-border-bottom-width: initial;
   --pgn-size-header-border-top-width: 0px;
-  --pgn-size-header-border-bottom-width: 0px;
+  --pgn-size-header-border-bottom-width: 1px;
   --pgn-spacing-input-btn-padding-y: 0.5625rem;
   --pgn-color-white: #FFFFFFFF; /** White color. */
   --pgn-color-accent-a: #DB493DFF; /** Accent-A color. */
@@ -112,7 +112,6 @@
   --pgn-color-header-nav-item-border-bottom-hover-color: initial;
   --pgn-color-header-nav-user-dropdown-menu-item-color: initial;
   --pgn-color-header-border-top: initial;
-  --pgn-color-header-border-bottom: initial;
   --pgn-wgu-color-blue-50: #E6F1FEFF;
   --pgn-wgu-color-blue-100: #B0FFFAFF;
   --pgn-wgu-color-blue-200: #8ADBF8FF;
@@ -300,5 +299,6 @@
   --pgn-color-register-btn-text: var(--pgn-color-btn-text-outline-primary);
   --pgn-color-register-btn-border: var(--pgn-color-btn-border-outline-primary);
   --pgn-color-register-btn-hover-bg: var(--pgn-color-btn-hover-bg-outline-primary);
+  --pgn-color-header-border-bottom: var(--pgn-wgu-color-border-gray);
   --pgn-color-register-btn-hover-text: var(--pgn-color-btn-hover-text-outline-primary);
 }
