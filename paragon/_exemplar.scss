@@ -1,76 +1,160 @@
-.outline-sidebar-wrapper {
-  margin: 0 var(--pgn-spacing-spacer-1) !important;
+// override this padding from the mfe styles in a way that won't force remove other padding later
+.learning-header .course-title-lockup .course-outline-popup span {
+  padding-bottom: 0;
 }
-.outline-sidebar {
-  --outline-sidebar-bg-color: var(--pgn-color-gray-200);
-  .outline-sidebar-heading-wrapper {
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    border-bottom: 1px solid white !important;
-    background-color: var(--outline-sidebar-bg-color) !important;
-  }
 
-  background: var(--outline-sidebar-bg-color);
-  --pgn-color-card-bg-base: var(--outline-sidebar-bg-color);
+@mixin focus-styles {
+  outline: 1px solid var(--pgn-color-secondary-base);
+  outline-offset: -1px;
+}
 
-  #outline-sidebar-outline {
-    .course-sidebar-section {
+.course-outline-popup {
+  // This is styling for the CourseOutlinePopup from https://gitlab.com/opencraft/dev/frontend-plugin-exemplar .
+  --outline-sidebar-bg-color: var(--exemplar-outline-sidebar-bg-color, var(--pgn-color-gray-200));
+  --outline-sidebar-bg-color-hover: var(--exemplar-outline-sidebar-bg-color-hover, var(--pgn-color-light-500));
+  --outline-sidebar-font-size-base: var(--exemplar-outline-sidebar-font-size-base, 0.875rem); // default to 14px
+  --pgn-typography-font-size-base: var(--outline-sidebar-font-size-base);
+  --pgn-typography-btn-font-size-base: var(--outline-sidebar-font-size-base);
+
+  width: 476px;
+  max-height: 600px;
+  background-color: var(--outline-sidebar-bg-color) !important;
+
+  .outline-sidebar-wrapper {
+    margin: 0 !important;
+
+    .outline-sidebar {
       background-color: var(--outline-sidebar-bg-color);
-      > button {
-        padding: var(--pgn-spacing-spacer-2) 0 var(--pgn-spacing-spacer-2) var(--pgn-spacing-spacer-4) !important;
-      }
-      &.active-section button {
-        background-color: var(--outline-sidebar-bg-color);
-        --pgn-btn-color: var(--pgn-color-secondary-base) !important;
-        color: var(--pgn-color-secondary-base) !important;
+      --pgn-color-card-bg-base: var(--outline-sidebar-bg-color);
 
-        > div.text-dark-500 {
-          color: var(--pgn-color-secondary-base) !important;
+      .outline-sidebar-heading-wrapper {
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: 1px solid white !important;
+        background-color: var(--outline-sidebar-bg-color);
+
+        .outline-sidebar-heading {
+          &:hover {
+            background-color: var(--outline-sidebar-bg-color-hover);
+
+            .pgn__icon {
+              background-color: var(--pgn-color-light-500) !important;
+            }
+          }
+
+          &:focus {
+            @include focus-styles;
+          }
+
+          .pgn__icon {
+            border: 2px solid var(--pgn-color-secondary-base) !important;
+          }
         }
       }
-    }
-    ol li div {
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-    li > div.pgn_collapsible {
-      margin-bottom: 0 !important;
-      padding: var(--pgn-spacing-spacer-2) var(--pgn-spacing-spacer-4);
-      li a {
-        padding: var(--pgn-spacing-spacer-2) var(--pgn-spacing-spacer-4);
+
+      #outline-sidebar-outline {
+        padding-top: var(--pgn-spacing-spacer-2);
+        overflow-y: scroll;
+        max-height: 416px; // 600px - header height - course progress height
+        margin: 0 !important;
+
+        // this class was messing up vertical spacing
+        .align-middle {
+          vertical-align: initial !important;
+        }
+
+        // padding between the icons and the menu text
+        .ml-3 {
+          margin-left: var(--pgn-spacing-spacer-1) !important;
+        }
+
+        .pgn__icon {
+          transform: scale(0.67);
+        }
+
+        // top level menu of sections
+        .course-sidebar-section {
+          background-color: var(--outline-sidebar-bg-color);
+          margin-bottom: 0 !important;
+          border: none !important;
+
+          > button {
+            padding: var(--pgn-spacing-spacer-2) 0 var(--pgn-spacing-spacer-2) 0;
+
+            &:focus:before {
+              content: none;
+            }
+            &:focus {
+              @include focus-styles;
+            }
+          }
+        }
+
+        li {
+          font-size: var(--outline-sidebar-font-size-base) !important;
+          line-height: 2rem !important;
+          border: none !important;
+
+          div {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+        }
+
+        li > div.pgn_collapsible {
+          background-color: var(--outline-sidebar-bg-color) !important;
+          margin-bottom: 0 !important;
+          padding: var(--pgn-spacing-spacer-2) var(--pgn-spacing-spacer-4);
+          li a {
+            padding: var(--pgn-spacing-spacer-2) var(--pgn-spacing-spacer-4);
+          }
+
+          [role="button"]:focus,
+          a:focus {
+            @include focus-styles;
+          }
+        }
+
+        // a subsection in the submenu
+        .collapsible-card-lg {
+          border: none !important;
+          padding: 0 !important;
+
+          .collapsible-trigger {
+            padding: var(--pgn-spacing-spacer-2) 0 var(--pgn-spacing-spacer-2) 0;
+            border: none !important;
+          }
+        }
+
+        // a subsection in the menu that is currently active
+        .active-section {
+          .collapsible-trigger {
+            color: var(--pgn-color-secondary-base) !important;
+            background-color: var(--outline-sidebar-bg-color) !important;
+            font-weight: bold;
+
+            &:hover {
+              background-color: var(--outline-sidebar-bg-color-hover) !important;
+            }
+
+            span.align-middle.text-dark-500 {
+              color: var(--pgn-color-secondary-base) !important;
+            }
+          }
+        }
+
+        // a unit in the menu that is currently active (lowest level of navigation)
+        .active-unit {
+          background-color: var(--outline-sidebar-bg-color) !important;
+
+          a {
+            color: var(--pgn-color-secondary-base) !important;
+            font-weight: bold;
+          }
+        }
       }
-    }
-
-    .collapsible-trigger,
-    .collapsible-card-lg {
-      border: none !important;
-      padding: var(--pgn-spacing-spacer-2) 0 var(--pgn-spacing-spacer-2) var(--pgn-spacing-spacer-2) !important;
-    }
-
-    .active-unit {
-      --pgn-color-info-100: var(--outline-sidebar-bg-color);
-      a {
-        color: var(--pgn-color-secondary-base) !important;
-      }
-    }
-
-    .active-section {
-      color: var(--pgn-color-secondary-base) !important;
-
-      .collapsible-trigger span.align-middle.text-dark-500 {
-        color: var(--pgn-color-secondary-base) !important;
-      }
-    }
-  }
-
-  .course-sidebar-section {
-    margin-bottom: 0 !important;
-    border: none !important;
-
-    button {
-      padding: var(--pgn-spacing-spacer-2) var(--pgn-spacing-spacer-4) !important;
     }
   }
 }
@@ -150,7 +234,7 @@ dialog.courseware-search {
 
 /* sticky header for the learning mfe where the custom dropdown course nav is shown */
 header.learning-header {
-    position: sticky;
-    top: 0;
-    z-index: 99999; /* required otherwise it hides behind content on course home pages */
+  position: sticky;
+  top: 0;
+  z-index: 99999; /* required otherwise it hides behind content on course home pages */
 }
