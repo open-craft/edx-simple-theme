@@ -117,3 +117,13 @@
 .course-outline-tab .raised-card .pgn__card-header-content {
   margin-top: calc(var(--pgn-spacing-spacer-base) * 1.5);
 }
+
+header.learning-header {
+  > .container-xl {
+    max-width: 100vw;
+    padding: var(--pgn-spacing-navbar-padding-y) var(--pgn-spacing-navbar-padding-x-base);
+  }
+  .user-dropdown {
+    display: none;
+  }
+}
