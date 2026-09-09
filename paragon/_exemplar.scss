@@ -211,15 +211,39 @@ header.site-header-desktop nav button.menu-trigger {
 }
 
 header.learning-header {
-  padding-right: var(--pgn-spacing-spacer-4);
-  padding-left: var(--pgn-spacing-spacer-4);
+  --header-btn-bg-color-hover: var(--exemplar-header-btn-bg-color-hover, var(--pgn-color-light-500));
+
+  height: calc(3.5rem + var(--pgn-size-header-border-top-width) + var(--pgn-size-header-border-bottom-width));
+  padding: 0 var(--pgn-spacing-spacer-3);
 
   .container-xl {
     max-width: none;
+    padding: calc(var(--pgn-spacing-spacer-1) * 3) 0 !important;
   }
-  .header-course-title {
-    font-family: var(--pgn-typography-headings-font-family);
+
+  .logo {
+    height: 2rem !important;
   }
+
+  [role="button"]:hover,
+  button:hover {
+    background-color: var(--header-btn-bg-color-hover);
+  }
+
+  // user menu button (profile image in header)
+  .user-dropdown .btn {
+    height: unset; // default height pushes it too high
+    border-radius: 50%;
+
+    &:hover {
+      -webkit-filter: brightness(70%);
+    }
+  }
+}
+
+/* utility to set the font-family to the same as headings without making it a heading style */
+.font-family-heading {
+  font-family: var(--pgn-typography-headings-font-family);
 }
 
 dialog.courseware-search {
