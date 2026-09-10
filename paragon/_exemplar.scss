@@ -1,3 +1,9 @@
+:root {
+  --outline-sidebar-bg-color: var(--exemplar-outline-sidebar-bg-color, var(--pgn-color-gray-200));
+  --outline-sidebar-bg-color-hover: var(--exemplar-outline-sidebar-bg-color-hover, var(--pgn-color-light-500));
+  --outline-sidebar-font-size-base: var(--exemplar-outline-sidebar-font-size-base, 0.875rem); // default to 14px
+}
+
 // override this padding from the mfe styles in a way that won't force remove other padding later
 .learning-header .course-title-lockup .course-outline-popup span {
   padding-bottom: 0;
@@ -10,15 +16,12 @@
 
 .course-outline-popup {
   // This is styling for the CourseOutlinePopup from https://gitlab.com/opencraft/dev/frontend-plugin-exemplar .
-  --outline-sidebar-bg-color: var(--exemplar-outline-sidebar-bg-color, var(--pgn-color-gray-200));
-  --outline-sidebar-bg-color-hover: var(--exemplar-outline-sidebar-bg-color-hover, var(--pgn-color-light-500));
-  --outline-sidebar-font-size-base: var(--exemplar-outline-sidebar-font-size-base, 0.875rem); // default to 14px
   --pgn-typography-font-size-base: var(--outline-sidebar-font-size-base);
   --pgn-typography-btn-font-size-base: var(--outline-sidebar-font-size-base);
 
   width: 476px;
   max-height: 600px;
-  background-color: var(--outline-sidebar-bg-color) !important;
+  background-color: var(--outline-sidebar-bg-color);
 
   .outline-sidebar-wrapper {
     margin: 0 !important;
@@ -216,6 +219,11 @@ header.learning-header {
   height: calc(3.5rem + var(--pgn-size-header-border-top-width) + var(--pgn-size-header-border-bottom-width));
   padding: 0 var(--pgn-spacing-spacer-3);
 
+  /* sticky header for the learning mfe where the custom dropdown course nav is shown */
+  position: sticky;
+  top: 0;
+  z-index: 99999; /* required otherwise it hides behind content on course home pages */
+
   .container-xl {
     max-width: none;
     padding: calc(var(--pgn-spacing-spacer-1) * 3) 0 !important;
@@ -225,8 +233,8 @@ header.learning-header {
     height: 2rem !important;
   }
 
-  [role="button"]:hover,
-  button:hover {
+  .help-icon-btn:hover,
+  .search-icon-btn:hover {
     background-color: var(--header-btn-bg-color-hover);
   }
 
@@ -256,9 +264,205 @@ dialog.courseware-search {
   padding: 0 !important;
 }
 
-/* sticky header for the learning mfe where the custom dropdown course nav is shown */
-header.learning-header {
-  position: sticky;
-  top: 0;
-  z-index: 99999; /* required otherwise it hides behind content on course home pages */
+.learning-header.mobile {
+  padding: 0 calc(var(--pgn-spacing-spacer-1) * 5);
+  height: calc(4.5rem + var(--pgn-size-header-border-top-width) + var(--pgn-size-header-border-bottom-width));
+
+  .container-xl {
+    padding: calc(var(--pgn-spacing-spacer-1) * 5) 0 !important;
+  }
+
+  .help-icon-btn,
+  .search-icon-btn {
+    background-color: white;
+    margin-right: var(--pgn-spacing-spacer-3) !important;
+  }
+
+  .mobile-popup-menu-wrapper {
+    position: fixed;
+    // the learning-header height minus the border (border should be hidden when menu is open)
+    top: calc(4.5rem + var(--pgn-size-header-border-top-width));
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    .nav-bar {
+      font-size: var(--outline-sidebar-font-size-base);
+      background-color: var(--outline-sidebar-bg-color);
+      height: 3.5rem;
+      padding: calc(var(--pgn-spacing-spacer-1) * 3) calc(var(--pgn-spacing-spacer-1) * 5);
+
+      div {
+        align-content: center; // vertically center the title
+      }
+    }
+
+    .mobile-course-outline-popup {
+      width: 100%;
+      // full height - header height - nav-bar height
+      height: calc(100vh - calc(4.5rem + var(--pgn-size-header-border-top-width)) - 3.5rem);
+      overflow-y: scroll;
+    }
+
+    .outline-sidebar-heading-wrapper {
+      --pgn-typography-btn-font-size-base: var(--outline-sidebar-font-size-base);
+      padding: 0 !important;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+      border-bottom: 1px solid var(--pgn-color-light-500) !important;
+      border-radius: 0 !important;
+      position: initial !important;
+
+      .outline-sidebar-heading {
+        padding: var(--pgn-spacing-spacer-2) 0 calc(var(--pgn-spacing-spacer-1) * 3) 0 !important;
+
+        &:hover {
+          background-color: var(--outline-sidebar-bg-color-hover);
+
+          .pgn__icon {
+            background-color: var(--pgn-color-light-500) !important;
+          }
+        }
+
+        &:focus {
+          @include focus-styles;
+        }
+
+        .pgn__icon {
+          border: 2px solid var(--pgn-color-secondary-base) !important;
+          transform: scale(1.14);
+        }
+      }
+    }
+
+    .outline-sidebar-wrapper {
+      margin-right: 0 !important;
+      padding: calc(var(--pgn-spacing-spacer-2)) calc(var(--pgn-spacing-spacer-1) * 5);
+      width: 100%;
+      flex-grow: 1;
+    }
+
+    #outline-sidebar-outline {
+      padding-top: 0;
+      margin: 0 !important;
+
+      // this class was messing up vertical spacing
+      .align-middle {
+        vertical-align: initial !important;
+      }
+
+      // padding between the icons and the menu text
+      .ml-3 {
+        margin-left: var(--pgn-spacing-spacer-1) !important;
+      }
+
+      .pgn__icon {
+        transform: scale(0.67);
+      }
+
+      // top level menu of sections
+      .course-sidebar-section {
+        margin-bottom: 0 !important;
+        border: none !important;
+
+        .text-dark-500 {
+          color: var(--pgn-color-gray-700) !important;
+        }
+
+        > button {
+          padding: var(--pgn-spacing-spacer-3) 0 calc(var(--pgn-spacing-spacer-1) * 3) 0;
+          border: none !important;
+          border-bottom: 1px solid var(--pgn-color-light-500) !important;
+          font-weight: normal;
+
+          &:focus:before {
+            content: none;
+          }
+          &:focus {
+            @include focus-styles;
+          }
+        }
+
+        &.active-section {
+          .text-dark-500 {
+            color: var(--pgn-color-secondary-base) !important;
+          }
+
+          > button {
+            font-weight: bold;
+          }
+
+          .pgn__icon {
+            color: var(--pgn-color-secondary-base) !important;
+          }
+        }
+      }
+
+      li {
+        font-size: var(--outline-sidebar-font-size-base) !important;
+        line-height: 2rem !important;
+        border: none !important;
+
+        div {
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+
+      li > div.pgn_collapsible {
+        margin-bottom: 0 !important;
+        padding: var(--pgn-spacing-spacer-2) var(--pgn-spacing-spacer-4);
+        // a unit in the menu
+        li a {
+          padding: var(--pgn-spacing-spacer-3) 0 calc(var(--pgn-spacing-spacer-1) * 3) 0;
+          margin-left: var(--pgn-spacing-spacer-4) !important;
+          width: unset !important;
+          border-bottom: 1px solid var(--pgn-color-light-500) !important;
+        }
+
+        [role="button"]:focus,
+        a:focus {
+          @include focus-styles;
+        }
+      }
+
+      // a subsection in the submenu
+      .collapsible-card-lg {
+        padding: 0 !important;
+        border: none !important;
+
+        .collapsible-trigger {
+          padding: var(--pgn-spacing-spacer-3) 0 calc(var(--pgn-spacing-spacer-1) * 3) 0;
+          border: none !important;
+          border-bottom: 1px solid var(--pgn-color-light-500) !important;
+        }
+      }
+
+      // a subsection in the menu that is currently active
+      .active-section {
+        .collapsible-trigger {
+          color: var(--pgn-color-secondary-base) !important;
+          font-weight: bold;
+
+          &:hover {
+            background-color: var(--outline-sidebar-bg-color-hover) !important;
+          }
+
+          span.align-middle.text-dark-500 {
+            color: var(--pgn-color-secondary-base) !important;
+          }
+        }
+      }
+
+      // a unit in the menu that is currently active (lowest level of navigation)
+      .active-unit {
+        a {
+          color: var(--pgn-color-secondary-base) !important;
+          font-weight: bold;
+        }
+      }
+    }
+  }
 }
