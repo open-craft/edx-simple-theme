@@ -1,80 +1,3 @@
-.outline-sidebar-wrapper {
-  margin: 0 var(--pgn-spacing-spacer-1) !important;
-}
-.outline-sidebar {
-  --outline-sidebar-bg-color: var(--pgn-color-gray-200);
-  .outline-sidebar-heading-wrapper {
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    border-bottom: 1px solid white !important;
-    background-color: var(--outline-sidebar-bg-color) !important;
-  }
-
-  background: var(--outline-sidebar-bg-color);
-  --pgn-color-card-bg-base: var(--outline-sidebar-bg-color);
-
-  #outline-sidebar-outline {
-    .course-sidebar-section {
-      background-color: var(--outline-sidebar-bg-color);
-      > button {
-        padding: var(--pgn-spacing-spacer-2) 0 var(--pgn-spacing-spacer-2) var(--pgn-spacing-spacer-4) !important;
-      }
-      &.active-section button {
-        background-color: var(--outline-sidebar-bg-color);
-        --pgn-btn-color: var(--pgn-color-secondary-base) !important;
-        color: var(--pgn-color-secondary-base) !important;
-
-        > div.text-dark-500 {
-          color: var(--pgn-color-secondary-base) !important;
-        }
-      }
-    }
-    ol li div {
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-    li > div.pgn_collapsible {
-      margin-bottom: 0 !important;
-      padding: var(--pgn-spacing-spacer-2) var(--pgn-spacing-spacer-4);
-      li a {
-        padding: var(--pgn-spacing-spacer-2) var(--pgn-spacing-spacer-4);
-      }
-    }
-
-    .collapsible-trigger,
-    .collapsible-card-lg {
-      border: none !important;
-      padding: var(--pgn-spacing-spacer-2) 0 var(--pgn-spacing-spacer-2) var(--pgn-spacing-spacer-2) !important;
-    }
-
-    .active-unit {
-      --pgn-color-info-100: var(--outline-sidebar-bg-color);
-      a {
-        color: var(--pgn-color-secondary-base) !important;
-      }
-    }
-
-    .active-section {
-      color: var(--pgn-color-secondary-base) !important;
-
-      .collapsible-trigger span.align-middle.text-dark-500 {
-        color: var(--pgn-color-secondary-base) !important;
-      }
-    }
-  }
-
-  .course-sidebar-section {
-    margin-bottom: 0 !important;
-    border: none !important;
-
-    button {
-      padding: var(--pgn-spacing-spacer-2) var(--pgn-spacing-spacer-4) !important;
-    }
-  }
-}
-
 header.site-header-desktop nav button.menu-trigger {
   border: none;
 }
@@ -127,15 +50,49 @@ header.site-header-desktop nav button.menu-trigger {
 }
 
 header.learning-header {
-  padding-right: var(--pgn-spacing-spacer-4);
-  padding-left: var(--pgn-spacing-spacer-4);
+  --header-btn-bg-color-hover: var(--exemplar-header-btn-bg-color-hover, var(--pgn-color-light-500));
+
+  height: calc(3.5rem + var(--pgn-size-header-border-top-width) + var(--pgn-size-header-border-bottom-width));
+  padding: 0 var(--pgn-spacing-spacer-3);
+
+  /* sticky header for the learning mfe where the custom dropdown course nav is shown */
+  position: sticky;
+  top: 0;
+  z-index: 99999; /* required otherwise it hides behind content on course home pages */
+
+  // override this padding from the mfe styles in a way that won't force remove other padding later
+  .course-title-lockup .course-outline-popup span {
+    padding-bottom: 0;
+  }
 
   .container-xl {
     max-width: none;
+    padding: calc(var(--pgn-spacing-spacer-1) * 3) 0 !important;
   }
-  .header-course-title {
-    font-family: var(--pgn-typography-headings-font-family);
+
+  .logo {
+    height: 2rem !important;
   }
+
+  .help-icon-btn:hover,
+  .search-icon-btn:hover {
+    background-color: var(--header-btn-bg-color-hover);
+  }
+
+  // user menu button (profile image in header)
+  .user-dropdown .btn {
+    height: unset; // default height pushes it too high
+    border-radius: 50%;
+
+    &:hover {
+      filter: brightness(70%);
+    }
+  }
+}
+
+/* utility to set the font-family to the same as headings without making it a heading style */
+.font-family-heading {
+  font-family: var(--pgn-typography-headings-font-family);
 }
 
 dialog.courseware-search {
@@ -146,11 +103,4 @@ dialog.courseware-search {
 #main-content > .position-relative {
   margin: 0 !important;
   padding: 0 !important;
-}
-
-/* sticky header for the learning mfe where the custom dropdown course nav is shown */
-header.learning-header {
-    position: sticky;
-    top: 0;
-    z-index: 99999; /* required otherwise it hides behind content on course home pages */
 }
