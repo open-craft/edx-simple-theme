@@ -85,7 +85,7 @@ header.learning-header {
     border-radius: 50%;
 
     &:hover {
-      -webkit-filter: brightness(70%);
+      filter: brightness(70%);
     }
   }
 }
