@@ -1,0 +1,19 @@
+[color.footer.bg]
+"$value" = "white"
+source = "$footer-bg"
+
+[color.footer.text]
+"$value" = "initial"
+source = "$footer-color"
+
+[color.footer.link]
+"$value" = "initial"
+source = "$footer-link-color"
+
+[color.footer.border.top]
+"$value" = "initial"
+source = "$footer-border-top-color"
+
+[color.footer.border.bottom]
+"$value" = "initial"
+source = "$footer-border-bottom-color"

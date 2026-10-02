@@ -1,0 +1,12 @@
+[wgu.color.icon.navy]
+"$value" = "{wgu.color.navy.base}"
+[wgu.color.icon.lake]
+"$value" = "{wgu.color.lake.base}"
+[wgu.color.icon.white]
+"$value" = "{color.white}"
+[wgu.color.icon.success]
+"$value" = "{wgu.color.green.base}"
+[wgu.color.icon.warning]
+"$value" = "{wgu.color.orange.base}"
+[wgu.color.icon.error]
+"$value" = "{wgu.color.red.base}"
