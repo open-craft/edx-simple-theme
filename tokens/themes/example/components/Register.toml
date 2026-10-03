@@ -1,0 +1,19 @@
+[color.register.btn.bg]
+"$value" = "green"
+source = "$btn-register-bg"
+
+[color.register.btn.text]
+"$value" = "{color.btn.text.outline-primary}"
+source = "$btn-register-color"
+
+[color.register.btn.border]
+"$value" = "{color.btn.border.outline-primary}"
+source = "$btn-register-border-color"
+
+[color.register.btn.hover.bg]
+"$value" = "{color.btn.hover.bg.outline-primary}"
+source = "$btn-register-hover-bg"
+
+[color.register.btn.hover.text]
+"$value" = "{color.btn.hover.text.outline-primary}"
+source = "$btn-register-hover-color"

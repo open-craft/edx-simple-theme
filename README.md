@@ -184,6 +184,61 @@ Alternatively, you can use eh above config in JSON format in the SiteConfigurati
 After enabling the above plugin you only need to restart the lms and cms, you don't need to run 
 `launch` again.
 
+## Multiple Themes
+
+This branch can build and deploy several themes at once. Every folder in
+`tokens/themes/` is a theme, and each one is built to its own stylesheet that
+shares the same `core.min.css`:
+
+```
+tokens/themes/light/    →  dist/light.min.css     (default theme)
+tokens/themes/example/  →  dist/example.min.css   (example: `light` with green buttons)
+```
+
+### Creating a New Theme
+
+1. Copy the default theme and give it a name:
+   ```bash
+   cp -r tokens/themes/light tokens/themes/<theme-name>
+   ```
+2. Change the values you need in `tokens/themes/<theme-name>/`. Each theme must be
+   self-contained, since Paragon only reads the theme's own folder when building
+   it.
+3. Build the tokens and the stylesheets:
+   ```bash
+   npm run build:tokens && npm run build
+   ```
+   Check that `dist/<theme-name>.min.css` was generated.
+4. Commit both `tokens/themes/<theme-name>/` and the generated
+   `paragon/css/themes/<theme-name>/`. CI fails if `paragon/css` is out of date.
+5. Open a PR against the release branch (e.g. `wgu-release/ulmo`). Once it's
+   merged, the "Build and Deploy" workflow publishes `dist/` to the CDN, and the
+   theme is available at `<cdn>/<version>/<theme-name>.min.css`.
+
+### Using a Theme
+
+Point `brandOverride` of the `light` variant in `PARAGON_THEME_URLS` to the
+theme's stylesheet, keeping `core.min.css` for the core (see
+[Hosting the Theme CSS at a CDN](#hosting-the-theme-css-at-a-cdn)):
+
+```json
+"variants": {
+  "light": {
+    "urls": {
+      "default": "https://cdn.jsdelivr.net/npm/@openedx/paragon@$paragonVersion/dist/light.min.css",
+      "brandOverride": "<cdn>/<version>/<theme-name>.min.css"
+    }
+  }
+}
+```
+
+With `tutor-contrib-grove` and multiple domains, set `GROVE_MFE_THEME_CDN_ORIGIN`
+to `<cdn>/<version>/` and `mfe_theme: <theme-name>` on each domain in
+`GROVE_ADDITIONAL_DOMAINS`.
+
+Since the stylesheets are loaded at runtime, updating a theme only requires
+merging the change: no image rebuild or redeployment of the instance is needed.
+
 ## Automatically Deploying a Runtime Theme to S3 via Gitlab CI
 
 This repo has a GitLab CI configuration to automatically deploy to AWS S3 if
