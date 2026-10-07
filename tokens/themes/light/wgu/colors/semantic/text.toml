@@ -4,3 +4,5 @@
 "$value" = "{wgu.color.blue.base}"
 [wgu.color.text.main.lake]
 "$value" = "{wgu.color.lake.base}"
+[wgu.color.text.pure-white]
+"$value" = "{color.white}"

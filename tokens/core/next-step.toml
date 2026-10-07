@@ -1,0 +1,8 @@
+[typography.next-step.label.font.family]
+"$value" = "{typography.headings.font.family}"
+
+[typography.next-step.label.font.size.base]
+"$value" = "0.75rem"
+
+[typography.next-step.label.font.size.mobile]
+"$value" = "{typography.font.size.micro}"
