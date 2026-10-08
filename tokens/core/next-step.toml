@@ -6,3 +6,31 @@
 
 [typography.next-step.label.font.size.mobile]
 "$value" = "{typography.font.size.micro}"
+
+[typography.next-step.label.font.weight]
+"$type" = "fontWeight"
+"$value" = "700"
+
+[typography.next-step.label.line-height]
+"$value" = "1rem"
+
+[typography.next-step.title.font.family]
+"$value" = "{typography.headings.font.family}"
+
+[typography.next-step.title.font.size.base]
+"$value" = "{typography.font.size.h5.base}"
+
+[typography.next-step.title.font.size.mobile]
+"$value" = "1.125rem"
+
+[typography.next-step.title.font.weight]
+"$type" = "fontWeight"
+"$value" = "700"
+
+[typography.next-step.title.line-height.base]
+"$type" = "number"
+"$value" = "1.7"
+
+[typography.next-step.title.line-height.mobile]
+"$type" = "number"
+"$value" = "1.3333"
