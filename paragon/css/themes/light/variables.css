@@ -122,6 +122,7 @@
   --pgn-wgu-color-blue-800: #003E84FF;
   --pgn-wgu-color-blue-900: #002F65FF;
   --pgn-wgu-color-blue-base: #0070F0FF;
+  --pgn-wgu-color-blue-muted: #3874BCFF;
   --pgn-wgu-color-lake-50: #EDF7FDFF;
   --pgn-wgu-color-lake-100: #C6E7FAFF;
   --pgn-wgu-color-lake-200: #AADBF8FF;
@@ -132,6 +133,7 @@
   --pgn-wgu-color-lake-800: #276183FF;
   --pgn-wgu-color-lake-900: #1D4A64FF;
   --pgn-wgu-color-lake-base: #46B1EFFF;
+  --pgn-wgu-color-lake-muted: #8CC4CEFF;
   --pgn-wgu-color-navy-50: #E6EAEEFF;
   --pgn-wgu-color-navy-100: #B0BCCAFF;
   --pgn-wgu-color-navy-200: #8A9CB1FF;
@@ -142,6 +144,7 @@
   --pgn-wgu-color-navy-800: #00162FFF;
   --pgn-wgu-color-navy-900: #001124FF;
   --pgn-wgu-color-navy-base: #002855FF;
+  --pgn-wgu-color-navy-muted: #223E5DFF;
   --pgn-wgu-color-green-50: #ECFDEDFF;
   --pgn-wgu-color-green-100: #C4F9C6FF;
   --pgn-wgu-color-green-200: #92E294FF;
@@ -263,6 +266,10 @@
   --pgn-color-action-default-danger-900: #180807FF;
   --pgn-color-action-default-danger-base: #C13024FF;
   --pgn-color-action-default-accent-a: #C13024FF;
+  --pgn-color-next-step-bg: var(--pgn-wgu-color-navy-muted);
+  --pgn-color-next-step-label: var(--pgn-wgu-color-lake-muted);
+  --pgn-color-next-step-arrow-bg: var(--pgn-wgu-color-blue-muted);
+  --pgn-color-next-step-previous-text: var(--pgn-wgu-color-navy-muted);
   --pgn-wgu-color-blue-500: var(--pgn-wgu-color-blue-base);
   --pgn-wgu-color-lake-500: var(--pgn-wgu-color-lake-base);
   --pgn-wgu-color-navy-500: var(--pgn-wgu-color-navy-base);
@@ -287,6 +294,7 @@
   --pgn-wgu-color-text-main-navy: var(--pgn-wgu-color-navy-base);
   --pgn-wgu-color-text-main-blue: var(--pgn-wgu-color-blue-base);
   --pgn-wgu-color-text-main-lake: var(--pgn-wgu-color-lake-base);
+  --pgn-wgu-color-text-pure-white: var(--pgn-color-white);
   --pgn-color-btn-bg-brand: var(--pgn-wgu-color-btn-default);
   --pgn-color-btn-border-outline-brand: var(--pgn-wgu-color-btn-default);
   --pgn-color-btn-hover-text-outline-primary: var(--pgn-color-theme-hover-primary);
@@ -296,6 +304,8 @@
   --pgn-color-btn-active-border-outline-brand: var(--pgn-wgu-color-btn-focus);
   --pgn-color-btn-focus-border-outline-brand: var(--pgn-wgu-color-btn-focus);
   --pgn-color-btn-focus-bg-brand: var(--pgn-wgu-color-btn-focus);
+  --pgn-color-next-step-title: var(--pgn-wgu-color-text-pure-white);
+  --pgn-color-next-step-arrow-icon: var(--pgn-wgu-color-icon-white);
   --pgn-color-register-btn-text: var(--pgn-color-btn-text-outline-primary);
   --pgn-color-register-btn-border: var(--pgn-color-btn-border-outline-primary);
   --pgn-color-register-btn-hover-bg: var(--pgn-color-btn-hover-bg-outline-primary);
