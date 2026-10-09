@@ -1,0 +1,52 @@
+
+
+
+[color.primary.base]
+"$value" = "#0A3055"
+actions = { default = "{color.action.default.primary.base}" }
+
+
+[color.primary.100]
+"$value" = "#0A3055"
+actions = { default = "{color.action.default.primary.100}" }
+modify = [ { type = "mix", otherColor = "white", amount = "0.94" } ]
+
+[color.primary.200]
+"$value" = "#0A3055"
+actions = { default = "{color.action.default.primary.200}" }
+modify = [ { type = "mix", otherColor = "white", amount = "0.75" } ]
+
+[color.primary.300]
+"$value" = "#0A3055"
+actions = { default = "{color.action.default.primary.300}" }
+modify = [ { type = "mix", otherColor = "white", amount = "0.50" } ]
+
+[color.primary.400]
+"$value" = "#0A3055"
+actions = { default = "{color.action.default.primary.400}" }
+modify = [ { type = "mix", otherColor = "white", amount = "0.25" } ]
+
+[color.primary.500]
+"$value" = "#0A3055"
+actions = { default = "{color.action.default.primary.500}" }
+
+
+[color.primary.600]
+"$value" = "#0A3055"
+actions = { default = "{color.action.default.primary.600}" }
+modify = [ { type = "mix", otherColor = "black", amount = "0.10" } ]
+
+[color.primary.700]
+"$value" = "#0A3055"
+actions = { default = "{color.action.default.primary.700}" }
+modify = [ { type = "mix", otherColor = "black", amount = "0.20" } ]
+
+[color.primary.800]
+"$value" = "#0A3055"
+actions = { default = "{color.action.default.primary.800}" }
+modify = [ { type = "mix", otherColor = "black", amount = "0.25" } ]
+
+[color.primary.900]
+"$value" = "#0A3055"
+actions = { default = "{color.action.default.primary.900}" }
+modify = [ { type = "mix", otherColor = "black", amount = "0.30" } ]
