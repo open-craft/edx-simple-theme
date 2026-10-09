@@ -1,0 +1,31 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ * See <PARAGON_ROOT>/tokens/README.md for more details.
+ */
+
+:root {
+  --pgn-size-btn-focus-width: 2px;
+  --pgn-size-input-btn-focus-width: 1px;
+  --pgn-spacing-input-btn-padding-y: 0.5625rem;
+  --pgn-color-primary-100: #FFF0F0FF; /** Primary color of level 100. */
+  --pgn-color-primary-200: #FFBFBFFF; /** Primary color of level 200. */
+  --pgn-color-primary-300: #FF8080FF; /** Primary color of level 300. */
+  --pgn-color-primary-400: #FF4040FF; /** Primary color of level 400. */
+  --pgn-color-primary-500: #FF0000FF; /** Primary color of level 500. */
+  --pgn-color-primary-600: #E60000FF; /** Primary color of level 600. */
+  --pgn-color-primary-700: #CC0000FF; /** Primary color of level 700. */
+  --pgn-color-primary-800: #BF0000FF; /** Primary color of level 800. */
+  --pgn-color-primary-900: #B30000FF; /** Primary color of level 900. */
+  --pgn-color-primary-base: #FF0000FF; /** Basic primary color. */
+  --pgn-color-brand-100: #F9F1FBFF; /** Brand color of level 100. */
+  --pgn-color-brand-200: #E7C6EFFF; /** Brand color of level 200. */
+  --pgn-color-brand-300: #CF8EDEFF; /** Brand color of level 300. */
+  --pgn-color-brand-400: #B755CEFF; /** Brand color of level 400. */
+  --pgn-color-brand-500: #9F1CBDFF; /** Brand color of level 500. */
+  --pgn-color-brand-600: #8F19AAFF; /** Brand color of level 600. */
+  --pgn-color-brand-700: #7F1697FF; /** Brand color of level 700. */
+  --pgn-color-brand-800: #77158EFF; /** Brand color of level 800. */
+  --pgn-color-brand-900: #6F1484FF; /** Brand color of level 900. */
+  --pgn-color-brand-base: #9F1CBDFF; /** Basic brand color. */
+  --pgn-spacing-form-input-padding-y-base: var(--pgn-spacing-input-btn-padding-y);
+}

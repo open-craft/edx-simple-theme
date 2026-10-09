@@ -1,0 +1,102 @@
+
+
+
+[color.brand.base]
+"$value" = "#E85D4E"
+actions = { default = "{color.action.default.brand.base}" }
+
+
+[color.brand.100]
+"$value" = "#E85D4E"
+actions = { default = "{color.action.default.brand.100}" }
+modify = [ { type = "mix", otherColor = "white", amount = "0.94" } ]
+
+[color.brand.200]
+"$value" = "#E85D4E"
+actions = { default = "{color.action.default.brand.200}" }
+modify = [ { type = "mix", otherColor = "white", amount = "0.75" } ]
+
+[color.brand.300]
+"$value" = "#E85D4E"
+actions = { default = "{color.action.default.brand.300}" }
+modify = [ { type = "mix", otherColor = "white", amount = "0.50" } ]
+
+[color.brand.400]
+"$value" = "#E85D4E"
+actions = { default = "{color.action.default.brand.400}" }
+modify = [ { type = "mix", otherColor = "white", amount = "0.25" } ]
+
+[color.brand.500]
+"$value" = "#E85D4E"
+actions = { default = "{color.action.default.brand.500}" }
+
+
+[color.brand.600]
+"$value" = "#E85D4E"
+actions = { default = "{color.action.default.brand.600}" }
+modify = [ { type = "mix", otherColor = "black", amount = "0.10" } ]
+
+[color.brand.700]
+"$value" = "#E85D4E"
+actions = { default = "{color.action.default.brand.700}" }
+modify = [ { type = "mix", otherColor = "black", amount = "0.20" } ]
+
+[color.brand.800]
+"$value" = "#E85D4E"
+actions = { default = "{color.action.default.brand.800}" }
+modify = [ { type = "mix", otherColor = "black", amount = "0.25" } ]
+
+[color.brand.900]
+"$value" = "#E85D4E"
+actions = { default = "{color.action.default.brand.900}" }
+modify = [ { type = "mix", otherColor = "black", amount = "0.30" } ]
+
+[color.primary.base]
+"$value" = "#4ED9E8"
+actions = { default = "{color.action.default.primary.base}" }
+
+
+[color.primary.100]
+"$value" = "#4ED9E8"
+actions = { default = "{color.action.default.primary.100}" }
+modify = [ { type = "mix", otherColor = "white", amount = "0.94" } ]
+
+[color.primary.200]
+"$value" = "#4ED9E8"
+actions = { default = "{color.action.default.primary.200}" }
+modify = [ { type = "mix", otherColor = "white", amount = "0.75" } ]
+
+[color.primary.300]
+"$value" = "#4ED9E8"
+actions = { default = "{color.action.default.primary.300}" }
+modify = [ { type = "mix", otherColor = "white", amount = "0.50" } ]
+
+[color.primary.400]
+"$value" = "#4ED9E8"
+actions = { default = "{color.action.default.primary.400}" }
+modify = [ { type = "mix", otherColor = "white", amount = "0.25" } ]
+
+[color.primary.500]
+"$value" = "#4ED9E8"
+actions = { default = "{color.action.default.primary.500}" }
+
+
+[color.primary.600]
+"$value" = "#4ED9E8"
+actions = { default = "{color.action.default.primary.600}" }
+modify = [ { type = "mix", otherColor = "black", amount = "0.10" } ]
+
+[color.primary.700]
+"$value" = "#4ED9E8"
+actions = { default = "{color.action.default.primary.700}" }
+modify = [ { type = "mix", otherColor = "black", amount = "0.20" } ]
+
+[color.primary.800]
+"$value" = "#4ED9E8"
+actions = { default = "{color.action.default.primary.800}" }
+modify = [ { type = "mix", otherColor = "black", amount = "0.25" } ]
+
+[color.primary.900]
+"$value" = "#4ED9E8"
+actions = { default = "{color.action.default.primary.900}" }
+modify = [ { type = "mix", otherColor = "black", amount = "0.30" } ]
