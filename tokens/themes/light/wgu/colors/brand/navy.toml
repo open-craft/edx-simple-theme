@@ -30,3 +30,6 @@
 
 [wgu.color.navy.base]
 "$value" = "#002855"
+
+[wgu.color.navy.muted]
+"$value" = "#223e5d"

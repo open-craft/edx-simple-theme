@@ -1,0 +1,17 @@
+[color.next-step.bg]
+"$value" = "{wgu.color.navy.muted}"
+
+[color.next-step.label]
+"$value" = "{wgu.color.lake.muted}"
+
+[color.next-step.title]
+"$value" = "{wgu.color.text.pure-white}"
+
+[color.next-step.arrow.bg]
+"$value" = "{wgu.color.blue.muted}"
+
+[color.next-step.arrow.icon]
+"$value" = "{wgu.color.icon.white}"
+
+[color.next-step.previous.text]
+"$value" = "{wgu.color.navy.muted}"
