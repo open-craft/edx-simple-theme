@@ -1,0 +1,23 @@
+[color.sign-in.btn.bg]
+"$value" = "initial"
+source = "$btn-sign-in-bg"
+
+[color.sign-in.btn.text]
+"$value" = "initial"
+source = "$btn-sign-in-color"
+
+[color.sign-in.btn.border]
+"$value" = "initial"
+source = "$btn-sign-in-border-color"
+
+[color.sign-in.btn.hover.bg]
+"$value" = "initial"
+source = "$btn-sign-in-hover-bg"
+
+[color.sign-in.btn.hover.text]
+"$value" = "initial"
+source = "$btn-sign-in-hover-color"
+
+[color.sign-in.btn.hover.border]
+"$value" = "initial"
+source = "$btn-sign-in-hover-border-color"

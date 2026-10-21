@@ -1,0 +1,6 @@
+[wgu.color.text.main.navy]
+"$value" = "{wgu.color.navy.base}"
+[wgu.color.text.main.blue]
+"$value" = "{wgu.color.blue.base}"
+[wgu.color.text.main.lake]
+"$value" = "{wgu.color.lake.base}"

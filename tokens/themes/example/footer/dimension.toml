@@ -1,0 +1,7 @@
+[size.footer.border.top.width]
+"$value" = "initial"
+source = "$footer-border-top-width"
+
+[size.footer.border.bottom.width]
+"$value" = "initial"
+source = "$footer-border-bottom-width"
