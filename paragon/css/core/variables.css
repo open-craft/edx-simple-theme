@@ -13,14 +13,26 @@
   --pgn-typography-headings-font-family: Sora, sans-serif;
   --pgn-typography-font-family-sans-serif: Lato, sans-serif, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; /** Sans-serif font family. */
   --pgn-typography-font-size-base: 16px; /** Base font size. */
+  --pgn-typography-font-size-micro: 0.688rem; /** Micro utils text font size. */
   --pgn-typography-font-size-h2-base: 2.125rem; /** Font size of heading level 2. */
   --pgn-typography-font-size-h3-base: 1.875rem; /** Font size of heading level 3. */
   --pgn-typography-font-size-h4-base: 1.5rem; /** Font size of heading level 4. */
   --pgn-typography-font-size-h5-base: 1.25rem; /** Font size of heading level 5. */
   --pgn-typography-line-height-display-base: 1.15; /** Standard display line height. */
+  --pgn-typography-next-step-label-font-size-base: 0.75rem;
+  --pgn-typography-next-step-label-font-weight: 700;
+  --pgn-typography-next-step-label-line-height: 1rem;
+  --pgn-typography-next-step-title-font-size-mobile: 1.125rem;
+  --pgn-typography-next-step-title-font-weight: 700;
+  --pgn-typography-next-step-title-line-height-base: 1.7;
+  --pgn-typography-next-step-title-line-height-mobile: 1.3333;
   --pgn-typography-display-font-family: Sora,sans-serif;
   --pgn-wgu-size-border-radius-base: 16px;
   --pgn-wgu-size-border-radius-full: 9999px;
+  --pgn-typography-next-step-label-font-family: var(--pgn-typography-headings-font-family);
+  --pgn-typography-next-step-label-font-size-mobile: var(--pgn-typography-font-size-micro);
+  --pgn-typography-next-step-title-font-family: var(--pgn-typography-headings-font-family);
+  --pgn-typography-next-step-title-font-size-base: var(--pgn-typography-font-size-h5-base);
   --pgn-wgu-size-border-radius-xxs: calc(var(--pgn-wgu-size-border-radius-base) * 0.25);
   --pgn-wgu-size-border-radius-xs: calc(var(--pgn-wgu-size-border-radius-base) * .5);
   --pgn-wgu-size-border-radius-s: var(--pgn-wgu-size-border-radius-base);

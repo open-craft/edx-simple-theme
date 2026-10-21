@@ -30,3 +30,6 @@
 
 [wgu.color.lake.base]
 "$value" = "#46b1ef"
+
+[wgu.color.lake.muted]
+"$value" = "#8cc4ce"
