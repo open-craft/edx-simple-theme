@@ -1,0 +1,67 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches:
+      - "*-release/**"
+
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+
+    outputs:
+      client: ${{ steps.parse.outputs.client }}
+      version: ${{ steps.parse.outputs.version }}
+      environment_name: ${{ steps.parse.outputs.environment_name }}
+
+    steps:
+      - name: Parse deployment target
+        id: parse
+        shell: bash
+        run: |
+          TARGET_BRANCH="${GITHUB_REF_NAME}"
+          SOURCE_BRANCH="${GITHUB_REF_NAME}"
+
+          if [[ ! "$TARGET_BRANCH" =~ ^([A-Za-z0-9_-]+)-release/(.+)$ ]]; then
+            echo "Target branch must match CLIENT-release/VERSION"
+            echo "Actual target branch: $TARGET_BRANCH"
+            exit 1
+          fi
+
+          CLIENT="${BASH_REMATCH[1]}"
+          VERSION="${BASH_REMATCH[2]}"
+          ENVIRONMENT_NAME="${CLIENT}-staging"
+
+
+          echo "client=${CLIENT}" >> "$GITHUB_OUTPUT"
+          echo "version=${VERSION}" >> "$GITHUB_OUTPUT"
+          echo "environment_name=${ENVIRONMENT_NAME}" >> "$GITHUB_OUTPUT"
+
+          echo "Client: ${CLIENT}"
+          echo "Version: ${VERSION}"
+          echo "Environment: ${ENVIRONMENT_NAME}"
+
+  build-and-deploy:
+    needs: prepare
+    runs-on: ubuntu-latest
+
+    environment:
+      name: ${{ needs.prepare.outputs.environment_name }}
+
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Setup and Build
+        uses: ./.github/actions/build
+        with:
+          node-version: 24
+
+      - name: Deploy
+        uses: ./.github/actions/deploy
+        with:
+          deploy-path: ${{ needs.prepare.outputs.version }}
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-default-region: ${{ vars.AWS_REGION }}
+          s3-bucket: ${{ secrets.S3_BUCKET }}
+          s3-endpoint: ${{ vars.S3_ENDPOINT }}
