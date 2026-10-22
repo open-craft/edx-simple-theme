@@ -24,7 +24,7 @@ runs:
         DEPLOY_PATH_SUFFIX: ${{ inputs.deploy-path }}
         AWS_ACCESS_KEY_ID: ${{ inputs.aws-access-key-id }}
         AWS_SECRET_ACCESS_KEY: ${{ inputs.aws-secret-access-key }}
-        AWS_DEFAULT_REGION: ${{ inputs.default-region }}
+        AWS_DEFAULT_REGION: ${{ inputs.aws-default-region }}
         S3_BUCKET: ${{ inputs.s3-bucket }}
         S3_ENDPOINT: ${{ inputs.s3-endpoint }}
       run: |

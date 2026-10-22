@@ -1,5 +1,8 @@
 name: Build and Deploy
 
+permissions:
+  pull-requests: write
+
 on:
   pull_request:
     branches:
@@ -28,3 +31,20 @@ jobs:
           aws-default-region: ${{ vars.AWS_REGION }}
           s3-bucket: ${{ secrets.S3_BUCKET }}
           s3-endpoint: ${{ vars.S3_ENDPOINT }}
+
+      - name: Find preview comment
+        uses: peter-evans/find-comment@v3
+        with:
+          issue-number: ${{ github.event.pull_request.number }}
+          comment-author: github-actions[bot]
+          body-includes: "<!-- theme-preview-url -->"
+
+      - name: Comment preview URL
+        uses: peter-evans/create-or-update-comment@v5
+        with:
+          comment-id: ${{ steps.find-comment.outputs.comment-id }}
+          issue-number: ${{ github.event.pull_request.number }}
+          edit-mode: replace
+          body: |
+            <!-- theme-preview-url -->
+            You can access the files at: ${{ vars.S3_ENDPOINT }}/${{ secrets.S3_BUCKET }}/pr/${{ github.event.pull_request.number }}
