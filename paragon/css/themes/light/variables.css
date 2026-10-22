@@ -11,6 +11,16 @@
   --pgn-size-header-border-top-width: 0px;
   --pgn-size-header-border-bottom-width: 0px;
   --pgn-spacing-input-btn-padding-y: 0.5625rem;
+  --pgn-color-primary-100: #F0F3F5FF; /** Primary color of level 100. */
+  --pgn-color-primary-200: #C2CBD5FF; /** Primary color of level 200. */
+  --pgn-color-primary-300: #8598AAFF; /** Primary color of level 300. */
+  --pgn-color-primary-400: #476480FF; /** Primary color of level 400. */
+  --pgn-color-primary-500: #0A3055FF; /** Primary color of level 500. */
+  --pgn-color-primary-600: #092B4DFF; /** Primary color of level 600. */
+  --pgn-color-primary-700: #082644FF; /** Primary color of level 700. */
+  --pgn-color-primary-800: #082440FF; /** Primary color of level 800. */
+  --pgn-color-primary-900: #07223CFF; /** Primary color of level 900. */
+  --pgn-color-primary-base: #0A3055FF; /** Basic primary color. */
   --pgn-color-footer-bg: #FFFFFFFF;
   --pgn-color-footer-text: initial;
   --pgn-color-footer-link: initial;
@@ -25,4 +35,14 @@
   --pgn-color-header-border-top: initial;
   --pgn-color-header-border-bottom: initial;
   --pgn-spacing-form-input-padding-y-base: var(--pgn-spacing-input-btn-padding-y);
+  --pgn-color-action-default-primary-100: #D1DBE1FF;
+  --pgn-color-action-default-primary-200: #A4B1C0FF;
+  --pgn-color-action-default-primary-300: #677F95FF;
+  --pgn-color-action-default-primary-400: #354A5FFF;
+  --pgn-color-action-default-primary-500: #051627FF;
+  --pgn-color-action-default-primary-600: #04111FFF;
+  --pgn-color-action-default-primary-700: #030C16FF;
+  --pgn-color-action-default-primary-800: #020A13FF;
+  --pgn-color-action-default-primary-900: #02080EFF;
+  --pgn-color-action-default-primary-base: #051627FF;
 }
