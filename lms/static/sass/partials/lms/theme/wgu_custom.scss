@@ -183,3 +183,109 @@
     padding-top: 0;
   }
 }
+
+// Core Text/HTML content: six columns, with prose in the middle four.
+// These selectors use the native XBlock markup; no authoring class is required.
+.xblock.xmodule_display.xmodule_HtmlBlock {
+  --reading-text: var(--pgn-wgu-color-navy-muted, #223e5d);
+  --reading-heading: var(--pgn-wgu-color-navy-bright, #2a578d);
+  --reading-line-height: var(--pgn-typography-line-height-lg);
+
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  column-gap: var(--pgn-spacing-spacer-4);
+  row-gap: var(--pgn-spacing-spacer-4);
+
+  box-sizing: border-box;
+  margin-inline: var(--pgn-spacing-spacer-4);
+  padding-top: var(--pgn-spacing-spacer-5);
+  padding-bottom: var(--pgn-spacing-spacer-5);
+
+  font-family: var(--pgn-typography-font-family-sans-serif, Lato, sans-serif);
+  font-size: var(--pgn-typography-font-size-base);
+  color: var(--reading-text);
+
+  // Grid placement applies to direct children, not text inside custom elements.
+  > :is(h1, h2, h3, h4, h5, h6, p, ul, ol) {
+    grid-column: 2 / 6;
+    min-width: 0;
+    margin: 0;
+    overflow-wrap: anywhere;
+  }
+
+  > :is(h1, h2, h3, h4, h5, h6) {
+    font-family: var(--pgn-typography-headings-font-family, Sora, sans-serif);
+    font-weight: var(--pgn-typography-headings-font-weight);
+    line-height: var(--pgn-wgu-html-line-height-heading, 1.45);
+    letter-spacing: normal;
+    color: var(--reading-heading);
+  }
+
+  > :is(h1, h2):first-child {
+    grid-column: 1 / -1;
+    font-size: var(--pgn-typography-font-size-h3-base);
+
+    // 24px heading margin + 24px mobile grid gap = 48px before the first paragraph.
+    margin-block-end: var(--pgn-spacing-spacer-4);
+  }
+
+  > h2:not(:first-child) {
+    font-size: var(--pgn-typography-font-size-h5-base);
+    line-height: var(--pgn-wgu-html-line-height-heading-fc, 1.6);
+  }
+
+  > p,
+  > :is(ul, ol) li {
+    font-size: 1em;
+    color: var(--reading-text);
+
+    // HtmlBlockDisplay.css sets paragraph line-height with !important.
+    line-height: var(--reading-line-height) !important;
+  }
+
+  // Neutralise upstream adjacency margins; the grid owns paragraph spacing.
+  > p + p,
+  > ul + p,
+  > ol + p {
+    margin-top: 0;
+  }
+
+  > :is(ul, ol) {
+    padding: 0;
+    padding-inline-start: 1.5em;
+  }
+
+  > :is(ul, ol) > li {
+    margin: 0;
+
+    + li {
+      margin-block-start: var(--pgn-spacing-spacer-2);
+    }
+  }
+
+  // Override upstream's universal line-height for inline core text.
+  > :is(h1, h2, h3, h4, h5, h6, p, ul, ol)
+    :where(span, a, strong, b, em, i) {
+    line-height: inherit;
+  }
+
+  @media (min-width: 768px) {
+    --reading-line-height: 1.6;
+
+    font-size: var(--pgn-typography-font-size-lg);
+    row-gap: var(--pgn-spacing-spacer-4-5);
+    padding-top: var(--pgn-spacing-spacer-5-5);
+    padding-bottom: var(--pgn-spacing-spacer-5-5);
+
+    > :is(h1, h2):first-child {
+      font-size: var(--pgn-typography-font-size-h1-base);
+
+      // 16px heading margin + 32px grid gap = 48px.
+      margin-block-end: var(--pgn-spacing-spacer-3);
+    }
+
+    > h2:not(:first-child) {
+      font-size: var(--pgn-typography-font-size-h4-base);
+    }
+  }
+}
