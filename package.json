@@ -12,7 +12,7 @@
     "watch:scss": "onchange -v --initial --delay 1500 'paragon/**/*.css' 'paragon/**/*.scss' -- npm run build:scss",
     "watch": "concurrently --names tokens,scss -c green,magenta 'npm run watch:tokens' 'npm run watch:scss'",
     "dev": "concurrently --names watch,serve -c blue,yellow  'npm run watch' 'npm run serve'",
-    "serve": "paragon serve-theme-css",
+    "serve": "paragon serve-theme-css --host 0.0.0.0",
     "prepare": "husky install"
   },
   "repository": {
