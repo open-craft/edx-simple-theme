@@ -1,0 +1,6 @@
+@import "cms/static/sass/course-unit-mfe-iframe-bundle";
+
+// The unit iframe embedded by the Course Authoring MFE (container_embed) renders
+// block student_views, so give them the same WGU styles as the LMS. Only this
+// bundle is overridden so the Paragon reset doesn't leak into other Studio pages.
+@import "../../../lms/static/sass/partials/lms/theme/wgu_custom";

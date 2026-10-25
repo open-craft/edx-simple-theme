@@ -396,3 +396,5 @@ temp/
 lms/static/sass/_lms-overrides.scss
 lms/static/sass/common-variables.scss
 lms/static/css/
+
+cms/static/css/
