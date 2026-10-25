@@ -186,26 +186,99 @@
 
 // Core Text/HTML content: six columns, with prose in the middle four.
 // These selectors use the native XBlock markup; no authoring class is required.
+//
+// REFACTOR NOTES (annotations only; no rule below has been changed)
+// -----------------------------------------------------------------
+// Markup this targets (openedx-platform common/templates/xblock_wrapper.html):
+//
+//   <div class="xblock xblock-student_view xmodule_display xmodule_HtmlBlock ...">
+//     <script type="json/xblock-args" class="xblock-json-init-args">...</script>
+//     ...author's HTML, unwrapped...
+//   </div>
+//
+// So every top-level authored element (h*, p, ul, div, table, figure, img...)
+// is a direct child of this element and therefore becomes a grid item.
+//
+// Base styles being overridden live in openedx-platform
+// xmodule/static/css-builtin-blocks/HtmlBlockDisplay.css. Its selectors are
+// `.xmodule_display.xmodule_HtmlBlock <el>` (specificity 0,2,1); the
+// `.xblock.xmodule_display.xmodule_HtmlBlock > :is(...)` selectors below are
+// 0,3,1, so they win without !important, except where upstream used !important.
+//
+// Why this blocks the float/wrap design:
+//  1. `display: grid` turns each top-level element into its own grid cell.
+//     `float` has no effect on a grid item, and a float *inside* a cell (e.g.
+//     TinyMCE's `<p><img style="float:right"></p>`) can only wrap text in that
+//     same cell. Text in the following <p> sits in a different cell/row and
+//     will never flow around the image.
+//  2. Column placement is only defined for h1-h6/p/ul/ol. Anything else
+//     (div, figure, img, table, blockquote, pre, hr...) is auto-placed into a
+//     single 1/6 track. With sparse auto-placement it usually lands in column 6
+//     of the previous paragraph's row, i.e. beside the text in the right gutter.
+//  3. Vertical rhythm is owned by `row-gap`, with all child margins zeroed.
+//     Once the container stops being a grid, every spacing value below must be
+//     re-expressed as margins (or a flow/"stack" rule) on the children.
+//  4. The 6-column track is hardcoded and only one breakpoint (768px) exists.
+//     The target is 12 (desktop) / 6 (tablet) / 4 (mobile) columns, so the
+//     column count, gutter and the "2 / 6" text span need to become
+//     per-breakpoint values (custom properties are a natural fit).
+//
+// Possible direction (for discussion): keep the container in normal flow
+// (display: block / flow-root), constrain prose with a max-width + margin-inline
+// computed from the column vars, and let images opt into `float: right` with a
+// negative margin-inline-end to bleed past the text column. That keeps
+// floats working across paragraphs.
 .xblock.xmodule_display.xmodule_HtmlBlock {
+  // Local design tokens. Fallbacks are the WGU navy values from the Figma.
+  // `--reading-line-height` is redefined at >=768px (see media query below).
   --reading-text: var(--pgn-wgu-color-navy-muted, #223e5d);
   --reading-heading: var(--pgn-wgu-color-navy-bright, #2a578d);
   --reading-line-height: var(--pgn-typography-line-height-lg);
 
+  // REFACTOR: This is the core of the problem (see note 1 above). Every
+  // top-level child becomes an isolated grid cell, so floats cannot wrap text
+  // across paragraphs. Column count is fixed at 6 at all widths; the target
+  // design needs 12 / 6 / 4.
   display: grid;
   grid-template-columns: repeat(6, minmax(0, 1fr));
+  // Gutter between columns. Will become the per-breakpoint gutter of the
+  // column system.
   column-gap: var(--pgn-spacing-spacer-4);
+  // REFACTOR: Sole source of vertical spacing between top-level blocks
+  // (children have margin: 0). Must move to child margins once grid is gone.
   row-gap: var(--pgn-spacing-spacer-4);
 
   box-sizing: border-box;
+  // Outer page margin on both sides (mobile value, not overridden at 768px).
+  // Candidate for the per-breakpoint "page margin" of the column system.
   margin-inline: var(--pgn-spacing-spacer-4);
+  // Block top/bottom padding. Note: .vert spacing is removed globally at the
+  // top of this file, so this padding is the only space between an HtmlBlock
+  // and its sibling blocks in the unit.
   padding-top: var(--pgn-spacing-spacer-5);
   padding-bottom: var(--pgn-spacing-spacer-5);
 
+  // Base typography. Upstream sets no font-family on the container (only on
+  // h1/h2 via `font` shorthand), so this inherits to all descendants.
   font-family: var(--pgn-typography-font-family-sans-serif, Lato, sans-serif);
   font-size: var(--pgn-typography-font-size-base);
   color: var(--reading-text);
 
   // Grid placement applies to direct children, not text inside custom elements.
+  //
+  // REFACTOR: `grid-column: 2 / 6` = columns 2-5 of 6, i.e. one empty column
+  // either side of the text. This is the "prose width" that should become a
+  // max-width / margin-inline derived from the column vars. Only these tags
+  // are placed; other top-level elements are not (see note 2 above).
+  //
+  // `margin: 0` wipes upstream margins (h1: 0 0 1.416em, h2: margin-bottom
+  // 15px, h3-6: 0 0 10px, p: margin-bottom 1.416em, ul/ol: 1em 0) so that
+  // row-gap alone controls spacing.
+  //
+  // `min-width: 0` is needed because grid items default to `min-width: auto`
+  // and long words/URLs would otherwise blow out the track. Not needed in
+  // normal flow.
+  // `overflow-wrap: anywhere` lets long URLs break; keep it after the refactor.
   > :is(h1, h2, h3, h4, h5, h6, p, ul, ol) {
     grid-column: 2 / 6;
     min-width: 0;
@@ -213,6 +286,12 @@
     overflow-wrap: anywhere;
   }
 
+  // Heading typography for all top-level headings.
+  // Overrides upstream: h1/h2 `font` shorthand family + line-height,
+  // `letter-spacing: 1px` (h1/h2), `font-weight: 600` (h3-h6), and h2's
+  // #646464 colour. Sizes are NOT set here: h3-h6 keep upstream em sizes
+  // (1.2em / 1em / 0.83em / 0.75em of the container font-size), and an h1
+  // that is not the first child keeps upstream's 2em.
   > :is(h1, h2, h3, h4, h5, h6) {
     font-family: var(--pgn-typography-headings-font-family, Sora, sans-serif);
     font-weight: var(--pgn-typography-headings-font-weight);
@@ -221,19 +300,39 @@
     color: var(--reading-heading);
   }
 
+  // Page title: a leading h1/h2 spans the full width (all 6 columns) and is
+  // sized as h3 on mobile (h1 at >=768px, below).
+  //
+  // REFACTOR / BUG: `:first-child` does not match on initial render. The
+  // wrapper's first child is `<script class="xblock-json-init-args">`
+  // (HtmlBlock uses shim_xmodule_js, which always sets json_init_args). The
+  // XBlock runtime removes that script in common/js/xblock/core.js initArgs(),
+  // so this rule only starts matching after JS init, causing a layout/size
+  // jump. Consider `:first-of-type`-style logic, `:nth-child(1 of h1, h2)`,
+  // or `script:first-child + :is(h1, h2), :is(h1, h2):first-child`.
   > :is(h1, h2):first-child {
     grid-column: 1 / -1;
     font-size: var(--pgn-typography-font-size-h3-base);
 
     // 24px heading margin + 24px mobile grid gap = 48px before the first paragraph.
+    // REFACTOR: This spacing is split across margin + row-gap; when row-gap
+    // is removed the margin alone must equal the full 48px.
     margin-block-end: var(--pgn-spacing-spacer-4);
   }
 
+  // Section headings (any h2 after the title). Replaces upstream's 1.2em.
+  // h3-h6 have no WGU size rules (see heading block above).
   > h2:not(:first-child) {
     font-size: var(--pgn-typography-font-size-h5-base);
     line-height: var(--pgn-wgu-html-line-height-heading-fc, 1.6);
   }
 
+  // Body copy: top-level paragraphs and list items (any depth, since `li` is
+  // a descendant selector here). `1em` = container font-size, so body size is
+  // driven entirely by the container's font-size (base / lg at 768px).
+  // Overrides upstream `color: var(--body-color, #313131)` on p.
+  // Note: <p> that is not a direct child (e.g. inside an authored <div>) keeps
+  // upstream 1.6em line-height, #313131 colour and 1.416em bottom margin.
   > p,
   > :is(ul, ol) li {
     font-size: 1em;
@@ -244,17 +343,28 @@
   }
 
   // Neutralise upstream adjacency margins; the grid owns paragraph spacing.
+  //
+  // REFACTOR: Currently redundant. Upstream `p+p` / `ul+p` / `ol+p` set
+  // margin-top: 20px at 0,2,2, but `> :is(... p ...) { margin: 0 }` above
+  // (0,3,1) already beats it. Once spacing moves to margins, this is the
+  // natural place to define paragraph-to-paragraph spacing instead.
   > p + p,
   > ul + p,
   > ol + p {
     margin-top: 0;
   }
 
+  // List indent: replaces upstream `padding: 0 0 0 1em`. Bullet style stays
+  // upstream (disc/decimal, outside). Nested lists are not direct children,
+  // so they keep upstream padding and `margin: 1em 0`.
   > :is(ul, ol) {
     padding: 0;
     padding-inline-start: 1.5em;
   }
 
+  // List item spacing: replaces upstream `li { margin-bottom: 0.708em }` with
+  // an 8px gap between siblings only (no trailing space after the last item).
+  // Applies to top-level list items only; nested li keep upstream margins.
   > :is(ul, ol) > li {
     margin: 0;
 
@@ -264,19 +374,32 @@
   }
 
   // Override upstream's universal line-height for inline core text.
+  // Upstream `.xmodule_HtmlBlock * { line-height: 1.4em }` gives every element
+  // its own em-based line-height, which would shrink/expand line boxes inside
+  // paragraphs. This restores inheritance for the common inline tags only;
+  // others (code, sup, sub, u, mark, abbr, small, label...) still get 1.4em.
+  // REFACTOR: Images/figures added for the float design will also inherit the
+  // upstream `*` rule; harmless for <img>, but check figcaption.
   > :is(h1, h2, h3, h4, h5, h6, p, ul, ol)
     :where(span, a, strong, b, em, i) {
     line-height: inherit;
   }
 
+  // Tablet/desktop (>=768px). This is the only breakpoint; the target design
+  // needs separate tablet (6 col) and desktop (12 col) steps, so this will
+  // likely split into two media queries.
+  // Note: column count, column-gap and margin-inline are not changed here.
   @media (min-width: 768px) {
     --reading-line-height: 1.6;
 
     font-size: var(--pgn-typography-font-size-lg);
+    // REFACTOR: Larger vertical rhythm between blocks; moves to child
+    // margins with the grid.
     row-gap: var(--pgn-spacing-spacer-4-5);
     padding-top: var(--pgn-spacing-spacer-5-5);
     padding-bottom: var(--pgn-spacing-spacer-5-5);
 
+    // Same :first-child caveat as the mobile rule above.
     > :is(h1, h2):first-child {
       font-size: var(--pgn-typography-font-size-h1-base);
 
