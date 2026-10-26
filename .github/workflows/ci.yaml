@@ -13,20 +13,10 @@ jobs:
     steps:
       - uses: actions/checkout@v6
 
-      - name: Setup Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v6
+      - name: Setup and Build
+        uses: ./.github/actions/build
         with:
           node-version: ${{ matrix.node-version }}
-          cache: "npm"
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Prettier check
-        run: npx prettier --check .
-
-      - name: Build tokens
-        run: npm run build:tokens
 
       - name: Verify token output unchanged
         run: |

@@ -5,7 +5,7 @@
   "scripts": {
     "build-tokens": "npm run build:tokens",
     "build-scss": "npm run build:scss",
-    "build:tokens": "paragon build-tokens --source ./tokens/ --build-dir ./paragon/css --all-themes --base-paragon-theme light --source-tokens-only --verbose",
+    "build:tokens": "paragon build-tokens --source ./tokens/ --build-dir ./paragon/css --all-themes --base-paragon-theme light --verbose",
     "build:scss": "paragon build-scss --corePath ./paragon/core.scss --themesPath ./paragon/css/themes",
     "build": "rimraf dist && mkdir dist && npm run build:scss",
     "watch:tokens": "onchange -v --initial --delay 1500 'tokens/**/*.json' 'tokens/**/*.toml' -- npm run build:tokens",
@@ -29,12 +29,12 @@
     "@openedx/paragon": "^23.4.5"
   },
   "devDependencies": {
-    "@openedx/paragon": "^23.21.2",
-    "concurrently": "^10.0.5",
+    "@openedx/paragon": "^23.23.1",
+    "concurrently": "^10.0.6",
     "husky": "^9.1.7",
-    "lint-staged": "^16.4.0",
+    "lint-staged": "^17.6.0",
     "onchange": "^7.1.0",
-    "prettier": "3.8.3",
+    "prettier": "3.9.10",
     "rimraf": "^6.1.3"
   },
   "lint-staged": {
