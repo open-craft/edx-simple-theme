@@ -7,7 +7,8 @@
     "build-scss": "npm run build:scss",
     "build:tokens": "paragon build-tokens --source ./tokens/ --build-dir ./paragon/css --all-themes --base-paragon-theme light --verbose --source-tokens-only",
     "build:scss": "paragon build-scss --corePath ./paragon/core.scss --themesPath ./paragon/css/themes",
-    "build": "rimraf dist && mkdir dist && npm run build:scss",
+    "build": "rimraf dist && mkdir -p dist && npm run build:scss && npm run copy:paragon-dist",
+    "copy:paragon-dist": "mkdir -p dist/paragon && cp node_modules/@openedx/paragon/dist/*.min.css dist/paragon/",
     "watch:tokens": "onchange -v --initial --delay 1500 'tokens/**/*.json' 'tokens/**/*.toml' -- npm run build:tokens",
     "watch:scss": "onchange -v --initial --delay 1500 'paragon/**/*.css' 'paragon/**/*.scss' -- npm run build:scss",
     "watch": "concurrently --names tokens,scss -c green,magenta 'npm run watch:tokens' 'npm run watch:scss'",
@@ -29,7 +30,7 @@
     "@openedx/paragon": "^23.4.5"
   },
   "devDependencies": {
-    "@openedx/paragon": "^23.22.0",
+    "@openedx/paragon": "git+https://github.com/open-craft/paragon.git#wgu-release/ulmo",
     "concurrently": "^9.2.1",
     "husky": "^9.1.7",
     "lint-staged": "^17.0.4",
