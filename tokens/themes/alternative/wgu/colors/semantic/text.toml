@@ -1,0 +1,11 @@
+# [wgu.color.text.main.navy]
+# "$value" = "{wgu.color.navy.base}"
+# [wgu.color.text.main.blue]
+# "$value" = "{wgu.color.blue.base}"
+[wgu.color.text.main.lake]
+"$value" = "{color.wgu.txt.headings}"
+# [wgu.color.text.pure-white]
+# "$value" = "{color.white}"
+
+# [color.headings.base]
+# "$value" = "{color.wgu.txt.content}"

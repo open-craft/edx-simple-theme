@@ -1,0 +1,188 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ * See <PARAGON_ROOT>/tokens/README.md for more details.
+ */
+
+:root {
+  --pgn-size-btn-focus-width: 2px;
+  --pgn-size-input-btn-focus-width: 1px;
+  --pgn-spacing-input-btn-padding-y: 0.5625rem;
+  --pgn-color-gray-0: #FFFFFFFF; /** VariableID:4101:983 */
+  --pgn-color-gray-25: #F4F5F7FF; /** VariableID:4101:984 */
+  --pgn-color-gray-50: #E9ECEFFF; /** VariableID:4101:985 */
+  --pgn-color-gray-100: #D3D8DFFF; /** Gray color of level 100. */
+  --pgn-color-gray-200: #A7B2BEFF; /** Gray color of level 200. */
+  --pgn-color-gray-300: #7A8B9EFF; /** Gray color of level 300. */
+  --pgn-color-gray-400: #4E657DFF; /** Gray color of level 400. */
+  --pgn-color-gray-500: #223E5DFF; /** Gray color of level 500. */
+  --pgn-color-gray-600: #1B324AFF; /** Gray color of level 600. */
+  --pgn-color-gray-700: #142538FF; /** Gray color of level 700. */
+  --pgn-color-gray-800: #0E1925FF; /** Gray color of level 800. */
+  --pgn-color-gray-900: #070C13FF; /** Gray color of level 900. */
+  --pgn-color-success-50: #E8F4E8FF; /** VariableID:4101:1027 */
+  --pgn-color-success-100: #FCFEFCFF; /** Success color of level 100. */
+  --pgn-color-success-200: #E8F4E8FF; /** Success color of level 200. */
+  --pgn-color-success-300: #B9DFBAFF; /** Success color of level 300. */
+  --pgn-color-success-400: #72BF74FF; /** Success color of level 400. */
+  --pgn-color-success-500: #149418FF; /** Success color of level 500. */
+  --pgn-color-success-600: #0E6B11FF; /** Success color of level 600. */
+  --pgn-color-success-700: #0A470BFF; /** Success color of level 700. */
+  --pgn-color-success-800: #062C08FF; /** Success color of level 800. */
+  --pgn-color-success-900: #031504FF; /** Success color of level 900. */
+  --pgn-color-info-50: #EDF4FDFF; /** VariableID:4101:1057 */
+  --pgn-color-info-100: #FDFEFFFF; /** Info color of level 100. */
+  --pgn-color-info-200: #EDF4FDFF; /** Info color of level 200. */
+  --pgn-color-info-300: #C8DEF9FF; /** Info color of level 300. */
+  --pgn-color-info-400: #90BDF3FF; /** Info color of level 400. */
+  --pgn-color-info-500: #4690EBFF; /** Info color of level 500. */
+  --pgn-color-info-600: #3268A9FF; /** Info color of level 600. */
+  --pgn-color-info-750: #2A578DFF; /** VariableID:4101:1064 */
+  --pgn-color-info-800: #152C47FF; /** Info color of level 800. */
+  --pgn-color-info-900: #0A1421FF; /** Info color of level 900. */
+  --pgn-color-warning-50: #FFF4E5FF; /** VariableID:4101:1047 */
+  --pgn-color-warning-100: #FFFEFCFF; /** Warning color of level 100. */
+  --pgn-color-warning-200: #FFF4E6FF; /** Warning color of level 200. */
+  --pgn-color-warning-300: #FFDFB3FF; /** Warning color of level 300. */
+  --pgn-color-warning-400: #FFBE66FF; /** Warning color of level 400. */
+  --pgn-color-warning-500: #FF9200FF; /** Warning color of level 500. */
+  --pgn-color-warning-600: #B86900FF; /** Warning color of level 600. */
+  --pgn-color-warning-700: #7A4600FF; /** Warning color of level 700. */
+  --pgn-color-warning-800: #4D2C00FF; /** Warning color of level 800. */
+  --pgn-color-warning-900: #241400FF; /** Warning color of level 900. */
+  --pgn-color-danger-50: #FBEDECFF; /** VariableID:4101:1037 */
+  --pgn-color-danger-100: #FFFDFDFF; /** Danger color of level 100. */
+  --pgn-color-danger-200: #FCEDECFF; /** Danger color of level 200. */
+  --pgn-color-danger-300: #F4C9C5FF; /** Danger color of level 300. */
+  --pgn-color-danger-400: #E9928BFF; /** Danger color of level 400. */
+  --pgn-color-danger-500: #DB493DFF; /** Danger color of level 500. */
+  --pgn-color-danger-600: #9E342CFF; /** Danger color of level 600. */
+  --pgn-color-danger-700: #69231EFF; /** Danger color of level 700. */
+  --pgn-color-danger-800: #421612FF; /** Danger color of level 800. */
+  --pgn-color-danger-900: #1F0B08FF; /** Danger color of level 900. */
+  --pgn-color-orange-50: #FDF0EDFF; /** VariableID:4101:1017 */
+  --pgn-color-orange-100: #FCE0DBFF; /** VariableID:4101:1018 */
+  --pgn-color-orange-200: #F9C2B7FF; /** VariableID:4101:1019 */
+  --pgn-color-orange-300: #F6A392FF; /** VariableID:4101:1020 */
+  --pgn-color-orange-400: #F3856EFF; /** VariableID:4101:1021 */
+  --pgn-color-orange-500: #F0664AFF; /** VariableID:4101:1022 */
+  --pgn-color-orange-600: #C0523BFF; /** VariableID:4101:1023 */
+  --pgn-color-orange-700: #903D2CFF; /** VariableID:4101:1024 */
+  --pgn-color-orange-800: #60291EFF; /** VariableID:4101:1025 */
+  --pgn-color-orange-900: #30140FFF; /** VariableID:4101:1026 */
+  --pgn-spacing-form-input-padding-y-base: var(--pgn-spacing-input-btn-padding-y);
+  --pgn-color-btn-text-tertiary: var(--pgn-color-primary-base);
+  --pgn-color-form-feedback-valid: var(--pgn-color-success-900);
+  --pgn-color-form-feedback-invalid: var(--pgn-color-danger-900);
+  --pgn-color-wgu-bg-prim-main: var(--pgn-color-gray-600);
+  --pgn-color-wgu-bg-prim-emphasis: var(--pgn-color-gray-500);
+  --pgn-color-wgu-bg-prim-hover: var(--pgn-color-gray-400);
+  --pgn-color-wgu-bg-sec-main: var(--pgn-color-gray-0);
+  --pgn-color-wgu-bg-sec-emphasis: {color.teal.50};
+  --pgn-color-wgu-bg-sec-hover: var(--pgn-color-gray-25);
+  --pgn-color-wgu-bg-sec-callout-default: var(--pgn-color-orange-500);
+  --pgn-color-wgu-bg-sec-callout-alternative: {color.blue.600};
+  --pgn-color-wgu-bg-feedback-positive: var(--pgn-color-success-100);
+  --pgn-color-wgu-bg-feedback-negative: var(--pgn-color-danger-100);
+  --pgn-color-wgu-bg-feedback-informative: var(--pgn-color-info-100);
+  --pgn-color-wgu-bg-feedback-attention: var(--pgn-color-warning-100);
+  --pgn-color-wgu-bg-tooltip: {color.blue.600};
+  --pgn-color-wgu-action-default: {color.blue.600};
+  --pgn-color-wgu-action-hover: {color.blue.750};
+  --pgn-color-wgu-action-focus: var(--pgn-color-gray-900);
+  --pgn-color-wgu-action-disabled: var(--pgn-color-gray-300);
+  --pgn-color-wgu-action-inprogress: {color.teal.300};
+  --pgn-color-wgu-interact-default: {color.teal.50};
+  --pgn-color-wgu-interact-raised: var(--pgn-color-gray-0);
+  --pgn-color-wgu-interact-emphasis: {color.teal.100};
+  --pgn-color-wgu-txt-prim-headings: {color.teal.200};
+  --pgn-color-wgu-txt-prim-content: var(--pgn-color-gray-0);
+  --pgn-color-wgu-txt-sec-headings: {color.blue.600};
+  --pgn-color-wgu-txt-sec-content: var(--pgn-color-gray-500);
+  --pgn-color-wgu-txt-inverse: var(--pgn-color-gray-0);
+  --pgn-color-wgu-txt-alternative: var(--pgn-color-gray-400);
+  --pgn-color-wgu-txt-action-prim-default: var(--pgn-color-gray-0);
+  --pgn-color-wgu-txt-action-prim-hover: {color.blue.50};
+  --pgn-color-wgu-txt-action-prim-disabled: var(--pgn-color-gray-200);
+  --pgn-color-wgu-txt-action-prim-focus: {color.blue.200};
+  --pgn-color-wgu-txt-action-default: {color.blue.600};
+  --pgn-color-wgu-txt-action-sec-hover: {color.blue.750};
+  --pgn-color-wgu-txt-action-sec-oncolor: var(--pgn-color-gray-0);
+  --pgn-color-wgu-txt-action-sec-disabled: var(--pgn-color-gray-200);
+  --pgn-color-wgu-txt-action-sec-focus: var(--pgn-color-gray-900);
+  --pgn-color-wgu-txt-interact-headings: {color.teal.600};
+  --pgn-color-wgu-txt-interact-accent: {color.blue.750};
+  --pgn-color-wgu-txt-interact-content: var(--pgn-color-gray-500);
+  --pgn-color-wgu-txt-feedback-positive: var(--pgn-color-success-500);
+  --pgn-color-wgu-txt-feedback-negative: var(--pgn-color-danger-500);
+  --pgn-color-wgu-txt-feedback-informative: var(--pgn-color-info-600);
+  --pgn-color-wgu-txt-feedback-attention: var(--pgn-color-warning-700);
+  --pgn-color-wgu-icon-default: {color.teal.300};
+  --pgn-color-wgu-icon-inverse: var(--pgn-color-gray-0);
+  --pgn-color-wgu-icon-sec-default: {color.blue.600};
+  --pgn-color-wgu-icon-sec-inverse: var(--pgn-color-gray-0);
+  --pgn-color-wgu-icon-sec-alternative: var(--pgn-color-gray-400);
+  --pgn-color-wgu-icon-interact-default: {color.teal.600};
+  --pgn-color-wgu-icon-interact-disabled: var(--pgn-color-gray-200);
+  --pgn-color-wgu-icon-interact-positive: var(--pgn-color-success-500);
+  --pgn-color-wgu-icon-interact-negative: var(--pgn-color-danger-500);
+  --pgn-color-wgu-icon-interact-informative: var(--pgn-color-info-600);
+  --pgn-color-wgu-icon-interact-attention: var(--pgn-color-warning-700);
+  --pgn-color-wgu-icon-action-default: var(--pgn-color-gray-0);
+  --pgn-color-wgu-icon-action-hover: {color.blue.50};
+  --pgn-color-wgu-icon-action-focus: {color.blue.200};
+  --pgn-color-wgu-icon-action-disabled: var(--pgn-color-gray-200);
+  --pgn-color-wgu-icon-action-sec-default: {color.blue.600};
+  --pgn-color-wgu-icon-action-sec-hover: {color.blue.750};
+  --pgn-color-wgu-icon-action-sec-neutral: {color.blue.800};
+  --pgn-color-wgu-icon-action-sec-disabled: var(--pgn-color-gray-200);
+  --pgn-color-wgu-input-default: var(--pgn-color-gray-0);
+  --pgn-color-wgu-input-unselected-disabled: var(--pgn-color-gray-25);
+  --pgn-color-wgu-input-unselected-default-border: var(--pgn-color-gray-200);
+  --pgn-color-wgu-input-unselected-hover-border: {color.blue.600};
+  --pgn-color-wgu-input-unselected-focused-border: {color.blue.900};
+  --pgn-color-wgu-input-selected-default: {color.blue.500};
+  --pgn-color-wgu-input-selected-hover: {color.blue.600};
+  --pgn-color-wgu-input-selected-focused: {color.blue.500};
+  --pgn-color-wgu-input-selected-disabled: var(--pgn-color-gray-300);
+  --pgn-color-wgu-input-error-border: var(--pgn-color-danger-100);
+  --pgn-color-wgu-border-default: var(--pgn-color-gray-400);
+  --pgn-color-wgu-border-emphasis: var(--pgn-color-gray-0);
+  --pgn-color-wgu-border-arrows: var(--pgn-color-gray-0);
+  --pgn-color-wgu-border-sec-default: var(--pgn-color-gray-100);
+  --pgn-color-wgu-border-sec-emphasis: var(--pgn-color-gray-200);
+  --pgn-color-wgu-border-sec-arrows: {color.blue.750};
+  --pgn-color-wgu-border-sec-action-default: {color.blue.600};
+  --pgn-color-wgu-border-sec-action-hover: {color.blue.750};
+  --pgn-color-wgu-border-sec-action-focus: {color.blue.900};
+  --pgn-color-wgu-border-sec-action-disabled: var(--pgn-color-gray-200);
+  --pgn-color-wgu-border-sec-action-inprogress: {color.teal.300};
+  --pgn-color-wgu-border-action-default: var(--pgn-color-gray-0);
+  --pgn-color-wgu-border-action-hover: {color.blue.50};
+  --pgn-color-wgu-border-action-focus: {color.blue.200};
+  --pgn-color-wgu-border-action-disabled: var(--pgn-color-gray-200);
+  --pgn-color-wgu-border-action-inprogress: {color.teal.300};
+  --pgn-color-wgu-border-interact-default: {color.teal.200};
+  --pgn-color-wgu-border-interact-emphasis: {color.teal.600};
+  --pgn-color-wgu-bg-main: var(--pgn-color-wgu-bg-prim-main);
+  --pgn-color-wgu-bg-emphasis: var(--pgn-color-wgu-bg-prim-emphasis);
+  --pgn-color-wgu-bg-hover: var(--pgn-color-wgu-bg-prim-hover);
+  --pgn-color-wgu-txt-headings: var(--pgn-color-wgu-txt-prim-headings);
+  --pgn-color-wgu-txt-content: var(--pgn-color-wgu-txt-prim-content);
+  --pgn-color-wgu-txt-action-hover: var(--pgn-color-wgu-txt-action-prim-hover);
+  --pgn-color-wgu-txt-action-disabled: var(--pgn-color-wgu-txt-action-prim-disabled);
+  --pgn-color-wgu-txt-action-focus: var(--pgn-color-wgu-txt-action-prim-focus);
+  --pgn-wgu-color-btn-default: var(--pgn-color-wgu-action-default);
+  --pgn-wgu-color-btn-hover: var(--pgn-color-wgu-action-hover);
+  --pgn-wgu-color-btn-disabled: var(--pgn-color-wgu-action-disabled);
+  --pgn-wgu-color-btn-focus: var(--pgn-color-wgu-action-focus);
+  --pgn-color-btn-bg-brand: var(--pgn-wgu-color-btn-default);
+  --pgn-color-btn-border-outline-brand: var(--pgn-wgu-color-btn-default);
+  --pgn-color-btn-hover-bg-brand: var(--pgn-wgu-color-btn-hover);
+  --pgn-color-btn-hover-border-outline-brand: var(--pgn-wgu-color-btn-hover);
+  --pgn-color-btn-active-bg-brand: var(--pgn-wgu-color-btn-focus);
+  --pgn-color-btn-active-border-outline-brand: var(--pgn-wgu-color-btn-focus);
+  --pgn-color-btn-focus-border-outline-brand: var(--pgn-wgu-color-btn-focus);
+  --pgn-color-btn-focus-bg-brand: var(--pgn-wgu-color-btn-focus);
+  --pgn-color-form-input-focus-border: var(--pgn-color-secondary-500);
+  --pgn-wgu-color-text-main-lake: var(--pgn-color-wgu-txt-headings);
+}
