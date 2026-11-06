@@ -1,0 +1,327 @@
+[color.gray.0]
+"$value" = "#FFFFFF"
+description = "VariableID:4722:1493"
+
+[color.gray.25]
+"$value" = "#FAFAFA"
+description = "VariableID:4722:1494"
+
+[color.gray.50]
+"$value" = "#F2F3F2"
+description = "VariableID:4722:1495"
+
+[color.gray.100]
+"$value" = "#E6E8E5"
+description = "VariableID:4722:1496"
+
+[color.gray.200]
+"$value" = "#CDD1CB"
+description = "VariableID:4722:1497"
+
+[color.gray.300]
+"$value" = "#B3B9B2"
+description = "VariableID:4722:1498"
+
+[color.gray.400]
+"$value" = "#9AA298"
+description = "VariableID:4722:1499"
+
+[color.gray.500]
+"$value" = "#818B7E"
+description = "VariableID:4722:1500"
+
+[color.gray.600]
+"$value" = "#676F65"
+description = "VariableID:4722:1501"
+
+[color.gray.700]
+"$value" = "#4D534C"
+description = "VariableID:4722:1502"
+
+[color.gray.800]
+"$value" = "#343832"
+description = "VariableID:4722:1503"
+
+[color.gray.900]
+"$value" = "#1A1C19"
+description = "VariableID:4722:1504"
+
+[color.teal.50]
+"$value" = "#ECF5F7"
+description = "VariableID:4722:1505"
+
+[color.teal.100]
+"$value" = "#D9EBEF"
+description = "VariableID:4722:1506"
+
+[color.teal.200]
+"$value" = "#B2D8DE"
+description = "VariableID:4722:1507"
+
+[color.teal.300]
+"$value" = "#8CC4CE"
+description = "VariableID:4722:1508"
+
+[color.teal.400]
+"$value" = "#65B0BD"
+description = "VariableID:4722:1509"
+
+[color.teal.500]
+"$value" = "#3F9CAD"
+description = "VariableID:4722:1510"
+
+[color.teal.600]
+"$value" = "#327D8A"
+description = "VariableID:4722:1511"
+
+[color.teal.700]
+"$value" = "#265E68"
+description = "VariableID:4722:1512"
+
+[color.teal.800]
+"$value" = "#193F45"
+description = "VariableID:4722:1513"
+
+[color.teal.900]
+"$value" = "#0D1F23"
+description = "VariableID:4722:1514"
+
+[color.brown.50]
+"$value" = "#F6F0ED"
+description = "VariableID:4722:1515"
+
+[color.brown.100]
+"$value" = "#EDE1DB"
+description = "VariableID:4722:1516"
+
+[color.brown.200]
+"$value" = "#DBC3B7"
+description = "VariableID:4722:1517"
+
+[color.brown.300]
+"$value" = "#C9A492"
+description = "VariableID:4722:1518"
+
+[color.brown.400]
+"$value" = "#B7866E"
+description = "VariableID:4722:1519"
+
+[color.brown.500]
+"$value" = "#A5684A"
+description = "VariableID:4722:1520"
+
+[color.brown.600]
+"$value" = "#84533B"
+description = "VariableID:4722:1521"
+
+[color.brown.700]
+"$value" = "#633E2C"
+description = "VariableID:4722:1522"
+
+[color.brown.800]
+"$value" = "#422A1E"
+description = "VariableID:4722:1523"
+
+[color.brown.900]
+"$value" = "#21150F"
+description = "VariableID:4722:1524"
+
+[color.yellow.50]
+"$value" = "#FDF7E7"
+description = "VariableID:4722:1525"
+
+[color.yellow.100]
+"$value" = "#FCF0CF"
+description = "VariableID:4722:1526"
+
+[color.yellow.200]
+"$value" = "#F9E29F"
+description = "VariableID:4722:1527"
+
+[color.yellow.300]
+"$value" = "#F6D36F"
+description = "VariableID:4722:1528"
+
+[color.yellow.400]
+"$value" = "#F2C540"
+description = "VariableID:4722:1529"
+
+[color.yellow.500]
+"$value" = "#EEB711"
+description = "VariableID:4722:1530"
+
+[color.yellow.600]
+"$value" = "#BF930D"
+description = "VariableID:4722:1531"
+
+[color.yellow.700]
+"$value" = "#906F09"
+description = "VariableID:4722:1532"
+
+[color.yellow.800]
+"$value" = "#604B06"
+description = "VariableID:4722:1533"
+
+[color.yellow.900]
+"$value" = "#302603"
+description = "VariableID:4722:1534"
+
+[color.success.50]
+"$value" = "#F0F4F0"
+description = "VariableID:4722:1535"
+
+[color.success.100]
+"$value" = "#E1EAE1"
+description = "VariableID:4722:1536"
+
+[color.success.200]
+"$value" = "#C4D4C4"
+description = "VariableID:4722:1537"
+
+[color.success.300]
+"$value" = "#A6BFA6"
+description = "VariableID:4722:1538"
+
+[color.success.400]
+"$value" = "#89A989"
+description = "VariableID:4722:1539"
+
+[color.success.500]
+"$value" = "#6C936C"
+description = "VariableID:4722:1540"
+
+[color.success.600]
+"$value" = "#567656"
+description = "VariableID:4722:1541"
+
+[color.success.700]
+"$value" = "#4B674B"
+description = "VariableID:4722:1542"
+
+[color.success.800]
+"$value" = "#2B3B2B"
+description = "VariableID:4722:1543"
+
+[color.success.900]
+"$value" = "#151E15"
+description = "VariableID:4722:1544"
+
+[color.danger.50]
+"$value" = "#FBE9EA"
+description = "VariableID:4722:1545"
+
+[color.danger.100]
+"$value" = "#F8D3D5"
+description = "VariableID:4722:1546"
+
+[color.danger.200]
+"$value" = "#F1A7AC"
+description = "VariableID:4722:1547"
+
+[color.danger.300]
+"$value" = "#EA7B83"
+description = "VariableID:4722:1548"
+
+[color.danger.400]
+"$value" = "#E34F5A"
+description = "VariableID:4722:1549"
+
+[color.danger.500]
+"$value" = "#DC2331"
+description = "VariableID:4722:1550"
+
+[color.danger.600]
+"$value" = "#B01C27"
+description = "VariableID:4722:1551"
+
+[color.danger.700]
+"$value" = "#84151D"
+description = "VariableID:4722:1552"
+
+[color.danger.800]
+"$value" = "#580E13"
+description = "VariableID:4722:1553"
+
+[color.danger.900]
+"$value" = "#2C0709"
+description = "VariableID:4722:1554"
+
+[color.warning.50]
+"$value" = "#FDF7E7"
+description = "VariableID:4722:1555"
+
+[color.warning.100]
+"$value" = "#FCF0CF"
+description = "VariableID:4722:1556"
+
+[color.warning.200]
+"$value" = "#F9E29F"
+description = "VariableID:4722:1557"
+
+[color.warning.300]
+"$value" = "#F6D36F"
+description = "VariableID:4722:1558"
+
+[color.warning.400]
+"$value" = "#F2C540"
+description = "VariableID:4722:1559"
+
+[color.warning.500]
+"$value" = "#EEB711"
+description = "VariableID:4722:1560"
+
+[color.warning.600]
+"$value" = "#BF930D"
+description = "VariableID:4722:1561"
+
+[color.warning.700]
+"$value" = "#906F09"
+description = "VariableID:4722:1562"
+
+[color.warning.800]
+"$value" = "#604B06"
+description = "VariableID:4722:1563"
+
+[color.warning.900]
+"$value" = "#302603"
+description = "VariableID:4722:1564"
+
+[color.info.50]
+"$value" = "#ECF7F9"
+description = "VariableID:4722:1565"
+
+[color.info.100]
+"$value" = "#D9EEF2"
+description = "VariableID:4722:1566"
+
+[color.info.200]
+"$value" = "#B3DEE5"
+description = "VariableID:4722:1567"
+
+[color.info.300]
+"$value" = "#8CCDD9"
+description = "VariableID:4722:1568"
+
+[color.info.400]
+"$value" = "#66BDCC"
+description = "VariableID:4722:1569"
+
+[color.info.500]
+"$value" = "#3FADC0"
+description = "VariableID:4722:1570"
+
+[color.info.600]
+"$value" = "#338A99"
+description = "VariableID:4722:1571"
+
+[color.info.750]
+"$value" = "#266773"
+description = "VariableID:4722:1572"
+
+[color.info.800]
+"$value" = "#19454D"
+description = "VariableID:4722:1573"
+
+[color.info.900]
+"$value" = "#0D2226"
+description = "VariableID:4722:1574"

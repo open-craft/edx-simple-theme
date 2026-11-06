@@ -1,0 +1,89 @@
+.variant-prim {
+  --pgn-color-wgu-bg-hover: var(--pgn-color-wgu-bg-prim-hover);
+  --pgn-color-wgu-bg-main: var(--pgn-color-wgu-bg-prim-main);
+  --pgn-color-wgu-txt-action-default: var(
+    --pgn-color-wgu-txt-action-prim-default
+  );
+  --pgn-color-wgu-txt-action-disabled: var(
+    --pgn-color-wgu-txt-action-prim-disabled
+  );
+  --pgn-color-wgu-txt-action-focus: var(--pgn-color-wgu-txt-action-prim-focus);
+  --pgn-color-wgu-txt-action-hover: var(--pgn-color-wgu-txt-action-prim-hover);
+  --pgn-color-wgu-txt-content: var(--pgn-color-wgu-txt-prim-content);
+  --pgn-color-wgu-txt-headings: var(--pgn-color-wgu-txt-prim-headings);
+}
+
+.variant-prim-emphasis {
+  --pgn-color-wgu-Interact-raised: var(
+    --pgn-color-wgu-Interact-raised-emphasis
+  );
+  --pgn-color-wgu-Interact: var(--pgn-color-wgu-Interact-emphasis);
+  --pgn-color-wgu-bg-main: var(--pgn-color-wgu-bg-emphasis);
+  --pgn-color-wgu-bg-main: var(--pgn-color-wgu-bg-prim-emphasis);
+  --pgn-color-wgu-border-interact: var(
+    --pgn-color-wgu-border-interact-emphasis
+  );
+  --pgn-color-wgu-border-main: var(--pgn-color-wgu-border-emphasis);
+}
+
+.variant-sec {
+  --pgn-color-wgu-bg-callout-alternative: var(
+    --pgn-color-wgu-bg-sec-callout-alternative
+  );
+  --pgn-color-wgu-bg-callout-default: var(
+    --pgn-color-wgu-bg-sec-callout-default
+  );
+  --pgn-color-wgu-bg-hover: var(--pgn-color-wgu-bg-sec-hover);
+  --pgn-color-wgu-bg-main: var(--pgn-color-wgu-bg-sec-main);
+  --pgn-color-wgu-border-action-default: var(
+    --pgn-color-wgu-border-sec-action-default
+  );
+  --pgn-color-wgu-border-action-disabled: var(
+    --pgn-color-wgu-border-sec-action-disabled
+  );
+  --pgn-color-wgu-border-action-focus: var(
+    --pgn-color-wgu-border-sec-action-focus
+  );
+  --pgn-color-wgu-border-action-hover: var(
+    --pgn-color-wgu-border-sec-action-hover
+  );
+  --pgn-color-wgu-border-action-inprogress: var(
+    --pgn-color-wgu-border-sec-action-inprogress
+  );
+  --pgn-color-wgu-border-arrows: var(--pgn-color-wgu-border-sec-arrows);
+  --pgn-color-wgu-border-default: var(--pgn-color-wgu-border-sec-default);
+  --pgn-color-wgu-icon-action-default: var(
+    --pgn-color-wgu-icon-action-sec-default
+  );
+  --pgn-color-wgu-icon-action-disabled: var(
+    --pgn-color-wgu-icon-action-sec-disabled
+  );
+  --pgn-color-wgu-icon-action-hover: var(--pgn-color-wgu-icon-action-sec-hover);
+  --pgn-color-wgu-icon-action-neutral-hover: var(
+    --pgn-color-wgu-icon-action-sec-neutral-hover
+  );
+  --pgn-color-wgu-icon-action-neutral: var(
+    --pgn-color-wgu-icon-action-sec-neutral
+  );
+  --pgn-color-wgu-icon-alternative: var(--pgn-color-wgu-icon-sec-alternative);
+  --pgn-color-wgu-icon-default: var(--pgn-color-wgu-icon-sec-default);
+  --pgn-color-wgu-icon-inverse: var(--pgn-color-wgu-icon-sec-inverse);
+  --pgn-color-wgu-txt-action-default: var(
+    --pgn-color-wgu-txt-action-sec-default
+  );
+  --pgn-color-wgu-txt-action-disabled: var(
+    --pgn-color-wgu-txt-action-sec-disabled
+  );
+  --pgn-color-wgu-txt-action-focus: var(--pgn-color-wgu-txt-action-sec-focus);
+  --pgn-color-wgu-txt-action-hover: var(--pgn-color-wgu-txt-action-sec-hover);
+  --pgn-color-wgu-txt-action-oncolor: var(
+    --pgn-color-wgu-txt-action-sec-oncolor
+  );
+  --pgn-color-wgu-txt-content: var(--pgn-color-wgu-txt-sec-content);
+  --pgn-color-wgu-txt-headings: var(--pgn-color-wgu-txt-sec-headings);
+}
+
+.variant-sec-emphasis {
+  --pgn-color-wgu-bg-main: var(--pgn-color-wgu-bg-sec-emphasis);
+  --pgn-color-wgu-border-main: var(--pgn-color-wgu-border-sec-emphasis);
+}
