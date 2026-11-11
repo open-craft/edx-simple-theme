@@ -1,103 +1,36 @@
 // WGU brand layer for FAL-4439 (Figma BS-1): **colours, typography and shape**.
-// Spacing and layout - the 16px above Restart, the report grid, centring and the
-// shared breakpoints - live in the block's own stylesheet, so an unthemed install
-// keeps the same layout with Paragon's own radii and button sizing. The theme loads
-// site-wide, so every rule below is scoped to the branching scenario block.
+//
+// Contract: the block's own stylesheet owns the selectors, the states, the spacing,
+// the layout and every stock default; the block's role values live in the theme's
+// token sources (tokens/themes/*/components/BranchingScenario.toml for colours,
+// tokens/core/branching-scenario.toml for shape and type), and this file carries only
+// the roles the token pipeline cannot express plus the Paragon component tokens of our
+// own controls, which have no block role. That is why nothing here needs !important,
+// :has() or a selector deeper than .branching-scenario, and why an unthemed install
+// keeps the same layout with Paragon's own faces, colours, radii and button sizing.
 
-// ---------- shape (brand: Paragon's own radii/sizing are the unthemed default) ----------
-
-// The two outer surfaces are square in the design (the choice cards are not).
-.branching-scenario .branching-scenario__card,
-.branching-scenario .grade-report {
-  border-radius: 0;
+// The one role the token sources cannot hold: the colour pipeline parses every color.*
+// value with chroma, which rejects this var() fallback chain.
+.branching-scenario {
+  --pgn-color-bx-report-fail-text: var(--pgn-color-bx-report-badge-fail-bg, var(--pgn-color-badge-bg-danger));
 }
 
-// Choice cards: 16px, the design's xl radius. One class deeper than the block's own
-// .branching-scenario .branching-scenario__choice rule, which loads later.
-.branching-scenario .branching-scenario__choice-list .branching-scenario__choice {
-  border-radius: var(--pgn-wgu-size-border-radius-s);
-}
+// ---------- our own controls: Paragon component tokens only ----------
 
-// Report Details sits in its own card: the design's 16px radius.
-.branching-scenario .grade-report__table-card {
-  border-radius: var(--pgn-wgu-size-border-radius-s);
-}
-
-// Text action buttons: pill with 12/32 padding (Figma pgn.wgu-button). Part of the
-// brand button appearance; an unthemed button keeps Paragon's own radius and padding.
+// Text action buttons: pill with 12/32 padding and Sora in place of the Lato button
+// face, part of the brand button appearance. Paragon has no block role for a button's
+// shape, and these selectors are our controls only, so authored buttons in the content
+// keep Paragon's own radius, padding and face.
 .branching-scenario .branching-scenario__action,
 .branching-scenario .grade-report__restart {
   --pgn-size-btn-border-radius-base: var(--pgn-wgu-size-border-radius-full);
   --pgn-spacing-btn-padding-y-base: 12px;
   --pgn-spacing-btn-padding-x-base: 32px;
+  --pgn-typography-btn-font-family: var(--pgn-typography-headings-font-family);
 }
 
-// ---------- colour and typography ----------
-
-// The active question sits on the design's Interactive surface.
-.branching-scenario .branching-scenario__card {
-  background-color: var(--pgn-wgu-color-background-interactive-default);
-}
-
-// A failed report's number uses the same red as its Fail badge. One class deeper
-// than the block's own `.grade-report:has(.grade-report__badge.badge-danger)
-// .grade-report__percentage` (0,4,0), which loads after this theme. The badge's own
-// fallback chain is reused, so the number tracks whatever red the badge paints.
-.branching-scenario .grade-report:has(.grade-report__badge.badge-danger) .grade-report__percentage {
-  color: var(--pgn-color-bx-report-badge-fail-bg, var(--pgn-color-badge-bg-danger));
-}
-
-// The report table's column headers and its points column are the design's slate
-// text at brand weight. The rule below paints every th - the choice labels in the
-// body included - interactive blue, so these selectors are one class/element deeper:
-// only the header row and the points cells change, labels keep their colour.
-.branching-scenario .grade-report__table thead th,
-.branching-scenario .grade-report__table .grade-report__details-score {
-  color: var(--pgn-wgu-color-text-report-table);
-  font-weight: var(--pgn-typography-font-weight-bold);
-}
-
-// The report sparkle is the action blue, not the primary the block paints it.
-.branching-scenario .grade-report .grade-report__sparkle {
-  color: var(--pgn-wgu-color-background-action-default);
-}
-
-// WGU's pass state is one green for the badge fill and the percentage beside it.
-// The block reads this token for the badge background and keeps its own red for
-// Fail, so the number and the fill can never drift apart.
-.branching-scenario .grade-report {
-  --pgn-color-bx-report-badge-pass-bg: var(--pgn-wgu-color-background-report-badge-pass);
-}
-
-.branching-scenario .grade-report:has(.grade-report__badge.badge-success) .grade-report__percentage {
-  color: var(--pgn-color-bx-report-badge-pass-bg);
-}
-
-// The scenario title (question and report share the header markup) keeps the
-// design's interactive heading teal, distinct from the copy below it. The AccountTree
-// glyph beside it takes the same colour, so title and icon read as one heading.
-.branching-scenario .branching-scenario__title-text,
-.branching-scenario .branching-scenario__title-icon {
-  color: var(--pgn-wgu-color-text-interactive-heading);
-}
-
-// Interactive text colour for scenario copy and report labels. Deliberately not
-// applied to the percentage, pass/fail badge, points or error alerts: those are
-// semantic colours the block sets itself.
-.branching-scenario .branching-scenario__pane :is(h1, h2, h3, h4, h5, h6, p, li),
-.branching-scenario .branching-scenario__choices-legend,
-.branching-scenario .branching-scenario__choice-text,
-.branching-scenario .grade-report__heading,
-.branching-scenario .grade-report__subtitle,
-.branching-scenario .grade-report__details-heading,
-.branching-scenario .grade-report__metric-label,
-.branching-scenario .grade-report__metric-value,
-.branching-scenario .grade-report__table th {
-  color: var(--pgn-wgu-color-text-interactive-default);
-}
-
-// Filled actions (Submit, Show Report): the design's action blue with white
-// labels. Disabled keeps Paragon's neutral disabled tokens.
+// Filled actions (Submit, Show Report): the design's action blue with white labels.
+// Disabled keeps Paragon's neutral disabled tokens.
 .branching-scenario .branching-scenario__action[data-role="submit-choice"],
 .branching-scenario .branching-scenario__action[data-role="show-report"] {
   --pgn-btn-color: var(--pgn-wgu-color-text-pure-white);
@@ -114,19 +47,11 @@
   --pgn-btn-active-border-color: var(--pgn-wgu-color-btn-focus);
 }
 
-// The header Reset glyph is the design's muted steel grey, standing apart from the
-// action blue of the button states around it. The IconButton paints the svg from the
-// button's own color, so the glyph is targeted directly; backgrounds, hover/focus
-// colours and the disabled opacity stay stock.
-.branching-scenario .branching-scenario__reset .btn-icon__icon {
-  color: var(--pgn-wgu-color-icon-muted);
-}
-
-// Go Back and Restart are outline buttons, in the same palette: the component's own
+// Go Back and Restart are outline buttons in the same palette: the component's own
 // outline-primary variant draws the transparent surface and the pill shape set above,
-// and only the action blue border/text and their blue hover/focus/active family are
-// set here. The restart glyph follows the label in every state through the block's own
-// stylesheet, so no per-state icon colour is needed here.
+// so only the action blue border/text and their blue hover/focus/active family are set
+// here. The restart glyph follows the label in every state through the block's own
+// stylesheet, so no per-state icon colour is needed.
 .branching-scenario .branching-scenario__action[data-role="undo"],
 .branching-scenario .grade-report__restart {
   --pgn-btn-color: var(--pgn-wgu-color-background-action-default);

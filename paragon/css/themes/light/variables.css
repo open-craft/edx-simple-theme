@@ -11,6 +11,7 @@
   --pgn-size-header-border-top-width: 0px;
   --pgn-size-header-border-bottom-width: 1px;
   --pgn-spacing-input-btn-padding-y: 0.5625rem;
+  --pgn-other-content-bx-choice-radio-icon-checked: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%234690EBFF'/%3e%3c/svg%3e");
   --pgn-color-white: #FFFFFFFF; /** White color. */
   --pgn-color-accent-a: #DB493DFF; /** Accent-A color. */
   --pgn-color-gray-100: #FFFFFFFF; /** Gray color of level 100. */
@@ -93,6 +94,9 @@
   --pgn-color-danger-800: #5A1E1AFF; /** Danger color of level 800. */
   --pgn-color-danger-900: #401612FF; /** Danger color of level 900. */
   --pgn-color-danger-base: #DB493DFF; /** Basic danger color. */
+  --pgn-color-bx-title-divider: #B2D8DEFF;
+  --pgn-color-bx-choice-border-selected: #4690EBFF;
+  --pgn-color-bx-choice-radio-checked: #4690EBFF;
   --pgn-color-register-btn-bg: #008000FF;
   --pgn-color-sign-in-btn-bg: initial;
   --pgn-color-sign-in-btn-text: initial;
@@ -272,6 +276,14 @@
   --pgn-color-action-default-danger-900: #180807FF;
   --pgn-color-action-default-danger-base: #C13024FF;
   --pgn-color-action-default-accent-a: #C13024FF;
+  --pgn-color-bx-card-bg: var(--pgn-wgu-color-background-interactive-default);
+  --pgn-color-bx-text: var(--pgn-wgu-color-text-interactive-default);
+  --pgn-color-bx-title-text: var(--pgn-wgu-color-text-interactive-heading);
+  --pgn-color-bx-icon-muted: var(--pgn-wgu-color-icon-muted);
+  --pgn-color-bx-choice-border-base: var(--pgn-wgu-color-blue-muted);
+  --pgn-color-bx-choice-border-hover: var(--pgn-color-primary-base);
+  --pgn-color-bx-report-badge-pass-bg: var(--pgn-wgu-color-background-report-badge-pass);
+  --pgn-color-bx-report-table-text: var(--pgn-wgu-color-text-report-table);
   --pgn-color-next-step-bg: var(--pgn-wgu-color-navy-muted);
   --pgn-color-next-step-label: var(--pgn-wgu-color-lake-muted);
   --pgn-color-next-step-arrow-bg: var(--pgn-wgu-color-blue-muted);
@@ -311,6 +323,8 @@
   --pgn-color-btn-active-border-outline-brand: var(--pgn-wgu-color-btn-focus);
   --pgn-color-btn-focus-border-outline-brand: var(--pgn-wgu-color-btn-focus);
   --pgn-color-btn-focus-bg-brand: var(--pgn-wgu-color-btn-focus);
+  --pgn-color-bx-report-sparkle: var(--pgn-wgu-color-background-action-default);
+  --pgn-color-bx-report-pass-text: var(--pgn-color-bx-report-badge-pass-bg);
   --pgn-color-next-step-title: var(--pgn-wgu-color-text-pure-white);
   --pgn-color-next-step-arrow-icon: var(--pgn-wgu-color-icon-white);
   --pgn-color-register-btn-text: var(--pgn-color-btn-text-outline-primary);
