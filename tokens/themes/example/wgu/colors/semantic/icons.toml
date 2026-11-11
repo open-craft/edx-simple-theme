@@ -10,3 +10,6 @@
 "$value" = "{wgu.color.orange.base}"
 [wgu.color.icon.error]
 "$value" = "{wgu.color.red.base}"
+
+[wgu.color.icon.muted]
+"$value" = "#A7B2BE"

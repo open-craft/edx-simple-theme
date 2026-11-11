@@ -175,6 +175,12 @@
   --pgn-wgu-color-red-800: #782822FF;
   --pgn-wgu-color-red-900: #5C1F1AFF;
   --pgn-wgu-color-red-base: #DB493DFF;
+  --pgn-wgu-color-background-interactive-default: #ECF5F7FF;
+  --pgn-wgu-color-background-report-badge-pass: #149418FF;
+  --pgn-wgu-color-icon-muted: #A7B2BEFF;
+  --pgn-wgu-color-text-interactive-default: #2A578DFF;
+  --pgn-wgu-color-text-interactive-heading: #327D8AFF;
+  --pgn-wgu-color-text-report-table: #4E657DFF;
   --pgn-spacing-form-input-padding-y-base: var(--pgn-spacing-input-btn-padding-y);
   --pgn-color-theme-hover-primary: var(--pgn-color-primary-700); /** Theme-specific primary hover color. */
   --pgn-color-btn-text-outline-primary: var(--pgn-color-primary-base);
@@ -279,6 +285,7 @@
   --pgn-wgu-color-background-main-navy: var(--pgn-wgu-color-navy-base);
   --pgn-wgu-color-background-main-blue: var(--pgn-wgu-color-blue-base);
   --pgn-wgu-color-background-main-lake: var(--pgn-wgu-color-lake-base);
+  --pgn-wgu-color-background-action-default: var(--pgn-wgu-color-blue-muted);
   --pgn-wgu-color-border-gray: var(--pgn-color-gray-base);
   --pgn-wgu-color-border-blue: var(--pgn-wgu-color-blue-base);
   --pgn-wgu-color-btn-default: var(--pgn-wgu-color-blue-base);

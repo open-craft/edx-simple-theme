@@ -121,6 +121,7 @@
   --pgn-wgu-color-blue-800: #003E84FF;
   --pgn-wgu-color-blue-900: #002F65FF;
   --pgn-wgu-color-blue-base: #0070F0FF;
+  --pgn-wgu-color-blue-muted: #3874BCFF;
   --pgn-wgu-color-lake-50: #EDF7FDFF;
   --pgn-wgu-color-lake-100: #C6E7FAFF;
   --pgn-wgu-color-lake-200: #AADBF8FF;
@@ -171,6 +172,12 @@
   --pgn-wgu-color-red-800: #782822FF;
   --pgn-wgu-color-red-900: #5C1F1AFF;
   --pgn-wgu-color-red-base: #DB493DFF;
+  --pgn-wgu-color-background-interactive-default: #ECF5F7FF;
+  --pgn-wgu-color-background-report-badge-pass: #149418FF;
+  --pgn-wgu-color-icon-muted: #A7B2BEFF;
+  --pgn-wgu-color-text-interactive-default: #2A578DFF;
+  --pgn-wgu-color-text-interactive-heading: #327D8AFF;
+  --pgn-wgu-color-text-report-table: #4E657DFF;
   --pgn-spacing-form-input-padding-y-base: var(--pgn-spacing-input-btn-padding-y);
   --pgn-color-btn-text-tertiary: var(--pgn-color-primary-base);
   --pgn-color-form-input-focus-border: var(--pgn-color-secondary-500);
@@ -186,6 +193,7 @@
   --pgn-wgu-color-background-main-navy: var(--pgn-wgu-color-navy-base);
   --pgn-wgu-color-background-main-blue: var(--pgn-wgu-color-blue-base);
   --pgn-wgu-color-background-main-lake: var(--pgn-wgu-color-lake-base);
+  --pgn-wgu-color-background-action-default: var(--pgn-wgu-color-blue-muted);
   --pgn-wgu-color-border-gray: var(--pgn-color-gray-base);
   --pgn-wgu-color-border-blue: var(--pgn-wgu-color-blue-base);
   --pgn-wgu-color-btn-default: var(--pgn-wgu-color-green-700);
@@ -201,6 +209,7 @@
   --pgn-wgu-color-text-main-navy: var(--pgn-wgu-color-navy-base);
   --pgn-wgu-color-text-main-blue: var(--pgn-wgu-color-blue-base);
   --pgn-wgu-color-text-main-lake: var(--pgn-wgu-color-lake-base);
+  --pgn-wgu-color-text-pure-white: var(--pgn-color-white);
   --pgn-color-btn-bg-brand: var(--pgn-wgu-color-btn-default);
   --pgn-color-btn-border-outline-brand: var(--pgn-wgu-color-btn-default);
   --pgn-color-btn-hover-bg-brand: var(--pgn-wgu-color-btn-hover);
