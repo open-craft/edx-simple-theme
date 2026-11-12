@@ -5,7 +5,8 @@
 // token sources (tokens/themes/*/components/BranchingScenario.toml for colours,
 // tokens/core/branching-scenario.toml for shape and type), and this file carries only
 // the roles the token pipeline cannot express plus the Paragon component tokens of our
-// own controls, which have no block role. That is why nothing here needs !important,
+// own controls and of the elements whose value is exactly a component token, which have
+// no block role. That is why nothing here needs !important,
 // :has() or a selector deeper than .branching-scenario, and why an unthemed install
 // keeps the same layout with Paragon's own faces, colours, radii and button sizing.
 
@@ -13,6 +14,32 @@
 // value with chroma, which rejects this var() fallback chain.
 .branching-scenario {
   --pgn-color-bx-report-fail-text: var(--pgn-color-bx-report-badge-fail-bg, var(--pgn-color-badge-bg-danger));
+}
+
+// ---------- component tokens that need no block role ----------
+
+// Scenario card surface: the token .card paints, so no block-specific role is needed.
+.branching-scenario .branching-scenario__card {
+  --pgn-color-card-bg-base: var(--pgn-wgu-color-background-interactive-default);
+}
+
+// Checked radio: the input consumes both of these itself — the border and the glyph.
+.branching-scenario .branching-scenario__choice-input {
+  --pgn-color-form-control-indicator-checked-border-base: #4690eb;
+  --pgn-other-content-form-control-radio-indicator-icon-checked-base: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%234690EBFF'/%3e%3c/svg%3e");
+}
+
+// Pass badge: Paragon's own success badge background, scoped to this badge only.
+.branching-scenario .grade-report__badge.badge-success {
+  --pgn-color-badge-bg-success: var(--pgn-wgu-color-background-report-badge-pass);
+}
+
+// Header Reset: the IconButton's glyph colour in every state. Its background and its
+// focus ring keep Paragon's own tokens.
+.branching-scenario .branching-scenario__reset {
+  --pgn-color-icon-button-text-primary-base: var(--pgn-wgu-color-icon-muted);
+  --pgn-color-icon-button-text-primary-hover: var(--pgn-wgu-color-icon-muted);
+  --pgn-color-icon-button-text-primary-focus: var(--pgn-wgu-color-icon-muted);
 }
 
 // ---------- our own controls: Paragon component tokens only ----------

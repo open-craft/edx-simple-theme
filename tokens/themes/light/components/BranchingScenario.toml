@@ -1,6 +1,3 @@
-[color.bx.card.bg]
-"$value" = "{wgu.color.background.interactive.default}"
-
 [color.bx.text]
 "$value" = "{wgu.color.text.interactive.default}"
 
@@ -9,9 +6,6 @@
 
 [color.bx.title.divider]
 "$value" = "#B2D8DE"
-
-[color.bx.icon.muted]
-"$value" = "{wgu.color.icon.muted}"
 
 [color.bx.choice.border.base]
 "$value" = "{wgu.color.blue.muted}"
@@ -22,20 +16,11 @@
 [color.bx.choice.border.selected]
 "$value" = "#4690EB"
 
-[color.bx.choice.radio.checked]
-"$value" = "#4690EB"
-
 [color.bx.report.sparkle]
 "$value" = "{wgu.color.background.action.default}"
 
-[color.bx.report.badge.pass.bg]
-"$value" = "{wgu.color.background.report.badge.pass}"
-
 [color.bx.report.pass.text]
-"$value" = "{color.bx.report.badge.pass.bg}"
+"$value" = "{wgu.color.background.report.badge.pass}"
 
 [color.bx.report.table.text]
 "$value" = "{wgu.color.text.report.table}"
-
-[other.content.bx.choice.radio.icon.checked]
-"$value" = "url(\"data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%234690EBFF'/%3e%3c/svg%3e\")"
