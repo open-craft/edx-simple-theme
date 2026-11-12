@@ -11,6 +11,8 @@
   --pgn-size-header-border-top-width: 0px;
   --pgn-size-header-border-bottom-width: 1px;
   --pgn-spacing-input-btn-padding-y: 0.5625rem;
+  --pgn-spacing-bx-report-metric-padding-y: 8px;
+  --pgn-spacing-bx-report-metric-padding-x: 16px;
   --pgn-color-white: #FFFFFFFF; /** White color. */
   --pgn-color-accent-a: #DB493DFF; /** Accent-A color. */
   --pgn-color-gray-100: #FFFFFFFF; /** Gray color of level 100. */

@@ -24,3 +24,9 @@
 
 [color.bx.report.table.text]
 "$value" = "{wgu.color.text.report.table}"
+
+[spacing.bx.report.metric.padding.y]
+"$value" = "8px"
+
+[spacing.bx.report.metric.padding.x]
+"$value" = "16px"
