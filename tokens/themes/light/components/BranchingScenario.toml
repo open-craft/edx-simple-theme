@@ -30,3 +30,12 @@
 
 [spacing.bx.report.metric.padding.x]
 "$value" = "16px"
+
+[spacing.bx.report.details.heading.gap]
+"$value" = "24px"
+
+[spacing.bx.report.table.column.gap]
+"$value" = "16px"
+
+[spacing.bx.report.result.inline.gap]
+"$value" = "16px"
