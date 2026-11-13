@@ -11,6 +11,11 @@
   --pgn-size-header-border-top-width: 0px;
   --pgn-size-header-border-bottom-width: 1px;
   --pgn-spacing-input-btn-padding-y: 0.5625rem;
+  --pgn-spacing-bx-report-metric-padding-y: 8px;
+  --pgn-spacing-bx-report-metric-padding-x: 16px;
+  --pgn-spacing-bx-report-details-heading-gap: 24px;
+  --pgn-spacing-bx-report-table-column-gap: 16px;
+  --pgn-spacing-bx-report-result-inline-gap: 16px;
   --pgn-color-accent-a: #DB493DFF; /** Accent-A color. */
   --pgn-color-gray-100: #FFFFFFFF; /** Gray color of level 100. */
   --pgn-color-gray-200: #F2F2F2FF; /** Gray color of level 200. */
@@ -92,6 +97,8 @@
   --pgn-color-danger-800: #5A1E1AFF; /** Danger color of level 800. */
   --pgn-color-danger-900: #401612FF; /** Danger color of level 900. */
   --pgn-color-danger-base: #DB493DFF; /** Basic danger color. */
+  --pgn-color-bx-title-divider: #B2D8DEFF;
+  --pgn-color-bx-choice-border-selected: #4690EBFF;
   --pgn-color-register-btn-bg: #008000FF;
   --pgn-color-sign-in-btn-bg: initial;
   --pgn-color-sign-in-btn-text: initial;
@@ -121,6 +128,7 @@
   --pgn-wgu-color-blue-800: #003E84FF;
   --pgn-wgu-color-blue-900: #002F65FF;
   --pgn-wgu-color-blue-base: #0070F0FF;
+  --pgn-wgu-color-blue-muted: #3874BCFF;
   --pgn-wgu-color-lake-50: #EDF7FDFF;
   --pgn-wgu-color-lake-100: #C6E7FAFF;
   --pgn-wgu-color-lake-200: #AADBF8FF;
@@ -171,12 +179,24 @@
   --pgn-wgu-color-red-800: #782822FF;
   --pgn-wgu-color-red-900: #5C1F1AFF;
   --pgn-wgu-color-red-base: #DB493DFF;
+  --pgn-wgu-color-background-interactive-default: #ECF5F7FF;
+  --pgn-wgu-color-background-report-badge-pass: #149418FF;
+  --pgn-wgu-color-icon-muted: #A7B2BEFF;
+  --pgn-wgu-color-text-interactive-default: #2A578DFF;
+  --pgn-wgu-color-text-interactive-heading: #327D8AFF;
+  --pgn-wgu-color-text-report-table: #4E657DFF;
   --pgn-spacing-form-input-padding-y-base: var(--pgn-spacing-input-btn-padding-y);
   --pgn-color-btn-text-tertiary: var(--pgn-color-primary-base);
   --pgn-color-form-input-focus-border: var(--pgn-color-secondary-500);
   --pgn-color-form-feedback-valid: var(--pgn-color-success-900);
   --pgn-color-form-feedback-invalid: var(--pgn-color-danger-900);
   --pgn-color-headings-base: var(--pgn-color-primary-500);
+  --pgn-color-bx-text: var(--pgn-wgu-color-text-interactive-default);
+  --pgn-color-bx-title-text: var(--pgn-wgu-color-text-interactive-heading);
+  --pgn-color-bx-choice-border-base: var(--pgn-wgu-color-blue-muted);
+  --pgn-color-bx-choice-border-hover: var(--pgn-color-primary-base);
+  --pgn-color-bx-report-pass-text: var(--pgn-wgu-color-background-report-badge-pass);
+  --pgn-color-bx-report-table-text: var(--pgn-wgu-color-text-report-table);
   --pgn-wgu-color-blue-500: var(--pgn-wgu-color-blue-base);
   --pgn-wgu-color-lake-500: var(--pgn-wgu-color-lake-base);
   --pgn-wgu-color-navy-500: var(--pgn-wgu-color-navy-base);
@@ -186,6 +206,7 @@
   --pgn-wgu-color-background-main-navy: var(--pgn-wgu-color-navy-base);
   --pgn-wgu-color-background-main-blue: var(--pgn-wgu-color-blue-base);
   --pgn-wgu-color-background-main-lake: var(--pgn-wgu-color-lake-base);
+  --pgn-wgu-color-background-action-default: var(--pgn-wgu-color-blue-muted);
   --pgn-wgu-color-border-gray: var(--pgn-color-gray-base);
   --pgn-wgu-color-border-blue: var(--pgn-wgu-color-blue-base);
   --pgn-wgu-color-btn-default: var(--pgn-wgu-color-green-700);
@@ -201,6 +222,7 @@
   --pgn-wgu-color-text-main-navy: var(--pgn-wgu-color-navy-base);
   --pgn-wgu-color-text-main-blue: var(--pgn-wgu-color-blue-base);
   --pgn-wgu-color-text-main-lake: var(--pgn-wgu-color-lake-base);
+  --pgn-wgu-color-text-pure-white: var(--pgn-color-white);
   --pgn-color-btn-bg-brand: var(--pgn-wgu-color-btn-default);
   --pgn-color-btn-border-outline-brand: var(--pgn-wgu-color-btn-default);
   --pgn-color-btn-hover-bg-brand: var(--pgn-wgu-color-btn-hover);
@@ -209,6 +231,7 @@
   --pgn-color-btn-active-border-outline-brand: var(--pgn-wgu-color-btn-focus);
   --pgn-color-btn-focus-border-outline-brand: var(--pgn-wgu-color-btn-focus);
   --pgn-color-btn-focus-bg-brand: var(--pgn-wgu-color-btn-focus);
+  --pgn-color-bx-report-sparkle: var(--pgn-wgu-color-background-action-default);
   --pgn-color-register-btn-text: var(--pgn-color-btn-text-outline-primary);
   --pgn-color-register-btn-border: var(--pgn-color-btn-border-outline-primary);
   --pgn-color-register-btn-hover-bg: var(--pgn-color-btn-hover-bg-outline-primary);

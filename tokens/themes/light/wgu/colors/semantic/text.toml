@@ -6,3 +6,12 @@
 "$value" = "{wgu.color.lake.base}"
 [wgu.color.text.pure-white]
 "$value" = "{color.white}"
+
+[wgu.color.text.interactive.default]
+"$value" = "#2A578D"
+
+[wgu.color.text.interactive.heading]
+"$value" = "#327D8A"
+
+[wgu.color.text.report.table]
+"$value" = "#4E657D"

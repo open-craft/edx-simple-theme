@@ -11,6 +11,11 @@
   --pgn-size-header-border-top-width: 0px;
   --pgn-size-header-border-bottom-width: 1px;
   --pgn-spacing-input-btn-padding-y: 0.5625rem;
+  --pgn-spacing-bx-report-metric-padding-y: 8px;
+  --pgn-spacing-bx-report-metric-padding-x: 16px;
+  --pgn-spacing-bx-report-details-heading-gap: 24px;
+  --pgn-spacing-bx-report-table-column-gap: 16px;
+  --pgn-spacing-bx-report-result-inline-gap: 16px;
   --pgn-color-white: #FFFFFFFF; /** White color. */
   --pgn-color-accent-a: #DB493DFF; /** Accent-A color. */
   --pgn-color-gray-100: #FFFFFFFF; /** Gray color of level 100. */
@@ -93,6 +98,8 @@
   --pgn-color-danger-800: #5A1E1AFF; /** Danger color of level 800. */
   --pgn-color-danger-900: #401612FF; /** Danger color of level 900. */
   --pgn-color-danger-base: #DB493DFF; /** Basic danger color. */
+  --pgn-color-bx-title-divider: #B2D8DEFF;
+  --pgn-color-bx-choice-border-selected: #4690EBFF;
   --pgn-color-register-btn-bg: #008000FF;
   --pgn-color-sign-in-btn-bg: initial;
   --pgn-color-sign-in-btn-text: initial;
@@ -175,6 +182,12 @@
   --pgn-wgu-color-red-800: #782822FF;
   --pgn-wgu-color-red-900: #5C1F1AFF;
   --pgn-wgu-color-red-base: #DB493DFF;
+  --pgn-wgu-color-background-interactive-default: #ECF5F7FF;
+  --pgn-wgu-color-background-report-badge-pass: #149418FF;
+  --pgn-wgu-color-icon-muted: #A7B2BEFF;
+  --pgn-wgu-color-text-interactive-default: #2A578DFF;
+  --pgn-wgu-color-text-interactive-heading: #327D8AFF;
+  --pgn-wgu-color-text-report-table: #4E657DFF;
   --pgn-spacing-form-input-padding-y-base: var(--pgn-spacing-input-btn-padding-y);
   --pgn-color-theme-hover-primary: var(--pgn-color-primary-700); /** Theme-specific primary hover color. */
   --pgn-color-btn-text-outline-primary: var(--pgn-color-primary-base);
@@ -266,6 +279,12 @@
   --pgn-color-action-default-danger-900: #180807FF;
   --pgn-color-action-default-danger-base: #C13024FF;
   --pgn-color-action-default-accent-a: #C13024FF;
+  --pgn-color-bx-text: var(--pgn-wgu-color-text-interactive-default);
+  --pgn-color-bx-title-text: var(--pgn-wgu-color-text-interactive-heading);
+  --pgn-color-bx-choice-border-base: var(--pgn-wgu-color-blue-muted);
+  --pgn-color-bx-choice-border-hover: var(--pgn-color-primary-base);
+  --pgn-color-bx-report-pass-text: var(--pgn-wgu-color-background-report-badge-pass);
+  --pgn-color-bx-report-table-text: var(--pgn-wgu-color-text-report-table);
   --pgn-color-next-step-bg: var(--pgn-wgu-color-navy-muted);
   --pgn-color-next-step-label: var(--pgn-wgu-color-lake-muted);
   --pgn-color-next-step-arrow-bg: var(--pgn-wgu-color-blue-muted);
@@ -279,6 +298,7 @@
   --pgn-wgu-color-background-main-navy: var(--pgn-wgu-color-navy-base);
   --pgn-wgu-color-background-main-blue: var(--pgn-wgu-color-blue-base);
   --pgn-wgu-color-background-main-lake: var(--pgn-wgu-color-lake-base);
+  --pgn-wgu-color-background-action-default: var(--pgn-wgu-color-blue-muted);
   --pgn-wgu-color-border-gray: var(--pgn-color-gray-base);
   --pgn-wgu-color-border-blue: var(--pgn-wgu-color-blue-base);
   --pgn-wgu-color-btn-default: var(--pgn-wgu-color-blue-base);
@@ -304,6 +324,7 @@
   --pgn-color-btn-active-border-outline-brand: var(--pgn-wgu-color-btn-focus);
   --pgn-color-btn-focus-border-outline-brand: var(--pgn-wgu-color-btn-focus);
   --pgn-color-btn-focus-bg-brand: var(--pgn-wgu-color-btn-focus);
+  --pgn-color-bx-report-sparkle: var(--pgn-wgu-color-background-action-default);
   --pgn-color-next-step-title: var(--pgn-wgu-color-text-pure-white);
   --pgn-color-next-step-arrow-icon: var(--pgn-wgu-color-icon-white);
   --pgn-color-register-btn-text: var(--pgn-color-btn-text-outline-primary);

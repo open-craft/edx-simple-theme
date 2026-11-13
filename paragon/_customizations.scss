@@ -1,0 +1,95 @@
+// WGU brand layer for FAL-4439 (Figma BS-1): **colours, typography and shape**.
+//
+// Contract: the block's own stylesheet owns the selectors, the states, the spacing,
+// the layout and every stock default; the block's role values live in the theme's
+// token sources (tokens/themes/*/components/BranchingScenario.toml for colours,
+// tokens/core/branching-scenario.toml for shape and type), and this file carries only
+// the roles the token pipeline cannot express plus the Paragon component tokens of our
+// own controls and of the elements whose value is exactly a component token, which have
+// no block role. That is why nothing here needs !important,
+// :has() or a selector deeper than .branching-scenario, and why an unthemed install
+// keeps the same layout with Paragon's own faces, colours, radii and button sizing.
+
+// The one role the token sources cannot hold: the colour pipeline parses every color.*
+// value with chroma, which rejects this var() fallback chain.
+.branching-scenario {
+  --pgn-color-bx-report-fail-text: var(--pgn-color-bx-report-badge-fail-bg, var(--pgn-color-badge-bg-danger));
+}
+
+// ---------- component tokens that need no block role ----------
+
+// Scenario card surface: the token .card paints, so no block-specific role is needed.
+.branching-scenario .branching-scenario__card {
+  --pgn-color-card-bg-base: var(--pgn-wgu-color-background-interactive-default);
+}
+
+// Checked radio: the input consumes both of these itself — the border and the glyph.
+.branching-scenario .branching-scenario__choice-input {
+  --pgn-color-form-control-indicator-checked-border-base: #4690eb;
+  --pgn-other-content-form-control-radio-indicator-icon-checked-base: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%234690EBFF'/%3e%3c/svg%3e");
+}
+
+// Pass badge: Paragon's own success badge background, scoped to this badge only.
+.branching-scenario .grade-report__badge.badge-success {
+  --pgn-color-badge-bg-success: var(--pgn-wgu-color-background-report-badge-pass);
+}
+
+// Header Reset: the IconButton's glyph colour in every state. Its background and its
+// focus ring keep Paragon's own tokens.
+.branching-scenario .branching-scenario__reset {
+  --pgn-color-icon-button-text-primary-base: var(--pgn-wgu-color-icon-muted);
+  --pgn-color-icon-button-text-primary-hover: var(--pgn-wgu-color-icon-muted);
+  --pgn-color-icon-button-text-primary-focus: var(--pgn-wgu-color-icon-muted);
+}
+
+// ---------- our own controls: Paragon component tokens only ----------
+
+// Text action buttons: pill with 12/32 padding and Sora in place of the Lato button
+// face, part of the brand button appearance. Paragon has no block role for a button's
+// shape, and these selectors are our controls only, so authored buttons in the content
+// keep Paragon's own radius, padding and face.
+.branching-scenario .branching-scenario__action,
+.branching-scenario .grade-report__restart {
+  --pgn-size-btn-border-radius-base: var(--pgn-wgu-size-border-radius-full);
+  --pgn-spacing-btn-padding-y-base: 12px;
+  --pgn-spacing-btn-padding-x-base: 32px;
+  --pgn-typography-btn-font-family: var(--pgn-typography-headings-font-family);
+}
+
+// Filled actions (Submit, Show Report): the design's action blue with white labels.
+// Disabled keeps Paragon's neutral disabled tokens.
+.branching-scenario .branching-scenario__action[data-role="submit-choice"],
+.branching-scenario .branching-scenario__action[data-role="show-report"] {
+  --pgn-btn-color: var(--pgn-wgu-color-text-pure-white);
+  --pgn-btn-bg: var(--pgn-wgu-color-background-action-default);
+  --pgn-btn-border-color: var(--pgn-wgu-color-background-action-default);
+  --pgn-btn-hover-color: var(--pgn-wgu-color-text-pure-white);
+  --pgn-btn-hover-bg: var(--pgn-wgu-color-btn-hover);
+  --pgn-btn-hover-border-color: var(--pgn-wgu-color-btn-hover);
+  --pgn-btn-focus-color: var(--pgn-wgu-color-text-pure-white);
+  --pgn-btn-focus-bg: var(--pgn-wgu-color-btn-hover);
+  --pgn-btn-focus-border-color: var(--pgn-wgu-color-btn-focus);
+  --pgn-btn-active-color: var(--pgn-wgu-color-text-pure-white);
+  --pgn-btn-active-bg: var(--pgn-wgu-color-btn-focus);
+  --pgn-btn-active-border-color: var(--pgn-wgu-color-btn-focus);
+}
+
+// Go Back and Restart are outline buttons in the same palette: the component's own
+// outline-primary variant draws the transparent surface and the pill shape set above,
+// so only the action blue border/text and their blue hover/focus/active family are set
+// here. The restart glyph follows the label in every state through the block's own
+// stylesheet, so no per-state icon colour is needed.
+.branching-scenario .branching-scenario__action[data-role="undo"],
+.branching-scenario .grade-report__restart {
+  --pgn-btn-color: var(--pgn-wgu-color-background-action-default);
+  --pgn-btn-border-color: var(--pgn-wgu-color-background-action-default);
+  --pgn-btn-hover-color: var(--pgn-wgu-color-text-pure-white);
+  --pgn-btn-hover-bg: var(--pgn-wgu-color-background-action-default);
+  --pgn-btn-hover-border-color: var(--pgn-wgu-color-background-action-default);
+  --pgn-btn-focus-color: var(--pgn-wgu-color-text-pure-white);
+  --pgn-btn-focus-bg: var(--pgn-wgu-color-btn-focus);
+  --pgn-btn-focus-border-color: var(--pgn-wgu-color-btn-focus);
+  --pgn-btn-active-color: var(--pgn-wgu-color-text-pure-white);
+  --pgn-btn-active-bg: var(--pgn-wgu-color-btn-focus);
+  --pgn-btn-active-border-color: var(--pgn-wgu-color-btn-focus);
+}
