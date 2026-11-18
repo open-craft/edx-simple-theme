@@ -5,6 +5,8 @@
 
 :root {
   --pgn-size-form-input-radius-border-base: 0;
+  --pgn-size-bx-card-border-radius: 0;
+  --pgn-size-bx-action-min-width: min(200px, 100%);
   --pgn-spacing-spacer-base: 1rem; /** Basic space value */
   --pgn-spacing-grid-gutter-width: 32px; /** Grid gutter width value. */
   --pgn-typography-btn-font-size-base: 1rem;
@@ -19,6 +21,23 @@
   --pgn-typography-font-size-h4-base: 1.5rem; /** Font size of heading level 4. */
   --pgn-typography-font-size-h5-base: 1.25rem; /** Font size of heading level 5. */
   --pgn-typography-line-height-display-base: 1.15; /** Standard display line height. */
+  --pgn-typography-bx-title-font-size: 18px;
+  --pgn-typography-bx-title-line-height: 24px;
+  --pgn-typography-bx-legend-font-size: 20px;
+  --pgn-typography-bx-legend-line-height: 32px;
+  --pgn-typography-bx-report-percentage-font-size: 60px;
+  --pgn-typography-bx-report-percentage-line-height: 80px;
+  --pgn-typography-bx-report-heading-font-size: 30px;
+  --pgn-typography-bx-report-heading-line-height: 44px;
+  --pgn-typography-bx-report-subtitle-font-size: 20px;
+  --pgn-typography-bx-report-subtitle-line-height: 32px;
+  --pgn-typography-bx-report-details-heading-font-size: 20px;
+  --pgn-typography-bx-report-details-heading-font-weight: var(--pgn-typography-font-weight-bold);
+  --pgn-typography-bx-report-details-heading-line-height: 34px;
+  --pgn-typography-bx-report-table-font-size: 16px;
+  --pgn-typography-bx-report-table-font-weight: var(--pgn-typography-font-weight-bold);
+  --pgn-typography-bx-report-table-line-height: 24px;
+  --pgn-typography-bx-choice-line-height: 28px;
   --pgn-typography-next-step-label-font-size-base: 0.75rem;
   --pgn-typography-next-step-label-font-weight: 700;
   --pgn-typography-next-step-label-line-height: 1rem;
@@ -43,6 +62,9 @@
   --pgn-size-border-radius-lg: var(--pgn-wgu-size-border-radius-s); /** Large border radius. */
   --pgn-size-border-radius-sm: var(--pgn-wgu-size-border-radius-xs); /** Small border radius. */
   --pgn-size-card-border-radius-base: var(--pgn-wgu-size-border-radius-l);
+  --pgn-size-bx-choice-border-radius: var(--pgn-wgu-size-border-radius-s);
+  --pgn-size-bx-report-table-border-radius: var(--pgn-wgu-size-border-radius-s);
+  --pgn-size-bx-media-border-radius: var(--pgn-wgu-size-border-radius-s);
   --pgn-two-column-block-image-size-border-radius-lg: var(--pgn-wgu-size-border-radius-m);
   --pgn-two-column-block-image-size-border-radius-sm: var(--pgn-wgu-size-border-radius-xs);
 }

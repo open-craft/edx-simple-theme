@@ -1,0 +1,248 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ * See <PARAGON_ROOT>/tokens/README.md for more details.
+ */
+
+:root {
+  --pgn-size-btn-focus-width: 2px;
+  --pgn-size-input-btn-focus-width: 1px;
+  --pgn-size-footer-border-top-width: initial;
+  --pgn-size-footer-border-bottom-width: initial;
+  --pgn-size-header-border-top-width: 0px;
+  --pgn-size-header-border-bottom-width: 1px;
+  --pgn-spacing-input-btn-padding-y: 0.5625rem;
+  --pgn-spacing-bx-report-metric-padding-y: 8px;
+  --pgn-spacing-bx-report-metric-padding-x: 16px;
+  --pgn-spacing-bx-report-details-heading-gap: 24px;
+  --pgn-spacing-bx-report-table-column-gap: 16px;
+  --pgn-spacing-bx-report-result-inline-gap: 16px;
+  --pgn-color-accent-a: #db493dff; /** Accent-A color. */
+  --pgn-color-gray-100: #ffffffff; /** Gray color of level 100. */
+  --pgn-color-gray-200: #f2f2f2ff; /** Gray color of level 200. */
+  --pgn-color-gray-300: #d6d9dfff; /** Gray color of level 300. */
+  --pgn-color-gray-400: #b3b3b3ff; /** Gray color of level 400. */
+  --pgn-color-gray-500: #808080ff; /** Gray color of level 500. */
+  --pgn-color-gray-600: #666666ff; /** Gray color of level 600. */
+  --pgn-color-gray-700: #4d4d4dff; /** Gray color of level 700. */
+  --pgn-color-gray-800: #333333ff; /** Gray color of level 800. */
+  --pgn-color-gray-900: #1a1a1aff; /** Gray color of level 900. */
+  --pgn-color-gray-base: #808080ff; /** Basic gray color. */
+  --pgn-color-primary-100: #fefefeff; /** Primary color of level 100. */
+  --pgn-color-primary-200: #ebeef2ff; /** Primary color of level 200. */
+  --pgn-color-primary-300: #c5ced8ff; /** Primary color of level 300. */
+  --pgn-color-primary-400: #7f93aaff; /** Primary color of level 400. */
+  --pgn-color-primary-500: #002855ff; /** Primary color of level 500. */
+  --pgn-color-primary-600: #002045ff; /** Primary color of level 600. */
+  --pgn-color-primary-700: #001630ff; /** Primary color of level 700. */
+  --pgn-color-primary-800: #001123ff; /** Primary color of level 800. */
+  --pgn-color-primary-900: #000c19ff; /** Primary color of level 900. */
+  --pgn-color-primary-base: #002855ff; /** Basic primary color. */
+  --pgn-color-secondary-100: #fefeffff; /** Secondary color of level 100. */
+  --pgn-color-secondary-200: #ebf4feff; /** Secondary color of level 200. */
+  --pgn-color-secondary-300: #c5defcff; /** Secondary color of level 300. */
+  --pgn-color-secondary-400: #66aaf6ff; /** Secondary color of level 400. */
+  --pgn-color-secondary-500: #0070f0ff; /** Secondary color of level 500. */
+  --pgn-color-secondary-600: #005cc4ff; /** Secondary color of level 600. */
+  --pgn-color-secondary-700: #004088ff; /** Secondary color of level 700. */
+  --pgn-color-secondary-800: #002f63ff; /** Secondary color of level 800. */
+  --pgn-color-secondary-900: #002147ff; /** Secondary color of level 900. */
+  --pgn-color-secondary-base: #0070f0ff; /** Basic secondary color. */
+  --pgn-color-brand-100: #fefefeff; /** Brand color of level 100. */
+  --pgn-color-brand-200: #ebeef2ff; /** Brand color of level 200. */
+  --pgn-color-brand-300: #c5ced8ff; /** Brand color of level 300. */
+  --pgn-color-brand-400: #667e99ff; /** Brand color of level 400. */
+  --pgn-color-brand-500: #002855ff; /** Brand color of level 500. */
+  --pgn-color-brand-600: #002045ff; /** Brand color of level 600. */
+  --pgn-color-brand-700: #001630ff; /** Brand color of level 700. */
+  --pgn-color-brand-800: #001123ff; /** Brand color of level 800. */
+  --pgn-color-brand-900: #000c19ff; /** Brand color of level 900. */
+  --pgn-color-brand-base: #002855ff; /** Basic brand color. */
+  --pgn-color-success-100: #fefffeff; /** Success color of level 100. */
+  --pgn-color-success-200: #f0fef1ff; /** Success color of level 200. */
+  --pgn-color-success-300: #c5f4c7ff; /** Success color of level 300. */
+  --pgn-color-success-400: #7ae57eff; /** Success color of level 400. */
+  --pgn-color-success-500: #12c117ff; /** Success color of level 500. */
+  --pgn-color-success-600: #0c7b0eff; /** Success color of level 600. */
+  --pgn-color-success-700: #064108ff; /** Success color of level 700. */
+  --pgn-color-success-800: #042604ff; /** Success color of level 800. */
+  --pgn-color-success-900: #011202ff; /** Success color of level 900. */
+  --pgn-color-success-base: #12c117ff; /** Basic success color. */
+  --pgn-color-info-100: #feffffff; /** Info color of level 100. */
+  --pgn-color-info-200: #f1f9feff; /** Info color of level 200. */
+  --pgn-color-info-300: #d5edfcff; /** Info color of level 300. */
+  --pgn-color-info-400: #a2d8f7ff; /** Info color of level 400. */
+  --pgn-color-info-500: #46b1efff; /** Info color of level 500. */
+  --pgn-color-info-600: #3a91c3ff; /** Info color of level 600. */
+  --pgn-color-info-700: #286588ff; /** Info color of level 700. */
+  --pgn-color-info-800: #1d4962ff; /** Info color of level 800. */
+  --pgn-color-info-900: #143446ff; /** Info color of level 900. */
+  --pgn-color-info-base: #46b1efff; /** Basic info color. */
+  --pgn-color-warning-100: #fffefeff; /** Warning color of level 100. */
+  --pgn-color-warning-200: #fff7edff; /** Warning color of level 200. */
+  --pgn-color-warning-300: #fee8c9ff; /** Warning color of level 300. */
+  --pgn-color-warning-400: #fccc88ff; /** Warning color of level 400. */
+  --pgn-color-warning-500: #f99912ff; /** Warning color of level 500. */
+  --pgn-color-warning-600: #cc7d0eff; /** Warning color of level 600. */
+  --pgn-color-warning-700: #8e570aff; /** Warning color of level 700. */
+  --pgn-color-warning-800: #673f08ff; /** Warning color of level 800. */
+  --pgn-color-warning-900: #4a2d06ff; /** Warning color of level 900. */
+  --pgn-color-warning-base: #f99912ff; /** Basic warning color. */
+  --pgn-color-danger-100: #fffefeff; /** Danger color of level 100. */
+  --pgn-color-danger-200: #fcf1f0ff; /** Danger color of level 200. */
+  --pgn-color-danger-300: #f7d5d3ff; /** Danger color of level 300. */
+  --pgn-color-danger-400: #eda49eff; /** Danger color of level 400. */
+  --pgn-color-danger-500: #db493dff; /** Danger color of level 500. */
+  --pgn-color-danger-600: #b33b32ff; /** Danger color of level 600. */
+  --pgn-color-danger-700: #7c2a22ff; /** Danger color of level 700. */
+  --pgn-color-danger-800: #5a1e1aff; /** Danger color of level 800. */
+  --pgn-color-danger-900: #401612ff; /** Danger color of level 900. */
+  --pgn-color-danger-base: #db493dff; /** Basic danger color. */
+  --pgn-color-bx-title-divider: #b2d8deff;
+  --pgn-color-bx-choice-border-selected: #4690ebff;
+  --pgn-color-register-btn-bg: #008000ff;
+  --pgn-color-sign-in-btn-bg: initial;
+  --pgn-color-sign-in-btn-text: initial;
+  --pgn-color-sign-in-btn-border: initial;
+  --pgn-color-sign-in-btn-hover-bg: initial;
+  --pgn-color-sign-in-btn-hover-text: initial;
+  --pgn-color-sign-in-btn-hover-border: initial;
+  --pgn-color-footer-bg: #ffffffff;
+  --pgn-color-footer-text: initial;
+  --pgn-color-footer-link: initial;
+  --pgn-color-footer-border-top: initial;
+  --pgn-color-footer-border-bottom: initial;
+  --pgn-color-header-bg: #ffffffff;
+  --pgn-color-header-nav-text: initial;
+  --pgn-color-header-nav-link: initial;
+  --pgn-color-header-nav-item-border-bottom-color: initial;
+  --pgn-color-header-nav-item-border-bottom-hover-color: initial;
+  --pgn-color-header-nav-user-dropdown-menu-item-color: initial;
+  --pgn-color-header-border-top: initial;
+  --pgn-wgu-color-blue-50: #e6f1feff;
+  --pgn-wgu-color-blue-100: #b0fffaff;
+  --pgn-wgu-color-blue-200: #8adbf8ff;
+  --pgn-wgu-color-blue-300: #549ff5ff;
+  --pgn-wgu-color-blue-400: #338df3ff;
+  --pgn-wgu-color-blue-600: #0066daff;
+  --pgn-wgu-color-blue-700: #0050aaff;
+  --pgn-wgu-color-blue-800: #003e84ff;
+  --pgn-wgu-color-blue-900: #002f65ff;
+  --pgn-wgu-color-blue-base: #0070f0ff;
+  --pgn-wgu-color-blue-muted: #3874bcff;
+  --pgn-wgu-color-lake-50: #edf7fdff;
+  --pgn-wgu-color-lake-100: #c6e7faff;
+  --pgn-wgu-color-lake-200: #aadbf8ff;
+  --pgn-wgu-color-lake-300: #83cbf4ff;
+  --pgn-wgu-color-lake-400: #6bc1f2ff;
+  --pgn-wgu-color-lake-600: #40a1d9ff;
+  --pgn-wgu-color-lake-700: #327eaaff;
+  --pgn-wgu-color-lake-800: #276183ff;
+  --pgn-wgu-color-lake-900: #1d4a64ff;
+  --pgn-wgu-color-lake-base: #46b1efff;
+  --pgn-wgu-color-navy-50: #e6eaeeff;
+  --pgn-wgu-color-navy-100: #b0bccaff;
+  --pgn-wgu-color-navy-200: #8a9cb1ff;
+  --pgn-wgu-color-navy-300: #546f8dff;
+  --pgn-wgu-color-navy-400: #335377ff;
+  --pgn-wgu-color-navy-600: #00244dff;
+  --pgn-wgu-color-navy-700: #001c3cff;
+  --pgn-wgu-color-navy-800: #00162fff;
+  --pgn-wgu-color-navy-900: #001124ff;
+  --pgn-wgu-color-navy-base: #002855ff;
+  --pgn-wgu-color-green-50: #ecfdedff;
+  --pgn-wgu-color-green-100: #c4f9c6ff;
+  --pgn-wgu-color-green-200: #92e294ff;
+  --pgn-wgu-color-green-300: #60d564ff;
+  --pgn-wgu-color-green-400: #41cd45ff;
+  --pgn-wgu-color-green-600: #10b015ff;
+  --pgn-wgu-color-green-700: #0d8910ff;
+  --pgn-wgu-color-green-800: #0a6a0dff;
+  --pgn-wgu-color-green-900: #08510aff;
+  --pgn-wgu-color-green-base: #12c117ff;
+  --pgn-wgu-color-orange-50: #fef5e7ff;
+  --pgn-wgu-color-orange-100: #fddfb6ff;
+  --pgn-wgu-color-orange-200: #fcd092ff;
+  --pgn-wgu-color-orange-300: #fbbb60ff;
+  --pgn-wgu-color-orange-400: #faad41ff;
+  --pgn-wgu-color-orange-600: #e38b10ff;
+  --pgn-wgu-color-orange-700: #b16d0dff;
+  --pgn-wgu-color-orange-800: #89540aff;
+  --pgn-wgu-color-orange-900: #694008ff;
+  --pgn-wgu-color-orange-base: #f99912ff;
+  --pgn-wgu-color-red-50: #fbedecff;
+  --pgn-wgu-color-red-100: #f4c7c3ff;
+  --pgn-wgu-color-red-200: #eeaba6ff;
+  --pgn-wgu-color-red-300: #e7857dff;
+  --pgn-wgu-color-red-400: #e26d64ff;
+  --pgn-wgu-color-red-600: #c74238ff;
+  --pgn-wgu-color-red-700: #9b342bff;
+  --pgn-wgu-color-red-800: #782822ff;
+  --pgn-wgu-color-red-900: #5c1f1aff;
+  --pgn-wgu-color-red-base: #db493dff;
+  --pgn-wgu-color-background-interactive-default: #ecf5f7ff;
+  --pgn-wgu-color-background-report-badge-pass: #149418ff;
+  --pgn-wgu-color-icon-muted: #a7b2beff;
+  --pgn-wgu-color-text-interactive-default: #2a578dff;
+  --pgn-wgu-color-text-interactive-heading: #327d8aff;
+  --pgn-wgu-color-text-report-table: #4e657dff;
+  --pgn-spacing-form-input-padding-y-base: var(
+    --pgn-spacing-input-btn-padding-y
+  );
+  --pgn-color-btn-text-tertiary: var(--pgn-color-primary-base);
+  --pgn-color-form-input-focus-border: var(--pgn-color-secondary-500);
+  --pgn-color-form-feedback-valid: var(--pgn-color-success-900);
+  --pgn-color-form-feedback-invalid: var(--pgn-color-danger-900);
+  --pgn-color-headings-base: var(--pgn-color-primary-500);
+  --pgn-color-bx-text: var(--pgn-wgu-color-text-interactive-default);
+  --pgn-color-bx-title-text: var(--pgn-wgu-color-text-interactive-heading);
+  --pgn-color-bx-choice-border-base: var(--pgn-wgu-color-blue-muted);
+  --pgn-color-bx-choice-border-hover: var(--pgn-color-primary-base);
+  --pgn-color-bx-report-pass-text: var(
+    --pgn-wgu-color-background-report-badge-pass
+  );
+  --pgn-color-bx-report-table-text: var(--pgn-wgu-color-text-report-table);
+  --pgn-wgu-color-blue-500: var(--pgn-wgu-color-blue-base);
+  --pgn-wgu-color-lake-500: var(--pgn-wgu-color-lake-base);
+  --pgn-wgu-color-navy-500: var(--pgn-wgu-color-navy-base);
+  --pgn-wgu-color-green-500: var(--pgn-wgu-color-green-base);
+  --pgn-wgu-color-orange-500: var(--pgn-wgu-color-orange-base);
+  --pgn-wgu-color-red-500: var(--pgn-wgu-color-red-base);
+  --pgn-wgu-color-background-main-navy: var(--pgn-wgu-color-navy-base);
+  --pgn-wgu-color-background-main-blue: var(--pgn-wgu-color-blue-base);
+  --pgn-wgu-color-background-main-lake: var(--pgn-wgu-color-lake-base);
+  --pgn-wgu-color-background-action-default: var(--pgn-wgu-color-blue-muted);
+  --pgn-wgu-color-border-gray: var(--pgn-color-gray-base);
+  --pgn-wgu-color-border-blue: var(--pgn-wgu-color-blue-base);
+  --pgn-wgu-color-btn-default: var(--pgn-wgu-color-green-700);
+  --pgn-wgu-color-btn-hover: var(--pgn-wgu-color-green-900);
+  --pgn-wgu-color-btn-disabled: var(--pgn-wgu-color-green-200);
+  --pgn-wgu-color-btn-focus: var(--pgn-wgu-color-navy-base);
+  --pgn-wgu-color-icon-navy: var(--pgn-wgu-color-navy-base);
+  --pgn-wgu-color-icon-lake: var(--pgn-wgu-color-lake-base);
+  --pgn-wgu-color-icon-white: var(--pgn-color-white);
+  --pgn-wgu-color-icon-success: var(--pgn-wgu-color-green-base);
+  --pgn-wgu-color-icon-warning: var(--pgn-wgu-color-orange-base);
+  --pgn-wgu-color-icon-error: var(--pgn-wgu-color-red-base);
+  --pgn-wgu-color-text-main-navy: var(--pgn-wgu-color-navy-base);
+  --pgn-wgu-color-text-main-blue: var(--pgn-wgu-color-blue-base);
+  --pgn-wgu-color-text-main-lake: var(--pgn-wgu-color-lake-base);
+  --pgn-wgu-color-text-pure-white: var(--pgn-color-white);
+  --pgn-color-btn-bg-brand: var(--pgn-wgu-color-btn-default);
+  --pgn-color-btn-border-outline-brand: var(--pgn-wgu-color-btn-default);
+  --pgn-color-btn-hover-bg-brand: var(--pgn-wgu-color-btn-hover);
+  --pgn-color-btn-hover-border-outline-brand: var(--pgn-wgu-color-btn-hover);
+  --pgn-color-btn-active-bg-brand: var(--pgn-wgu-color-btn-focus);
+  --pgn-color-btn-active-border-outline-brand: var(--pgn-wgu-color-btn-focus);
+  --pgn-color-btn-focus-border-outline-brand: var(--pgn-wgu-color-btn-focus);
+  --pgn-color-btn-focus-bg-brand: var(--pgn-wgu-color-btn-focus);
+  --pgn-color-bx-report-sparkle: var(--pgn-wgu-color-background-action-default);
+  --pgn-color-register-btn-text: var(--pgn-color-btn-text-outline-primary);
+  --pgn-color-register-btn-border: var(--pgn-color-btn-border-outline-primary);
+  --pgn-color-register-btn-hover-bg: var(
+    --pgn-color-btn-hover-bg-outline-primary
+  );
+  --pgn-color-header-border-bottom: var(--pgn-wgu-color-border-gray);
+  --pgn-color-register-btn-hover-text: var(
+    --pgn-color-btn-hover-text-outline-primary
+  );
+}

@@ -1,0 +1,65 @@
+[size.bx.card.border.radius]
+"$value" = "0"
+
+[size.bx.choice.border.radius]
+"$value" = "{wgu.size.border.radius.s}"
+
+[size.bx.report.table.border.radius]
+"$value" = "{wgu.size.border.radius.s}"
+
+[size.bx.media.border.radius]
+"$value" = "{wgu.size.border.radius.s}"
+
+[size.bx.action.min.width]
+"$value" = "min(200px, 100%)"
+
+[typography.bx.title.font.size]
+"$value" = "18px"
+
+[typography.bx.title.line.height]
+"$value" = "24px"
+
+[typography.bx.legend.font.size]
+"$value" = "20px"
+
+[typography.bx.legend.line.height]
+"$value" = "32px"
+
+[typography.bx.report.percentage.font.size]
+"$value" = "60px"
+
+[typography.bx.report.percentage.line.height]
+"$value" = "80px"
+
+[typography.bx.report.heading.font.size]
+"$value" = "30px"
+
+[typography.bx.report.heading.line.height]
+"$value" = "44px"
+
+[typography.bx.report.subtitle.font.size]
+"$value" = "20px"
+
+[typography.bx.report.subtitle.line.height]
+"$value" = "32px"
+
+[typography.bx.report.details.heading.font.size]
+"$value" = "20px"
+
+[typography.bx.report.details.heading.line.height]
+"$value" = "34px"
+
+[typography.bx.report.details.heading.font.weight]
+"$value" = "var(--pgn-typography-font-weight-bold)"
+
+[typography.bx.report.table.font.size]
+"$value" = "16px"
+
+[typography.bx.report.table.line.height]
+"$value" = "24px"
+
+[typography.bx.report.table.font.weight]
+"$value" = "var(--pgn-typography-font-weight-bold)"
+
+[typography.bx.choice.line.height]
+"$value" = "28px"
