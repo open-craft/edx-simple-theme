@@ -1,0 +1,56 @@
+@import "./css/core/index.css";
+html:root {
+  --primary: var(--pgn-color-primary-base, #0075b4);
+  --blue: var(--pgn-color-primary-base, #0075b4);
+  --blue-s1: var(--pgn-color-primary-base, #0075b4);
+  --blue-d1: var(--pgn-color-primary-700, #005e90);
+  --blue-d2: var(--pgn-color-primary-800, #00466c);
+  --blue-d4: var(--pgn-color-primary-900, #001724);
+  --action-primary-active-bg: var(--pgn-color-primary-base, #0075b4);
+  --btn-brand-focus-background: var(--pgn-color-primary-700, #065683);
+  --general-color-accent: var(--pgn-color-primary-base, #0075b4);
+  --submitted: var(--pgn-color-primary-base, #0075b4);
+  --forum-color-primary: var(--pgn-color-primary-base, #0075b4);
+  --link-color: var(--pgn-color-link-base, #1b6d99);
+  --link-hover-color: var(--pgn-color-link-hover, #065683);
+
+  --correct: var(--pgn-color-success-base, #008100);
+  --partially-correct: var(--pgn-color-success-base, #008100);
+  --success: var(--pgn-color-success-base, #008100);
+  --green: var(--pgn-color-success-base, #008100);
+  --incorrect: var(--pgn-color-danger-base, #b20610);
+  --danger: var(--pgn-color-danger-base, #b20610);
+  --error-color: var(--pgn-color-danger-500, #cb0712);
+  --error-color-dark: var(--pgn-color-danger-700, #95050d);
+  --error-color-light: var(--pgn-color-danger-300, #f95861);
+  --warning: var(--pgn-color-warning-base, #e2c01f);
+  --yellow: var(--pgn-color-warning-base, #e2c01f);
+  --warning-color: var(--pgn-color-warning-base, #ffc01f);
+  --warning-color-accent: var(--pgn-color-warning-100, #fffcdd);
+
+  --body-color: var(--pgn-color-body-base, #313131);
+  --lighter-base-font-color: var(--pgn-color-gray-600, #646464);
+  --gray-d1: var(--pgn-color-gray-600, #5e5e5e);
+  --gray: var(--pgn-color-gray-500, #767676);
+  --gray-l2: var(--pgn-color-gray-300, #adadad);
+  --gray-l3: var(--pgn-color-gray-200, #c8c8c8);
+  --gray-300: var(--pgn-color-gray-200, #d9d9d9);
+  --gray-l4: var(--pgn-color-gray-100, #e4e4e4);
+  --gray-l6: var(--pgn-color-light-200, #f8f8f8);
+  --border-color: var(--pgn-color-border, #e7e7e7);
+  --sidebar-color: var(--pgn-color-light-200, #f6f6f6);
+  --uxpl-gray-background: var(--pgn-color-gray-200, #d9d9d9);
+  --uxpl-gray-base: var(--pgn-color-gray-700, #414141);
+  --uxpl-gray-dark: var(--pgn-color-gray-900, #111111);
+
+  --font-family-sans-serif: var(
+    --pgn-typography-font-family-base,
+    "Open Sans",
+    "Helvetica Neue",
+    Helvetica,
+    Arial,
+    sans-serif
+  );
+  --serif: var(--pgn-typography-font-family-serif, Georgia, Cambria, "Times New Roman", Times, serif);
+  --font-bold: var(--pgn-typography-font-weight-bold, 700);
+}
