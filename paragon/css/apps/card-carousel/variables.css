@@ -3,7 +3,7 @@
  * See <PARAGON_ROOT>/tokens/README.md for more details.
  */
 
-:root {
+:root, :host {
   --ccblk-typography-headings-color: var(--pgn-color-headings-base);
   --ccblk-spacing-badge-spacer-x: 2rem;
   --ccblk-spacing-badge-spacer-y: 0.5rem;

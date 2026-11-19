@@ -3,6 +3,6 @@
  * See <PARAGON_ROOT>/tokens/README.md for more details.
  */
 
-:root {
+:root, :host {
   --ai-eval-vertical-padding: 3rem;
 }
