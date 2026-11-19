@@ -1,0 +1,305 @@
+[color.wgu.bg.prim.main]
+"$value" = "{color.gray.600}"
+
+[color.wgu.bg.prim.emphasis]
+"$value" = "{color.gray.500}"
+
+[color.wgu.bg.prim.hover]
+"$value" = "{color.gray.400}"
+
+[color.wgu.bg.main]
+"$value" = "{color.wgu.bg.prim.main}"
+
+[color.wgu.bg.emphasis]
+"$value" = "{color.wgu.bg.prim.emphasis}"
+
+[color.wgu.bg.hover]
+"$value" = "{color.wgu.bg.prim.hover}"
+
+[color.wgu.bg.sec.main]
+"$value" = "{color.gray.0}"
+
+[color.wgu.bg.sec.emphasis]
+"$value" = "{color.teal.50}"
+
+[color.wgu.bg.sec.hover]
+"$value" = "{color.gray.25}"
+
+[color.wgu.bg.sec.callout.default]
+"$value" = "{color.orange.500}"
+
+[color.wgu.bg.sec.callout.alternative]
+"$value" = "{color.blue.600}"
+
+[color.wgu.bg.feedback.positive]
+"$value" = "{color.success.100}"
+
+[color.wgu.bg.feedback.negative]
+"$value" = "{color.danger.100}"
+
+[color.wgu.bg.feedback.informative]
+"$value" = "{color.info.100}"
+
+[color.wgu.bg.feedback.attention]
+"$value" = "{color.warning.100}"
+
+[color.wgu.bg.tooltip]
+"$value" = "{color.blue.600}"
+
+[color.wgu.action.default]
+"$value" = "{color.blue.600}"
+
+[color.wgu.action.hover]
+"$value" = "{color.blue.750}"
+
+[color.wgu.action.focus]
+"$value" = "{color.gray.900}"
+
+[color.wgu.action.disabled]
+"$value" = "{color.gray.300}"
+
+[color.wgu.action.inprogress]
+"$value" = "{color.teal.300}"
+
+[color.wgu.Interact.default]
+"$value" = "{color.teal.50}"
+
+[color.wgu.Interact.raised]
+"$value" = "{color.gray.0}"
+
+[color.wgu.Interact.raised.emphasis]
+"$value" = "{color.teal.600}"
+
+[color.wgu.Interact.emphasis]
+"$value" = "{color.teal.100}"
+
+[color.wgu.txt.prim.headings]
+"$value" = "{color.teal.200}"
+
+[color.wgu.txt.prim.content]
+"$value" = "{color.gray.0}"
+
+[color.wgu.txt.headings]
+"$value" = "{color.wgu.txt.prim.headings}"
+
+[color.wgu.txt.content]
+"$value" = "{color.wgu.txt.prim.content}"
+
+[color.wgu.txt.sec.headings]
+"$value" = "{color.blue.600}"
+
+[color.wgu.txt.sec.content]
+"$value" = "{color.gray.500}"
+
+[color.wgu.txt.inverse]
+"$value" = "{color.gray.0}"
+
+[color.wgu.txt.alternative]
+"$value" = "{color.gray.400}"
+
+[color.wgu.txt.action.prim.default]
+"$value" = "{color.gray.0}"
+
+[color.wgu.txt.action.prim.hover]
+"$value" = "{color.blue.50}"
+
+[color.wgu.txt.action.prim.disabled]
+"$value" = "{color.gray.200}"
+
+[color.wgu.txt.action.prim.focus]
+"$value" = "{color.blue.200}"
+
+[color.wgu.txt.action.default]
+"$value" = "{color.blue.600}"
+
+[color.wgu.txt.action.hover]
+"$value" = "{color.wgu.txt.action.prim.hover}"
+
+[color.wgu.txt.action.disabled]
+"$value" = "{color.wgu.txt.action.prim.disabled}"
+
+[color.wgu.txt.action.focus]
+"$value" = "{color.wgu.txt.action.prim.focus}"
+
+[color.wgu.txt.action.sec.hover]
+"$value" = "{color.blue.750}"
+
+[color.wgu.txt.action.sec.oncolor]
+"$value" = "{color.gray.0}"
+
+[color.wgu.txt.action.sec.disabled]
+"$value" = "{color.gray.200}"
+
+[color.wgu.txt.action.sec.focus]
+"$value" = "{color.gray.900}"
+
+[color.wgu.txt.interact.headings]
+"$value" = "{color.teal.600}"
+
+[color.wgu.txt.interact.accent]
+"$value" = "{color.blue.750}"
+
+[color.wgu.txt.interact.content]
+"$value" = "{color.gray.500}"
+
+[color.wgu.txt.interact.content.inverse]
+"$value" = "{color.gray.0}"
+
+[color.wgu.txt.feedback.positive]
+"$value" = "{color.success.500}"
+
+[color.wgu.txt.feedback.negative]
+"$value" = "{color.danger.500}"
+
+[color.wgu.txt.feedback.informative]
+"$value" = "{color.info.600}"
+
+[color.wgu.txt.feedback.attention]
+"$value" = "{color.warning.700}"
+
+[color.wgu.icon.default]
+"$value" = "{color.teal.300}"
+
+[color.wgu.icon.inverse]
+"$value" = "{color.gray.0}"
+
+[color.wgu.icon.sec.default]
+"$value" = "{color.blue.600}"
+
+[color.wgu.icon.sec.inverse]
+"$value" = "{color.gray.0}"
+
+[color.wgu.icon.sec.alternative]
+"$value" = "{color.gray.400}"
+
+[color.wgu.icon.interact.default]
+"$value" = "{color.teal.600}"
+
+[color.wgu.icon.interact.disabled]
+"$value" = "{color.gray.200}"
+
+[color.wgu.icon.interact.positive]
+"$value" = "{color.success.500}"
+
+[color.wgu.icon.interact.negative]
+"$value" = "{color.danger.500}"
+
+[color.wgu.icon.interact.informative]
+"$value" = "{color.info.600}"
+
+[color.wgu.icon.interact.attention]
+"$value" = "{color.warning.700}"
+
+[color.wgu.icon.action.default]
+"$value" = "{color.gray.0}"
+
+[color.wgu.icon.action.hover]
+"$value" = "{color.blue.50}"
+
+[color.wgu.icon.action.focus]
+"$value" = "{color.blue.200}"
+
+[color.wgu.icon.action.disabled]
+"$value" = "{color.gray.200}"
+
+[color.wgu.icon.action.sec.default]
+"$value" = "{color.blue.600}"
+
+[color.wgu.icon.action.sec.hover]
+"$value" = "{color.blue.750}"
+
+[color.wgu.icon.action.sec.neutral]
+"$value" = "{color.blue.800}"
+
+[color.wgu.icon.action.sec.neutral.hover]
+"$value" = "{color.blue.900}"
+
+[color.wgu.icon.action.sec.disabled]
+"$value" = "{color.gray.200}"
+
+[color.wgu.input.default]
+"$value" = "{color.gray.0}"
+
+[color.wgu.input.unselected.disabled]
+"$value" = "{color.gray.25}"
+
+[color.wgu.input.unselected.default.border]
+"$value" = "{color.gray.200}"
+
+[color.wgu.input.unselected.hover.border]
+"$value" = "{color.blue.600}"
+
+[color.wgu.input.unselected.focused.border]
+"$value" = "{color.blue.900}"
+
+[color.wgu.input.selected.default]
+"$value" = "{color.blue.500}"
+
+[color.wgu.input.selected.hover]
+"$value" = "{color.blue.600}"
+
+[color.wgu.input.selected.focused]
+"$value" = "{color.blue.500}"
+
+[color.wgu.input.selected.focused.border]
+"$value" = "{color.blue.900}"
+
+[color.wgu.input.selected.disabled]
+"$value" = "{color.gray.300}"
+
+[color.wgu.input.error.border]
+"$value" = "{color.danger.100}"
+
+[color.wgu.border.default]
+"$value" = "{color.gray.400}"
+
+[color.wgu.border.emphasis]
+"$value" = "{color.gray.0}"
+
+[color.wgu.border.arrows]
+"$value" = "{color.gray.0}"
+
+[color.wgu.border.sec.default]
+"$value" = "{color.gray.100}"
+
+[color.wgu.border.sec.emphasis]
+"$value" = "{color.gray.200}"
+
+[color.wgu.border.sec.arrows]
+"$value" = "{color.blue.750}"
+
+[color.wgu.border.sec.action.default]
+"$value" = "{color.blue.600}"
+
+[color.wgu.border.sec.action.hover]
+"$value" = "{color.blue.750}"
+
+[color.wgu.border.sec.action.focus]
+"$value" = "{color.blue.900}"
+
+[color.wgu.border.sec.action.disabled]
+"$value" = "{color.gray.200}"
+
+[color.wgu.border.sec.action.inprogress]
+"$value" = "{color.teal.300}"
+
+[color.wgu.border.action.default]
+"$value" = "{color.gray.0}"
+
+[color.wgu.border.action.hover]
+"$value" = "{color.blue.50}"
+
+[color.wgu.border.action.focus]
+"$value" = "{color.blue.200}"
+
+[color.wgu.border.action.disabled]
+"$value" = "{color.gray.200}"
+
+[color.wgu.border.action.inprogress]
+"$value" = "{color.teal.300}"
+
+[color.wgu.border.interact.default]
+"$value" = "{color.teal.200}"
+
+[color.wgu.border.interact.emphasis]
+"$value" = "{color.teal.600}"

@@ -1,0 +1,11 @@
+[wgu.color.btn.default]
+"$value" = "{color.wgu.action.default}"
+
+[wgu.color.btn.hover]
+"$value" = "{color.wgu.action.hover}"
+
+[wgu.color.btn.disabled]
+"$value" = "{color.wgu.action.disabled}"
+
+[wgu.color.btn.focus]
+"$value" = "{color.wgu.action.focus}"

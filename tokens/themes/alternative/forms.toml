@@ -1,0 +1,9 @@
+# TODO: Currently we can't set the form feedback color spearately from the border color
+[color.form.feedback.valid]
+"$value" = "{color.success.900}"
+
+[color.form.feedback.invalid]
+"$value" = "{color.danger.900}"
+
+[color.form.input.focus.border]
+"$value" = "{color.secondary.500}"
