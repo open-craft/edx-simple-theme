@@ -4,3 +4,12 @@
 "$value" = "{wgu.color.blue.base}"
 [wgu.color.background.main.lake]
 "$value" = "{wgu.color.lake.base}"
+
+[wgu.color.background.interactive.default]
+"$value" = "#ECF5F7"
+
+[wgu.color.background.action.default]
+"$value" = "{wgu.color.blue.muted}"
+
+[wgu.color.background.report.badge.pass]
+"$value" = "#149418"
