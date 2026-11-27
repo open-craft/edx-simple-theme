@@ -105,3 +105,14 @@
   --pgn-btn-active-bg: var(--pgn-wgu-color-btn-focus);
   --pgn-btn-active-border-color: var(--pgn-wgu-color-btn-focus);
 }
+
+// A hack to make the fullscreen activity modal for the unfolding scenario a little nicer.
+// In practice, this doesn't change much, just tidies the top and bottom margins of the modal.
+.unfolding-scenario-fullscreen-modal {
+    &::before {
+        content: initial !important;
+    }
+    &::after {
+        content: initial !important;
+    }
+}

@@ -58,7 +58,7 @@ header.learning-header {
   /* sticky header for the learning mfe where the custom dropdown course nav is shown */
   position: sticky;
   top: 0;
-  z-index: 99999; /* required otherwise it hides behind content on course home pages */
+  z-index: 2; /* required otherwise it hides behind content on course home pages. It cannot be too high, otherwise it renders over fullscreen modals */
 
   // override this padding from the mfe styles in a way that won't force remove other padding later
   .course-title-lockup .course-outline-popup span {
